@@ -96,19 +96,20 @@ def build_packages():
     BINARY_DIR.mkdir(parents=True, exist_ok=True)
     POOL_DIR.mkdir(parents=True, exist_ok=True)
 
-    deb_files = sorted(POOL_DIR.glob("*.deb"))
+    deb_files = sorted(POOL_DIR.rglob("*.deb"))  # rglob = recursive, finds in any subfolder
 
     if not deb_files:
-        print("⚠  No .deb files found in pool/main/ — Packages will be empty.")
+        print("⚠  No .deb files found in pool/main/ or subfolders — Packages will be empty.")
 
     entries = []
     for deb in deb_files:
-        print(f"  📦  Processing {deb.name} ...")
+        # Preserve subfolder path e.g. pool/main/m/micro_2.0.15_aarch64.deb
+        rel_path = "pool/main/" + str(deb.relative_to(POOL_DIR)).replace("\\", "/")
+        print(f"  📦  Processing {rel_path} ...")
         info = extract_deb_info(deb)
 
         size       = deb.stat().st_size
         file_sha   = sha256(deb)
-        rel_path   = f"pool/main/{deb.name}"
 
         # Build control block
         block_lines = []
@@ -142,6 +143,27 @@ def build_packages():
 
     PACKAGES_FILE.write_text(packages_content, encoding="utf-8")
     print(f"  ✅  Packages written ({len(deb_files)} package(s))")
+
+    # Build folder map for the web file browser (packages.json)
+    import json
+    folder_map = {}
+    for deb in deb_files:
+        rel    = deb.relative_to(POOL_DIR)
+        parts  = rel.parts
+        folder = parts[0] if len(parts) > 1 else "."
+        inf    = extract_deb_info(deb)
+        folder_map.setdefault(folder, []).append({
+            "name":    deb.name,
+            "path":    "pool/main/" + str(rel).replace("\\", "/"),
+            "size":    deb.stat().st_size,
+            "package": inf.get("Package", deb.stem.split("_")[0]),
+            "version": inf.get("Version", ""),
+            "desc":    inf.get("Description", "").split("\n")[0],
+        })
+    json_path = REPO_ROOT / "packages.json"
+    json_path.write_text(json.dumps(folder_map, indent=2), encoding="utf-8")
+    print(f"  ✅  packages.json written")
+
     return packages_content
 
 
@@ -208,6 +230,7 @@ def main():
     print(f"    {PACKAGES_FILE.relative_to(REPO_ROOT)}")
     print(f"    {PACKAGESGZ.relative_to(REPO_ROOT)}")
     print(f"    {RELEASE_FILE.relative_to(REPO_ROOT)}")
+    print(f"    packages.json")
     print()
     print("💡  Now commit and push to GitHub to publish your repo.")
     print()

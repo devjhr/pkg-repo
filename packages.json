@@ -1,0 +1,12 @@
+{
+  "m": [
+    {
+      "name": "micro_2.0.15_aarch64.deb",
+      "path": "pool/main/m/micro/micro_2.0.15_aarch64.deb",
+      "size": 3613008,
+      "package": "micro",
+      "version": "2.0.15",
+      "desc": "Modern and intuitive terminal-based text editor"
+    }
+  ]
+}

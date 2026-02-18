@@ -13,11 +13,11 @@
       --surface: #0b0f12;
       --border: #1a2028;
       --green: #00ff88;
-      --green-dim: rgba(0,255,136,0.08);
-      --green-mid: rgba(0,255,136,0.15);
+      --green-dim: rgba(0,255,136,0.06);
       --text: #cdd8e3;
       --muted: #445566;
       --amber: #ffb347;
+      --blue: #4fc3f7;
     }
 
     html { scroll-behavior: smooth; }
@@ -30,31 +30,21 @@
       overflow-x: hidden;
     }
 
-    /* Scanline effect */
+    /* Scanlines */
     body::after {
       content: '';
       position: fixed; inset: 0;
-      background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0,0,0,0.03) 2px,
-        rgba(0,0,0,0.03) 4px
-      );
-      pointer-events: none;
-      z-index: 9999;
+      background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+      pointer-events: none; z-index: 9999;
     }
 
     /* Grid bg */
     body::before {
       content: '';
       position: fixed; inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+      background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px);
       background-size: 40px 40px;
-      opacity: 0.3;
-      pointer-events: none;
+      opacity: 0.25; pointer-events: none;
     }
 
     /* TOP BAR */
@@ -67,14 +57,11 @@
       position: sticky; top: 0; z-index: 100;
     }
     .topbar-dot { width: 8px; height: 8px; border-radius: 50%; }
-    .dot-red { background: #ff5f57; }
+    .dot-red    { background: #ff5f57; }
     .dot-yellow { background: #febc2e; }
-    .dot-green { background: #28c840; }
+    .dot-green  { background: #28c840; }
     .topbar-title { margin-left: 16px; color: var(--text); font-size: 0.72rem; }
-    .topbar-status {
-      margin-left: auto;
-      display: flex; align-items: center; gap: 8px;
-    }
+    .topbar-status { margin-left: auto; display: flex; align-items: center; gap: 8px; }
     .status-dot {
       width: 6px; height: 6px; border-radius: 50%;
       background: var(--green);
@@ -83,11 +70,7 @@
     @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
     /* HERO */
-    .hero {
-      padding: 80px 40px 60px;
-      max-width: 900px; margin: 0 auto;
-      position: relative;
-    }
+    .hero { padding: 80px 40px 60px; max-width: 960px; margin: 0 auto; }
     .hero-label {
       font-size: 0.68rem; letter-spacing: 0.2em;
       color: var(--green); text-transform: uppercase;
@@ -97,8 +80,7 @@
     .hero-title {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(4rem, 10vw, 9rem);
-      line-height: 0.9; letter-spacing: 0.02em;
-      color: var(--text);
+      line-height: 0.9; color: var(--text);
       margin-bottom: 8px;
       opacity: 0; animation: fadeIn 0.6s 0.2s forwards;
     }
@@ -106,14 +88,12 @@
     .hero-sub {
       font-family: 'Bebas Neue', sans-serif;
       font-size: clamp(1.5rem, 4vw, 3rem);
-      color: var(--muted); letter-spacing: 0.05em;
-      margin-bottom: 40px;
+      color: var(--muted); margin-bottom: 40px;
       opacity: 0; animation: fadeIn 0.6s 0.3s forwards;
     }
     .hero-desc {
       font-size: 0.82rem; line-height: 1.9;
-      color: var(--muted); max-width: 560px;
-      margin-bottom: 50px;
+      color: var(--muted); max-width: 560px; margin-bottom: 50px;
       opacity: 0; animation: fadeIn 0.6s 0.4s forwards;
     }
 
@@ -122,28 +102,18 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-left: 3px solid var(--green);
-      padding: 28px 32px;
-      margin-bottom: 14px;
-      position: relative;
+      padding: 24px 28px; margin-bottom: 14px;
       opacity: 0; animation: fadeIn 0.6s 0.5s forwards;
     }
     .install-block-label {
       font-size: 0.62rem; letter-spacing: 0.18em;
       color: var(--green); text-transform: uppercase;
-      margin-bottom: 16px; display: block;
+      margin-bottom: 14px; display: block;
     }
-    .cmd-line {
-      display: flex; align-items: center; gap: 10px;
-      margin-bottom: 10px;
-    }
+    .cmd-line { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
     .cmd-line:last-child { margin-bottom: 0; }
     .prompt { color: var(--green); font-size: 0.85rem; user-select: none; }
-    .cmd {
-      font-size: 0.85rem; color: var(--text);
-      background: none; border: none;
-      flex: 1; cursor: text;
-      word-break: break-all;
-    }
+    .cmd { font-size: 0.85rem; color: var(--text); flex: 1; word-break: break-all; }
     .copy-btn {
       background: none; border: 1px solid var(--border);
       color: var(--muted); font-family: 'JetBrains Mono', monospace;
@@ -155,89 +125,122 @@
     .copy-btn:hover { border-color: var(--green); color: var(--green); }
     .copy-btn.copied { color: var(--green); border-color: var(--green); }
 
-    .install-note {
-      font-size: 0.7rem; color: var(--muted);
-      margin-top: 10px; line-height: 1.6;
-    }
-    .install-note span { color: var(--amber); }
-
     /* DIVIDER */
     .divider {
       display: flex; align-items: center; gap: 16px;
-      margin: 60px 0 50px;
-      opacity: 0; animation: fadeIn 0.6s 0.6s forwards;
+      margin: 60px 0 40px;
     }
     .divider-line { flex: 1; height: 1px; background: var(--border); }
-    .divider-text { font-size: 0.68rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; }
+    .divider-text { font-size: 0.68rem; letter-spacing: 0.18em; color: var(--muted); text-transform: uppercase; white-space: nowrap; }
 
-    /* PACKAGES */
-    .packages-section { max-width: 900px; margin: 0 auto; padding: 0 40px 80px; }
-    .section-title {
-      font-size: 0.68rem; letter-spacing: 0.2em;
-      color: var(--green); text-transform: uppercase;
-      margin-bottom: 24px; display: block;
+    /* FILE MANAGER */
+    .fm-section { max-width: 960px; margin: 0 auto; padding: 0 40px 80px; }
+
+    /* Breadcrumb */
+    .fm-breadcrumb {
+      display: flex; align-items: center; gap: 6px;
+      font-size: 0.72rem; color: var(--muted);
+      margin-bottom: 16px; flex-wrap: wrap;
     }
-    .pkg-table {
-      width: 100%;
-      border-collapse: collapse;
-      border: 1px solid var(--border);
+    .fm-breadcrumb span { color: var(--muted); }
+    .fm-breadcrumb a {
+      color: var(--green); text-decoration: none;
+      cursor: pointer;
     }
-    .pkg-table th {
+    .fm-breadcrumb a:hover { text-decoration: underline; }
+
+    /* Toolbar */
+    .fm-toolbar {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 14px; flex-wrap: wrap;
+    }
+    .fm-search {
+      flex: 1; min-width: 180px;
       background: var(--surface);
-      font-size: 0.65rem; letter-spacing: 0.14em;
-      text-transform: uppercase; color: var(--muted);
-      padding: 12px 20px; text-align: left;
-      border-bottom: 1px solid var(--border);
-    }
-    .pkg-table td {
-      padding: 16px 20px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-family: 'JetBrains Mono', monospace;
       font-size: 0.78rem;
-      border-bottom: 1px solid var(--border);
-      vertical-align: top;
+      padding: 8px 14px;
+      outline: none;
+      transition: border-color 0.2s;
     }
-    .pkg-table tr:last-child td { border-bottom: none; }
-    .pkg-table tr { transition: background 0.15s; }
-    .pkg-table tr:hover td { background: var(--green-dim); }
-    .pkg-name { color: var(--green); font-weight: 700; }
-    .pkg-version { color: var(--amber); font-size: 0.72rem; }
-    .pkg-desc { color: var(--muted); font-size: 0.74rem; line-height: 1.5; }
-    .pkg-install {
-      font-size: 0.72rem; color: var(--text);
+    .fm-search:focus { border-color: var(--green); }
+    .fm-search::placeholder { color: var(--muted); }
+    .fm-count {
+      font-size: 0.68rem; color: var(--muted);
       white-space: nowrap;
     }
 
-    /* HOW IT WORKS */
-    .how-section { max-width: 900px; margin: 0 auto; padding: 0 40px 80px; }
-    .steps { display: flex; flex-direction: column; gap: 0; }
-    .step {
-      display: flex; gap: 0;
+    /* File manager shell */
+    .fm-shell {
       border: 1px solid var(--border);
-      border-bottom: none;
       background: var(--surface);
       overflow: hidden;
     }
-    .step:last-child { border-bottom: 1px solid var(--border); }
-    .step-num {
-      padding: 24px 24px;
-      background: var(--green-dim);
-      border-right: 1px solid var(--border);
-      font-family: 'Bebas Neue', sans-serif;
-      font-size: 2.5rem; color: var(--green);
-      min-width: 70px; text-align: center;
-      display: flex; align-items: center; justify-content: center;
+
+    /* Column headers */
+    .fm-header {
+      display: grid;
+      grid-template-columns: 24px 1fr 90px 100px 110px;
+      gap: 0;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      background: #0d1219;
+      font-size: 0.62rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--muted);
+      user-select: none;
     }
-    .step-content { padding: 24px 28px; }
-    .step-title {
-      font-size: 0.82rem; font-weight: 700;
-      color: var(--text); margin-bottom: 8px;
+
+    /* Rows */
+    .fm-row {
+      display: grid;
+      grid-template-columns: 24px 1fr 90px 100px 110px;
+      gap: 0;
+      padding: 0 16px;
+      border-bottom: 1px solid var(--border);
+      align-items: center;
+      min-height: 44px;
+      cursor: pointer;
+      transition: background 0.12s;
+      text-decoration: none; color: inherit;
     }
-    .step-body { font-size: 0.74rem; color: var(--muted); line-height: 1.7; }
-    .step-code {
-      font-size: 0.75rem; color: var(--green);
-      background: rgba(0,255,136,0.06);
+    .fm-row:last-child { border-bottom: none; }
+    .fm-row:hover { background: var(--green-dim); }
+    .fm-row.fm-folder:hover .fm-name { color: var(--green); }
+
+    .fm-icon { font-size: 1rem; display: flex; align-items: center; }
+    .fm-name {
+      font-size: 0.8rem; color: var(--text);
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+      padding-right: 12px;
+      transition: color 0.15s;
+    }
+    .fm-name.folder-name { color: var(--blue); font-weight: 700; }
+    .fm-version { font-size: 0.7rem; color: var(--amber); }
+    .fm-size { font-size: 0.7rem; color: var(--muted); }
+    .fm-action { display: flex; justify-content: flex-end; }
+    .fm-dl-btn {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
       border: 1px solid var(--border);
-      padding: 8px 14px; margin-top: 10px;
-      display: inline-block;
+      color: var(--muted);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .fm-dl-btn:hover { border-color: var(--green); color: var(--green); }
+
+    /* Up row (go back) */
+    .fm-up { color: var(--muted); }
+    .fm-up .fm-name { color: var(--muted); font-style: italic; }
+
+    /* Empty state */
+    .fm-empty {
+      padding: 48px; text-align: center;
+      font-size: 0.78rem; color: var(--muted);
     }
 
     /* FOOTER */
@@ -254,20 +257,21 @@
       from { opacity: 0; transform: translateY(16px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s, transform 0.6s; }
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.5s, transform 0.5s; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 640px) {
-      .hero, .packages-section, .how-section { padding-left: 20px; padding-right: 20px; }
-      .topbar { padding: 10px 20px; }
-      .pkg-table th:nth-child(3), .pkg-table td:nth-child(3) { display: none; }
+      .hero, .fm-section { padding-left: 16px; padding-right: 16px; }
+      .topbar { padding: 10px 16px; }
+      .fm-header, .fm-row { grid-template-columns: 20px 1fr 70px 0 80px; }
+      .fm-header > :nth-child(4), .fm-row > :nth-child(4) { display: none; }
       footer { flex-direction: column; gap: 10px; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Top bar (terminal chrome) -->
+  <!-- Topbar -->
   <div class="topbar">
     <div class="topbar-dot dot-red"></div>
     <div class="topbar-dot dot-yellow"></div>
@@ -285,130 +289,61 @@
     <h1 class="hero-title">Andro<span>Studio</span></h1>
     <p class="hero-sub">PKG Repository</p>
     <p class="hero-desc">
-      The official package repository for AndroStudio's built-in terminal.
-      Install developer tools directly inside your app — git, python, nano, curl and more.
+      Official package repository for AndroStudio's built-in terminal.
       Built for <strong style="color:var(--text)">aarch64</strong> Android devices.
     </p>
 
-    <!-- Step 1: Add repo -->
+    <!-- Install block (Step 2 only) -->
     <div class="install-block">
-      <span class="install-block-label">Step 1 — Add this repository to your terminal</span>
+      <span class="install-block-label">Install a package</span>
       <div class="cmd-line">
         <span class="prompt">$</span>
-        <span class="cmd" id="cmd1">pkg repo add https://devjhr.github.io/pkg-repo</span>
-        <button class="copy-btn" onclick="copyCmd('cmd1', this)">copy</button>
-      </div>
-      <p class="install-note">
-        <span>※</span> Run this once inside AndroStudio's terminal to register the repo.
-      </p>
-    </div>
-
-    <!-- Step 2: Install -->
-    <div class="install-block" style="animation-delay:0.55s">
-      <span class="install-block-label">Step 2 — Install any package</span>
-      <div class="cmd-line">
-        <span class="prompt">$</span>
-        <span class="cmd" id="cmd2">pkg install git</span>
-        <button class="copy-btn" onclick="copyCmd('cmd2', this)">copy</button>
+        <span class="cmd" id="cmd1">pkg install git</span>
+        <button class="copy-btn" onclick="copyCmd('cmd1',this)">copy</button>
       </div>
       <div class="cmd-line">
         <span class="prompt">$</span>
-        <span class="cmd" id="cmd3">pkg install python</span>
-        <button class="copy-btn" onclick="copyCmd('cmd3', this)">copy</button>
+        <span class="cmd" id="cmd2">pkg install python</span>
+        <button class="copy-btn" onclick="copyCmd('cmd2',this)">copy</button>
       </div>
       <div class="cmd-line">
         <span class="prompt">$</span>
-        <span class="cmd" id="cmd4">pkg install nano curl</span>
-        <button class="copy-btn" onclick="copyCmd('cmd4', this)">copy</button>
+        <span class="cmd" id="cmd3">pkg install micro</span>
+        <button class="copy-btn" onclick="copyCmd('cmd3',this)">copy</button>
       </div>
     </div>
   </div>
 
-  <!-- Packages -->
-  <div class="packages-section">
+  <!-- File Manager Section -->
+  <div class="fm-section">
     <div class="divider reveal">
       <div class="divider-line"></div>
-      <span class="divider-text">Available Packages</span>
+      <span class="divider-text">📁 pool / main</span>
       <div class="divider-line"></div>
     </div>
 
-    <table class="pkg-table reveal">
-      <thead>
-        <tr>
-          <th>Package</th>
-          <th>Version</th>
-          <th>Description</th>
-          <th>Install</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="pkg-name">git</span></td>
-          <td><span class="pkg-version">2.44.0</span></td>
-          <td><span class="pkg-desc">Distributed version control system for tracking code changes</span></td>
-          <td><span class="pkg-install">pkg install git</span></td>
-        </tr>
-        <tr>
-          <td><span class="pkg-name">python</span></td>
-          <td><span class="pkg-version">3.11.8</span></td>
-          <td><span class="pkg-desc">High-level general-purpose programming language interpreter</span></td>
-          <td><span class="pkg-install">pkg install python</span></td>
-        </tr>
-        <tr>
-          <td><span class="pkg-name">nano</span></td>
-          <td><span class="pkg-version">7.2</span></td>
-          <td><span class="pkg-desc">Simple, friendly terminal text editor with syntax highlighting</span></td>
-          <td><span class="pkg-install">pkg install nano</span></td>
-        </tr>
-        <tr>
-          <td><span class="pkg-name">curl</span></td>
-          <td><span class="pkg-version">8.6.0</span></td>
-          <td><span class="pkg-desc">CLI tool for transferring data via HTTP, FTP, and more</span></td>
-          <td><span class="pkg-install">pkg install curl</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <!-- How it works -->
-  <div class="how-section">
-    <div class="divider reveal">
-      <div class="divider-line"></div>
-      <span class="divider-text">How It Works</span>
-      <div class="divider-line"></div>
+    <!-- Breadcrumb -->
+    <div class="fm-breadcrumb" id="breadcrumb">
+      <a onclick="navigateTo(null)">pool/main</a>
     </div>
 
-    <div class="steps">
-      <div class="step reveal">
-        <div class="step-num">1</div>
-        <div class="step-content">
-          <p class="step-title">Open AndroStudio Terminal</p>
-          <p class="step-body">Launch AndroStudio on your Android device and open the built-in Termux terminal from the sidebar or terminal tab.</p>
-        </div>
+    <!-- Toolbar -->
+    <div class="fm-toolbar reveal">
+      <input class="fm-search" id="searchInput" type="text" placeholder="Search packages..." oninput="renderView()"/>
+      <span class="fm-count" id="itemCount"></span>
+    </div>
+
+    <!-- Shell -->
+    <div class="fm-shell reveal" id="fmShell">
+      <div class="fm-header">
+        <div></div>
+        <div>Name</div>
+        <div>Version</div>
+        <div>Size</div>
+        <div></div>
       </div>
-      <div class="step reveal">
-        <div class="step-num">2</div>
-        <div class="step-content">
-          <p class="step-title">Add the Repository</p>
-          <p class="step-body">Register this repo so your terminal knows where to fetch packages from.</p>
-          <code class="step-code">pkg repo add https://devjhr.github.io/pkg-repo</code>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">3</div>
-        <div class="step-content">
-          <p class="step-title">Update Package Index</p>
-          <p class="step-body">Fetch the latest package list from all repositories including this one.</p>
-          <code class="step-code">pkg update</code>
-        </div>
-      </div>
-      <div class="step reveal">
-        <div class="step-num">4</div>
-        <div class="step-content">
-          <p class="step-title">Install Any Package</p>
-          <p class="step-body">Install packages by name. Multiple packages can be installed in one command.</p>
-          <code class="step-code">pkg install git python nano curl</code>
-        </div>
+      <div id="fmBody">
+        <div class="fm-empty">Loading packages...</div>
       </div>
     </div>
   </div>
@@ -420,22 +355,140 @@
   </footer>
 
   <script>
-    // Copy button
+    // ── Repo base URL (update if you rename the GitHub Pages repo) ──────────
+    const REPO_BASE = 'https://devjhr.github.io/pkg-repo';
+
+    // ── State ────────────────────────────────────────────────────────────────
+    let allFolders  = {};   // raw data from packages.json  { "m": [...], "g": [...] }
+    let currentPath = null; // null = root, string = open folder name
+
+    // ── Boot ─────────────────────────────────────────────────────────────────
+    fetch('packages.json')
+      .then(r => r.json())
+      .then(data => { allFolders = data; renderView(); })
+      .catch(() => {
+        document.getElementById('fmBody').innerHTML =
+          '<div class="fm-empty">⚠ packages.json not found — run generate_repo.py and push.</div>';
+      });
+
+    // ── Navigation ────────────────────────────────────────────────────────────
+    function navigateTo(folder) {
+      currentPath = folder;
+      document.getElementById('searchInput').value = '';
+      renderView();
+    }
+
+    // ── Render ────────────────────────────────────────────────────────────────
+    function renderView() {
+      const query = document.getElementById('searchInput').value.trim().toLowerCase();
+      const body  = document.getElementById('fmBody');
+      const crumb = document.getElementById('breadcrumb');
+      let html = '';
+      let count = 0;
+
+      if (currentPath === null) {
+        // ROOT VIEW — show folders + search across all files
+        crumb.innerHTML = '<span style="color:var(--green)">pool/main</span>';
+
+        if (query) {
+          // Search mode: flatten all files
+          const matches = [];
+          for (const [folder, files] of Object.entries(allFolders)) {
+            files.forEach(f => {
+              if (f.name.toLowerCase().includes(query) || f.package.toLowerCase().includes(query)) {
+                matches.push({ ...f, folder });
+              }
+            });
+          }
+          count = matches.length;
+          if (!matches.length) {
+            html = '<div class="fm-empty">No packages match "' + query + '"</div>';
+          } else {
+            matches.forEach(f => { html += fileRow(f, f.folder); });
+          }
+        } else {
+          // Normal root: show alphabet folders
+          const folders = Object.keys(allFolders).sort();
+          count = folders.length;
+          if (!folders.length) {
+            html = '<div class="fm-empty">No packages yet — add .deb files to pool/main/ and run generate_repo.py</div>';
+          } else {
+            folders.forEach(folder => {
+              const files = allFolders[folder];
+              const n = files.length;
+              html += `
+                <div class="fm-row fm-folder" onclick="navigateTo('${folder}')">
+                  <div class="fm-icon">📁</div>
+                  <div class="fm-name folder-name">${folder}/</div>
+                  <div class="fm-version" style="color:var(--muted)">${n} pkg${n!==1?'s':''}</div>
+                  <div class="fm-size">—</div>
+                  <div class="fm-action"></div>
+                </div>`;
+            });
+          }
+        }
+
+      } else {
+        // FOLDER VIEW — show files inside the folder
+        crumb.innerHTML = `<a onclick="navigateTo(null)">pool/main</a> <span>/</span> <span style="color:var(--green)">${currentPath}/</span>`;
+
+        let files = (allFolders[currentPath] || []).filter(f =>
+          !query || f.name.toLowerCase().includes(query) || f.package.toLowerCase().includes(query)
+        );
+        count = files.length;
+
+        // Up row
+        html += `
+          <div class="fm-row fm-up" onclick="navigateTo(null)">
+            <div class="fm-icon">↩</div>
+            <div class="fm-name">.. (back)</div>
+            <div class="fm-version"></div>
+            <div class="fm-size"></div>
+            <div class="fm-action"></div>
+          </div>`;
+
+        if (!files.length) {
+          html += '<div class="fm-empty">No packages match your search.</div>';
+        } else {
+          files.forEach(f => { html += fileRow(f, currentPath); });
+        }
+      }
+
+      body.innerHTML = html;
+      document.getElementById('itemCount').textContent =
+        currentPath ? `${count} file${count!==1?'s':''}` : (query ? `${count} result${count!==1?'s':''}` : `${count} folder${count!==1?'s':''}`);
+    }
+
+    // ── File row helper ───────────────────────────────────────────────────────
+    function fileRow(f, folder) {
+      const dlUrl  = `${REPO_BASE}/${f.path}`;
+      const sizeKB = f.size ? (f.size / 1024).toFixed(0) + ' KB' : '—';
+      return `
+        <div class="fm-row" title="${f.desc || ''}">
+          <div class="fm-icon">📦</div>
+          <div class="fm-name">${f.name}</div>
+          <div class="fm-version">${f.version || '—'}</div>
+          <div class="fm-size">${sizeKB}</div>
+          <div class="fm-action">
+            <a class="fm-dl-btn" href="${dlUrl}" download title="Download ${f.name}">↓ .deb</a>
+          </div>
+        </div>`;
+    }
+
+    // ── Copy command ─────────────────────────────────────────────────────────
     function copyCmd(id, btn) {
-      const text = document.getElementById(id).textContent;
-      navigator.clipboard.writeText(text).then(() => {
-        btn.textContent = 'copied!';
-        btn.classList.add('copied');
+      navigator.clipboard.writeText(document.getElementById(id).textContent).then(() => {
+        btn.textContent = 'copied!'; btn.classList.add('copied');
         setTimeout(() => { btn.textContent = 'copy'; btn.classList.remove('copied'); }, 2000);
       });
     }
 
-    // Scroll reveal
-    const reveals = document.querySelectorAll('.reveal');
+    // ── Scroll reveal ─────────────────────────────────────────────────────────
     const obs = new IntersectionObserver(entries => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
-    reveals.forEach(el => obs.observe(el));
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
   </script>
 </body>
 </html>
+
