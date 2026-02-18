@@ -9,6 +9,7 @@ Homepage: https://abseil.io/
 Description: Abseil C++ Common Libraries
 Filename: pool/main/a/abseil-cpp/abseil-cpp_20250814.0_aarch64.deb
 Size: 1118396
+MD5Sum: 2c58e6094b80e2f76ac87f2eacda1c69
 SHA256: 36791f21669bd4dc4506f1a9e49532f5b77699deeda7bc69e06a1c0d2fc55b34
 
 Package: alsa-lib
@@ -21,6 +22,7 @@ Homepage: https://www.alsa-project.org
 Description: The Advanced Linux Sound Architecture (ALSA) - library
 Filename: pool/main/a/alsa-lib/alsa-lib_1.2.14-1_aarch64.deb
 Size: 444368
+MD5Sum: 5dd16fe8a6e26393da8d94da2bda3ac1
 SHA256: fbb61c6c7a5c5e44b4ac5d6586643c1041a7ae2694cccf1712007a3ba53e8f94
 
 Package: alsa-plugins
@@ -33,6 +35,7 @@ Homepage: https://www.alsa-project.org
 Description: The Advanced Linux Sound Architecture (ALSA) - plugins
 Filename: pool/main/a/alsa-plugins/alsa-plugins_1.2.12-1_aarch64.deb
 Size: 25620
+MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
 Package: apr
@@ -47,6 +50,7 @@ Homepage: https://apr.apache.org/
 Description: Apache Portable Runtime Library
 Filename: pool/main/a/apr/apr_1.7.6-2_aarch64.deb
 Size: 237780
+MD5Sum: 47661219af57e2931b3831388dfef6e2
 SHA256: 4bbebe290d02d0429ccd86666b6851651bb6d5fc6e7228a80b97c364dc08f6c7
 
 Package: apr-static
@@ -59,6 +63,7 @@ Homepage: https://apr.apache.org/
 Description: Static libraries for apr
 Filename: pool/main/a/apr-static/apr-static_1.7.6-2_aarch64.deb
 Size: 83860
+MD5Sum: 249f8b50469fb05b66e8ef3e43787324
 SHA256: d0b4cce0a2f9d51aa9d562bf8c51cc96179d066f8ab1cc6acbce82b34dabe7a8
 
 Package: apr-util
@@ -73,6 +78,7 @@ Homepage: https://apr.apache.org/
 Description: Apache Portable Runtime Utility Library
 Filename: pool/main/a/apr-util/apr-util_1.6.3-3_aarch64.deb
 Size: 111340
+MD5Sum: 19d8d15903d160dab979b74358e1bea1
 SHA256: 5e66e3c9c61e05ce585da5dca347751d565300598e438e3ea501c4c242aeb3c3
 
 Package: apr-util-static
@@ -85,6 +91,7 @@ Homepage: https://apr.apache.org/
 Description: Static libraries for apr-util
 Filename: pool/main/a/apr-util-static/apr-util-static_1.6.3-3_aarch64.deb
 Size: 68604
+MD5Sum: 7e5ecad92f4711d3fe783b40c994a7a9
 SHA256: 0ea5e24136784e1b80bfb651383937a3ab1d4ac9abb3e8b6ccc75f47aa9e2528
 
 Package: apt
@@ -93,16 +100,17 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 4008
 Depends: coreutils, dpkg, findutils, gpgv, grep, libandroid-glob, libbz2, libc++, libiconv, libgcrypt, libgnutls, liblz4, liblzma, sed, termux-keyring, termux-licenses, xxhash, zlib, zstd
+Suggests: gnupg
 Conflicts: apt-transport-https, libapt-pkg, unstable-repo, game-repo, science-repo
 Replaces: apt-transport-https, libapt-pkg, unstable-repo, game-repo, science-repo
 Provides: unstable-repo, game-repo, science-repo
 Homepage: https://packages.debian.org/apt
 Description: Front-end for the dpkg package manager
+Essential: yes
 Filename: pool/main/a/apt/apt_2.8.1-2_aarch64.deb
 Size: 1031364
+MD5Sum: e543ac83a50841c6ffe26197bcb90723
 SHA256: 3f8c589bf3d4fb7097c6c341d69da5135b5d0a677393a794b33ea1c0b2483072
-Essential: yes
-Suggests: gnupg
 
 Package: apt-ftparchive
 Version: 2.8.1-2
@@ -114,6 +122,7 @@ Homepage: https://packages.debian.org/apt
 Description: apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source
 Filename: pool/main/a/apt-ftparchive/apt-ftparchive_2.8.1-2_aarch64.deb
 Size: 95132
+MD5Sum: 2ef0d15458f08746300817cdd4283d2b
 SHA256: e50d191e2836cf7ee967df0dd54b9a3873aa87f76f00d838ab82566718e85445
 
 Package: apt-transport-tor
@@ -126,6 +135,7 @@ Homepage: https://packages.debian.org/apt
 Description: APT transport for anonymous package downloads via Tor
 Filename: pool/main/a/apt-transport-tor/apt-transport-tor_2.8.1-2_all.deb
 Size: 912
+MD5Sum: a3bfa9fb8eff0878991edd8d48ddfe5f
 SHA256: 2590834e3575285955ceef038715b35009f2db847d012c62dc161f1ebed2ae69
 
 Package: bash
@@ -134,15 +144,16 @@ Architecture: aarch64
 Maintainer: Joshua Kahn @TomJo2000
 Installed-Size: 4736
 Depends: libandroid-support, libiconv, readline (>= 8.3), termux-tools
+Recommends: command-not-found, bash-completion
 Breaks: bash-dev
 Replaces: bash-dev
 Homepage: https://www.gnu.org/software/bash/
 Description: A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)
+Essential: yes
 Filename: pool/main/b/bash/bash_5.3.3-1_aarch64.deb
 Size: 955968
+MD5Sum: 9c29ab99be17b9af5d3aa65f4994fd67
 SHA256: 12938727e593306211cdbc32da6455f77c2ec1cd80ef886dd56afad235688b67
-Essential: yes
-Recommends: command-not-found, bash-completion
 
 Package: blk-utils
 Version: 2.41.2
@@ -156,6 +167,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Utilities for handling block device attributes
 Filename: pool/main/b/blk-utils/blk-utils_2.41.2_aarch64.deb
 Size: 180472
+MD5Sum: 2579cdeb281baa59578ea13547316f4d
 SHA256: 96a484908185629b1c1448d85dcfb7c4d7ce382cb4d4a6453e3516d11d5d5ced
 
 Package: brotli
@@ -169,6 +181,7 @@ Homepage: https://github.com/google/brotli
 Description: lossless compression algorithm and format (command line utility)
 Filename: pool/main/b/brotli/brotli_1.2.0_aarch64.deb
 Size: 340508
+MD5Sum: 6439ab10ac1f4ce868353032095d78ce
 SHA256: 6990f38c9ce3dd795aa8e30d6bb0d307b780f3662e6877864fac77d09a29653c
 
 Package: bzip2
@@ -179,10 +192,11 @@ Installed-Size: 120
 Depends: libbz2 (= 1.0.8-8)
 Homepage: http://www.bzip.org/
 Description: Tools for working with bzip2 compression
+Essential: yes
 Filename: pool/main/b/bzip2/bzip2_1.0.8-8_aarch64.deb
 Size: 26140
+MD5Sum: 1dc80cd457b9de3c1503d9813bb441c6
 SHA256: 96c521c0236d9d3d6bb2a151f86f659c8e933edf09916787e1464f09bb88d830
-Essential: yes
 
 Package: ca-certificates
 Version: 1:2025.11.04
@@ -193,6 +207,7 @@ Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates
 Filename: pool/main/c/ca-certificates/ca-certificates_1:2025.11.04_all.deb
 Size: 127216
+MD5Sum: 4ea0e386048a3305cee60962166dd94e
 SHA256: 5ab7a46e613ea6558a78998841e14b83bd9e4805ed1ddb460570a4237311a6c6
 
 Package: ca-certificates-java
@@ -205,6 +220,7 @@ Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates (java keystore format)
 Filename: pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.11.04_all.deb
 Size: 116772
+MD5Sum: 7d5f15a8795af87fdd806944a2ffb4af
 SHA256: d203113709dcd84cfbdac7f9c45573cdc43d53e6da51b577fada9ed4de16ac57
 
 Package: check
@@ -217,6 +233,7 @@ Homepage: https://libcheck.github.io/check
 Description: A unit testing framework for C
 Filename: pool/main/c/check/check_0.15.2-3_aarch64.deb
 Size: 97432
+MD5Sum: 7e5885d591a6c4b218dafd4835f20777
 SHA256: 2cc4ef59543586b5e50e935d4c9efb44002e7890c85b8ab14b25d3f833492b07
 
 Package: check-static
@@ -229,6 +246,7 @@ Homepage: https://libcheck.github.io/check
 Description: Static libraries for check
 Filename: pool/main/c/check-static/check-static_0.15.2-3_aarch64.deb
 Size: 22384
+MD5Sum: 333b1a2fba1bc7a7537f6ab8b3f2f493
 SHA256: 267bf1afd7a78b9d3aff16b99bd2b5a0924c084f9b42e504e85946f61879daaf
 
 Package: command-not-found
@@ -241,6 +259,7 @@ Homepage: https://github.com/termux/command-not-found
 Description: Suggest installation of packages in interactive shell sessions
 Filename: pool/main/c/command-not-found/command-not-found_3.2-2_aarch64.deb
 Size: 16732
+MD5Sum: 6ae3d1dacc1d80f0fd49ca865f4c5ade
 SHA256: c70f88e24a9439bcb206a670bdd5e21f9d916658de66a5729291621eba7381ba
 
 Package: coreutils
@@ -253,10 +272,11 @@ Breaks: chroot, busybox (<< 1.30.1-4)
 Replaces: chroot, busybox (<< 1.30.1-4)
 Homepage: https://www.gnu.org/software/coreutils/
 Description: Basic file, shell and text manipulation utilities from the GNU project
+Essential: yes
 Filename: pool/main/c/coreutils/coreutils_9.8-1_aarch64.deb
 Size: 772864
+MD5Sum: 7c029520499d1a223b49478bb9d563ed
 SHA256: 2926370131c55e2467ca6ccdeb67ab4679858eec8dc6ef12ab8d1f4d3ec212f5
-Essential: yes
 
 Package: cups
 Version: 2.4.14
@@ -268,6 +288,7 @@ Homepage: https://www.cups.org/
 Description: Common UNIX Printing System
 Filename: pool/main/c/cups/cups_2.4.14_aarch64.deb
 Size: 5162968
+MD5Sum: 1720b43f9db0e0f0ea1faa910ed77b06
 SHA256: a0e22183d2e19003836760ec40bf4f6a7dc96b6f473b04570efbf64c5ed1a46e
 
 Package: cups-static
@@ -280,6 +301,7 @@ Homepage: https://www.cups.org/
 Description: Static libraries for cups
 Filename: pool/main/c/cups-static/cups-static_2.4.14_aarch64.deb
 Size: 726264
+MD5Sum: fc7c67eae6a5fef396d7e2c2dcc559dc
 SHA256: 04438357c97cd631904ddf500166e5c1c27e661ffb2b0245a39c1653e95ac572
 
 Package: curl
@@ -290,10 +312,11 @@ Installed-Size: 412
 Depends: libcurl (= 8.17.0)
 Homepage: https://curl.se/
 Description: Command line tool for transferring data with URL syntax
+Essential: yes
 Filename: pool/main/c/curl/curl_8.17.0_aarch64.deb
 Size: 235824
+MD5Sum: fcce3eb259e5bbb06ce9e19f9bf114a1
 SHA256: a95ebd033ce566c2b4391a54e3441ebb3e654775478fd111b4c929f3e2a77107
-Essential: yes
 
 Package: dash
 Version: 0.5.12-1
@@ -302,10 +325,11 @@ Maintainer: @termux
 Installed-Size: 184
 Homepage: http://gondor.apana.org.au/~herbert/dash/
 Description: Small POSIX-compliant implementation of /bin/sh
+Essential: yes
 Filename: pool/main/d/dash/dash_0.5.12-1_aarch64.deb
 Size: 65824
+MD5Sum: f4f392c612b6763328879e7a265b9843
 SHA256: e1b46866fa0de75b8b8b88330375831aecd7e7dca73c3ef6c2911078643c66bf
-Essential: yes
 
 Package: db
 Version: 18.1.40-5
@@ -317,6 +341,7 @@ Homepage: https://www.oracle.com/database/berkeley-db
 Description: The Berkeley DB embedded database system
 Filename: pool/main/d/db/db_18.1.40-5_aarch64.deb
 Size: 40748
+MD5Sum: 6f556d66b03d0fc70553b42252a5d0ad
 SHA256: fd4656829c5c4dd76e57545c43e83cdafa8eafed9f363eb1446f78abb1897840
 
 Package: dbus
@@ -331,6 +356,7 @@ Homepage: https://dbus.freedesktop.org
 Description: Freedesktop.org message bus system
 Filename: pool/main/d/dbus/dbus_1.16.2-2_aarch64.deb
 Size: 429324
+MD5Sum: 0440eb64d96869f89f32fd4a90f65280
 SHA256: 3b3736d0c0db1e7562099349f9148996ae3b964f04ed58d22078190f3de68a92
 
 Package: debianutils
@@ -342,6 +368,7 @@ Homepage: https://packages.debian.org/debianutils
 Description: Small utilities which are used primarily by the installation scripts of Debian packages
 Filename: pool/main/d/debianutils/debianutils_5.23.2-1_aarch64.deb
 Size: 16776
+MD5Sum: df8caa445f815a4e6f3e659c13c2c4b0
 SHA256: 5138c53425930ca8af08840c91ef6070b674ceaab2dfe2c420aca60cfd287ee2
 
 Package: dialog
@@ -354,6 +381,7 @@ Homepage: https://invisible-island.net/dialog/
 Description: Application used in shell scripts which displays text user interface widgets
 Filename: pool/main/d/dialog/dialog_1.3-20240307-1_aarch64.deb
 Size: 100140
+MD5Sum: 6cdd955f0d3ca78f2527d7204d55042c
 SHA256: 66836ff8b0b59155826232e45cc1fb57aed64d1d097f61487a624cd00f145ea2
 
 Package: dialog-static
@@ -366,6 +394,7 @@ Homepage: https://invisible-island.net/dialog/
 Description: Static libraries for dialog
 Filename: pool/main/d/dialog-static/dialog-static_1.3-20240307-1_aarch64.deb
 Size: 93348
+MD5Sum: aee85dfd37224269fa12702a4cce868d
 SHA256: 519d70ed8147bdd797e3ea08858bae1c5838fc6db9e2533de36da8fccd0744c5
 
 Package: diffutils
@@ -376,10 +405,11 @@ Installed-Size: 668
 Depends: libiconv
 Homepage: https://www.gnu.org/software/diffutils/
 Description: Programs (cmp, diff, diff3 and sdiff) related to finding differences between files
+Essential: yes
 Filename: pool/main/d/diffutils/diffutils_3.12-2_aarch64.deb
 Size: 162672
+MD5Sum: cd6f4c91f5e8e9eb29074d7b03c8d8f7
 SHA256: 4fb0add42303e8990380bd949623d79c5640b5f013c085bf494d077e5b4aa060
-Essential: yes
 
 Package: docbook-xml
 Version: 5.1-1
@@ -392,6 +422,7 @@ Homepage: https://www.oasis-open.org/docbook/
 Description: A widely used XML scheme for writing documentation and help
 Filename: pool/main/d/docbook-xml/docbook-xml_5.1-1_all.deb
 Size: 78232
+MD5Sum: 28879dc24ffb981071932d51a54f9e91
 SHA256: 1107406a18679ec0fb5a3b26f5d9a255bf138f62cd05a1afbb598df4cc4013f0
 
 Package: docbook-xsl
@@ -404,6 +435,7 @@ Homepage: https://docbook.org/
 Description: XML stylesheets for Docbook-xml transformations
 Filename: pool/main/d/docbook-xsl/docbook-xsl_1.79.2-4_all.deb
 Size: 1236108
+MD5Sum: a4038b67b7ccae0e164795850941887f
 SHA256: da6d9a8fba2d48c6bea71206b35c01df0e81d34590b1a087cc54e3225ca347a6
 
 Package: dos2unix
@@ -416,6 +448,7 @@ Homepage: https://waterlan.home.xs4all.nl/dos2unix.html
 Description: Converts between DOS and Unix text files
 Filename: pool/main/d/dos2unix/dos2unix_7.5.2-1_aarch64.deb
 Size: 64432
+MD5Sum: 13b5b622156e86769bd8106e62edca6d
 SHA256: 0db8584cb1a477ca4ca1bfdecef1d4722e5f44f2d09f7696205670ec6f33c664
 
 Package: dpkg
@@ -428,10 +461,11 @@ Breaks: dpkg-dev
 Replaces: dpkg-dev
 Homepage: https://packages.debian.org/dpkg
 Description: Debian package management system
+Essential: yes
 Filename: pool/main/d/dpkg/dpkg_1.22.6-5_aarch64.deb
 Size: 308324
+MD5Sum: f9b902417881f8237c355dffca9fa86e
 SHA256: 2e675a7a7584d582f4f7994f0f1e2483d9b06a3f4f17f2035d5f5064248988ba
-Essential: yes
 
 Package: dpkg-perl
 Version: 1.22.6-5
@@ -443,6 +477,7 @@ Homepage: https://packages.debian.org/dpkg
 Description: Perl modules for dpkg
 Filename: pool/main/d/dpkg-perl/dpkg-perl_1.22.6-5_all.deb
 Size: 126244
+MD5Sum: 363727be091fef36270e65391e10450d
 SHA256: cc577de980dbb5fbb1a86b0556cd7d8892fc39e6be8b2c9a19f0877747eddf75
 
 Package: dpkg-scanpackages
@@ -455,6 +490,7 @@ Homepage: https://packages.debian.org/dpkg
 Description: Creates Packages index files
 Filename: pool/main/d/dpkg-scanpackages/dpkg-scanpackages_1.22.6-5_all.deb
 Size: 6496
+MD5Sum: c34f4bd336ee68d790e7159f0e0828dc
 SHA256: fcb97f8b2254d3f005d8e203895a8997434b637cbce5a0d696cba51b6a1f17e6
 
 Package: ed
@@ -466,6 +502,7 @@ Homepage: https://www.gnu.org/software/ed/
 Description: Classic UNIX line editor
 Filename: pool/main/e/ed/ed_1.22.2-1_aarch64.deb
 Size: 42736
+MD5Sum: 1d935b8ae5f5d7c1456297ba134a5975
 SHA256: ec5ebeb16d595583db876c5be7b9b5654590c74ab545d8e2082ad1cab316a76f
 
 Package: fdisk
@@ -478,6 +515,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Utilities to manipulate disk partition tables
 Filename: pool/main/f/fdisk/fdisk_2.41.2_aarch64.deb
 Size: 115832
+MD5Sum: ce1af58743fce4a543ccd3f56e6f557c
 SHA256: 26437f38dfec461bf7d62c93917f267421e946a250936a8ff31f7765f12b3e70
 
 Package: findutils
@@ -488,10 +526,11 @@ Installed-Size: 884
 Depends: libandroid-support
 Homepage: https://www.gnu.org/software/findutils/
 Description: Utilities to find files meeting specified criteria and perform various actions on the files which are found
+Essential: yes
 Filename: pool/main/f/findutils/findutils_4.10.0-1_aarch64.deb
 Size: 251288
+MD5Sum: 0bb689b50ff8639945c515d398a49ab0
 SHA256: 62b4cc903dabdb0dd30497e6b80b195f10cf80649a814dcb21feac68bd4916a3
-Essential: yes
 
 Package: flac
 Version: 1.5.0-1
@@ -503,6 +542,7 @@ Homepage: https://xiph.org/flac/
 Description: FLAC (Free Lossless Audio Codec) command-line tool
 Filename: pool/main/f/flac/flac_1.5.0-1_aarch64.deb
 Size: 104512
+MD5Sum: 142463ea873c2e005c5f0323d5e23b43
 SHA256: ca7f4b0515948140b333d32a935bcd1ed88ae19c9d9e72d4de28a17f92a9a51f
 
 Package: fontconfig
@@ -517,6 +557,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Library for configuring and customizing font access
 Filename: pool/main/f/fontconfig/fontconfig_2.17.1-1_aarch64.deb
 Size: 123088
+MD5Sum: b6276d9fd3340174c5dd3a904204867b
 SHA256: 3feb9cfce7f8649e05d523e27051c2e656e009a05dc4e948b0de68a923dc370c
 
 Package: fontconfig-static
@@ -529,6 +570,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Static libraries for fontconfig
 Filename: pool/main/f/fontconfig-static/fontconfig-static_2.17.1-1_aarch64.deb
 Size: 117884
+MD5Sum: d2e2687c8bfa286a7ed8193098d4feff
 SHA256: f360b6029b5f52c0506ee6c25200696f7e3e4dafd6e00903ce0d34679d2a352d
 
 Package: fontconfig-utils
@@ -541,6 +583,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Fontconfig binaries
 Filename: pool/main/f/fontconfig-utils/fontconfig-utils_2.17.1-1_aarch64.deb
 Size: 14480
+MD5Sum: ffba8bea2ac166632017952de435ef04
 SHA256: 8f643c640613f1ef9e8d937db60faefc011b36023c8369c6a3f2551ff4c1fc73
 
 Package: freetype
@@ -555,6 +598,7 @@ Homepage: https://www.freetype.org
 Description: Software font engine capable of producing high-quality output
 Filename: pool/main/f/freetype/freetype_2.14.1_aarch64.deb
 Size: 412236
+MD5Sum: 6929550385afa09244853ec883f4572c
 SHA256: f06e422bad6f8adaf7c7727718750bb4638ac1225ad6f53c1a27cadf23b996ed
 
 Package: freetype-static
@@ -567,6 +611,7 @@ Homepage: https://www.freetype.org
 Description: Static libraries for freetype
 Filename: pool/main/f/freetype-static/freetype-static_2.14.1_aarch64.deb
 Size: 302336
+MD5Sum: 4b2afb7caf9fc97039e5b6afcd651afb
 SHA256: f9f379b84f42671764dec841dc17025e517cd2edd1e18054c712994c2772fe3d
 
 Package: gawk
@@ -579,10 +624,11 @@ Breaks: gawk-dev
 Replaces: gawk-dev
 Homepage: https://www.gnu.org/software/gawk/
 Description: Programming language designed for text processing
+Essential: yes
 Filename: pool/main/g/gawk/gawk_5.3.1-2_aarch64.deb
 Size: 782072
+MD5Sum: 7f5a9fbde267769b5366428d8b3d4660
 SHA256: 775c7a33fbbe69cc886218d05a8dae1ac2929e76143c4af389dcd655304fbae7
-Essential: yes
 
 Package: gawk-static
 Version: 5.3.1-2
@@ -594,6 +640,7 @@ Homepage: https://www.gnu.org/software/gawk/
 Description: Static libraries for gawk
 Filename: pool/main/g/gawk-static/gawk-static_5.3.1-2_aarch64.deb
 Size: 24936
+MD5Sum: 16b36f2a56c56a5365ea4b513fb85a71
 SHA256: 8ac602edd51a48cf98b5314d2145674e8e6cfb014160a8c4fb1d70441e5d75b2
 
 Package: gdbm
@@ -608,6 +655,7 @@ Homepage: https://www.gnu.org.ua/software/gdbm/
 Description: Library of database functions that use extensible hashing
 Filename: pool/main/g/gdbm/gdbm_1.26-1_aarch64.deb
 Size: 150280
+MD5Sum: faf8201e1d289e2e688da29f1e763ab2
 SHA256: 9b3a6be3f289990bbc06322a8dfb8ec200773015de553ef261a48e9bbeb7f4fe
 
 Package: gdbm-static
@@ -620,6 +668,7 @@ Homepage: https://www.gnu.org.ua/software/gdbm/
 Description: Static libraries for gdbm
 Filename: pool/main/g/gdbm-static/gdbm-static_1.26-1_aarch64.deb
 Size: 32196
+MD5Sum: a23eb72de4553acf5c49370a29218f45
 SHA256: 78ba66c7a7d63052dc37eab1476ca969bdd8c2f459897dc07e3592466b09801a
 
 Package: giflib
@@ -633,6 +682,7 @@ Homepage: https://giflib.sourceforge.net/
 Description: A library for reading and writing gif images
 Filename: pool/main/g/giflib/giflib_5.2.2-1_aarch64.deb
 Size: 18244
+MD5Sum: 78c395bb22fdddfb5e9274d6d8cf37c7
 SHA256: a40d51ddec4c14fdbd157b47993f17c92d0899ee0499bb400b2813d87b41f3df
 
 Package: giflib-static
@@ -645,6 +695,7 @@ Homepage: https://giflib.sourceforge.net/
 Description: Static libraries for giflib
 Filename: pool/main/g/giflib-static/giflib-static_5.2.2-1_aarch64.deb
 Size: 15020
+MD5Sum: 6f0c2b048e0b208e11fec24d5f813420
 SHA256: d1415d1851af85cb55e0de7fe985e0268a315d386139f287c76ea3d3dff6ed9c
 
 Package: giflib-utils
@@ -658,6 +709,7 @@ Homepage: https://giflib.sourceforge.net/
 Description: A set of utilities that comes with giflib package
 Filename: pool/main/g/giflib-utils/giflib-utils_5.2.2-1_aarch64.deb
 Size: 50612
+MD5Sum: 8f61be9caf2b46e27ce30e59cd2f5350
 SHA256: 75b2e0a650a2a64fff377ad027a69599e9387821c546f811a53c33f39a73bf18
 
 Package: git
@@ -666,13 +718,14 @@ Architecture: aarch64
 Maintainer: Joshua Kahn @TomJo2000
 Installed-Size: 27092
 Depends: libcurl, libexpat, libiconv, less, openssl, pcre2, zlib
+Recommends: openssh
+Suggests: perl
 Homepage: https://git-scm.com/
 Description: Fast, scalable, distributed revision control system
 Filename: pool/main/g/git/git_2.51.2_aarch64.deb
 Size: 4576184
+MD5Sum: b044a16179b18355169b76b15dcec095
 SHA256: f319d8de7173d2540a0fdfff5a46bf8cf9b4a8e896b0245a57c4007d9c097d02
-Recommends: openssh
-Suggests: perl
 
 Package: git-gitk
 Version: 2.51.2
@@ -684,6 +737,7 @@ Homepage: https://git-scm.com/
 Description: Git repository browser
 Filename: pool/main/g/git-gitk/git-gitk_2.51.2_aarch64.deb
 Size: 143040
+MD5Sum: 65664f49e27a1d88748e7668b40fbb84
 SHA256: e91237f39a666e905ff637f64fb434192f888e3c6166791f81cc79aee127e0f2
 
 Package: git-gui
@@ -696,6 +750,7 @@ Homepage: https://git-scm.com/
 Description: A graphical interface to Git
 Filename: pool/main/g/git-gui/git-gui_2.51.2_aarch64.deb
 Size: 214624
+MD5Sum: 47cac661888abfd3366e3f4cb71855b5
 SHA256: 0b0c1286359a18b51ad8545a95109a5c2880d3131903175d6d3fcf01129200b2
 
 Package: git-svn
@@ -708,6 +763,7 @@ Homepage: https://git-scm.com/
 Description: Convert between Git and Subversion repositories
 Filename: pool/main/g/git-svn/git-svn_2.51.2_all.deb
 Size: 75512
+MD5Sum: 7376e683ff2520275f3bb1f959205989
 SHA256: 6938c57f145461a87cf7cd99fb97f9f512a90596e54b6b8a6816453adfa45c5c
 
 Package: glib
@@ -722,6 +778,7 @@ Homepage: https://developer.gnome.org/glib/
 Description: Library providing core building blocks for libraries and applications written in C
 Filename: pool/main/g/glib/glib_2.86.1_aarch64.deb
 Size: 2550260
+MD5Sum: 75574e0a706b3c222e9eefb2b65cd316
 SHA256: fabc424aa533fffa9a4038d3b8ca0c8d82b7dd6c8d7b2342c1a6858fe347ddbb
 
 Package: glib-cross
@@ -734,6 +791,7 @@ Homepage: https://developer.gnome.org/glib/
 Description: glib for host (NOT for Termux)
 Filename: pool/main/g/glib-cross/glib-cross_2.86.1_all.deb
 Size: 12132344
+MD5Sum: 04ba5f87d281903d27402ade04c4d554
 SHA256: cba0a5aba43b4975851bcb4ad3cf47b1786b6768f98e73d82c4aa74bba278013
 
 Package: gnupg
@@ -742,14 +800,15 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 5512
 Depends: libassuan, libbz2, libgcrypt, libgnutls, libgpg-error, libksba, libnpth, libsqlite, readline, pinentry, resolv-conf, zlib
+Suggests: scdaemon
 Conflicts: gnupg2 (<< 2.2.9-1), dirmngr (<< 2.2.17-1)
 Replaces: gnupg2 (<< 2.2.9-1), dirmngr (<< 2.2.17-1)
 Homepage: https://www.gnupg.org/
 Description: Implementation of the OpenPGP standard for encrypting and signing data and communication
 Filename: pool/main/g/gnupg/gnupg_2.5.11_aarch64.deb
 Size: 1400960
+MD5Sum: bf07448e761eeb44f33cedaf11020af5
 SHA256: 3507b265d3a8e4fa4c0e35d574cb53b76597789aa9a5c68b6f87f130f9bf95fc
-Suggests: scdaemon
 
 Package: gnutls
 Version: 3.8.10
@@ -761,6 +820,7 @@ Homepage: https://www.gnutls.org/
 Description: Commandline utilities for interfacing with the gnutls library
 Filename: pool/main/g/gnutls/gnutls_3.8.10_aarch64.deb
 Size: 175560
+MD5Sum: 5b8dc820623891da2b143abf9b739ec3
 SHA256: 11361fb36ce629a0443545642e01774a1854bbbebaa33ad1e2a7b74315ab931d
 
 Package: gpgv
@@ -773,6 +833,7 @@ Homepage: https://www.gnupg.org/
 Description: GNU privacy guard - signature verification tool
 Filename: pool/main/g/gpgv/gpgv_2.5.11_aarch64.deb
 Size: 187228
+MD5Sum: b2836faa340bae72c056f3d2a8309414
 SHA256: 27ccdab93f2f5d809c06d2c76ed26068979f05f03a05807904cc72abd54fbe50
 
 Package: grep
@@ -783,10 +844,11 @@ Installed-Size: 456
 Depends: libandroid-support, pcre2
 Homepage: https://www.gnu.org/software/grep/
 Description: Command which searches one or more input files for lines containing a match to a specified pattern
+Essential: yes
 Filename: pool/main/g/grep/grep_3.12-2_aarch64.deb
 Size: 128052
+MD5Sum: c1c24c5b0324d19d1ce409b3feb53673
 SHA256: 4f34f7694ae5f60586955e608dac3de7e3ec24a84491f56ba657494bcfb63221
-Essential: yes
 
 Package: gzip
 Version: 1.14-1
@@ -795,10 +857,11 @@ Maintainer: @termux
 Installed-Size: 324
 Homepage: https://www.gnu.org/software/gzip/
 Description: Standard GNU file compression utilities
+Essential: yes
 Filename: pool/main/g/gzip/gzip_1.14-1_aarch64.deb
 Size: 87564
+MD5Sum: 85a8d8b7441f6751ce955029586c0c99
 SHA256: 152a90f85cdf0744e1c8eb914d767b05ba415a9b0a894d6572c5811adc0e6ec5
-Essential: yes
 
 Package: iconv
 Version: 1.18-1
@@ -810,6 +873,7 @@ Homepage: https://www.gnu.org/software/libiconv/
 Description: Utility converting between different character encodings
 Filename: pool/main/i/iconv/iconv_1.18-1_aarch64.deb
 Size: 10032
+MD5Sum: 8a84641b9b14f93f6b528e3e0d482a55
 SHA256: 1411bd8a7cc85c835cb90798dee1e8502c476fe5e8d9fdf601e5507f2a2af108
 
 Package: icu-devtools
@@ -822,6 +886,7 @@ Homepage: http://site.icu-project.org/home
 Description: Development utilities for International Components for Unicode
 Filename: pool/main/i/icu-devtools/icu-devtools_77.1-2_aarch64.deb
 Size: 213320
+MD5Sum: 32a800c544de96266300458d4933d325
 SHA256: 9d968c5cc2af0822a8d21cd35806e4bb8c21e9af02bc7fde7af0e2e5e50cc287
 
 Package: inetutils
@@ -830,12 +895,13 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 1040
 Depends: readline
+Suggests: whois
 Homepage: https://www.gnu.org/software/inetutils/
 Description: Collection of common network programs
 Filename: pool/main/i/inetutils/inetutils_2.6-1_aarch64.deb
 Size: 223360
+MD5Sum: 85a11a678d5b343b8dbc3ec14a0bbfab
 SHA256: b068ff42e1149e93959ab7c3472af30992c68f53969d1b9c5c0750a66586c774
-Suggests: whois
 
 Package: lame
 Version: 3.100-7
@@ -847,6 +913,7 @@ Homepage: https://lame.sourceforge.io/
 Description: High quality MPEG Audio Layer III (MP3) encoder - frontend
 Filename: pool/main/l/lame/lame_3.100-7_aarch64.deb
 Size: 192628
+MD5Sum: e0f02b844f9aff367e1ba7ec89dc07fb
 SHA256: 9869edef79924fe332b96d8aa0dfbf5318470500c87360ce3278104e3c149620
 
 Package: less
@@ -858,10 +925,11 @@ Depends: ncurses, pcre2
 Replaces: lazyread
 Homepage: https://www.greenwoodsoftware.com/less/
 Description: Terminal pager program used to view the contents of a text file one screen at a time
+Essential: yes
 Filename: pool/main/l/less/less_685_aarch64.deb
 Size: 131476
+MD5Sum: bf9ad56cc3555c7ff78a4a54d1a6d21c
 SHA256: 0ef8d3aa51a09571247a7cab2f56ee13488058fcbc1966cc290ec05a4a933372
-Essential: yes
 
 Package: libandroid-execinfo
 Version: 0.1-3
@@ -874,6 +942,7 @@ Homepage: https://man7.org/linux/man-pages/man3/backtrace.3.html
 Description: Shared library for the backtrace system function
 Filename: pool/main/l/libandroid-execinfo/libandroid-execinfo_0.1-3_aarch64.deb
 Size: 14980
+MD5Sum: 7f47170caec80dbf346a83081c87c13c
 SHA256: 0ef3084cf2c73f8faae36f89435302b49f8f94a6facfb6013271d48606e5e6ed
 
 Package: libandroid-execinfo-static
@@ -886,6 +955,7 @@ Homepage: https://man7.org/linux/man-pages/man3/backtrace.3.html
 Description: Static libraries for libandroid-execinfo
 Filename: pool/main/l/libandroid-execinfo-static/libandroid-execinfo-static_0.1-3_aarch64.deb
 Size: 2404
+MD5Sum: 77e2d242a33b1e66069de7a2b3a1a8a9
 SHA256: 09f7d91f09f3f581eddfa3e72086ee0e8220d28cf8f97b7a78de7392bd1994a1
 
 Package: libandroid-glob
@@ -899,6 +969,7 @@ Homepage: https://man7.org/linux/man-pages/man3/glob.3.html
 Description: Shared library for the glob(3) system function
 Filename: pool/main/l/libandroid-glob/libandroid-glob_0.6-3_aarch64.deb
 Size: 7036
+MD5Sum: 809a2c6ed7b23421fbcae5624e80ed42
 SHA256: 2ea32135f17018e8ddc44ee06b2f84d9cedfd3ed12370c57b23ef646dc20dd3e
 
 Package: libandroid-glob-static
@@ -911,6 +982,7 @@ Homepage: https://man7.org/linux/man-pages/man3/glob.3.html
 Description: Static libraries for libandroid-glob
 Filename: pool/main/l/libandroid-glob-static/libandroid-glob-static_0.6-3_aarch64.deb
 Size: 4696
+MD5Sum: bcdbddbec3d939adcd62de702b9153af
 SHA256: 5e5ed44a8dab6ffb273b09e460b1abddd667a0be4317b42754b6fb26dd4f2cf2
 
 Package: libandroid-posix-semaphore
@@ -922,6 +994,7 @@ Homepage: https://man7.org/linux/man-pages/man7/sem_overview.7.html
 Description: Shared library for the posix semaphore system function
 Filename: pool/main/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_aarch64.deb
 Size: 4076
+MD5Sum: 7b0c75d8acce8866f369309f8f5a92bc
 SHA256: e2722fd88802a71d0c07584bddc55a4a01ed5c857ff2c491cda3ee4c90e3d202
 
 Package: libandroid-posix-semaphore-static
@@ -934,6 +1007,7 @@ Homepage: https://man7.org/linux/man-pages/man7/sem_overview.7.html
 Description: Static libraries for libandroid-posix-semaphore
 Filename: pool/main/l/libandroid-posix-semaphore-static/libandroid-posix-semaphore-static_0.1-4_aarch64.deb
 Size: 2860
+MD5Sum: 988a059fe120e7a9e5a1bf6905652e7a
 SHA256: 0d1b985d98206050c00d357f9a3191f6bea72fa3dce6b7eec060ce3840530161
 
 Package: libandroid-selinux
@@ -946,6 +1020,7 @@ Homepage: https://selinuxproject.org
 Description: Android fork of libselinux, an SELinux userland library
 Filename: pool/main/l/libandroid-selinux/libandroid-selinux_14.0.0.11-1_aarch64.deb
 Size: 59824
+MD5Sum: 68663d05f8c392c077c175da6449196d
 SHA256: 26b32ede1d8377834d76d46fb860487f79df5d62cb2d35083d757aa2fb6c2e0d
 
 Package: libandroid-shmem
@@ -959,6 +1034,7 @@ Homepage: https://github.com/termux/libandroid-shmem
 Description: System V shared memory emulation on Android using ashmem
 Filename: pool/main/l/libandroid-shmem/libandroid-shmem_0.5-1_aarch64.deb
 Size: 6876
+MD5Sum: 8cb9d246e4d07e7335123ed810fe81f5
 SHA256: 82b006524dfa447e32834692f69db437c38a392d0245ddafec21b16dbce50adf
 
 Package: libandroid-shmem-static
@@ -971,6 +1047,7 @@ Homepage: https://github.com/termux/libandroid-shmem
 Description: Static libraries for libandroid-shmem
 Filename: pool/main/l/libandroid-shmem-static/libandroid-shmem-static_0.5-1_aarch64.deb
 Size: 5696
+MD5Sum: e73a44dc4ecf3c524ed27c51da58e876
 SHA256: c3dfdce8fa18c814ec579adf116352133460e91748a2395aad1bd06eb0e9c392
 
 Package: libandroid-spawn
@@ -983,6 +1060,7 @@ Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
 Description: Shared library for the posix_spawn system function
 Filename: pool/main/l/libandroid-spawn/libandroid-spawn_0.3_aarch64.deb
 Size: 15852
+MD5Sum: fec7787d7a6b972031d4847172fcb8eb
 SHA256: ba961575e270a4501fe7247464a8465875fc58ae4b1237a8abce79c25be89c0d
 
 Package: libandroid-spawn-static
@@ -995,6 +1073,7 @@ Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
 Description: Static libraries for libandroid-spawn
 Filename: pool/main/l/libandroid-spawn-static/libandroid-spawn-static_0.3_aarch64.deb
 Size: 4072
+MD5Sum: ad279c3be149971cf2c21489bfb5b7d9
 SHA256: 135cb2f86872a87e651b46b29ba2ef99c0d13fb0497bb85918d2bdd1f8aa42d7
 
 Package: libandroid-support
@@ -1004,10 +1083,11 @@ Maintainer: @termux
 Installed-Size: 76
 Homepage: https://github.com/termux/libandroid-support
 Description: Library extending the Android C library (Bionic) for additional multibyte, locale and math support
+Essential: yes
 Filename: pool/main/l/libandroid-support/libandroid-support_29-1_aarch64.deb
 Size: 10880
+MD5Sum: 8f08db7d5c9379a35b223bdd1d22131a
 SHA256: 0e1831cea9c41667dcdbdaeaede8bae197a28c94a83832d98e0df399ff5ea484
-Essential: yes
 
 Package: libandroid-support-static
 Version: 29-1
@@ -1019,6 +1099,7 @@ Homepage: https://github.com/termux/libandroid-support
 Description: Static libraries for libandroid-support
 Filename: pool/main/l/libandroid-support-static/libandroid-support-static_29-1_aarch64.deb
 Size: 8632
+MD5Sum: 559b73d0cb6e52685d80e3cbaec0b391
 SHA256: 3bba1c49cb45adf9e6bd18e6f743e6ca9baf02e64bb5919a82affeb7514c3d76
 
 Package: libandroid-sysv-semaphore
@@ -1030,6 +1111,7 @@ Homepage: https://android.googlesource.com/platform/bionic/+/refs/heads/master/l
 Description: A shared library providing System V semaphores
 Filename: pool/main/l/libandroid-sysv-semaphore/libandroid-sysv-semaphore_0.1-1_aarch64.deb
 Size: 3564
+MD5Sum: 86c7c1ae7a97407233a027512243f3b1
 SHA256: 7b5791f7ae289a1e882283f7ebb6db6bd00ef204693392c7dab6600500b235c3
 
 Package: libandroid-sysv-semaphore-static
@@ -1042,6 +1124,7 @@ Homepage: https://android.googlesource.com/platform/bionic/+/refs/heads/master/l
 Description: Static libraries for libandroid-sysv-semaphore
 Filename: pool/main/l/libandroid-sysv-semaphore-static/libandroid-sysv-semaphore-static_0.1-1_aarch64.deb
 Size: 1700
+MD5Sum: e44b66c1f3b6624ffb5f185fb17a1d54
 SHA256: da79b810f7dd4c5626f7bb5c650aef0bdbfc24bfc569714f85a52d28d6882818
 
 Package: libandroid-utimes
@@ -1053,6 +1136,7 @@ Homepage: https://github.com/termux/libandroid-utimes
 Description: futimes, futimesat and lutimes from bionic
 Filename: pool/main/l/libandroid-utimes/libandroid-utimes_0.4_aarch64.deb
 Size: 3088
+MD5Sum: 593533090487a1780158b454f5946ab6
 SHA256: 1a22cfd73682e7d8f40dfe2fe2c30a19b165eb44d522e4f626b5aa6623e38df3
 
 Package: libandroid-utimes-static
@@ -1065,6 +1149,7 @@ Homepage: https://github.com/termux/libandroid-utimes
 Description: Static libraries for libandroid-utimes
 Filename: pool/main/l/libandroid-utimes-static/libandroid-utimes-static_0.4_aarch64.deb
 Size: 1688
+MD5Sum: dd2d3ec24eda48d40b91ea8c9eb07720
 SHA256: 2372ddd69d1c49290832852d5de6770335aed3b7a1ae491307e93c251d3c585a
 
 Package: libassuan
@@ -1079,6 +1164,7 @@ Homepage: https://www.gnupg.org/related_software/libassuan/
 Description: Library implementing the Assuan IPC protocol used between most newer GnuPG components
 Filename: pool/main/l/libassuan/libassuan_3.0.2-1_aarch64.deb
 Size: 73844
+MD5Sum: 4d53897b17e3765a31a9a85201bd0433
 SHA256: 165f3a548b04516e6fddfed924bd47248ec25c059e88a7cedc178f67ecdabb55
 
 Package: libassuan-static
@@ -1091,6 +1177,7 @@ Homepage: https://www.gnupg.org/related_software/libassuan/
 Description: Static libraries for libassuan
 Filename: pool/main/l/libassuan-static/libassuan-static_3.0.2-1_aarch64.deb
 Size: 33692
+MD5Sum: 7c779ad542940f3d1b5f809fd5ae2718
 SHA256: 630babfd3b35a31262892603512f0ce08e4191d285f17d07e90ac75e55336ee5
 
 Package: libblkid
@@ -1104,6 +1191,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Block device identification library
 Filename: pool/main/l/libblkid/libblkid_2.41.2_aarch64.deb
 Size: 125324
+MD5Sum: 0abd15bcc585357fce6d13ffe8f37381
 SHA256: c033eadbc843ba52df6ca83dadbb1dbf3b51e05acd93b3c5d092820e711cad63
 
 Package: libbz2
@@ -1115,10 +1203,11 @@ Breaks: libbz2-dev
 Replaces: libbz2-dev
 Homepage: http://www.bzip.org/
 Description: BZ2 format compression library
+Essential: yes
 Filename: pool/main/l/libbz2/libbz2_1.0.8-8_aarch64.deb
 Size: 26116
+MD5Sum: 265f2a67a91ebbd33aac5f1f32ea18ea
 SHA256: e12a001c2fe1bb8899a5baf94cec92aa59bfa7d07162b67ba7669b43e05da29e
-Essential: yes
 
 Package: libc++
 Version: 28c-1
@@ -1127,10 +1216,11 @@ Maintainer: @termux
 Installed-Size: 1268
 Homepage: https://libcxx.llvm.org/
 Description: C++ Standard Library
+Essential: yes
 Filename: pool/main/l/libc++/libc++_28c-1_aarch64.deb
 Size: 291724
+MD5Sum: 7f3dd852ca83bb979725f69d1e9c6670
 SHA256: ddf50e417aaf29472ce959ec40e0dc9d139a09b75f8d009cd7e9359881b02dfb
-Essential: yes
 
 Package: libcap-ng
 Version: 2:0.8.5-1
@@ -1141,6 +1231,7 @@ Homepage: https://people.redhat.com/sgrubb/libcap-ng/
 Description: Library making programming with POSIX capabilities easier than traditional libcap
 Filename: pool/main/l/libcap-ng/libcap-ng_2:0.8.5-1_aarch64.deb
 Size: 35684
+MD5Sum: 38fccaa62cec6dd366903de4a117cb59
 SHA256: a790f89a0b2c721e765b8e6a7583fffcdd3b7d0c2477eebd0bfc0c12e71ca490
 
 Package: libcap-ng-static
@@ -1153,6 +1244,7 @@ Homepage: https://people.redhat.com/sgrubb/libcap-ng/
 Description: Static libraries for libcap-ng
 Filename: pool/main/l/libcap-ng-static/libcap-ng-static_2:0.8.5-1_aarch64.deb
 Size: 8904
+MD5Sum: 6563526c6801ae3963531db6cbfb9a0a
 SHA256: 7728892ac511baaa95f3bfeda1083539cab228ddf23254d9a80d354e98f8f77c
 
 Package: libcrypt
@@ -1167,6 +1259,7 @@ Homepage: http://michael.dipperstein.com/crypt/
 Description: A crypt(3) implementation
 Filename: pool/main/l/libcrypt/libcrypt_0.2-6_aarch64.deb
 Size: 8876
+MD5Sum: 80ec43ddfd66e552ae75cef9a466b153
 SHA256: 2403d33a6072b1b00ce673555b17c80b98ccf7dc21ef0e053b44937f19808582
 
 Package: libcurl
@@ -1180,10 +1273,11 @@ Breaks: libcurl-dev
 Replaces: libcurl-dev
 Homepage: https://curl.se/
 Description: Easy-to-use client-side URL transfer library
+Essential: yes
 Filename: pool/main/l/libcurl/libcurl_8.17.0_aarch64.deb
 Size: 989624
+MD5Sum: bde6b056c9a9cbc7c56024e022683171
 SHA256: 9f165f22dcab80c4471e132b78c24dbc46bc2d612c15dc16c6019a031069b338
-Essential: yes
 
 Package: libcurl-static
 Version: 8.17.0
@@ -1195,6 +1289,7 @@ Homepage: https://curl.se/
 Description: Static libraries for libcurl
 Filename: pool/main/l/libcurl-static/libcurl-static_8.17.0_aarch64.deb
 Size: 396064
+MD5Sum: 1f9e5e205350fcad4bad51d8171960fc
 SHA256: 9f4e8316ae27605b9d9808a7f70d6f3d333718735cdbcc8ba5a47ddddd954fe2
 
 Package: libdb
@@ -1209,6 +1304,7 @@ Homepage: https://www.oracle.com/database/berkeley-db
 Description: The Berkeley DB embedded database system (library)
 Filename: pool/main/l/libdb/libdb_18.1.40-5_aarch64.deb
 Size: 508360
+MD5Sum: bead50ea16e2acb950eebc3c548a982a
 SHA256: 6f4a369f92090ce78c98bd4b4bc9f4802dd63422b06c0c43addaa6efc7f8d67c
 
 Package: libdb-static
@@ -1221,6 +1317,7 @@ Homepage: https://www.oracle.com/database/berkeley-db
 Description: Static libraries for libdb
 Filename: pool/main/l/libdb-static/libdb-static_18.1.40-5_aarch64.deb
 Size: 481120
+MD5Sum: eae0e7584f678ee66254c16994963b70
 SHA256: 04b0a404df54728af0bf34b63a99ec2697ea8512cd809262a0bd575beb863c77
 
 Package: libevent
@@ -1234,6 +1331,7 @@ Homepage: https://libevent.org/
 Description: Library that provides asynchronous event notification
 Filename: pool/main/l/libevent/libevent_2.1.12-3_aarch64.deb
 Size: 202688
+MD5Sum: 814107db9847cb20df5b412258995c21
 SHA256: 874aec1565a632915f5d2488787f66401f34b8c3cad4599f9a69ff5a1f6f75ab
 
 Package: libexpat
@@ -1247,6 +1345,7 @@ Homepage: https://libexpat.github.io/
 Description: XML parsing C library
 Filename: pool/main/l/libexpat/libexpat_2.7.3_aarch64.deb
 Size: 90548
+MD5Sum: d347563df6f305b2218010fce9c88e00
 SHA256: e133f637dd1026b296f5520a8dc1a4ea79d44c9a2c395fd626ae504d56b0b4b4
 
 Package: libexpat-static
@@ -1259,6 +1358,7 @@ Homepage: https://libexpat.github.io/
 Description: Static libraries for libexpat
 Filename: pool/main/l/libexpat-static/libexpat-static_2.7.3_aarch64.deb
 Size: 57404
+MD5Sum: 1cdd6e8ae4feec6e43cd06681f92fb82
 SHA256: d38c04fbe4ae5801b9f87cde406c554cb0448e6bc3493a9d77dea986fa3794b2
 
 Package: libfdisk
@@ -1271,6 +1371,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Library for manipulating disk partition tables
 Filename: pool/main/l/libfdisk/libfdisk_2.41.2_aarch64.deb
 Size: 157440
+MD5Sum: cb3e27f2eb3e838b420e60843b47d67f
 SHA256: 3981ca510c85e2db3a252ba436ac36fbd5724b864e0acbe7853f838b01a54a40
 
 Package: libffi
@@ -1284,6 +1385,7 @@ Homepage: https://sourceware.org/libffi/
 Description: Library providing a portable, high level programming interface to various calling conventions
 Filename: pool/main/l/libffi/libffi_3.4.7-1_aarch64.deb
 Size: 30696
+MD5Sum: 493e39bf2a1ced1602682ecfa7938cf7
 SHA256: 346996c5a3a00e22180a2e7eedb99785b17d604beb4cbcd339daf253f0b19712
 
 Package: libffi-static
@@ -1296,6 +1398,7 @@ Homepage: https://sourceware.org/libffi/
 Description: Static libraries for libffi
 Filename: pool/main/l/libffi-static/libffi-static_3.4.7-1_aarch64.deb
 Size: 16272
+MD5Sum: 8f027eb58449a7b793e37a14377fde1e
 SHA256: ed7f4205f71d448d4f42b85e844a3af44af1b3c426c23e86a0d686deaea38bf9
 
 Package: libflac
@@ -1310,6 +1413,7 @@ Homepage: https://xiph.org/flac/
 Description: FLAC (Free Lossless Audio Codec) library
 Filename: pool/main/l/libflac/libflac_1.5.0-1_aarch64.deb
 Size: 202664
+MD5Sum: 255385e44f1c341255f0529b77c1017b
 SHA256: 8139459cce0718bcc94af4f1f99cb4b1799ea01673c4d0ae816308b51942d2dd
 
 Package: libflac-static
@@ -1322,6 +1426,7 @@ Homepage: https://xiph.org/flac/
 Description: Static libraries for libflac
 Filename: pool/main/l/libflac-static/libflac-static_1.5.0-1_aarch64.deb
 Size: 110680
+MD5Sum: 65cb28fb516e0165d3a4977e9ff7ca20
 SHA256: 9d1590ca578bc84c8e2c147c960a52da91b9a384b9e6c9bc08251bc4c010a619
 
 Package: libgcrypt
@@ -1336,6 +1441,7 @@ Homepage: https://www.gnu.org/software/libgcrypt/
 Description: General purpose cryptographic library based on the code from GnuPG
 Filename: pool/main/l/libgcrypt/libgcrypt_1.11.2-1_aarch64.deb
 Size: 499820
+MD5Sum: 3dc1b75122bb86cc185c674f119d6149
 SHA256: 861a397a221136735152357be5a526ad1a9cab7d4c3a1fd59c3923e235edb60a
 
 Package: libgcrypt-static
@@ -1348,6 +1454,7 @@ Homepage: https://www.gnu.org/software/libgcrypt/
 Description: Static libraries for libgcrypt
 Filename: pool/main/l/libgcrypt-static/libgcrypt-static_1.11.2-1_aarch64.deb
 Size: 468180
+MD5Sum: 4d558e62b6e365deef6de0e6afd756f1
 SHA256: 5ea42cd1357e6d32990930d670366724ce12264c41dc4691cfd8f8d1660d05ea
 
 Package: libgmp
@@ -1362,6 +1469,7 @@ Homepage: https://gmplib.org/
 Description: Library for arbitrary precision arithmetic
 Filename: pool/main/l/libgmp/libgmp_6.3.0-2_aarch64.deb
 Size: 327348
+MD5Sum: 814f4d5172b567d4df21d336017f9dbe
 SHA256: 3f388a68ca16d2c1706f7dc70af636f2e0f8edf913febb33720c7ef88173e7bd
 
 Package: libgmp-static
@@ -1374,6 +1482,7 @@ Homepage: https://gmplib.org/
 Description: Static libraries for libgmp
 Filename: pool/main/l/libgmp-static/libgmp-static_6.3.0-2_aarch64.deb
 Size: 227100
+MD5Sum: 473159b139c1ea1e5cf855b90a494a15
 SHA256: eaa1ed4439c9eb1d8cb85b95cae0b447e72eb433b9c75e717f9aee03a9611f51
 
 Package: libgnutls
@@ -1388,6 +1497,7 @@ Homepage: https://www.gnutls.org/
 Description: Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them
 Filename: pool/main/l/libgnutls/libgnutls_3.8.10_aarch64.deb
 Size: 732884
+MD5Sum: 7bda039db9b41d29cef733901af5bf7f
 SHA256: 440915cf3aef6751def9471d996ea2de87bf5c3d25badd8daeafdd2a57ae99b2
 
 Package: libgnutls-static
@@ -1400,6 +1510,7 @@ Homepage: https://www.gnutls.org/
 Description: Static libraries for libgnutls
 Filename: pool/main/l/libgnutls-static/libgnutls-static_3.8.10_aarch64.deb
 Size: 790508
+MD5Sum: 42d3d294641a5e6ea172ca0deb9e2b84
 SHA256: 775f8af5484720834b9c40567fc98725dc45e578cd00077b556037e6838d6d09
 
 Package: libgpg-error
@@ -1413,6 +1524,7 @@ Homepage: https://www.gnupg.org/related_software/libgpg-error/
 Description: Small library that defines common error values for all GnuPG components
 Filename: pool/main/l/libgpg-error/libgpg-error_1.55-1_aarch64.deb
 Size: 120052
+MD5Sum: 5e06f522a67720b43ebeb776ad5b4a13
 SHA256: 9d7f3f4625e8cfee1f41cf8e042eb1c1e364eb6d6a5baecae8fd60fca4db3447
 
 Package: libgpg-error-static
@@ -1425,6 +1537,7 @@ Homepage: https://www.gnupg.org/related_software/libgpg-error/
 Description: Static libraries for libgpg-error
 Filename: pool/main/l/libgpg-error-static/libgpg-error-static_1.55-1_aarch64.deb
 Size: 65572
+MD5Sum: 557a82eb2fe9985fbc388ddd80f7a69b
 SHA256: 45df8febe3d5d854051ef4dbf395d599b25a4ad6d06d063809c45722f5000564
 
 Package: libice
@@ -1436,6 +1549,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 Inter-Client Exchange library
 Filename: pool/main/l/libice/libice_1.1.2-1_aarch64.deb
 Size: 68484
+MD5Sum: e6faaaa81f4992ed8ccc0b191925cd08
 SHA256: 0c3d0a6d77ed5467bbc4cd84a9f3b8c9d0fd116b9c94613db1458074d584d6f1
 
 Package: libiconv
@@ -1449,6 +1563,7 @@ Homepage: https://www.gnu.org/software/libiconv/
 Description: An implementation of iconv()
 Filename: pool/main/l/libiconv/libiconv_1.18-1_aarch64.deb
 Size: 562476
+MD5Sum: 3af59ce709b2bf45de4602d39a1372cb
 SHA256: 2aef2737a1580a47fc3127e4ce3d430d7f44de8b515ede73b41c00945e7deda3
 
 Package: libiconv-static
@@ -1461,6 +1576,7 @@ Homepage: https://www.gnu.org/software/libiconv/
 Description: Static libraries for libiconv
 Filename: pool/main/l/libiconv-static/libiconv-static_1.18-1_aarch64.deb
 Size: 558004
+MD5Sum: f39d246df55449d8b0004499da58c1d3
 SHA256: 01fe6cf7615530941b059ab13c57779d5349673b5cf5fb2f125ac42a1d782dcb
 
 Package: libicu
@@ -1475,6 +1591,7 @@ Homepage: http://site.icu-project.org/home
 Description: International Components for Unicode library
 Filename: pool/main/l/libicu/libicu_77.1-2_aarch64.deb
 Size: 9934872
+MD5Sum: d8ae6e5bfbe0a7d70dc28d17655d2113
 SHA256: 3f696cb6013bd8fa9fb09080ad93054acbd5ab9ebd0588fd590fad4ac0c5fbe0
 
 Package: libicu-static
@@ -1487,6 +1604,7 @@ Homepage: http://site.icu-project.org/home
 Description: Static libraries for libicu
 Filename: pool/main/l/libicu-static/libicu-static_77.1-2_aarch64.deb
 Size: 9824192
+MD5Sum: 3c8cf8f0980b6972a910fbe233d51885
 SHA256: 43ba0f2dd23bee51c78456a9dc59f1ab34ce8051ccab0f191471291f506dbc81
 
 Package: libidn2
@@ -1501,6 +1619,7 @@ Homepage: https://www.gnu.org/software/libidn/#libidn2
 Description: Free software implementation of IDNA2008, Punycode and TR46
 Filename: pool/main/l/libidn2/libidn2_2.3.8-1_aarch64.deb
 Size: 104960
+MD5Sum: f569089f5c4fd2e56a42f8fca351b3bf
 SHA256: 35878e792316d1ace1f134cc352b1260c73e4dda7f07efa61cc22dfff375c759
 
 Package: libidn2-static
@@ -1513,6 +1632,7 @@ Homepage: https://www.gnu.org/software/libidn/#libidn2
 Description: Static libraries for libidn2
 Filename: pool/main/l/libidn2-static/libidn2-static_2.3.8-1_aarch64.deb
 Size: 73260
+MD5Sum: 3bc3f2b96fcb0e31920e00206a75aba7
 SHA256: bf714c5cbdee6390876f14fd6473c2f3550fc363dcd1838cbd73f58f379a704a
 
 Package: libjpeg-turbo
@@ -1526,6 +1646,7 @@ Homepage: https://libjpeg-turbo.virtualgl.org
 Description: Library for reading and writing JPEG image files
 Filename: pool/main/l/libjpeg-turbo/libjpeg-turbo_3.1.2_aarch64.deb
 Size: 382288
+MD5Sum: 66b242502037375992d73b8da3a95ee1
 SHA256: db243f8daf0e83b4028b9f0e14bc98e4bea8104df617286f531851a2cc4ed9d5
 
 Package: libjpeg-turbo-progs
@@ -1538,6 +1659,7 @@ Homepage: https://libjpeg-turbo.virtualgl.org
 Description: Programs for manipulating JPEG files
 Filename: pool/main/l/libjpeg-turbo-progs/libjpeg-turbo-progs_3.1.2_aarch64.deb
 Size: 96924
+MD5Sum: 1a5159d1f4dffe5fe9f14ddaa2662b8f
 SHA256: 49c0e4f9d1d602e2f325e874a52fe71b668416b1400cfc3de984c5303441dfee
 
 Package: libjpeg-turbo-static
@@ -1550,6 +1672,7 @@ Homepage: https://libjpeg-turbo.virtualgl.org
 Description: Static libraries for libjpeg-turbo
 Filename: pool/main/l/libjpeg-turbo-static/libjpeg-turbo-static_3.1.2_aarch64.deb
 Size: 263572
+MD5Sum: e6bdbc6dfbbaa37ae800779af4a93df0
 SHA256: 5a04adfb1767ef423ab2b4b0ec1be1930cece09619d515a6ae0fc5f8ffe9df6e
 
 Package: libksba
@@ -1564,6 +1687,7 @@ Homepage: https://gnupg.org/related_software/libksba/
 Description: Library for using X.509 certificates and CMS (Cryptographic Message Syntax) easily accessible
 Filename: pool/main/l/libksba/libksba_1.6.7-2_aarch64.deb
 Size: 105704
+MD5Sum: 602b13f5c4f91966f3f66785f7dfbc53
 SHA256: b2e8cdfe6f8ea2167158923009f981b75d1a9d6fb398b1450db2773ed0aad493
 
 Package: libksba-static
@@ -1576,6 +1700,7 @@ Homepage: https://gnupg.org/related_software/libksba/
 Description: Static libraries for libksba
 Filename: pool/main/l/libksba-static/libksba-static_1.6.7-2_aarch64.deb
 Size: 91756
+MD5Sum: 8e726bc40aaac9942694717e590a6deb
 SHA256: 173c899f98eb24870d459df7120f473f9103a40eafa2eab3b2391f0f4979b123
 
 Package: libltdl
@@ -1589,6 +1714,7 @@ Homepage: https://www.gnu.org/software/libtool/
 Description: Library for dlopening libraries
 Filename: pool/main/l/libltdl/libltdl_2.5.4-2_aarch64.deb
 Size: 18020
+MD5Sum: 6fd649b61d89e49ecdc508810219e1dc
 SHA256: 8c84c3472dfd16f1bfdf036592fac0f3ae70133744d5ac102e40046e381a85f8
 
 Package: liblz4
@@ -1602,6 +1728,7 @@ Homepage: https://lz4.github.io/lz4/
 Description: Fast LZ compression algorithm library
 Filename: pool/main/l/liblz4/liblz4_1.10.0-1_aarch64.deb
 Size: 84616
+MD5Sum: c82b92e6e55b292c3ee018fcf2f2b08c
 SHA256: 15155b81d25f07d25f792bfd68d793187e486b52fb7e1b67a079f208fca196b0
 
 Package: liblzma
@@ -1613,10 +1740,11 @@ Breaks: liblzma-dev
 Replaces: liblzma-dev
 Homepage: https://tukaani.org/xz/
 Description: XZ-format compression library
+Essential: yes
 Filename: pool/main/l/liblzma/liblzma_5.8.1-1_aarch64.deb
 Size: 191452
+MD5Sum: dd0f4233d804cadef541d202ad79f512
 SHA256: c60dbef3da465e1d15db628ed73c0588edb1d4ae3884d0efa75cfb3118f0ffd6
-Essential: yes
 
 Package: liblzma-static
 Version: 5.8.1-1
@@ -1628,6 +1756,7 @@ Homepage: https://tukaani.org/xz/
 Description: Static libraries for liblzma
 Filename: pool/main/l/liblzma-static/liblzma-static_5.8.1-1_aarch64.deb
 Size: 89584
+MD5Sum: 20d5a7e70f10cc225bcbb7a012c9f818
 SHA256: 7685f58ea99ee58965211f10a957c034ab2af751da2563852398d3dd65e30601
 
 Package: libmd
@@ -1639,6 +1768,7 @@ Homepage: https://www.hadrons.org/software/libmd/
 Description: Message Digest functions from BSD systems
 Filename: pool/main/l/libmd/libmd_1.1.0-1_aarch64.deb
 Size: 40536
+MD5Sum: 22199b950db1f847b9c7e99f435fb52a
 SHA256: 5f7cea5d46e5e330dea14d650ca3a8adf8e3916a43c01b795d9649fb2db6f1ad
 
 Package: libmd-static
@@ -1651,6 +1781,7 @@ Homepage: https://www.hadrons.org/software/libmd/
 Description: Static libraries for libmd
 Filename: pool/main/l/libmd-static/libmd-static_1.1.0-1_aarch64.deb
 Size: 17888
+MD5Sum: 8c01637da4b589370800dff60051fbb3
 SHA256: d6aba3bb38865cc4e22f3462c164837b0526c7e1f5769020858f56aaec83c679
 
 Package: libmount
@@ -1663,6 +1794,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Library for (un)mounting filesystems
 Filename: pool/main/l/libmount/libmount_2.41.2_aarch64.deb
 Size: 152364
+MD5Sum: 4683aaf77d133dd1a2cd1175dd62fe36
 SHA256: 1a90a2c1c51661d314f56a4fa98eaf5f9fd9f393685303a25445b5d97a2b6a53
 
 Package: libmp3lame
@@ -1676,6 +1808,7 @@ Homepage: https://lame.sourceforge.io/
 Description: High quality MPEG Audio Layer III (MP3) encoder
 Filename: pool/main/l/libmp3lame/libmp3lame_3.100-7_aarch64.deb
 Size: 114696
+MD5Sum: 1a20fd453f495dfd1a543407a4dfd434
 SHA256: 527356c70018c5096c9b8eee7235214babf2c05bb8cba3366fe09f1a3ee6ebe0
 
 Package: libmp3lame-static
@@ -1688,6 +1821,7 @@ Homepage: https://lame.sourceforge.io/
 Description: Static libraries for libmp3lame
 Filename: pool/main/l/libmp3lame-static/libmp3lame-static_3.100-7_aarch64.deb
 Size: 121756
+MD5Sum: 966a25d93e3e645e7c0468ae172557b5
 SHA256: b0ef46e658132850632a5961550b8dc41c0a012eb50e2664fff534392b280244
 
 Package: libmpfr
@@ -1702,6 +1836,7 @@ Homepage: https://www.mpfr.org/
 Description: C library for multiple-precision floating-point computations with correct rounding
 Filename: pool/main/l/libmpfr/libmpfr_4.2.1-1_aarch64.deb
 Size: 272304
+MD5Sum: 871c28f5accaf25e498fef4fcaacf759
 SHA256: c8d730ab70b8a0ca29dc64bcff833df672341f06861955d0575abfe26eb8ee4f
 
 Package: libmpfr-static
@@ -1714,6 +1849,7 @@ Homepage: https://www.mpfr.org/
 Description: Static libraries for libmpfr
 Filename: pool/main/l/libmpfr-static/libmpfr-static_4.2.1-1_aarch64.deb
 Size: 208788
+MD5Sum: 4edc1a06e3c2418293edba61b5ee07d8
 SHA256: d9ed22e15bd44655af1c4f4facb125a95baf3e30b53200306562216e076650a8
 
 Package: libnettle
@@ -1728,6 +1864,7 @@ Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Description: Cryptographic library that is designed to fit easily in more or less any context
 Filename: pool/main/l/libnettle/libnettle_3.10.2-1_aarch64.deb
 Size: 406564
+MD5Sum: dc5e36f4a4b8687f5e70f8f225326c03
 SHA256: 2312daa52e69d14d3c8dde3715fce6f9d2b8b1cf4a5925e8d8b192306d4dcf87
 
 Package: libnettle-static
@@ -1740,6 +1877,7 @@ Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Description: Static libraries for libnettle
 Filename: pool/main/l/libnettle-static/libnettle-static_3.10.2-1_aarch64.deb
 Size: 683968
+MD5Sum: 90bd84a1894f3cb20315c497e03296b8
 SHA256: 54b14da2af520352ab94dd68c120f852f30936d0ada7c6491600c6cd222ad376
 
 Package: libnghttp2
@@ -1753,6 +1891,7 @@ Homepage: https://nghttp2.org/
 Description: nghttp HTTP 2.0 library
 Filename: pool/main/l/libnghttp2/libnghttp2_1.68.0_aarch64.deb
 Size: 95504
+MD5Sum: 9870137e5de069644a11a524d15b3cf8
 SHA256: d2fe913e43b283bf2b106dc5d0712747602349b1670ff34bfe67dbf293ac2247
 
 Package: libnghttp2-static
@@ -1765,6 +1904,7 @@ Homepage: https://nghttp2.org/
 Description: Static libraries for libnghttp2
 Filename: pool/main/l/libnghttp2-static/libnghttp2-static_1.68.0_aarch64.deb
 Size: 64000
+MD5Sum: 22e395c43160ea024d6b378ceb56ac90
 SHA256: 4433c31e0584e014ee67b2587f8a3fa1fbd776189453d1d4a890fe55c1bc6291
 
 Package: libnghttp3
@@ -1774,10 +1914,11 @@ Maintainer: @termux
 Installed-Size: 328
 Homepage: https://nghttp2.org/nghttp3/
 Description: HTTP/3 library written in C
+Essential: yes
 Filename: pool/main/l/libnghttp3/libnghttp3_1.12.0_aarch64.deb
 Size: 67056
+MD5Sum: 5e71f70ec90a7cb12357affd3cf92ab9
 SHA256: 19fb19db5d2b1e6911c2a053ec2fe762ab1108d10a7cddedf2969534d7476843
-Essential: yes
 
 Package: libnghttp3-static
 Version: 1.12.0
@@ -1789,6 +1930,7 @@ Homepage: https://nghttp2.org/nghttp3/
 Description: Static libraries for libnghttp3
 Filename: pool/main/l/libnghttp3-static/libnghttp3-static_1.12.0_aarch64.deb
 Size: 62824
+MD5Sum: d8fc00d7566e212fc3c385fade2b20d0
 SHA256: 85c0f9f5ce0da7338e83dec8434211462d954cebd604b237e1b2efbafd51fba8
 
 Package: libnpth
@@ -1802,6 +1944,7 @@ Homepage: https://www.gnupg.org/related_software/npth/
 Description: New GNU Portable Threads Library
 Filename: pool/main/l/libnpth/libnpth_1.6-3_aarch64.deb
 Size: 11220
+MD5Sum: fc84cacf90f8dd415b1acff1a110550f
 SHA256: 1192b3569340dc50f8677e177cbdc349be764add33d362946ffd640088205976
 
 Package: libnpth-static
@@ -1814,6 +1957,7 @@ Homepage: https://www.gnupg.org/related_software/npth/
 Description: Static libraries for libnpth
 Filename: pool/main/l/libnpth-static/libnpth-static_1.6-3_aarch64.deb
 Size: 4696
+MD5Sum: 0f34134c78e8a56396094fa8d05a4eec
 SHA256: e57cdacbca509e777d18ee633473d7b352261b414a2f6c7c27d092f60a488f0f
 
 Package: libogg
@@ -1827,6 +1971,7 @@ Homepage: https://xiph.org/ogg/
 Description: Library for working with the Ogg multimedia container format
 Filename: pool/main/l/libogg/libogg_1.3.6-1_aarch64.deb
 Size: 188600
+MD5Sum: de3c3c0556b02370a12cd2349aecc7f7
 SHA256: 33aef527eb24516a0f9da28b7a8eb3d94ed0f33c18a6a60149917e8e7422f847
 
 Package: libogg-static
@@ -1839,6 +1984,7 @@ Homepage: https://xiph.org/ogg/
 Description: Static libraries for libogg
 Filename: pool/main/l/libogg-static/libogg-static_1.3.6-1_aarch64.deb
 Size: 16616
+MD5Sum: 5e4e19e238a57fd4b1f8b747bd25eba9
 SHA256: 7146a5f3e55e5e4bce361d908f608b689b14971da574cad9bec041b3b9d1cf65
 
 Package: libopus
@@ -1852,6 +1998,7 @@ Homepage: https://www.opus-codec.org/
 Description: Reference implementation of the Opus codec
 Filename: pool/main/l/libopus/libopus_1.5.2-1_aarch64.deb
 Size: 185012
+MD5Sum: 595478b186fcad82a452afdfa08517bc
 SHA256: 5a5ceb720c563c194443e51e0b1c81149fe38df95ffa83f77d3d668f7c8cf402
 
 Package: libopus-static
@@ -1864,6 +2011,7 @@ Homepage: https://www.opus-codec.org/
 Description: Static libraries for libopus
 Filename: pool/main/l/libopus-static/libopus-static_1.5.2-1_aarch64.deb
 Size: 194848
+MD5Sum: db306babda1519278ad93a6dfd472f9d
 SHA256: 1dfb09ebe250d96c872c91fcd274c4129e3dbfc2b3da8e789511a489e4359c48
 
 Package: libpng
@@ -1878,6 +2026,7 @@ Homepage: http://www.libpng.org/pub/png/libpng.html
 Description: Official PNG reference library
 Filename: pool/main/l/libpng/libpng_1.6.50-1_aarch64.deb
 Size: 195408
+MD5Sum: 3a11323e2238d95b3f1a0404273d14e7
 SHA256: 25f0677bc2dd1ca655314385f1e40d98d2936853525901153a305658f58bdbf8
 
 Package: libpng-static
@@ -1890,6 +2039,7 @@ Homepage: http://www.libpng.org/pub/png/libpng.html
 Description: Static libraries for libpng
 Filename: pool/main/l/libpng-static/libpng-static_1.6.50-1_aarch64.deb
 Size: 86196
+MD5Sum: f43120b3e8263ac9702a51d5da429664
 SHA256: 1189f60191c38020d2748d18b8f085fced194aa5d116144ed0350541f96a1128
 
 Package: libsm
@@ -1902,6 +2052,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 Session Management library
 Filename: pool/main/l/libsm/libsm_1.2.6-1_aarch64.deb
 Size: 41168
+MD5Sum: 7e4825d92ac9c88f286f8a69ca6e91c2
 SHA256: 30fb5eb99c25c1cdafa1d4b8d6ec5e80c4957b9411978824910cf6f09f0d08cd
 
 Package: libsmartcols
@@ -1915,6 +2066,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Library for smart adaptive formatting of tabular data
 Filename: pool/main/l/libsmartcols/libsmartcols_2.41.2_aarch64.deb
 Size: 99688
+MD5Sum: 2369d684f336bee6e5a86a082807422b
 SHA256: 8f080fa9b72b098be6ca9015637f847ff18b44eed3a51beadd470b853b8ee5a8
 
 Package: libsndfile
@@ -1929,6 +2081,7 @@ Homepage: http://www.mega-nerd.com/libsndfile
 Description: Library for reading/writing audio files
 Filename: pool/main/l/libsndfile/libsndfile_1.2.2-2_aarch64.deb
 Size: 216972
+MD5Sum: 0cbac438f4b0d36bca49e70b3494523f
 SHA256: 8e29cc61828eda65a929201baaebfd1cde5dde1fb792ace710ff2a61da965a1b
 
 Package: libsndfile-static
@@ -1941,6 +2094,7 @@ Homepage: http://www.mega-nerd.com/libsndfile
 Description: Static libraries for libsndfile
 Filename: pool/main/l/libsndfile-static/libsndfile-static_1.2.2-2_aarch64.deb
 Size: 187564
+MD5Sum: 5b71265f945a4435ac3bb729e8f3404e
 SHA256: 6bf1671a06bc1617ef9ca8acbae04d470e8c360aa5d4a37bd3f69d89897c67f4
 
 Package: libsoxr
@@ -1954,6 +2108,7 @@ Homepage: https://sourceforge.net/projects/soxr/
 Description: High quality, one-dimensional sample-rate conversion library
 Filename: pool/main/l/libsoxr/libsoxr_0.1.3-8_aarch64.deb
 Size: 282612
+MD5Sum: c1770380014e8a3880e833cc7cfd6201
 SHA256: 5ee21e7610d497d99df9a6087ed606e82073c3a87b7bdec613666fe863956cd5
 
 Package: libsqlite
@@ -1968,6 +2123,7 @@ Homepage: https://www.sqlite.org
 Description: Library implementing a self-contained and transactional SQL database engine
 Filename: pool/main/l/libsqlite/libsqlite_3.51.0_aarch64.deb
 Size: 707852
+MD5Sum: c10bf6c03ac5826e18906b5ae60c143c
 SHA256: fe4e9dab32bc495c1e64b6de37414f479ebf281017db61b99fd15356b6e8c937
 
 Package: libsqlite-static
@@ -1980,6 +2136,7 @@ Homepage: https://www.sqlite.org
 Description: Static libraries for libsqlite
 Filename: pool/main/l/libsqlite-static/libsqlite-static_3.51.0_aarch64.deb
 Size: 545500
+MD5Sum: de7d8045378c3b51c154c39e16781960
 SHA256: 94e136a7bf0a4f113ceb5051a75ada57b9b91cf6ccc3baaedd3410a042c42679
 
 Package: libsqlite-tcl
@@ -1993,6 +2150,7 @@ Homepage: https://www.sqlite.org
 Description: tcl bindings for SQLite
 Filename: pool/main/l/libsqlite-tcl/libsqlite-tcl_3.51.0_aarch64.deb
 Size: 510744
+MD5Sum: 38edab38df21795935748d932ba78d48
 SHA256: 0aea6674c446a2680f6d6622e9bd0792c06113f488e7ad0f5536a5b42d8c989b
 
 Package: libssh2
@@ -2007,6 +2165,7 @@ Homepage: https://www.libssh2.org
 Description: Client-side library implementing the SSH2 protocol
 Filename: pool/main/l/libssh2/libssh2_1.11.1-1_aarch64.deb
 Size: 218424
+MD5Sum: 07f6a114d5e864c9043b7f0b89571111
 SHA256: d15853c3970acca58493b8c128b6ffcb3ce29ba0d71bd1b4e29982940e9fe29d
 
 Package: libssh2-static
@@ -2019,6 +2178,7 @@ Homepage: https://www.libssh2.org
 Description: Static libraries for libssh2
 Filename: pool/main/l/libssh2-static/libssh2-static_1.11.1-1_aarch64.deb
 Size: 110928
+MD5Sum: 77b6e834a3acfebb8c88fc14ca47b02c
 SHA256: d92d6c13c0d20f2edb32b90deb2495a89d6afc92f2ed1472035f124c541993dd
 
 Package: libtiff
@@ -2033,6 +2193,7 @@ Homepage: http://www.simplesystems.org/libtiff/
 Description: Support for the Tag Image File Format (TIFF) for storing image data
 Filename: pool/main/l/libtiff/libtiff_4.7.1_aarch64.deb
 Size: 848344
+MD5Sum: f36eecf9c842042ad5d6275ce6fefcff
 SHA256: 8471df126986bf9d79b2784c845cac6bdcf3705d50f123ef395d8ac87688e511
 
 Package: libtiff-static
@@ -2045,6 +2206,7 @@ Homepage: http://www.simplesystems.org/libtiff/
 Description: Static libraries for libtiff
 Filename: pool/main/l/libtiff-static/libtiff-static_4.7.1_aarch64.deb
 Size: 171396
+MD5Sum: 44f5354d1c045ccb73b905c49a451f32
 SHA256: 42156c89766fa11eb41102b6e0aa08f4418735dc3ca8aab7c011de592e4b61ea
 
 Package: libtiff-utils
@@ -2057,6 +2219,7 @@ Homepage: http://www.simplesystems.org/libtiff/
 Description: Tools for working with tiff files
 Filename: pool/main/l/libtiff-utils/libtiff-utils_4.7.1_aarch64.deb
 Size: 257136
+MD5Sum: 8b0c986c648d8a797ebd35926a71a0e1
 SHA256: e11b855982cf46ef32e42ac4d711b59bc3a4f7f65a6fea351b8dfa98f30f6436
 
 Package: libtirpc
@@ -2068,6 +2231,7 @@ Homepage: http://git.linux-nfs.org/?p=steved/libtirpc.git
 Description: Transport Independent RPC library
 Filename: pool/main/l/libtirpc/libtirpc_1.3.7-1_aarch64.deb
 Size: 123964
+MD5Sum: 7357c4819fb12659f4ff40186fc80d77
 SHA256: 976df4788b4b450303713af148b6baa1223562debb4652ce01c706a2582db8bb
 
 Package: libtirpc-static
@@ -2080,6 +2244,7 @@ Homepage: http://git.linux-nfs.org/?p=steved/libtirpc.git
 Description: Static libraries for libtirpc
 Filename: pool/main/l/libtirpc-static/libtirpc-static_1.3.7-1_aarch64.deb
 Size: 69892
+MD5Sum: 0479cac3035d522f6fd352cdfaba8ad1
 SHA256: 11d2ff91d5fe6161c2a3b76f470cb1d900daa55c4dc0c12cde62a4c306eb04b0
 
 Package: libtool
@@ -2094,6 +2259,7 @@ Homepage: https://www.gnu.org/software/libtool/
 Description: Generic library support script hiding the complexity of using shared libraries behind a consistent, portable interface
 Filename: pool/main/l/libtool/libtool_2.5.4-2_aarch64.deb
 Size: 392088
+MD5Sum: fdd138ff8c7963be97ae3715edaf1318
 SHA256: 50b41250f74605ce360f2e9c0607624509346cb74ddf0f3f9096d3afdbdda111
 
 Package: libunbound
@@ -2108,6 +2274,7 @@ Homepage: https://unbound.net/
 Description: A validating, recursive, caching DNS resolver
 Filename: pool/main/l/libunbound/libunbound_1.24.1-1_aarch64.deb
 Size: 365764
+MD5Sum: 66629e3e2833568b5137fc82b86d0351
 SHA256: d0c1644dedda70fc2f2f47d82cb5d2f7f79e41dfb9f02f324c46da885c50e384
 
 Package: libunbound-static
@@ -2120,6 +2287,7 @@ Homepage: https://unbound.net/
 Description: Static libraries for libunbound
 Filename: pool/main/l/libunbound-static/libunbound-static_1.24.1-1_aarch64.deb
 Size: 441952
+MD5Sum: e3f997faed7b867783842121a9c49491
 SHA256: db8ea8d61f83631579fe76c56c409309bf92b239ca7cf6e0e4e3aca141840e1c
 
 Package: libunistring
@@ -2134,6 +2302,7 @@ Homepage: https://www.gnu.org/software/libunistring/
 Description: Library providing functions for manipulating Unicode strings
 Filename: pool/main/l/libunistring/libunistring_1.3-1_aarch64.deb
 Size: 555012
+MD5Sum: c49c591910439b54467ae0368491d6d2
 SHA256: cfb24baacb0831bce3494b924ab90dcf7bcfd45fd684dcaf62c7b2de0f18f53a
 
 Package: libunistring-static
@@ -2146,6 +2315,7 @@ Homepage: https://www.gnu.org/software/libunistring/
 Description: Static libraries for libunistring
 Filename: pool/main/l/libunistring-static/libunistring-static_1.3-1_aarch64.deb
 Size: 469964
+MD5Sum: 40e5eabed10658574419f674c376a9e9
 SHA256: 0a4f2df3b83352bbdacafc730520b0e5c0ab27f50515d5c2f94d0e0e4a3dbb8d
 
 Package: libusb
@@ -2159,6 +2329,7 @@ Homepage: https://libusb.info/
 Description: A C library that provides generic access to USB devices
 Filename: pool/main/l/libusb/libusb_1.0.29-1_aarch64.deb
 Size: 58644
+MD5Sum: 5935f3ace9ae354ab7505945df559568
 SHA256: be9116b8cf265814c1688b10b4032df141e4e6b916011b4ae26787e778114812
 
 Package: libusb-static
@@ -2171,6 +2342,7 @@ Homepage: https://libusb.info/
 Description: Static libraries for libusb
 Filename: pool/main/l/libusb-static/libusb-static_1.0.29-1_aarch64.deb
 Size: 47044
+MD5Sum: a1118d79551cc7abe7521b85d8e9513a
 SHA256: 81f659c834cb973ebc505727fba01afbc8339639339f860ac2acbae6488b55a0
 
 Package: libuuid
@@ -2184,6 +2356,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Library for handling universally unique identifiers
 Filename: pool/main/l/libuuid/libuuid_2.41.2_aarch64.deb
 Size: 15392
+MD5Sum: 89c2cc3e8f23a8dbb933671f864387b3
 SHA256: c34242329e9e89c16eeda3f27f26be58ac309864dd3cf932909b59349efa02f0
 
 Package: libvorbis
@@ -2198,6 +2371,7 @@ Homepage: https://xiph.org/vorbis/
 Description: Library for using the Ogg Vorbis compressed audio format
 Filename: pool/main/l/libvorbis/libvorbis_1.3.7-4_aarch64.deb
 Size: 261996
+MD5Sum: a11b0f69ea9405d601d687ee715c3a39
 SHA256: e586d56a5024432102335416023fa41d09864dae96f9f2f03750576a524eb0aa
 
 Package: libvorbis-static
@@ -2210,6 +2384,7 @@ Homepage: https://xiph.org/vorbis/
 Description: Static libraries for libvorbis
 Filename: pool/main/l/libvorbis-static/libvorbis-static_1.3.7-4_aarch64.deb
 Size: 156868
+MD5Sum: 09b6278476e712c2fbe53b910af9b469
 SHA256: 7ef86d2c005859478246ac6e41fa76ae8a8b9c9dc3984bec95e2522868ed5c5b
 
 Package: libwebrtc-audio-processing
@@ -2222,6 +2397,7 @@ Homepage: https://www.freedesktop.org/software/pulseaudio/webrtc-audio-processin
 Description: A library containing the AudioProcessing module from the WebRTC project
 Filename: pool/main/l/libwebrtc-audio-processing/libwebrtc-audio-processing_1.3-3_aarch64.deb
 Size: 407308
+MD5Sum: d0f8bb44ef02c5a95b5f6e84a09d4440
 SHA256: bdc0f0ed602a97c27e2895bde2842e2d180c92d760c34ece06b40bddf080d53d
 
 Package: libx11
@@ -2230,12 +2406,13 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 13708
 Depends: libandroid-support, libxcb
+Recommends: xorg-xauth
 Homepage: https://xorg.freedesktop.org/
 Description: X11 client-side library
 Filename: pool/main/l/libx11/libx11_1.8.12-1_aarch64.deb
 Size: 1911240
+MD5Sum: 759a3d7cfcb533175ac4f278ce6c95ee
 SHA256: 86611e5b51e0d6a60f0d9083d650197400f37f39fcc0f5e4bb7686a3fd65cd22
-Recommends: xorg-xauth
 
 Package: libx11-static
 Version: 1.8.12-1
@@ -2247,6 +2424,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libx11
 Filename: pool/main/l/libx11-static/libx11-static_1.8.12-1_aarch64.deb
 Size: 566764
+MD5Sum: 55aaf11ae795d09d5b0193a4dd9d33c5
 SHA256: 17f0617197f29cf41107ff7961e80c876f2d2da7126050fb4c03e7250fac3638
 
 Package: libxau
@@ -2258,6 +2436,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 authorisation library
 Filename: pool/main/l/libxau/libxau_1.0.12-2_aarch64.deb
 Size: 9132
+MD5Sum: 8fe79b151a483807f19be0769c42d8c5
 SHA256: 0c2eb84fff4de1220de45b8b05ed080777fa9109d1b4b0f48a4642f979b8108e
 
 Package: libxcb
@@ -2266,12 +2445,13 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 12768
 Depends: libxau, libxdmcp
+Recommends: xorg-xauth
 Homepage: https://xcb.freedesktop.org/
 Description: X11 client-side library
 Filename: pool/main/l/libxcb/libxcb_1.17.0-1_aarch64.deb
 Size: 914204
+MD5Sum: 92ce0e7bed00ae0740af15ce9769b7b1
 SHA256: 75859737c47b14f2c4c081a1818da92c00c800f432bad0f04d568c083701ccee
-Recommends: xorg-xauth
 
 Package: libxcb-static
 Version: 1.17.0-1
@@ -2283,6 +2463,7 @@ Homepage: https://xcb.freedesktop.org/
 Description: Static libraries for libxcb
 Filename: pool/main/l/libxcb-static/libxcb-static_1.17.0-1_aarch64.deb
 Size: 158516
+MD5Sum: 5d2654bd12f5127444587d5cffe7da11
 SHA256: 120c0f3de84ca1f0c098b7358739996b5917fd272231b2fb5535ef4243a66a22
 
 Package: libxdmcp
@@ -2294,6 +2475,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 Display Manager Control Protocol library
 Filename: pool/main/l/libxdmcp/libxdmcp_1.1.5-2_aarch64.deb
 Size: 24456
+MD5Sum: 5eb053c2b186f0f5c8f7274c2adc611b
 SHA256: 5c2291abc366983f6a183ac4d29e82f3a2ddc656f36254b1b473bea27eb3d582
 
 Package: libxdmcp-static
@@ -2306,6 +2488,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxdmcp
 Filename: pool/main/l/libxdmcp-static/libxdmcp-static_1.1.5-2_aarch64.deb
 Size: 8016
+MD5Sum: 9c814f5be358c6289be3132f0f00ca74
 SHA256: ffc528fb9b4689ee4618884bc2401f6465f1d452cc29ba3d09fa0df280d369d5
 
 Package: libxext
@@ -2318,6 +2501,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 miscellaneous extensions library
 Filename: pool/main/l/libxext/libxext_1.3.6-1_aarch64.deb
 Size: 97744
+MD5Sum: 689e65af6948f55b64f02bf315116b87
 SHA256: 2af2268119291b08f2d009573faf66a5eac51a8caff59dd4fff9bb58bca688c9
 
 Package: libxext-static
@@ -2330,6 +2514,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxext
 Filename: pool/main/l/libxext-static/libxext-static_1.3.6-1_aarch64.deb
 Size: 26008
+MD5Sum: b1b7ebf90a0377d674536b67ea5b55f6
 SHA256: a978ae89fe3a04071e64e6a2453cc75cee651fcd2cf9143da634e24a7c3a1584
 
 Package: libxfixes
@@ -2342,6 +2527,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 miscellaneous 'fixes' extension library
 Filename: pool/main/l/libxfixes/libxfixes_6.0.2_aarch64.deb
 Size: 11528
+MD5Sum: a7c31e1c4c06c47d996939c76d64f95c
 SHA256: 736bf71f728cd16ffda231d3c9fbc538e277e8113b72303b98125116829f14e5
 
 Package: libxfixes-static
@@ -2354,6 +2540,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxfixes
 Filename: pool/main/l/libxfixes-static/libxfixes-static_6.0.2_aarch64.deb
 Size: 7960
+MD5Sum: 7131fb9333241b48a0f935ff282bcf55
 SHA256: 616c817542a87493272b2428204c4c31e35416f01b8c0cf963ea719efca48862
 
 Package: libxft
@@ -2366,6 +2553,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: FreeType-based font drawing library for X
 Filename: pool/main/l/libxft/libxft_2.3.9-1_aarch64.deb
 Size: 48040
+MD5Sum: 75c94aaad5a6c2d96d0d234040e5e662
 SHA256: 21b9620793c15ad7e579fa44db98b9a7949ee38db708ae8fdddb20e17e434f42
 
 Package: libxft-static
@@ -2378,6 +2566,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxft
 Filename: pool/main/l/libxft-static/libxft-static_2.3.9-1_aarch64.deb
 Size: 36500
+MD5Sum: 5a3f40729a9e320996452596f905873b
 SHA256: 882a066a205504ae5b3fa291051fa0e53e2c65553cf55942e91a0146686a0c75
 
 Package: libxi
@@ -2390,6 +2579,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 Input extension library
 Filename: pool/main/l/libxi/libxi_1.8.2-1_aarch64.deb
 Size: 141476
+MD5Sum: c6d007f8cc9d9c4440ecd2f1af1908b6
 SHA256: 7cf83690d76d9ba1338b343832fe88366ffac2d96ea57c200b474e67c604b075
 
 Package: libxi-static
@@ -2402,6 +2592,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxi
 Filename: pool/main/l/libxi-static/libxi-static_1.8.2-1_aarch64.deb
 Size: 27036
+MD5Sum: f9532ba217195ade65bb02c220a62d30
 SHA256: 885a25b3711f582e3090d0d3ad5c1d18f90c8c1d5723b8a206e80996b9dbb294
 
 Package: libxml2
@@ -2416,6 +2607,7 @@ Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: Library for parsing XML documents
 Filename: pool/main/l/libxml2/libxml2_2.15.0_aarch64.deb
 Size: 440420
+MD5Sum: 29b883b0886a1ad2d5b15c69a8abb348
 SHA256: bddaa28d2434fc7e6483d33b0542635f0e0509b95ed019e87157f26bb8d60606
 
 Package: libxml2-python
@@ -2428,6 +2620,7 @@ Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: Python bindings for libxml2
 Filename: pool/main/l/libxml2-python/libxml2-python_2.15.0_aarch64.deb
 Size: 47200
+MD5Sum: 8bc6d10fe6cd1092c23d6f7e2c698f34
 SHA256: d7cefe60b6085361a5903684610dfb7d81ee24f2ea4506ee7d83edbee825e90e
 
 Package: libxml2-utils
@@ -2441,6 +2634,7 @@ Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: XML utilities
 Filename: pool/main/l/libxml2-utils/libxml2-utils_2.15.0_aarch64.deb
 Size: 34016
+MD5Sum: 7ec463ccebed44611f9985bb0fa86b47
 SHA256: 2986df8de985a3e1125b54459ce8e760d080944fac4fece21f5906a9b4a900ee
 
 Package: libxrandr
@@ -2453,6 +2647,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 RandR extension library
 Filename: pool/main/l/libxrandr/libxrandr_1.5.4-1_aarch64.deb
 Size: 22232
+MD5Sum: e655d9d5d6dfbf1c96c1ed5c0d42441e
 SHA256: b7db7cef596ddf7ae344e0c18c220d098a6f0a6f0d08d09e827750f3e2c310dc
 
 Package: libxrandr-static
@@ -2465,6 +2660,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxrandr
 Filename: pool/main/l/libxrandr-static/libxrandr-static_1.5.4-1_aarch64.deb
 Size: 14884
+MD5Sum: cd4fc8e8d1ed9a807e75051e4ca2c0c7
 SHA256: f5bf0085a1e05df5cb7b721c001014305fd11b43e2f9c9f78df6ffe9bf70d363
 
 Package: libxrender
@@ -2477,6 +2673,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X Rendering Extension client library
 Filename: pool/main/l/libxrender/libxrender_0.9.12-1_aarch64.deb
 Size: 24632
+MD5Sum: 9a17a31830790efefde2366d659f7de9
 SHA256: d38b0cb143e22fac7fca3b6d3a0aa156be1ab854d3fa23a2beedcc031cabce7e
 
 Package: libxslt
@@ -2491,6 +2688,7 @@ Homepage: http://xmlsoft.org/libxslt/
 Description: XSLT processing library
 Filename: pool/main/l/libxslt/libxslt_1.1.43-2_aarch64.deb
 Size: 225272
+MD5Sum: db190fbc98e52e8c9572b543a41e7c0f
 SHA256: 64f71fe14f501abd6dd9bd1a885171e529787d40a05acf58395a60b4f938653f
 
 Package: libxss
@@ -2503,6 +2701,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 Screen Saver extension library
 Filename: pool/main/l/libxss/libxss_1.2.5_aarch64.deb
 Size: 11960
+MD5Sum: cb4b4fa31e655f4470d6262111bde537
 SHA256: b342ff7db220604d1a5d3331f3c8267cc0ed46a0568882ef14e6d1bbdb5a75db
 
 Package: libxss-static
@@ -2515,6 +2714,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxss
 Filename: pool/main/l/libxss-static/libxss-static_1.2.5_aarch64.deb
 Size: 4416
+MD5Sum: 4a2d7a5ff08c24aaf3d676507dbb2202
 SHA256: 6c4560092a7a6a261e9808fcfa6a98fbf6477aa87b09d84e2da22b3b407779b4
 
 Package: libxt
@@ -2527,6 +2727,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X11 toolkit intrinsics library
 Filename: pool/main/l/libxt/libxt_1.3.1-1_aarch64.deb
 Size: 483748
+MD5Sum: 35c06649a198eff0bd53fd772e4cf33b
 SHA256: 1ed509a6311d736ab5132eb71c0fdf606e2d98093fae47d0f500ced2f32ecc20
 
 Package: libxt-static
@@ -2539,6 +2740,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxt
 Filename: pool/main/l/libxt-static/libxt-static_1.3.1-1_aarch64.deb
 Size: 150004
+MD5Sum: c1e7cd50d081f41561ca215761d9b79c
 SHA256: b3dd51b7cf462f61e4ccbbd0ec41fdf170c1d5fc522185c83c2d5257846e07b4
 
 Package: libxtst
@@ -2551,6 +2753,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Xlib-based library for XTEST & RECORD extensions
 Filename: pool/main/l/libxtst/libxtst_1.2.5-1_aarch64.deb
 Size: 25644
+MD5Sum: 0deb631136e896ec5ce954db7b7c3739
 SHA256: e82eebbb1b3f5590fd932d636b43a6b13750073f36c1b451a85073ea3017e373
 
 Package: libxtst-static
@@ -2563,6 +2766,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxtst
 Filename: pool/main/l/libxtst-static/libxtst-static_1.2.5-1_aarch64.deb
 Size: 8572
+MD5Sum: 0c54efd8bc68440a3a91ab7fa3aabfc4
 SHA256: 40c24067eded5471fd708eefd3667dc7ca945180f59ac9c157ef63443ea8940f
 
 Package: littlecms
@@ -2576,6 +2780,7 @@ Homepage: http://www.littlecms.com/
 Description: Color management library
 Filename: pool/main/l/littlecms/littlecms_2.17-1_aarch64.deb
 Size: 141700
+MD5Sum: f6b5513caf01585f74f4bca1a5b55737
 SHA256: aef0fd701df8c85cb38761bf162ac3840d5745d1aba317a320c96bad163524a8
 
 Package: littlecms-static
@@ -2588,6 +2793,7 @@ Homepage: http://www.littlecms.com/
 Description: Static libraries for littlecms
 Filename: pool/main/l/littlecms-static/littlecms-static_2.17-1_aarch64.deb
 Size: 145220
+MD5Sum: 7de32576c69397da7179d7529136885f
 SHA256: 5eff1d141b6b4cc8652c04ffa6f1a4d59075de4d6abe9ed3d99c00c9a41b0b13
 
 Package: littlecms-utils
@@ -2600,6 +2806,7 @@ Homepage: http://www.littlecms.com/
 Description: Color management utilities
 Filename: pool/main/l/littlecms-utils/littlecms-utils_2.17-1_aarch64.deb
 Size: 35104
+MD5Sum: eef6effa2297da71ce737357c93bd79d
 SHA256: 8e43370adcf0aab05cab086a0821c8e17c7d0e99e906e5a5b15f1e448fd51f25
 
 Package: lsof
@@ -2612,6 +2819,7 @@ Homepage: https://github.com/lsof-org/lsof
 Description: Lists open files for running Unix processes
 Filename: pool/main/l/lsof/lsof_4.99.5-2_aarch64.deb
 Size: 121940
+MD5Sum: 28c6cf652ee5ac03b9fcca8d4cbc26a9
 SHA256: 906d2a09b468dc1c3928774bd0d1f021d6170b4f168c5c8d81d9a484e4a0b99a
 
 Package: lsof-static
@@ -2624,6 +2832,7 @@ Homepage: https://github.com/lsof-org/lsof
 Description: Static libraries for lsof
 Filename: pool/main/l/lsof-static/lsof-static_4.99.5-2_aarch64.deb
 Size: 55904
+MD5Sum: 29f34c42df0bb66302c90490d8c11ac4
 SHA256: 8268cd38a201f2944896a19bb4b8aacac63a899000832090bdbef44afddb96a3
 
 Package: lz4
@@ -2636,6 +2845,7 @@ Homepage: https://lz4.github.io/lz4/
 Description: Fast LZ compression algorithm tool
 Filename: pool/main/l/lz4/lz4_1.10.0-1_aarch64.deb
 Size: 90868
+MD5Sum: a309bbee11ccf8f8e2a2d624bdce1258
 SHA256: 3b1010c781835c3b1222e16f0fe1e7dfd097a97e1df2aa7c5c78a1d1e49bc532
 
 Package: make
@@ -2650,18 +2860,8 @@ Homepage: https://www.gnu.org/software/make/
 Description: Tool to control the generation of non-source files from source files
 Filename: pool/main/m/make/make_4.4.1-1_aarch64.deb
 Size: 240536
+MD5Sum: 4d93c7892f13e557fd923dfc36f59cb3
 SHA256: e76c04fbe6441aed94c9c972e7c131febc56a6b9378cad3621cc3c18c74bd1e7
-
-Package: micro
-Version: 2.0.15
-Architecture: aarch64
-Maintainer: @termux
-Installed-Size: 13424
-Homepage: https://micro-editor.github.io/
-Description: Modern and intuitive terminal-based text editor
-Filename: pool/main/m/micro/micro_2.0.15_aarch64.deb
-Size: 3613008
-SHA256: b00ec7a3cf3e487889cafe47b3b32ff0174ad66d045b3903f1fe9d42edfaf3e6
 
 Package: mount-utils
 Version: 2.41.2
@@ -2674,6 +2874,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Utilities for (un)mounting filesystems
 Filename: pool/main/m/mount-utils/mount-utils_2.41.2_aarch64.deb
 Size: 142612
+MD5Sum: 5ccc141e074845c66c9062ec84974521
 SHA256: 7e9c319c7c5e306981e54ae887e6c2d8cd88d710b322c047c8368d9cbb249604
 
 Package: nano
@@ -2686,6 +2887,7 @@ Homepage: https://www.nano-editor.org/
 Description: Small, free and friendly text editor
 Filename: pool/main/n/nano/nano_8.6-1_aarch64.deb
 Size: 229596
+MD5Sum: 5137882ac8f1ad01a6f7fa5dd32980b2
 SHA256: 03fd57bbc2b51cb2b6eb8b8faae0be20b6e6f7c1b54da8b63b3a73436a248f35
 
 Package: ncurses
@@ -2699,6 +2901,7 @@ Homepage: https://invisible-island.net/ncurses/
 Description: Library for text-based user interfaces in a terminal-independent manner
 Filename: pool/main/n/ncurses/ncurses_6.5.20240831-3_aarch64.deb
 Size: 529216
+MD5Sum: 4a5cc4fa857a42467681544b72f12070
 SHA256: 659f232a3152d1f69d235b2f6a24da5037c2ca74495a4e6b7ea7426ffcb9ec45
 
 Package: ncurses-static
@@ -2711,6 +2914,7 @@ Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for ncurses
 Filename: pool/main/n/ncurses-static/ncurses-static_6.5.20240831-3_aarch64.deb
 Size: 154032
+MD5Sum: a18c4a201dcb001006c169c023d1bba0
 SHA256: 35140085bb9cad025fbad73e145a304826e267aad39acdc0b378db7a39752cef
 
 Package: ncurses-ui-libs
@@ -2725,6 +2929,7 @@ Homepage: https://invisible-island.net/ncurses/
 Description: Libraries for terminal user interfaces based on ncurses
 Filename: pool/main/n/ncurses-ui-libs/ncurses-ui-libs_6.5.20240831-3_aarch64.deb
 Size: 32996
+MD5Sum: 5e73eb93223e760adea3b78cab8d8fe6
 SHA256: b6ce9b8f0a94bbd772e887ef90f377e34687e3070e623f94d85c59f00b19042c
 
 Package: ncurses-ui-libs-static
@@ -2737,6 +2942,7 @@ Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for terminal user interfaces based on ncurses
 Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.5.20240831-3_aarch64.deb
 Size: 39700
+MD5Sum: b55f9ab4ff938a8641812b6aa69e58c9
 SHA256: fbb3375521b3524a32c0131626f2c083f7602acd8c76f8e87581cbd330f8209e
 
 Package: ncurses-utils
@@ -2749,6 +2955,7 @@ Homepage: https://invisible-island.net/ncurses/
 Description: Tools for working with terminals
 Filename: pool/main/n/ncurses-utils/ncurses-utils_6.5.20240831-3_aarch64.deb
 Size: 87908
+MD5Sum: 5a9c561a2e4b2f7800422db632af6f29
 SHA256: ada908b42532623744aeddcea499931670a35f24a6a031a122c0d6631d7a239b
 
 Package: net-tools
@@ -2760,6 +2967,7 @@ Homepage: http://net-tools.sourceforge.net/
 Description: Configuration tools for Linux networking
 Filename: pool/main/n/net-tools/net-tools_2.10.0-1_aarch64.deb
 Size: 118628
+MD5Sum: 9d546d860a9e39229a77d71318ada96b
 SHA256: e188a1fc17f58a4f52603fd5f1c6ba5767d278bbf59b74c1a545a93747ea20e2
 
 Package: nettle
@@ -2772,6 +2980,7 @@ Homepage: https://www.lysator.liu.se/~nisse/nettle/
 Description: Low level cryptographic tools
 Filename: pool/main/n/nettle/nettle_3.10.2-1_aarch64.deb
 Size: 18208
+MD5Sum: 4d2056bb54da8e34936d8de5cd14565e
 SHA256: 2ffca494e2814f0d28126fb5370545961fd8b15a117c50268f93e6f9c213940f
 
 Package: openssl
@@ -2787,6 +2996,7 @@ Homepage: https://www.openssl.org/
 Description: Library implementing the SSL and TLS protocols as well as general purpose cryptography functions
 Filename: pool/main/o/openssl/openssl_1:3.5.2_aarch64.deb
 Size: 2447680
+MD5Sum: f99d15bcfd73d79f8f4965b009098e98
 SHA256: 68b4b9ac26643e06a390a85a9f6345239df2510b7a69b808ca9163cba2140781
 
 Package: openssl-static
@@ -2799,6 +3009,7 @@ Homepage: https://www.openssl.org/
 Description: Static libraries for openssl
 Filename: pool/main/o/openssl-static/openssl-static_1:3.5.2_aarch64.deb
 Size: 2595244
+MD5Sum: a5f6a99e5adfb39959cb766c0044ca2c
 SHA256: fd678c440670b1f34215593cf953306fb44d638a23eb68c96964409d571b2f33
 
 Package: openssl-tool
@@ -2811,6 +3022,7 @@ Homepage: https://www.openssl.org/
 Description: The openssl command line cryptographic tool
 Filename: pool/main/o/openssl-tool/openssl-tool_1:3.5.2_aarch64.deb
 Size: 272548
+MD5Sum: a59e01b7097253201efeabb7deb831c1
 SHA256: d5791b8cbf3428b8883198187db7a8d8d1b6716333b430397a0b3e2ff2af3ecf
 
 Package: patch
@@ -2822,6 +3034,7 @@ Homepage: https://savannah.gnu.org/projects/patch/
 Description: GNU patch which applies diff files to create patched files
 Filename: pool/main/p/patch/patch_2.8-1_aarch64.deb
 Size: 73820
+MD5Sum: d8a9393310cc47110b2933abde804922
 SHA256: dad1d999f738370879343c2495538cb990116e955b6d8eb437b5745d51fa2ec7
 
 Package: pcre2
@@ -2835,6 +3048,7 @@ Homepage: https://pcre2project.github.io/pcre2/
 Description: Perl 5 compatible regular expression library
 Filename: pool/main/p/pcre2/pcre2_10.47_aarch64.deb
 Size: 961120
+MD5Sum: 18a7d976e97a8c734b54dba01621fcaa
 SHA256: cff5f0c2b2291a64e506b1178bfec7eb3682d8d104de6daa6df5164e076f55cc
 
 Package: pcre2-static
@@ -2847,6 +3061,7 @@ Homepage: https://pcre2project.github.io/pcre2/
 Description: Static libraries for pcre2
 Filename: pool/main/p/pcre2-static/pcre2-static_10.47_aarch64.deb
 Size: 376704
+MD5Sum: f720927477684ffa5f1ace6767d79720
 SHA256: 807be246ce76e9affc47764ba92c5350421d37ae8523ea49d3a8b479260293de
 
 Package: pcre2grep
@@ -2859,6 +3074,7 @@ Homepage: https://pcre2project.github.io/pcre2/
 Description: A grep with Perl-compatible regular expressions
 Filename: pool/main/p/pcre2grep/pcre2grep_10.47_aarch64.deb
 Size: 34016
+MD5Sum: ba9b611bbf3bad3ee8d6ac4921d09271
 SHA256: a7fca9280e2856065fc7beb1690367411ea1c8385df80d63140ecc84fe20f50b
 
 Package: perl
@@ -2871,6 +3087,7 @@ Homepage: https://www.perl.org/
 Description: Capable, feature-rich programming language
 Filename: pool/main/p/perl/perl_5.40.3-3_aarch64.deb
 Size: 14831464
+MD5Sum: b68c9b0c3277ae81137b5fff3cdfde4b
 SHA256: 3335709017d9cc20d89df452d23f6282aa8c6bd8f7938634e6cdd006002b04f7
 
 Package: pinentry
@@ -2883,6 +3100,7 @@ Homepage: https://www.gnupg.org/related_software/pinentry/index.html
 Description: Dialog allowing secure password entry
 Filename: pool/main/p/pinentry/pinentry_1.3.2-1_aarch64.deb
 Size: 47136
+MD5Sum: a6f589d9afa89392dcd4915f35f7d65f
 SHA256: 4c0eac3641e57d7db149a0ce8ddf354723b539c28d2d1ecc352650bfed377912
 
 Package: pkg-config
@@ -2895,6 +3113,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/pkg-config/
 Description: Helper tool used when compiling applications and libraries
 Filename: pool/main/p/pkg-config/pkg-config_0.29.2-3_aarch64.deb
 Size: 32780
+MD5Sum: 2367f9bb6634d43f4fe99935ea444b52
 SHA256: fa11bf0d597a9672457f49586739c663b2a2add6ecd55d0210dd3f7076ad4ee9
 
 Package: procps
@@ -2907,10 +3126,11 @@ Breaks: procps-dev
 Replaces: procps-dev
 Homepage: https://gitlab.com/procps-ng/procps
 Description: Utilities that give information about processes using the /proc filesystem
+Essential: yes
 Filename: pool/main/p/procps/procps_3.3.17-6_aarch64.deb
 Size: 142888
+MD5Sum: cdb53bd72fc2e9c07d44fd24d49fef4f
 SHA256: 21601bc037bd6c220e766ad3abd39ca8af0ae53a6fb173249275bc94a53fba12
-Essential: yes
 
 Package: procps-static
 Version: 3.3.17-6
@@ -2922,6 +3142,7 @@ Homepage: https://gitlab.com/procps-ng/procps
 Description: Static libraries for procps
 Filename: pool/main/p/procps-static/procps-static_3.3.17-6_aarch64.deb
 Size: 28596
+MD5Sum: b5aca3f2902d2daaa6ac68d0425d4906
 SHA256: 9ac3a1a6c5aa9010fa52e9f778f559ebc821bc5e27e843bd22e056fa382db77a
 
 Package: psmisc
@@ -2932,10 +3153,11 @@ Installed-Size: 340
 Depends: ncurses
 Homepage: https://gitlab.com/psmisc/psmisc
 Description: Some small useful utilities that use the proc filesystem
+Essential: yes
 Filename: pool/main/p/psmisc/psmisc_23.7-1_aarch64.deb
 Size: 92640
+MD5Sum: 83b5a7442026d78b6862c0e67f89e135
 SHA256: 3bf631132126bcd1bec2587931c5adc46cb8a5860bea1d54e99c6e3379b19886
-Essential: yes
 
 Package: pulseaudio
 Version: 17.0-1
@@ -2949,6 +3171,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/PulseAudio
 Description: A featureful, general-purpose sound server
 Filename: pool/main/p/pulseaudio/pulseaudio_17.0-1_aarch64.deb
 Size: 853616
+MD5Sum: 47a5715befc48d8e0ab9a096fd348b8d
 SHA256: 855ca8c694203d378df2a0bf841b9ca68deb23873facc513acd29819af215d56
 
 Package: pulseaudio-glib
@@ -2961,6 +3184,7 @@ Homepage: https://www.freedesktop.org/wiki/Software/PulseAudio
 Description: PulseAudio GLIB mainloop component
 Filename: pool/main/p/pulseaudio-glib/pulseaudio-glib_17.0-1_aarch64.deb
 Size: 6912
+MD5Sum: c3e5577c660d513f31bb6bc60af06373
 SHA256: 56fde14aad62f0bb040a3d834f1ba71e11819e49b71a1f2bbc9bd6d9e654f1ff
 
 Package: python
@@ -2969,6 +3193,8 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 58448
 Depends: gdbm, libandroid-posix-semaphore, libandroid-support, libbz2, libcrypt, libexpat, libffi, liblzma, libsqlite, ncurses, ncurses-ui-libs, openssl, readline, zlib
+Recommends: python-ensurepip-wheels, python-pip
+Suggests: python-tkinter
 Breaks: python2 (<= 2.7.15), python-dev
 Replaces: python-dev
 Provides: python3
@@ -2976,9 +3202,8 @@ Homepage: https://python.org/
 Description: Python 3 programming language intended to enable clear programs
 Filename: pool/main/p/python/python_3.12.12_aarch64.deb
 Size: 7549328
+MD5Sum: 806a26f82a47132a3b4855f57302f4e3
 SHA256: fb12a4b3d2585b64d5923ecce1e841cec473ab02a1b151c88b665d9fa56b361d
-Recommends: python-ensurepip-wheels, python-pip
-Suggests: python-tkinter
 
 Package: python-ensurepip-wheels
 Version: 3.12.12
@@ -2992,6 +3217,7 @@ Homepage: https://python.org/
 Description: Wheels for Python ensurepip
 Filename: pool/main/p/python-ensurepip-wheels/python-ensurepip-wheels_3.12.12_all.deb
 Size: 1801596
+MD5Sum: f19105a290f7f995797807ecb51e24d5
 SHA256: 8ff7448906d28ae61aa3d33321ea58e538e738c1eb45abd47ae4782b97660e2c
 
 Package: python-static
@@ -3004,6 +3230,7 @@ Homepage: https://python.org/
 Description: Static libraries for python
 Filename: pool/main/p/python-static/python-static_3.12.12_aarch64.deb
 Size: 6730056
+MD5Sum: fedf94f1e4632c6d5133049f060ce556
 SHA256: f563196143b57e49d6c4990c83b2ab1cc23448aaa98b9883e03601017dc0e36c
 
 Package: python-tkinter
@@ -3018,6 +3245,7 @@ Homepage: https://python.org/
 Description: Tkinter support for Python 3
 Filename: pool/main/p/python-tkinter/python-tkinter_3.12.12_aarch64.deb
 Size: 1218044
+MD5Sum: 20ab218ddfd9429fdb049ae806348e6d
 SHA256: c6704ce4fb967db15ba63c651fda998a76d7d35aed1203b3673e9e2346b2ba7c
 
 Package: python-xcbgen
@@ -3026,14 +3254,15 @@ Architecture: all
 Maintainer: @termux
 Installed-Size: 444
 Depends: xcb-proto (= 1.17.0-1)
+Recommends: python
 Breaks: xcb-proto (<< 1.15.2)
 Replaces: xcb-proto (<< 1.15.2)
 Homepage: https://xcb.freedesktop.org/
 Description: The xcbgen Python module
 Filename: pool/main/p/python-xcbgen/python-xcbgen_1.17.0-1_all.deb
 Size: 44588
+MD5Sum: 571567182c46be9db562005b9f9e9ae1
 SHA256: ea4b3364435f500e6d42b253e29850b612e5427fc833faf01bff3c9e81c1730a
-Recommends: python
 
 Package: pyunbound
 Version: 1.24.1-1
@@ -3046,6 +3275,7 @@ Homepage: https://unbound.net/
 Description: Python bindings for Unbound
 Filename: pool/main/p/pyunbound/pyunbound_1.24.1-1_aarch64.deb
 Size: 40956
+MD5Sum: 73332d54ee5386bfda8b05737dbea794
 SHA256: a88869f0a7f415df1c45773b5f06ba56058c29ed8894fe9750d1d72cbcb72dd2
 
 Package: pzstd
@@ -3058,6 +3288,7 @@ Homepage: https://github.com/facebook/zstd
 Description: A Pigz-like tool for Zstandard
 Filename: pool/main/p/pzstd/pzstd_1.5.7-1_aarch64.deb
 Size: 42144
+MD5Sum: 9162449e476b85051c2d7408623272a5
 SHA256: d19a5d430bb2a42b2e1608a05e8d4b259030393f29611b25c97d5fd29213b06e
 
 Package: readline
@@ -3072,6 +3303,7 @@ Homepage: https://tiswww.case.edu/php/chet/readline/rltop.html
 Description: Library that allow users to edit command lines as they are typed in
 Filename: pool/main/r/readline/readline_8.3.1-1_aarch64.deb
 Size: 293448
+MD5Sum: a0ce2de472462707cc54a887394c8845
 SHA256: 071780fb72e78d6023902986659829677fce42caf94302581ffc93bc8e810f1e
 
 Package: readline-static
@@ -3084,6 +3316,7 @@ Homepage: https://tiswww.case.edu/php/chet/readline/rltop.html
 Description: Static libraries for readline
 Filename: pool/main/r/readline-static/readline-static_8.3.1-1_aarch64.deb
 Size: 125160
+MD5Sum: 8c7c659cb0e39bb19bf777916f0a1ad2
 SHA256: 430d2e26a2b5440ea25341a7525e601a857b8a022d095b43fc3b1a710c1356cc
 
 Package: resolv-conf
@@ -3095,6 +3328,7 @@ Homepage: https://man7.org/linux/man-pages/man5/resolv.conf.5.html
 Description: Resolver configuration file
 Filename: pool/main/r/resolv-conf/resolv-conf_1.3_aarch64.deb
 Size: 1000
+MD5Sum: 1b1250ae1ef5fed1f76e80e915a9e521
 SHA256: eff427469751f7ba21c2d8072a7f8a5ad2c472ebafe5218da950cc84399a8699
 
 Package: scdaemon
@@ -3109,6 +3343,7 @@ Homepage: https://www.gnupg.org/
 Description: Daemon invoked by gpg to manage smartcards
 Filename: pool/main/s/scdaemon/scdaemon_2.5.11_aarch64.deb
 Size: 182776
+MD5Sum: 2f090a924217002e0a475787335cef4f
 SHA256: c4080a28c5570960cd595eed8d3e2ceef1ae0c6ca8b17592f5ff2b87ccb9cd9f
 
 Package: sed
@@ -3118,10 +3353,11 @@ Maintainer: @termux
 Installed-Size: 412
 Homepage: https://www.gnu.org/software/sed/
 Description: GNU stream editor for filtering/transforming text
+Essential: yes
 Filename: pool/main/s/sed/sed_4.9-2_aarch64.deb
 Size: 117616
+MD5Sum: 7c7c1e99f4c77d4839dec24c68f82a13
 SHA256: 5953ee25d91b9537563ea32b3e7976260fc41b5749be62d29589bb7d1782c3e0
-Essential: yes
 
 Package: serf
 Version: 1.3.10-2
@@ -3135,6 +3371,7 @@ Homepage: https://serf.apache.org/
 Description: High performance C-based HTTP client library
 Filename: pool/main/s/serf/serf_1.3.10-2_aarch64.deb
 Size: 47668
+MD5Sum: 17c3f9033f2ae62dd9a1c21ce577a74e
 SHA256: 78e6fc43c2d46e8dcf8748eb5035fafa9f163ae625e9efdeaaca0fae56e6c07b
 
 Package: serf-static
@@ -3147,6 +3384,7 @@ Homepage: https://serf.apache.org/
 Description: Static libraries for serf
 Filename: pool/main/s/serf-static/serf-static_1.3.10-2_aarch64.deb
 Size: 39252
+MD5Sum: 5ddd5d3dba9a6633be47881cc42687e0
 SHA256: d77ebf94bc70ca5492ad73293eafc3513dfb38f6706fc1f5a4fff9341993e66e
 
 Package: speexdsp
@@ -3160,6 +3398,7 @@ Homepage: https://speex.org/
 Description: Speex audio processing library
 Filename: pool/main/s/speexdsp/speexdsp_1.2.1-1_aarch64.deb
 Size: 37388
+MD5Sum: 202dafa41115b8f30e91275680e87632
 SHA256: 98f3a291830edf214d23b438512613fa493e6d009bc22a677fd045a78f118997
 
 Package: speexdsp-static
@@ -3172,6 +3411,7 @@ Homepage: https://speex.org/
 Description: Static libraries for speexdsp
 Filename: pool/main/s/speexdsp-static/speexdsp-static_1.2.1-1_aarch64.deb
 Size: 32884
+MD5Sum: 6275abb14033b219583f57cc961eb542
 SHA256: 954e12bcb39e01faa8e7a7698f4c0e3d343b581b64b306d9b0e2c1185794ead7
 
 Package: sqlite
@@ -3184,6 +3424,7 @@ Homepage: https://www.sqlite.org
 Description: Command line shell for SQLite
 Filename: pool/main/s/sqlite/sqlite_3.51.0_aarch64.deb
 Size: 617864
+MD5Sum: b2e5d6e6a2e53655a54d80626f5ea053
 SHA256: 734572c08613399d3fec991c042b5f43e8f4175d7e2dfcd9d510d5549f2e3c19
 
 Package: subversion
@@ -3198,6 +3439,7 @@ Homepage: https://subversion.apache.org
 Description: Centralized version control system characterized by its simplicity
 Filename: pool/main/s/subversion/subversion_1.14.5-1_aarch64.deb
 Size: 1389984
+MD5Sum: d0283cc0cadf1a965275472fe350538a
 SHA256: 3fb67f4d0bf49fef13cdd19079d4e612a95234d38d81ca9fd38e00c8d5577dd3
 
 Package: subversion-perl
@@ -3210,6 +3452,7 @@ Homepage: https://subversion.apache.org
 Description: Perl interface to Subversion
 Filename: pool/main/s/subversion-perl/subversion-perl_1.14.5-1_aarch64.deb
 Size: 767128
+MD5Sum: fd7867b933212fcdd942e5799dcf9683
 SHA256: 6a67fe9477c64316e995dbe845304fd9d5af3e8486bff2ed0aa9bb7fe669265e
 
 Package: subversion-perl-static
@@ -3222,6 +3465,7 @@ Homepage: https://subversion.apache.org
 Description: Static libraries for subversion-perl
 Filename: pool/main/s/subversion-perl-static/subversion-perl-static_1.14.5-1_aarch64.deb
 Size: 15572
+MD5Sum: bb1017b3a0ee9c6d44ea1276cabb1044
 SHA256: f01a5509fd1e4f30c8b82c29917eb9f1d2ab5595803601b1d98345839ae81f1e
 
 Package: subversion-static
@@ -3234,6 +3478,7 @@ Homepage: https://subversion.apache.org
 Description: Static libraries for subversion
 Filename: pool/main/s/subversion-static/subversion-static_1.14.5-1_aarch64.deb
 Size: 1139196
+MD5Sum: a5fc9f5673852613d53fa3dd2c0c9e08
 SHA256: e3786d1977630a0425296e90788ca057f1097910bd26ba24afcdb393065792e8
 
 Package: swig
@@ -3246,6 +3491,7 @@ Homepage: https://swig.org
 Description: Generate scripting interfaces to C/C++ code
 Filename: pool/main/s/swig/swig_4.4.0_aarch64.deb
 Size: 926004
+MD5Sum: aff81f4a44edee32720fbc7eb21798d4
 SHA256: dd9bc661f0a815da6cbb7f09155481ecc6828e0aad61ddaa230d961b5a0b3f83
 
 Package: tar
@@ -3256,10 +3502,11 @@ Installed-Size: 1260
 Depends: libandroid-glob, libiconv
 Homepage: https://www.gnu.org/software/tar/
 Description: GNU tar for manipulating tar archives
+Essential: yes
 Filename: pool/main/t/tar/tar_1.35-1_aarch64.deb
 Size: 342808
+MD5Sum: 1abe19282bc8d4df6cb9a65f37e0b4a4
 SHA256: 072f03680c007e434cc464d8cb0c2f1b6f61f8bf42dfb009a0fb855761280af3
-Essential: yes
 
 Package: tcl
 Version: 8.6.14-1
@@ -3273,6 +3520,7 @@ Homepage: https://www.tcl.tk/
 Description: Powerful but easy to learn dynamic programming language
 Filename: pool/main/t/tcl/tcl_8.6.14-1_aarch64.deb
 Size: 2257168
+MD5Sum: d3e64d58b1af4b3b2f056865ecf8f28a
 SHA256: 8f5554bd636fdb54a58349cc7823960a2cdf77f3840419d7cdfb5df5ab47839a
 
 Package: termux-am
@@ -3285,6 +3533,7 @@ Homepage: https://github.com/termux/TermuxAm
 Description: Android Oreo-compatible am command reimplementation
 Filename: pool/main/t/termux-am/termux-am_0.8.0-2_all.deb
 Size: 577068
+MD5Sum: 7ba8fa6f835e874da30c643ff87f86e4
 SHA256: 57139e1aeb188450ee81a7ed42525155f0232596b407e05e57e81ebf9d987552
 
 Package: termux-am-socket
@@ -3297,6 +3546,7 @@ Homepage: https://github.com/termux/termux-am-socket
 Description: A faster version of am with less features that only works while Termux is running
 Filename: pool/main/t/termux-am-socket/termux-am-socket_1.5.0-1_aarch64.deb
 Size: 16132
+MD5Sum: 87d0401b4b8867327ddf1230ef1eb733
 SHA256: ea21f14c94ddfc2cb0e6961a4b2e48abf352961329b96a441c86c8b275d5cd8d
 
 Package: termux-core
@@ -3306,10 +3556,11 @@ Maintainer: @termux
 Installed-Size: 1956
 Homepage: https://github.com/termux/termux-core-package
 Description: Utils and libraries for Termux core
+Essential: yes
 Filename: pool/main/t/termux-core/termux-core_0.4.0-1_aarch64.deb
 Size: 197776
+MD5Sum: d6e9474a63e2621037cf69550871042e
 SHA256: 2d0ec3a6b4c5db282d3f710be3082aee7e13a6b4698a8a0e6e733f40c7465006
-Essential: yes
 
 Package: termux-core-static
 Version: 0.4.0-1
@@ -3321,6 +3572,7 @@ Homepage: https://github.com/termux/termux-core-package
 Description: Static libraries for termux-core
 Filename: pool/main/t/termux-core-static/termux-core-static_0.4.0-1_aarch64.deb
 Size: 20156
+MD5Sum: cff67b7643e592a5a5c06e4ce092d873
 SHA256: 622da7a03565823b7229aad67ac06ab94af2b79ddc358f965ac5dc91198eb061
 
 Package: termux-exec
@@ -3330,10 +3582,11 @@ Maintainer: @termux
 Installed-Size: 2112
 Homepage: https://github.com/termux/termux-exec-package
 Description: Utils and libraries for Termux exec including a LD_PRELOAD shared library for proper functioning of the Termux execution environment
+Essential: yes
 Filename: pool/main/t/termux-exec/termux-exec_1:2.4.0-1_aarch64.deb
 Size: 287544
+MD5Sum: fb4608395aaee6b1cce93c987987524b
 SHA256: 0fbfca5e14e154c7cfa79c829a1de402868fbe68dd4b8e730b51d3837f3db119
-Essential: yes
 
 Package: termux-exec-static
 Version: 1:2.4.0-1
@@ -3345,6 +3598,7 @@ Homepage: https://github.com/termux/termux-exec-package
 Description: Static libraries for termux-exec
 Filename: pool/main/t/termux-exec-static/termux-exec-static_1:2.4.0-1_aarch64.deb
 Size: 10640
+MD5Sum: 5726cc1104ef04001e1c222aad3e7ce6
 SHA256: 68016937421af6fe51916ee4440c1caa4c47ba19e38a903083c788608f73e3bb
 
 Package: termux-keyring
@@ -3354,10 +3608,11 @@ Maintainer: @termux
 Installed-Size: 192
 Homepage: https://github.com/termux
 Description: GPG public keys for the official Termux repositories
+Essential: yes
 Filename: pool/main/t/termux-keyring/termux-keyring_3.13_all.deb
 Size: 39796
+MD5Sum: d19edee2b3e15a0bd9c99fc3a7e657e9
 SHA256: 055733d697c790b74e816629cd74e433c76b06118997a7dd64245d6fa398e5b9
-Essential: yes
 
 Package: termux-licenses
 Version: 2.1
@@ -3366,10 +3621,11 @@ Maintainer: @termux
 Installed-Size: 612
 Homepage: https://termux.dev
 Description: Contains LICENSE files for common licenses
+Essential: yes
 Filename: pool/main/t/termux-licenses/termux-licenses_2.1_all.deb
 Size: 52568
+MD5Sum: da0b118687a416061afee5dae1ba1a9f
 SHA256: c4956f1e77c674326d07b4a74790e8e87623fd01203a8da63f85c522594319fc
-Essential: yes
 
 Package: termux-tools
 Version: 1.46.0+really1.45.0-1
@@ -3377,16 +3633,17 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 552
 Depends: bzip2, coreutils, curl, dash, diffutils, findutils, gawk, grep, gzip, less, procps, psmisc, sed, tar, termux-am (>= 0.8.0), termux-am-socket (>= 1.5.0), termux-core, termux-exec, util-linux, xz-utils, dialog
+Recommends: ed, dos2unix, inetutils, net-tools, patch, unzip
+Suggests: termux-api
 Conflicts: procps (<< 3.3.15-2)
 Breaks: termux-keyring (<< 1.9)
 Homepage: https://termux.dev/
 Description: Basic system tools for Termux
+Essential: yes
 Filename: pool/main/t/termux-tools/termux-tools_1.46.0+really1.45.0-1_aarch64.deb
 Size: 33640
+MD5Sum: f4d4007c23e9ccb402cdf6275bf06234
 SHA256: ddee021a6161ae78c346f38231217f61a3f0193ccd78b4d66cdea415b42723d4
-Essential: yes
-Recommends: ed, dos2unix, inetutils, net-tools, patch, unzip
-Suggests: termux-api
 
 Package: texinfo
 Version: 7.2-4
@@ -3394,12 +3651,13 @@ Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 10120
 Depends: gawk, libiconv, ncurses, perl
+Recommends: update-info-dir
 Homepage: https://www.gnu.org/software/texinfo/
 Description: Documentation system for on-line information and printed output
 Filename: pool/main/t/texinfo/texinfo_7.2-4_aarch64.deb
 Size: 1081748
+MD5Sum: 054e3ab8070afbe12a9136c4d8013540
 SHA256: 81f24360913d70b7cb47a5a264a08981a847e6196eb177fe6530c3e4628b873d
-Recommends: update-info-dir
 
 Package: tk
 Version: 8.6.14-1
@@ -3411,6 +3669,7 @@ Homepage: https://tcl.sourceforge.net/
 Description: A windowing toolkit for use with tcl
 Filename: pool/main/t/tk/tk_8.6.14-1_aarch64.deb
 Size: 1753824
+MD5Sum: 9b1b75b491ad99d9e63329b288ead8be
 SHA256: 93e16a8926b6586b6bed05afad8ded17e24c71ad677d9aa914cda460d1df10b3
 
 Package: tor
@@ -3423,6 +3682,7 @@ Homepage: https://www.torproject.org
 Description: The Onion Router anonymizing overlay network
 Filename: pool/main/t/tor/tor_0.4.8.19_aarch64.deb
 Size: 3057372
+MD5Sum: f99f2ad0fd107713215448ac21995512
 SHA256: 395b1431d580238182eb499dccd38a28be4a89057ffb1490fac02b54a7db1c6e
 
 Package: ttf-dejavu
@@ -3434,6 +3694,7 @@ Homepage: https://dejavu-fonts.github.io/
 Description: Font family based on the Bitstream Vera Fonts with a wider range of characters
 Filename: pool/main/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb
 Size: 2459180
+MD5Sum: 578b3296734dce3ae1fda7b36335e3e0
 SHA256: d97e97865ae55e8559862518586ceb1400e7226b5078839466a3ed8320ffed42
 
 Package: unbound
@@ -3446,6 +3707,7 @@ Homepage: https://unbound.net/
 Description: Unbound command-line tools
 Filename: pool/main/u/unbound/unbound_1.24.1-1_aarch64.deb
 Size: 620132
+MD5Sum: 3f2f31daf17478719298a60a1475ede4
 SHA256: a19ba15b1d9d5eb05ffea194222def3e0032a9cf54feade5a991605ea0adfc97
 
 Package: unzip
@@ -3458,6 +3720,7 @@ Homepage: https://sourceforge.net/projects/infozip/
 Description: Tools for working with zip files
 Filename: pool/main/u/unzip/unzip_6.0-10_aarch64.deb
 Size: 117248
+MD5Sum: 4b99b9452b2974dd1b6d2d8d26dd2740
 SHA256: 9fd35b54f05db3be4fa437c28dd77094f8653bb2c0a8e7a4ccb123e52cfc0058
 
 Package: update-info-dir
@@ -3470,6 +3733,7 @@ Homepage: https://www.gnu.org/software/texinfo/
 Description: Update or create index file from all installed info files in directory
 Filename: pool/main/u/update-info-dir/update-info-dir_7.2-4_all.deb
 Size: 2464
+MD5Sum: 39b9ee36240d316e570234cf59284318
 SHA256: 1fb9a817fd600a3a9a69f5030cd6abf647a82de890868f115d9ce8f6745dc031
 
 Package: utf8proc
@@ -3483,6 +3747,7 @@ Homepage: https://github.com/JuliaLang/utf8proc
 Description: Library for processing UTF-8 Unicode data
 Filename: pool/main/u/utf8proc/utf8proc_2.11.0_aarch64.deb
 Size: 58868
+MD5Sum: ee5570444325e3bb4f280260efe2ef41
 SHA256: c142dcd1f286fbb706c6fd9dcb5d6f12b43413635b530cbc8d860ab2d8160239
 
 Package: utf8proc-static
@@ -3495,6 +3760,7 @@ Homepage: https://github.com/JuliaLang/utf8proc
 Description: Static libraries for utf8proc
 Filename: pool/main/u/utf8proc-static/utf8proc-static_2.11.0_aarch64.deb
 Size: 48832
+MD5Sum: 91d10f6fed7659c74760bf9b26798b33
 SHA256: 3167b041c6f0496b4f81918cabf9b58deea190919b5cc362b24d9ce01a0b41b9
 
 Package: util-linux
@@ -3507,10 +3773,11 @@ Breaks: util-linux-dev
 Replaces: util-linux-dev
 Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Miscellaneous system utilities
+Essential: yes
 Filename: pool/main/u/util-linux/util-linux_2.41.2_aarch64.deb
 Size: 759892
+MD5Sum: 6bc7139bf11fe3eca642a61d1e063c37
 SHA256: 067bd9a2731a233a4aafed6438797112c2348ef1e8230433063be373b0f1008f
-Essential: yes
 
 Package: util-linux-static
 Version: 2.41.2
@@ -3522,6 +3789,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Static libraries for util-linux
 Filename: pool/main/u/util-linux-static/util-linux-static_2.41.2_aarch64.deb
 Size: 431836
+MD5Sum: e657ee9c16cc20f3400ca5e6bb4489d0
 SHA256: b06e07f35e1511da31b9405a238e9a0643da63e8ba2ca1757fcce3ab307188e2
 
 Package: uuid-utils
@@ -3534,6 +3802,7 @@ Homepage: https://en.wikipedia.org/wiki/Util-linux
 Description: Utilities for handling universally unique identifiers
 Filename: pool/main/u/uuid-utils/uuid-utils_2.41.2_aarch64.deb
 Size: 41096
+MD5Sum: b59dacc86667817a3de4b414bdea9625
 SHA256: 0a21c6e221e6066c5c412e6daf10a33cd03f2d844186d3c4b3758a41c43965d2
 
 Package: wget
@@ -3546,6 +3815,7 @@ Homepage: https://www.gnu.org/software/wget/
 Description: Commandline tool for retrieving files using HTTP, HTTPS and FTP
 Filename: pool/main/w/wget/wget_1.25.0-1_aarch64.deb
 Size: 281340
+MD5Sum: 734ac5f841c12f376a686fa380807f88
 SHA256: e03acf69e89c3879c3d371952741a29e601c0c7c470e14e53b699eede0038ee3
 
 Package: xcb-proto
@@ -3559,6 +3829,7 @@ Homepage: https://xcb.freedesktop.org/
 Description: XML-XCB protocol descriptions
 Filename: pool/main/x/xcb-proto/xcb-proto_1.17.0-1_all.deb
 Size: 78584
+MD5Sum: 1908f9e6a779873200c0f8395fff3347
 SHA256: f9f884921107bdfa18b1d18a9ae44cab35657d9cb312c099dc93b407dc51704a
 
 Package: xorg-util-macros
@@ -3570,6 +3841,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X.Org Autotools macros
 Filename: pool/main/x/xorg-util-macros/xorg-util-macros_1.20.2_all.deb
 Size: 21952
+MD5Sum: ce3b012617a3ba3b63d7d8dcd7c46368
 SHA256: 8c43c3c30ca26bba98ac26813b14f6860d955f9a02e7f71eae7a62f14299a3f4
 
 Package: xorgproto
@@ -3584,6 +3856,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X.Org X11 Protocol headers
 Filename: pool/main/x/xorgproto/xorgproto_2024.1_all.deb
 Size: 247828
+MD5Sum: d8355b440f6537b3bb4d77b4046cdce6
 SHA256: 57b3429407dfd6681b24bb21adbe6f0c5d9524688504e3eae2e8bab3aea2af57
 
 Package: xsltproc
@@ -3596,6 +3869,7 @@ Homepage: http://xmlsoft.org/libxslt/
 Description: XSLT command line processor
 Filename: pool/main/x/xsltproc/xsltproc_1.1.43-2_aarch64.deb
 Size: 11892
+MD5Sum: e114b4a520dce2e8d0ae0e20b42f2245
 SHA256: d98adf87a3aa8832bdf2c82e79662a08adbf4da058a06d49c618651a41ca8bba
 
 Package: xtrans
@@ -3607,6 +3881,7 @@ Homepage: https://xorg.freedesktop.org/
 Description: X transport library
 Filename: pool/main/x/xtrans/xtrans_1.6.0_all.deb
 Size: 39872
+MD5Sum: 90cc39262d0d1b085e7e28d4615dc13c
 SHA256: 84f1cc55efedac280358e228cc059e0463d33d5063e3757cc5857e853ed5981a
 
 Package: xxhash
@@ -3618,6 +3893,7 @@ Homepage: https://cyan4973.github.io/xxHash/
 Description: Extremely fast non-cryptographic hash algorithm
 Filename: pool/main/x/xxhash/xxhash_0.8.3-1_aarch64.deb
 Size: 76568
+MD5Sum: 7cc715d4253b5f6eea8e507e5068026f
 SHA256: 5a54bf7d5b9c4c6dbe8a53560dbe68204002084b881aaf98842da7e4d55a4a34
 
 Package: xxhash-static
@@ -3630,6 +3906,7 @@ Homepage: https://cyan4973.github.io/xxHash/
 Description: Static libraries for xxhash
 Filename: pool/main/x/xxhash-static/xxhash-static_0.8.3-1_aarch64.deb
 Size: 8452
+MD5Sum: caea5104379694723cd0383f9c98ed33
 SHA256: a090e9691149097f2193c97984840f95af8658c48a10533fa0bc25fd05053fc6
 
 Package: xz-utils
@@ -3640,10 +3917,11 @@ Installed-Size: 228
 Depends: liblzma (= 5.8.1-1)
 Homepage: https://tukaani.org/xz/
 Description: XZ-format compression tools
+Essential: yes
 Filename: pool/main/x/xz-utils/xz-utils_5.8.1-1_aarch64.deb
 Size: 71120
+MD5Sum: 6859faca5af7a7bc1393f5467112b5a8
 SHA256: 1b7aaf0ececf99293601a6d6ce6d640b1f6341a8865722e2cd2eafc0ab653417
-Essential: yes
 
 Package: zlib
 Version: 1.3.1-1
@@ -3656,6 +3934,7 @@ Homepage: https://www.zlib.net/
 Description: Compression library implementing the deflate compression method found in gzip and PKZIP
 Filename: pool/main/z/zlib/zlib_1.3.1-1_aarch64.deb
 Size: 60140
+MD5Sum: f6e2dee06fa7956e8c81d84ea6230722
 SHA256: aff9e472f49d15ebf6d6441fca9d75d900cb4f434494034ff5e2fe2bf2a36c1c
 
 Package: zlib-static
@@ -3668,6 +3947,7 @@ Homepage: https://www.zlib.net/
 Description: Static libraries for zlib
 Filename: pool/main/z/zlib-static/zlib-static_1.3.1-1_aarch64.deb
 Size: 34364
+MD5Sum: 2d1bbf01c1b47fd6c66b493ace2825f1
 SHA256: 4c52e363e570aaec6b5193fe3d0c3809a5e93c6408d324245e9b53a0e1cb23fc
 
 Package: zstd
@@ -3682,4 +3962,5 @@ Homepage: https://github.com/facebook/zstd
 Description: Zstandard compression
 Filename: pool/main/z/zstd/zstd_1.5.7-1_aarch64.deb
 Size: 360640
+MD5Sum: a42ad05732092f6b3e3a93915527dc1e
 SHA256: 820f91f6950ce3d99e83d7adcbc2fd0d41860b6315dd005b42a9b708c9aa9e16

@@ -2128,16 +2128,6 @@
         "desc": "Tool to control the generation of non-source files from source files"
       }
     ],
-    "micro": [
-      {
-        "name": "micro_2.0.15_aarch64.deb",
-        "path": "pool/main/m/micro/micro_2.0.15_aarch64.deb",
-        "size": 3613008,
-        "package": "micro",
-        "version": "2.0.15",
-        "desc": "Modern and intuitive terminal-based text editor"
-      }
-    ],
     "mount-utils": [
       {
         "name": "mount-utils_2.41.2_aarch64.deb",
