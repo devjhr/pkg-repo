@@ -145,14 +145,17 @@ def build_packages():
     print(f"  ✅  Packages written ({len(deb_files)} package(s))")
 
     # Build folder map for the web file browser (packages.json)
+    # Structure: { "m": { "micro": [{...}] } }
     import json
     folder_map = {}
     for deb in deb_files:
-        rel    = deb.relative_to(POOL_DIR)
-        parts  = rel.parts
-        folder = parts[0] if len(parts) > 1 else "."
-        inf    = extract_deb_info(deb)
-        folder_map.setdefault(folder, []).append({
+        rel   = deb.relative_to(POOL_DIR)
+        parts = rel.parts
+        # parts = ('m', 'micro', 'micro_2.0.15_aarch64.deb')
+        letter  = parts[0] if len(parts) >= 3 else (parts[0] if len(parts) > 1 else ".")
+        pkgdir  = parts[1] if len(parts) >= 3 else "."
+        inf     = extract_deb_info(deb)
+        folder_map.setdefault(letter, {}).setdefault(pkgdir, []).append({
             "name":    deb.name,
             "path":    "pool/main/" + str(rel).replace("\\", "/"),
             "size":    deb.stat().st_size,
