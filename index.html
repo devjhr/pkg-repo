@@ -7,11 +7,28 @@
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,700;1,300&family=Bebas+Neue&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    /* DARK theme (default) */
     :root {
       --bg: #060809; --surface: #0b0f12; --border: #1a2028;
-      --green: #00ff88; --green-dim: rgba(0,255,136,0.06);
+      --green: #00cc6a; --green-dim: rgba(0,204,106,0.07);
       --text: #cdd8e3; --muted: #445566; --amber: #ffb347; --blue: #4fc3f7;
+      --header-bg: #0d1219;
     }
+    /* LIGHT theme */
+    :root.light {
+      --bg: #f4f6f9; --surface: #ffffff; --border: #dde2ec;
+      --green: #00925a; --green-dim: rgba(0,146,90,0.07);
+      --text: #1a2030; --muted: #7a8aa0; --amber: #c07000; --blue: #0077bb;
+      --header-bg: #eef1f6;
+    }
+    /* Smooth theme transition */
+    *, *::before, *::after { transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease; }
+    /* But keep animations instant */
+    .reveal, .status-dot, .copy-btn, .fm-dl-btn, .fm-row, .fm-search, .nav-links a { transition: none !important; }
+    .reveal { transition: opacity 0.5s, transform 0.5s !important; }
+    .copy-btn, .fm-dl-btn { transition: border-color 0.2s, color 0.2s !important; }
+    .fm-row { transition: background 0.12s !important; }
+    .fm-search { transition: border-color 0.2s !important; }
     html { scroll-behavior: smooth; }
     body { background: var(--bg); color: var(--text); font-family: 'JetBrains Mono', monospace; min-height: 100vh; overflow-x: hidden; }
     body::after { content: ''; position: fixed; inset: 0; background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px); pointer-events: none; z-index: 9999; }
@@ -61,7 +78,7 @@
     .fm-search::placeholder { color: var(--muted); }
     .fm-count { font-size: 0.68rem; color: var(--muted); white-space: nowrap; }
     .fm-shell { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
-    .fm-header { display: grid; grid-template-columns: 28px 1fr 90px 90px 110px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: #0d1219; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); user-select: none; }
+    .fm-header { display: grid; grid-template-columns: 28px 1fr 90px 90px 110px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--header-bg); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); user-select: none; }
     .fm-row { display: grid; grid-template-columns: 28px 1fr 90px 90px 110px; padding: 0 16px; border-bottom: 1px solid var(--border); align-items: center; min-height: 46px; cursor: pointer; transition: background 0.12s; text-decoration: none; color: inherit; }
     .fm-row:last-child { border-bottom: none; }
     .fm-row:hover { background: var(--green-dim); }
@@ -88,6 +105,12 @@
     .step-body { font-size: 0.74rem; color: var(--muted); line-height: 1.7; }
     .step-code { font-size: 0.75rem; color: var(--green); background: rgba(0,255,136,0.06); border: 1px solid var(--border); padding: 8px 14px; margin-top: 10px; display: inline-block; }
 
+    /* THEME TOGGLE */
+    .theme-toggle { background: none; border: 1px solid var(--border); color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; padding: 5px 12px; cursor: pointer; text-transform: uppercase; display: flex; align-items: center; gap: 6px; transition: border-color 0.2s, color 0.2s !important; white-space: nowrap; }
+    .theme-toggle:hover { border-color: var(--green); color: var(--green); }
+    .theme-icon { font-size: 0.85rem; transition: transform 0.4s ease !important; }
+    :root.light .theme-icon { transform: rotate(180deg); }
+
     /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 28px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 0.68rem; color: var(--muted); }
     .footer-logo { color: var(--green); font-weight: 700; }
@@ -113,6 +136,10 @@
     <div class="topbar-dot dot-green"></div>
     <span class="topbar-title">androstudio &mdash; pkg repository</span>
     <div class="topbar-status"><div class="status-dot"></div><span>repo online</span></div>
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()" title="Toggle light/dark mode">
+      <span class="theme-icon" id="themeIcon">&#9790;</span>
+      <span id="themeLabel">Light</span>
+    </button>
   </div>
 
   <div class="hero">
@@ -317,6 +344,36 @@
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // ── Theme: auto-detect system preference, persist user choice ──────────
+    const root        = document.documentElement;
+    const toggleBtn   = document.getElementById('themeToggle');
+    const themeIcon   = document.getElementById('themeIcon');
+    const themeLabel  = document.getElementById('themeLabel');
+
+    function applyTheme(isLight) {
+      root.classList.toggle('light', isLight);
+      themeIcon.innerHTML  = isLight ? '&#9788;' : '&#9790;';
+      themeLabel.textContent = isLight ? 'Dark' : 'Light';
+    }
+
+    function toggleTheme() {
+      const isLight = !root.classList.contains('light');
+      applyTheme(isLight);
+      localStorage.setItem('as-theme', isLight ? 'light' : 'dark');
+    }
+
+    // On load: check saved pref, else follow system
+    (function() {
+      const saved  = localStorage.getItem('as-theme');
+      const system = window.matchMedia('(prefers-color-scheme: light)').matches;
+      applyTheme(saved ? saved === 'light' : system);
+    })();
+
+    // Auto-switch when system preference changes (only if user hasn't manually set a pref)
+    window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
+      if (!localStorage.getItem('as-theme')) applyTheme(e.matches);
+    });
   </script>
 </body>
 </html>
