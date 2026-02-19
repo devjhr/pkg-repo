@@ -69,9 +69,6 @@
 
     /* FILE MANAGER */
     .fm-section { max-width: 960px; margin: 0 auto; padding: 0 40px 80px; }
-    .fm-breadcrumb { display: flex; align-items: center; gap: 6px; font-size: 0.72rem; color: var(--muted); margin-bottom: 16px; flex-wrap: wrap; }
-    .fm-breadcrumb a { color: var(--green); text-decoration: none; cursor: pointer; }
-    .fm-breadcrumb a:hover { text-decoration: underline; }
     .fm-toolbar { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; flex-wrap: wrap; }
     .fm-search { flex: 1; min-width: 180px; background: var(--surface); border: 1px solid var(--border); color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; padding: 8px 14px; outline: none; transition: border-color 0.2s; }
     .fm-search:focus { border-color: var(--green); }
@@ -174,9 +171,7 @@
       <div class="divider-line"></div>
     </div>
 
-    <div class="fm-breadcrumb" id="breadcrumb">
-      <a onclick="navigateTo(null)">pool/main</a>
-    </div>
+    
 
     <div class="fm-toolbar reveal">
       <input class="fm-search" id="searchInput" type="text" placeholder="Search packages..." oninput="renderView()"/>
@@ -232,151 +227,51 @@
 
   <script>
     const REPO_BASE = 'https://devjhr.github.io/pkg-repo';
-    let allPackages = {};  // Will store the full package data
-    let currentPath = null; // Current letter folder (e.g., 'a', 'b', etc.)
+    let allPackages = [];  // flat list of all packages
 
-    // Load packages.json
+    // packages.json structure: { "m": { "micro": [{...}] } }
     fetch('packages.json')
       .then(r => { if (!r.ok) throw new Error(); return r.json(); })
-      .then(data => { 
-        allPackages = data; 
-        renderView(); 
+      .then(data => {
+        // Flatten nested structure into a single array
+        for (const pkgs of Object.values(data))
+          for (const files of Object.values(pkgs))
+            files.forEach(f => allPackages.push(f));
+        allPackages.sort((a, b) => a.package.localeCompare(b.package));
+        renderView();
       })
       .catch(() => {
         document.getElementById('fmBody').innerHTML =
           '<div class="fm-empty">packages.json not found.<br>Run <strong style="color:var(--green)">python generate_repo.py</strong> then push to GitHub.</div>';
       });
 
-    function navigateTo(folder) {
-      currentPath = folder;
-      document.getElementById('searchInput').value = '';
-      renderView();
-    }
-
-    function getAllPackagesFlat() {
-      // Flatten all packages for search functionality
-      const flat = [];
-      for (const [letter, packages] of Object.entries(allPackages)) {
-        for (const [pkgName, versions] of Object.entries(packages)) {
-          versions.forEach(version => {
-            flat.push({
-              ...version,
-              letter: letter,
-              packageName: pkgName
-            });
-          });
-        }
-      }
-      return flat;
-    }
-
     function renderView() {
       const query = document.getElementById('searchInput').value.trim().toLowerCase();
-      const body = document.getElementById('fmBody');
-      const crumb = document.getElementById('breadcrumb');
-      let html = '', count = 0;
+      const body  = document.getElementById('fmBody');
 
-      if (currentPath === null) {
-        // ROOT — show letter folders
-        crumb.innerHTML = '<span style="color:var(--green)">pool/main</span>';
+      const results = query
+        ? allPackages.filter(f =>
+            f.package.toLowerCase().includes(query) ||
+            f.name.toLowerCase().includes(query) ||
+            (f.desc||'').toLowerCase().includes(query))
+        : allPackages;
 
-        if (query) {
-          // Search across all packages
-          const flatPackages = getAllPackagesFlat();
-          const matches = flatPackages.filter(pkg => 
-            pkg.name.toLowerCase().includes(query) || 
-            (pkg.package || '').toLowerCase().includes(query) ||
-            (pkg.desc || '').toLowerCase().includes(query)
-          );
-          
-          count = matches.length;
-          html = matches.length
-            ? matches.map(pkg => fileRow(pkg)).join('')
-            : '<div class="fm-empty">No packages match "' + escHtml(query) + '"</div>';
-        } else {
-          // Show letter folders
-          const letters = Object.keys(allPackages).sort();
-          count = letters.length;
-          
-          if (!letters.length) {
-            html = '<div class="fm-empty">No packages yet.<br>Drop .deb files into pool/main/[letter]/[package]/ and run generate_repo.py</div>';
-          } else {
-            html = letters.map(letter => {
-              // Count total packages in this letter folder
-              let totalPkgs = 0;
-              if (allPackages[letter]) {
-                Object.values(allPackages[letter]).forEach(versions => {
-                  totalPkgs += versions.length;
-                });
-              }
-              
-              return '<div class="fm-row fm-folder" onclick="navigateTo(\'' + letter + '\')">' +
-                '<div class="fm-icon">&#128193;</div>' +
-                '<div class="fm-name folder-name">' + letter + '/</div>' +
-                '<div class="fm-version" style="color:var(--muted)">' + totalPkgs + ' pkg' + (totalPkgs !== 1 ? 's' : '') + '</div>' +
-                '<div class="fm-size"></div>' +
-                '<div class="fm-action"></div>' +
-              '</div>';
-            }).join('');
-          }
-        }
+      const count = results.length;
+      document.getElementById('itemCount').textContent =
+        count + ' package' + (count !== 1 ? 's' : '') + (query ? ' found' : ' total');
 
-      } else {
-        // FOLDER VIEW - show packages in selected letter
-        crumb.innerHTML = '<a onclick="navigateTo(null)">pool/main</a> <span>/</span> <span style="color:var(--green)">' + currentPath + '/</span>';
-        
-        // Get all packages for this letter
-        const letterPackages = allPackages[currentPath] || {};
-        const allVersions = [];
-        
-        for (const [pkgName, versions] of Object.entries(letterPackages)) {
-          versions.forEach(version => {
-            allVersions.push({
-              ...version,
-              letter: currentPath,
-              packageName: pkgName
-            });
-          });
-        }
-        
-        // Filter by search query if any
-        let files = query 
-          ? allVersions.filter(pkg => 
-              pkg.name.toLowerCase().includes(query) || 
-              (pkg.package || '').toLowerCase().includes(query) ||
-              (pkg.desc || '').toLowerCase().includes(query)
-            )
-          : allVersions;
-        
-        // Sort files by package name
-        files.sort((a, b) => (a.package || a.name).localeCompare(b.package || b.name));
-        
-        count = files.length;
-
-        html = '<div class="fm-row fm-up" onclick="navigateTo(null)">' +
-          '<div class="fm-icon">&#8617;</div>' +
-          '<div class="fm-name">.. (go back)</div>' +
-          '<div class="fm-version"></div><div class="fm-size"></div><div class="fm-action"></div>' +
-        '</div>';
-
-        html += files.length
-          ? files.map(f => fileRow(f)).join('')
-          : '<div class="fm-empty">No packages match your search.</div>';
-      }
-
-      body.innerHTML = html;
-      const label = currentPath ? 'package' : (query ? 'result' : 'folder');
-      document.getElementById('itemCount').textContent = count + ' ' + label + (count !== 1 ? 's' : '');
+      body.innerHTML = results.length
+        ? results.map(f => fileRow(f)).join('')
+        : '<div class="fm-empty">No packages match &quot;' + escHtml(query) + '&quot;</div>';
     }
 
     function fileRow(f) {
-      const dlUrl = REPO_BASE + '/' + f.path;
+      const dlUrl  = REPO_BASE + '/' + f.path;
       const sizeKB = f.size ? (f.size / 1024).toFixed(0) + ' KB' : '-';
-      const desc = f.desc ? ' title="' + escHtml(f.desc) + '"' : '';
-      
+      const desc   = f.desc ? ' title="' + escHtml(f.desc) + '"' : '';
       return '<div class="fm-row"' + desc + '>' +
         '<div class="fm-icon">&#128230;</div>' +
-        '<div class="fm-name">' + escHtml(f.name) + '</div>' +
+        '<div class="fm-name">' + escHtml(f.package) + '</div>' +
         '<div class="fm-version">' + escHtml(f.version || '-') + '</div>' +
         '<div class="fm-size">' + sizeKB + '</div>' +
         '<div class="fm-action"><a class="fm-dl-btn" href="' + dlUrl + '" download>Download</a></div>' +
@@ -400,15 +295,15 @@
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-    // Theme toggle functionality
-    const root = document.documentElement;
-    const toggleBtn = document.getElementById('themeToggle');
-    const themeIcon = document.getElementById('themeIcon');
-    const themeLabel = document.getElementById('themeLabel');
+    // ── Theme: auto-detect system preference, persist user choice ──────────
+    const root        = document.documentElement;
+    const toggleBtn   = document.getElementById('themeToggle');
+    const themeIcon   = document.getElementById('themeIcon');
+    const themeLabel  = document.getElementById('themeLabel');
 
     function applyTheme(isLight) {
       root.classList.toggle('light', isLight);
-      themeIcon.innerHTML = isLight ? '&#9788;' : '&#9790;';
+      themeIcon.innerHTML  = isLight ? '&#9788;' : '&#9790;';
       themeLabel.textContent = isLight ? 'Dark' : 'Light';
     }
 
@@ -420,7 +315,7 @@
 
     // On load: check saved pref, else follow system
     (function() {
-      const saved = localStorage.getItem('as-theme');
+      const saved  = localStorage.getItem('as-theme');
       const system = window.matchMedia('(prefers-color-scheme: light)').matches;
       applyTheme(saved ? saved === 'light' : system);
     })();
@@ -429,8 +324,9 @@
     window.matchMedia('(prefers-color-scheme: light)').addEventListener('change', e => {
       if (!localStorage.getItem('as-theme')) applyTheme(e.matches);
     });
-</script>
+  </script>
 </body>
 </html>
+
 
 
