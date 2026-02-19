@@ -91,6 +91,27 @@
     .fm-up .fm-name { color: var(--muted); font-style: italic; }
     .fm-empty { padding: 52px; text-align: center; font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
 
+    /* SKELETON LOADING */
+    .fm-skeleton { pointer-events: none; }
+    .fm-skeleton .fm-name,
+    .fm-skeleton .fm-version,
+    .fm-skeleton .fm-size,
+    .fm-skeleton .fm-action { position: relative; overflow: hidden; border-radius: 3px; background: var(--border); color: transparent !important; border-color: transparent !important; }
+    .fm-skeleton .fm-name::after,
+    .fm-skeleton .fm-version::after,
+    .fm-skeleton .fm-size::after,
+    .fm-skeleton .fm-action::after {
+      content: ''; position: absolute; inset: 0;
+      background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.06) 50%, transparent 100%);
+      animation: shimmer 1.4s infinite;
+    }
+    @keyframes shimmer { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+
+    /* LOAD MORE */
+    .fm-load-more { display: flex; justify-content: center; padding: 20px 0 8px; }
+    .fm-load-btn { background: none; border: 1px solid var(--border); color: var(--muted); font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; padding: 8px 24px; cursor: pointer; text-transform: uppercase; transition: border-color 0.2s, color 0.2s !important; }
+    .fm-load-btn:hover { border-color: var(--green); color: var(--green); }
+
     /* HOW IT WORKS */
     .how-section { max-width: 960px; margin: 0 auto; padding: 0 40px 80px; }
     .steps { display: flex; flex-direction: column; }
@@ -174,7 +195,7 @@
     
 
     <div class="fm-toolbar reveal">
-      <input class="fm-search" id="searchInput" type="text" placeholder="Search packages..." oninput="renderView()"/>
+      <input class="fm-search" id="searchInput" type="text" placeholder="Search packages..." oninput="onSearch()"/>
       <span class="fm-count" id="itemCount"></span>
     </div>
 
@@ -226,56 +247,124 @@
   </footer>
 
   <script>
-    const REPO_BASE = 'https://devjhr.github.io/pkg-repo';
-    let allPackages = [];  // flat list of all packages
+    const REPO_BASE  = 'https://devjhr.github.io/pkg-repo';
+    const PAGE_SIZE  = 30;   // packages shown per page
+    let allPackages  = [];   // full sorted flat list
+    let filtered     = [];   // current filtered results
+    let visibleCount = PAGE_SIZE;
+    let searchTimer  = null; // debounce timer
 
-    // packages.json structure: { "m": { "micro": [{...}] } }
+    // ── Show skeleton rows while loading ──────────────────────────────────────
+    function showSkeleton() {
+      const body = document.getElementById('fmBody');
+      let html = '';
+      for (let i = 0; i < 8; i++) {
+        html += '<div class="fm-row fm-skeleton">' +
+          '<div class="fm-icon">&#128230;</div>' +
+          '<div class="fm-name">████████████</div>' +
+          '<div class="fm-version">███████</div>' +
+          '<div class="fm-size">██████</div>' +
+          '<div class="fm-action fm-dl-btn">████████</div>' +
+        '</div>';
+      }
+      body.innerHTML = html;
+      document.getElementById('itemCount').textContent = 'Loading...';
+    }
+
+    // ── Fetch packages.json ───────────────────────────────────────────────────
+    showSkeleton();
     fetch('packages.json')
-      .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+      .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
       .then(data => {
-        // Flatten nested structure into a single array
+        // Flatten { "m": { "micro": [{...}] } } → flat array
         for (const pkgs of Object.values(data))
           for (const files of Object.values(pkgs))
             files.forEach(f => allPackages.push(f));
-        allPackages.sort((a, b) => a.package.localeCompare(b.package));
+        allPackages.sort((a, b) => (a.package||'').localeCompare(b.package||''));
+        filtered = allPackages;
+        visibleCount = PAGE_SIZE;
         renderView();
       })
-      .catch(() => {
+      .catch(err => {
         document.getElementById('fmBody').innerHTML =
-          '<div class="fm-empty">packages.json not found.<br>Run <strong style="color:var(--green)">python generate_repo.py</strong> then push to GitHub.</div>';
+          '<div class="fm-empty">&#9888; Failed to load packages.json<br>' +
+          '<span style="font-size:0.68rem;color:var(--muted)">' + err + '</span><br><br>' +
+          'Run <strong style="color:var(--green)">python generate_repo.py</strong> then push to GitHub.</div>';
+        document.getElementById('itemCount').textContent = '';
       });
 
-    function renderView() {
-      const query = document.getElementById('searchInput').value.trim().toLowerCase();
-      const body  = document.getElementById('fmBody');
-
-      const results = query
-        ? allPackages.filter(f =>
-            f.package.toLowerCase().includes(query) ||
-            f.name.toLowerCase().includes(query) ||
-            (f.desc||'').toLowerCase().includes(query))
-        : allPackages;
-
-      const count = results.length;
-      document.getElementById('itemCount').textContent =
-        count + ' package' + (count !== 1 ? 's' : '') + (query ? ' found' : ' total');
-
-      body.innerHTML = results.length
-        ? results.map(f => fileRow(f)).join('')
-        : '<div class="fm-empty">No packages match &quot;' + escHtml(query) + '&quot;</div>';
+    // ── Search with debounce (no lag while typing) ────────────────────────────
+    function onSearch() {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(() => {
+        const query = document.getElementById('searchInput').value.trim().toLowerCase();
+        filtered = query
+          ? allPackages.filter(f =>
+              (f.package||'').toLowerCase().includes(query) ||
+              (f.name||'').toLowerCase().includes(query) ||
+              (f.desc||'').toLowerCase().includes(query))
+          : allPackages;
+        visibleCount = PAGE_SIZE;
+        renderView();
+      }, 180);  // 180ms debounce
     }
 
-    function fileRow(f) {
-      const dlUrl  = REPO_BASE + '/' + f.path;
-      const sizeKB = f.size ? (f.size / 1024).toFixed(0) + ' KB' : '-';
-      const desc   = f.desc ? ' title="' + escHtml(f.desc) + '"' : '';
-      return '<div class="fm-row"' + desc + '>' +
-        '<div class="fm-icon">&#128230;</div>' +
-        '<div class="fm-name">' + escHtml(f.package) + '</div>' +
-        '<div class="fm-version">' + escHtml(f.version || '-') + '</div>' +
-        '<div class="fm-size">' + sizeKB + '</div>' +
-        '<div class="fm-action"><a class="fm-dl-btn" href="' + dlUrl + '" download>Download</a></div>' +
-      '</div>';
+    // ── Render current page ───────────────────────────────────────────────────
+    function renderView() {
+      const body    = document.getElementById('fmBody');
+      const total   = filtered.length;
+      const visible = filtered.slice(0, visibleCount);
+      const query   = document.getElementById('searchInput').value.trim();
+
+      // Count label
+      document.getElementById('itemCount').textContent =
+        query
+          ? total + ' result' + (total !== 1 ? 's' : '')
+          : total + ' package' + (total !== 1 ? 's' : '') + ' total';
+
+      if (!total) {
+        body.innerHTML = '<div class="fm-empty">No packages match &quot;' + escHtml(query) + '&quot;</div>';
+        return;
+      }
+
+      // Render rows using DocumentFragment for performance
+      const frag = document.createDocumentFragment();
+      visible.forEach(f => {
+        const div = document.createElement('div');
+        div.className = 'fm-row';
+        if (f.desc) div.title = f.desc;
+        div.innerHTML =
+          '<div class="fm-icon">&#128230;</div>' +
+          '<div class="fm-name">' + escHtml(f.package||f.name) + '</div>' +
+          '<div class="fm-version">' + escHtml(f.version || '-') + '</div>' +
+          '<div class="fm-size">' + (f.size ? (f.size/1024).toFixed(0)+' KB' : '-') + '</div>' +
+          '<div class="fm-action"><a class="fm-dl-btn" href="' + REPO_BASE + '/' + f.path + '" download>Download</a></div>';
+        frag.appendChild(div);
+      });
+
+      body.innerHTML = '';
+      body.appendChild(frag);
+
+      // Load more button
+      if (visibleCount < total) {
+        const remaining = total - visibleCount;
+        const wrap = document.createElement('div');
+        wrap.className = 'fm-load-more';
+        wrap.innerHTML = '<button class="fm-load-btn" onclick="loadMore()">Load ' +
+          Math.min(remaining, PAGE_SIZE) + ' more &nbsp;&#9660; &nbsp;(' + remaining + ' remaining)</button>';
+        body.appendChild(wrap);
+      }
+    }
+
+    // ── Load next page ────────────────────────────────────────────────────────
+    function loadMore() {
+      visibleCount += PAGE_SIZE;
+      renderView();
+      // Scroll to where the new items start
+      const rows = document.querySelectorAll('#fmBody .fm-row');
+      if (rows.length > PAGE_SIZE) {
+        rows[rows.length - PAGE_SIZE]?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     }
 
     function escHtml(s) {
