@@ -85,8 +85,11 @@
     .fm-version { font-size: 0.7rem; color: var(--amber); white-space: nowrap; }
     .fm-size { font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
     .fm-action { display: flex; justify-content: flex-end; }
-    .fm-dl-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; white-space: nowrap; display: inline-block; }
+    .fm-dl-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
     .fm-dl-btn:hover { border-color: var(--green); color: var(--green); }
+    .fm-dl-btn:hover svg { stroke: var(--green); }
+    .fm-dl-btn svg { stroke: var(--muted); transition: stroke 0.2s; flex-shrink: 0; }
+    .fm-dl-text { }
     .fm-empty { padding: 52px; text-align: center; font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
 
     /* SKELETON LOADING */
@@ -158,6 +161,8 @@
       .fm-meta .ver { color: var(--amber); margin-right: 6px; }
 
       footer { flex-direction: column; gap: 10px; text-align: center; }
+      .fm-dl-text { display: none; }
+      .fm-dl-btn { padding: 6px 10px; }
     }
   </style>
 </head>
@@ -358,7 +363,8 @@
           '</div>' +
           '<div class="fm-version">' + ver + '</div>' +
           '<div class="fm-size">' + (size||'-') + '</div>' +
-          '<div class="fm-action"><a class="fm-dl-btn" href="' + REPO_BASE + '/' + f.path + '" download>DL</a></div>';
+          '<div class="fm-action"><a class="fm-dl-btn" href="' + REPO_BASE + '/' + f.path + '" download>' +
+            '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13M7 11l5 5 5-5"/><path d="M5 20h14"/></svg><span class="fm-dl-text">Download</span></a></div>';
         frag.appendChild(div);
       });
 
