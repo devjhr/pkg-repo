@@ -115,6 +115,22 @@ def build_packages(pool_dir, repo_root):
     else:
         print(f"  Found {len(deb_files)} .deb file(s)")
 
+    # Remove old versions — keep only the newest .deb per package folder
+    # A package folder is pool/main/m/micro/ — all debs inside are versions of same pkg
+    pkg_dirs = set(deb.parent for deb in deb_files)
+    for pkg_dir in pkg_dirs:
+        all_debs = sorted(pkg_dir.glob('*.deb'))
+        if len(all_debs) > 1:
+            # Sort by modification time, keep newest
+            all_debs.sort(key=lambda f: f.stat().st_mtime)
+            for old_deb in all_debs[:-1]:
+                old_deb.unlink()
+                print(f"  Removed old version: {old_deb.name}")
+            # Refresh deb_files list
+    deb_files = sorted([
+        Path(p) for p in glob.glob(str(pool_dir / '**' / '*.deb'), recursive=True)
+    ])
+
     entries           = []
     folder_map        = {}
     encountered_arches = set()
@@ -231,16 +247,18 @@ def build_release(repo_root, bin_dir, pkg_file, pkggz, arches):
 
 
 def import_debs(input_path, pool_dir):
-    """Copy .deb files from input_path into pool/main/letter/pkgname/ structure."""
+    """Copy .deb files from input_path into pool/main/letter/pkgname/.
+    Old versions of the same package are automatically removed."""
     debs = sorted(Path(input_path).glob('*.deb'))
     if not debs:
         sys.exit(f"No .deb files found in {input_path}")
 
-    copied = skipped = 0
+    copied = skipped = replaced = 0
     for deb in debs:
         ctrl = control_file_contents(str(deb))
         if ctrl:
-            pkgname = parse_control(ctrl).get('Package', deb.stem.split('_')[0])
+            info    = parse_control(ctrl)
+            pkgname = info.get('Package', deb.stem.split('_')[0])
         else:
             pkgname = deb.stem.split('_')[0]
 
@@ -249,6 +267,14 @@ def import_debs(input_path, pool_dir):
         target_dir.mkdir(parents=True, exist_ok=True)
         target = target_dir / deb.name
 
+        # Remove any existing .deb for this package (old versions)
+        existing = [f for f in target_dir.glob('*.deb') if f != target]
+        for old_deb in existing:
+            old_deb.unlink()
+            print(f"  Removed {letter}/{pkgname}/{old_deb.name}")
+            replaced += 1
+
+        # Skip if exact same file already exists
         if target.exists() and target.stat().st_size == deb.stat().st_size:
             skipped += 1
             continue
@@ -257,7 +283,7 @@ def import_debs(input_path, pool_dir):
         print(f"  Copied  {letter}/{pkgname}/{deb.name}")
         copied += 1
 
-    print(f"\n  Copied: {copied}   Skipped: {skipped} (unchanged)")
+    print(f"\n  Copied: {copied}   Replaced: {replaced}   Skipped: {skipped} (unchanged)")
 
 
 def sign_release(repo_root):
