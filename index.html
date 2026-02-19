@@ -84,6 +84,8 @@
     .fm-name { font-size: 0.8rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 12px; }
     .fm-version { font-size: 0.7rem; color: var(--amber); white-space: nowrap; }
     .fm-size { font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
+    .fm-meta { display: none; }  /* hidden on desktop, shown on mobile via media query */
+    .fm-name-wrap { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
     .fm-action { display: flex; justify-content: flex-end; }
     .fm-dl-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; white-space: nowrap; display: inline-flex; align-items: center; gap: 6px; }
     .fm-dl-btn:hover { border-color: var(--green); color: var(--green); }
@@ -146,24 +148,23 @@
       .topbar-status { gap: 5px; font-size: 0.65rem; }
       .theme-toggle { font-size: 0.6rem; padding: 4px 8px; }
 
-      /* Mobile grid: icon | name | action only — hide version & size */
-      .fm-header { grid-template-columns: 28px 1fr 90px; }
-      .fm-row    { grid-template-columns: 28px 1fr 90px; min-height: 48px; }
+      /* Mobile grid: icon | name | download icon only */
+      .fm-header { grid-template-columns: 28px 1fr 50px; }
+      .fm-row    { grid-template-columns: 28px 1fr 50px; min-height: 52px; }
       .fm-header > :nth-child(3),
       .fm-header > :nth-child(4),
       .fm-row    > :nth-child(3),
       .fm-row    > :nth-child(4) { display: none; }
 
       /* Show version + size as subtitle under name */
-      .fm-name-wrap { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
-      .fm-name      { padding-right: 8px; }
-      .fm-meta      { display: none; }
+      .fm-meta    { display: flex !important; gap: 6px; font-size: 0.62rem; color: var(--muted); margin-top: 2px; }
+      .fm-meta .ver { color: var(--amber); }
+
+      /* Download: icon only, no text */
+      .fm-dl-text { display: none; }
+      .fm-dl-btn  { padding: 6px 8px; border: none; background: none; }
 
       footer { flex-direction: column; gap: 10px; text-align: center; }
-      .fm-dl-text { display: none; }
-      .fm-dl-btn { padding: 6px 10px; }
-      .fm-meta { display: flex; font-size: 0.62rem; color: var(--muted); gap: 6px; margin-top: 2px; }
-      .fm-meta .ver { color: var(--amber); }
     }
   </style>
 </head>
