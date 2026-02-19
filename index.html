@@ -75,20 +75,18 @@
     .fm-search::placeholder { color: var(--muted); }
     .fm-count { font-size: 0.68rem; color: var(--muted); white-space: nowrap; }
     .fm-shell { border: 1px solid var(--border); background: var(--surface); overflow: hidden; }
-    .fm-header { display: grid; grid-template-columns: 28px 1fr 90px 90px 110px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--header-bg); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); user-select: none; }
-    .fm-row { display: grid; grid-template-columns: 28px 1fr 90px 90px 110px; padding: 0 16px; border-bottom: 1px solid var(--border); align-items: center; min-height: 46px; cursor: pointer; transition: background 0.12s; text-decoration: none; color: inherit; }
+    /* Desktop: icon | name | version | size | action */
+    .fm-header { display: grid; grid-template-columns: 28px 1fr 100px 80px 110px; padding: 10px 16px; border-bottom: 1px solid var(--border); background: var(--header-bg); font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); user-select: none; }
+    .fm-row { display: grid; grid-template-columns: 28px 1fr 100px 80px 110px; padding: 0 16px; border-bottom: 1px solid var(--border); align-items: center; min-height: 50px; cursor: default; transition: background 0.12s; text-decoration: none; color: inherit; }
     .fm-row:last-child { border-bottom: none; }
     .fm-row:hover { background: var(--green-dim); }
-    .fm-row.fm-folder:hover .fm-name { color: var(--green); }
     .fm-icon { font-size: 0.95rem; }
-    .fm-name { font-size: 0.8rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 12px; transition: color 0.15s; }
-    .fm-name.folder-name { color: var(--blue); font-weight: 700; }
-    .fm-version { font-size: 0.7rem; color: var(--amber); }
-    .fm-size { font-size: 0.7rem; color: var(--muted); }
+    .fm-name { font-size: 0.8rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 12px; }
+    .fm-version { font-size: 0.7rem; color: var(--amber); white-space: nowrap; }
+    .fm-size { font-size: 0.7rem; color: var(--muted); white-space: nowrap; }
     .fm-action { display: flex; justify-content: flex-end; }
-    .fm-dl-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; white-space: nowrap; }
+    .fm-dl-btn { font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; padding: 5px 12px; border: 1px solid var(--border); color: var(--muted); text-decoration: none; transition: border-color 0.2s, color 0.2s; white-space: nowrap; display: inline-block; }
     .fm-dl-btn:hover { border-color: var(--green); color: var(--green); }
-    .fm-up .fm-name { color: var(--muted); font-style: italic; }
     .fm-empty { padding: 52px; text-align: center; font-size: 0.78rem; color: var(--muted); line-height: 1.8; }
 
     /* SKELETON LOADING */
@@ -138,10 +136,27 @@
     .reveal.visible { opacity: 1; transform: translateY(0); }
 
     @media (max-width: 640px) {
-      .hero, .fm-section { padding-left: 16px; padding-right: 16px; }
-      .topbar { padding: 10px 16px; }
-      .fm-header, .fm-row { grid-template-columns: 24px 1fr 0 70px 80px; }
-      .fm-header > :nth-child(3), .fm-row > :nth-child(3) { display: none; }
+      .hero { padding: 40px 16px 40px; }
+      .fm-section, .how-section { padding-left: 16px; padding-right: 16px; }
+      .topbar { padding: 8px 12px; gap: 8px; }
+      .topbar-title { font-size: 0.65rem; margin-left: 8px; }
+      .topbar-status { gap: 5px; font-size: 0.65rem; }
+      .theme-toggle { font-size: 0.6rem; padding: 4px 8px; }
+
+      /* Mobile grid: icon | name | action only — hide version & size */
+      .fm-header { grid-template-columns: 28px 1fr 90px; }
+      .fm-row    { grid-template-columns: 28px 1fr 90px; min-height: 48px; }
+      .fm-header > :nth-child(3),
+      .fm-header > :nth-child(4),
+      .fm-row    > :nth-child(3),
+      .fm-row    > :nth-child(4) { display: none; }
+
+      /* Show version + size as subtitle under name */
+      .fm-name-wrap { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
+      .fm-name      { padding-right: 8px; }
+      .fm-meta      { font-size: 0.62rem; color: var(--muted); white-space: nowrap; }
+      .fm-meta .ver { color: var(--amber); margin-right: 6px; }
+
       footer { flex-direction: column; gap: 10px; text-align: center; }
     }
   </style>
@@ -261,10 +276,10 @@
       for (let i = 0; i < 8; i++) {
         html += '<div class="fm-row fm-skeleton">' +
           '<div class="fm-icon">&#128230;</div>' +
-          '<div class="fm-name">████████████</div>' +
+          '<div class="fm-name-wrap"><div class="fm-name" style="width:' + (60+Math.random()*80|0) + 'px">████</div></div>' +
           '<div class="fm-version">███████</div>' +
           '<div class="fm-size">██████</div>' +
-          '<div class="fm-action fm-dl-btn">████████</div>' +
+          '<div class="fm-action fm-dl-btn" style="width:40px">██</div>' +
         '</div>';
       }
       body.innerHTML = html;
@@ -333,12 +348,17 @@
         const div = document.createElement('div');
         div.className = 'fm-row';
         if (f.desc) div.title = f.desc;
+        const ver  = escHtml(f.version || '');
+        const size = f.size ? (f.size/1024).toFixed(0)+' KB' : '';
         div.innerHTML =
           '<div class="fm-icon">&#128230;</div>' +
-          '<div class="fm-name">' + escHtml(f.package||f.name) + '</div>' +
-          '<div class="fm-version">' + escHtml(f.version || '-') + '</div>' +
-          '<div class="fm-size">' + (f.size ? (f.size/1024).toFixed(0)+' KB' : '-') + '</div>' +
-          '<div class="fm-action"><a class="fm-dl-btn" href="' + REPO_BASE + '/' + f.path + '" download>Download</a></div>';
+          '<div class="fm-name-wrap">' +
+            '<div class="fm-name">' + escHtml(f.package||f.name) + '</div>' +
+            '<div class="fm-meta"><span class="ver">' + ver + '</span>' + size + '</div>' +
+          '</div>' +
+          '<div class="fm-version">' + ver + '</div>' +
+          '<div class="fm-size">' + (size||'-') + '</div>' +
+          '<div class="fm-action"><a class="fm-dl-btn" href="' + REPO_BASE + '/' + f.path + '" download>DL</a></div>';
         frag.appendChild(div);
       });
 
