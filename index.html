@@ -157,12 +157,13 @@
       /* Show version + size as subtitle under name */
       .fm-name-wrap { display: flex; flex-direction: column; gap: 2px; overflow: hidden; }
       .fm-name      { padding-right: 8px; }
-      .fm-meta      { font-size: 0.62rem; color: var(--muted); white-space: nowrap; }
-      .fm-meta .ver { color: var(--amber); margin-right: 6px; }
+      .fm-meta      { display: none; }
 
       footer { flex-direction: column; gap: 10px; text-align: center; }
       .fm-dl-text { display: none; }
       .fm-dl-btn { padding: 6px 10px; }
+      .fm-meta { display: flex; font-size: 0.62rem; color: var(--muted); gap: 6px; margin-top: 2px; }
+      .fm-meta .ver { color: var(--amber); }
     }
   </style>
 </head>
