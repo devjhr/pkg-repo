@@ -1,43 +1,14 @@
-Codename: termux
-Version: 1
-Architectures: aarch64 all
-Description: stable repository
+Origin: AndroStudio
+Label: AndroStudio Package Repository
 Suite: stable
-Date: Thu, 19 Feb 2026 07:49:39 UTC
+Codename: stable
+Date: Thu, 19 Feb 2026 09:26:27 UTC
+Architectures: aarch64 all
 Components: main
+Description: Official AndroStudio terminal package repository
 MD5Sum:
- d8b813ef07ec8b39d06de4b37087a7a1 173583 main/binary-aarch64/Packages
- 8fff16117e6ffef72680a943e2c296fb 54732 main/binary-aarch64/Packages.xz
- bf6726f2a7d6449e94f2bebaf27694da 12207 main/binary-all/Packages
- 9d3a91f27e78d7b7c534e84a8ded7cbc 4900 main/binary-all/Packages.xz
- b2ddca369071e389a455408d25cd3caa 2037503 main/Contents-aarch64
- 452aca80202fe30675815b9663b70c80 393886 main/Contents-all
- 41b074159debb0141c0d760c26d21997 120256 main/Contents-aarch64.xz
- 327d7ec54ef1cb8ee482be32fc665d1e 19060 main/Contents-all.xz
-SHA1:
- 3bb47277eec1585d136213af112a66b5609c7c7f 173583 main/binary-aarch64/Packages
- 604c79f90b35921587bf3823b7adfe8e456e2d79 54732 main/binary-aarch64/Packages.xz
- 55077a404f13cc5b37a65260d6e457dee54a5587 12207 main/binary-all/Packages
- f18e32a6b634d92bccc8246dc4bb2b53f99e076e 4900 main/binary-all/Packages.xz
- 607c151d07ef6b133cdb31b3237c8129b1463f18 2037503 main/Contents-aarch64
- a29fe4e99692bd60bfc7a489b1889421fe02dc85 393886 main/Contents-all
- 4fb43609f21275b3de63040fbff94ca2a41bde3c 120256 main/Contents-aarch64.xz
- 9fbb02d30059ec202035fe4f9015c750cf98df28 19060 main/Contents-all.xz
+ 111b576e0b671f2577e42d51baaa0a02     129422 main/binary-aarch64/Packages
+ 8622567a50891187f0fe2015bc43f822      37937 main/binary-aarch64/Packages.gz
 SHA256:
- ee196769770fe0fc089e8651b5feeb11937fc2ec5e4a18de98554029292ee179 173583 main/binary-aarch64/Packages
- 7e0981527eef6edada4996d4fee9abfbe6a0b70dda0d0b0d9b13b0248dac6433 54732 main/binary-aarch64/Packages.xz
- 882a7fe5160275ce5488657d067bc9f9c4bf763a7d06c9811aff5924facb3b5b 12207 main/binary-all/Packages
- c9d913d74e446d6e4f2bc391a375fe31dfd368ed733daaa8f4a020010c5fcb3e 4900 main/binary-all/Packages.xz
- 715959a1346b8e8dd00fda2d5eee89e5dfcf89195853bdf64152d623245e94b3 2037503 main/Contents-aarch64
- d949d606103c5f2d9ca52d2ce51d4bb2cb05ba7847478c66d182974be9a6c279 393886 main/Contents-all
- 6aa9db49a7465e073ef484fbf3809ca36354037cf64f0693e4bdb1cd03555323 120256 main/Contents-aarch64.xz
- a41b40baac64084640e85f2af701c9db9a7840e17827b307263b1bc4031608f1 19060 main/Contents-all.xz
-SHA512:
- b1c5d305910923ebcfe753954df4022b346b4c1790c6001aea1b1ef2b3637cf32ca9486642273426f64c7ebd2d1c9bb65e438be04c1521a2843d1d1bf9216782 173583 main/binary-aarch64/Packages
- be2478f5c84f6dda920893a51d0a44e0d6c825335809815d99b33fb8abd010885835b534f3a2e4b9b50e5a1233e0490f8ff161d3d2a882dde43d1440fa2c8048 54732 main/binary-aarch64/Packages.xz
- 5297861e31fb876cbbc7d36b14a9be90349bd4fbc70fdb0013d16623770a36d5f87d7087d839616c64adfadec913c34e8055e07274337e29d25b508dad2ac278 12207 main/binary-all/Packages
- d4ea8b72dd36d761ff7ea659bd70da9a1532d41a23f282faff88e48e676bde57369316e8c8f48df182407097f6c807a3643bc901fdde9f9b2ff9ffe3bee63496 4900 main/binary-all/Packages.xz
- 3fdbe992e28b9196f58d0c73ecaa2c4b0841a87ec8b4bb1063f5a58078da5c68707f767e686279416e7981e27b57cf88b1582813b88866e6dbaf8d8c0bf17bf8 2037503 main/Contents-aarch64
- e3aa42fd120dd4dc19c9eb79c37639e46bcf13e2222f1f5d9a2cd7458b53cb4cede1e02fbe6216a337f3698c4cd34631843f4b199d2de4ac3c4e2b4f9178cef1 393886 main/Contents-all
- 8e07b9a046517987227e993fd6f3ef82004250b30776e5b62c38621afaee3c1e68e000c19c813054d6d9f333efcc969aca459c0df42b992d5ce37f2ea69d0a4e 120256 main/Contents-aarch64.xz
- 9cd2f241d22480a9b06a5b068c648d8799575b22fa099d459533b6861598017e9558d18da9b995072e3f51ec6e15fc4c25b563260bb6a005a9ad04a840228bd0 19060 main/Contents-all.xz
+ 1ee43ae710c1546a0d182737f2300e4259763fb6504f70a2944edb0a2ab43b3a     129422 main/binary-aarch64/Packages
+ c56d4a87b235ef9d44e3a2ee96cd31b6090f0a35cec88d237f28cba067fc17e5      37937 main/binary-aarch64/Packages.gz
