@@ -915,6 +915,34 @@ Size: 223360
 MD5Sum: 85a11a678d5b343b8dbc3ec14a0bbfab
 SHA256: b068ff42e1149e93959ab7c3472af30992c68f53969d1b9c5c0750a66586c774
 
+Package: jq
+Version: 1.8.1-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 1144
+Depends: oniguruma
+Breaks: jq-dev
+Replaces: jq-dev
+Homepage: https://stedolan.github.io/jq/
+Description: Command-line JSON processor
+Filename: pool/main/j/jq/jq_1.8.1-1_aarch64.deb
+Size: 309788
+MD5Sum: 229ada0f34a28fd5b0f1d915184fde81
+SHA256: 93e69c566cfb2a1fe5ea395a6aa1c8820b2ce2025f268d39485981cbba6ae636
+
+Package: jq-static
+Version: 1.8.1-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 1392
+Depends: jq (= 1.8.1-1)
+Homepage: https://stedolan.github.io/jq/
+Description: Static libraries for jq
+Filename: pool/main/j/jq-static/jq-static_1.8.1-1_aarch64.deb
+Size: 277204
+MD5Sum: fd4f478066dc0c1c723a88068e0738e2
+SHA256: 5eb3bac4ab4bf0f69cd706c40f1c3c226d33bbb23ef669c441d857567e424cfe
+
 Package: lame
 Version: 3.100-7
 Architecture: aarch64

@@ -685,6 +685,28 @@
       }
     ]
   },
+  "j": {
+    "jq": [
+      {
+        "name": "jq_1.8.1-1_aarch64.deb",
+        "path": "pool/main/j/jq/jq_1.8.1-1_aarch64.deb",
+        "size": 309788,
+        "package": "jq",
+        "version": "1.8.1-1",
+        "desc": "Command-line JSON processor"
+      }
+    ],
+    "jq-static": [
+      {
+        "name": "jq-static_1.8.1-1_aarch64.deb",
+        "path": "pool/main/j/jq-static/jq-static_1.8.1-1_aarch64.deb",
+        "size": 277204,
+        "package": "jq-static",
+        "version": "1.8.1-1",
+        "desc": "Static libraries for jq"
+      }
+    ]
+  },
   "l": {
     "lame": [
       {
