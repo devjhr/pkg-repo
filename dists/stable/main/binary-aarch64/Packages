@@ -2863,6 +2863,18 @@ Size: 240536
 MD5Sum: 4d93c7892f13e557fd923dfc36f59cb3
 SHA256: e76c04fbe6441aed94c9c972e7c131febc56a6b9378cad3621cc3c18c74bd1e7
 
+Package: micro
+Version: 2.0.15
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 13424
+Homepage: https://micro-editor.github.io/
+Description: Modern and intuitive terminal-based text editor
+Filename: pool/main/m/micro/micro_2.0.15_aarch64.deb
+Size: 3613008
+MD5Sum: 2bcbd30a6599d209356db14d35da9440
+SHA256: b00ec7a3cf3e487889cafe47b3b32ff0174ad66d045b3903f1fe9d42edfaf3e6
+
 Package: mount-utils
 Version: 2.41.2
 Architecture: aarch64
