@@ -2162,51 +2162,51 @@
     ],
     "ncurses": [
       {
-        "name": "ncurses_6.5.20240831-3_aarch64.deb",
-        "path": "pool/main/n/ncurses/ncurses_6.5.20240831-3_aarch64.deb",
-        "size": 529216,
+        "name": "ncurses_6.6.20260124_aarch64.deb",
+        "path": "pool/main/n/ncurses/ncurses_6.6.20260124_aarch64.deb",
+        "size": 558468,
         "package": "ncurses",
-        "version": "6.5.20240831-3",
+        "version": "6.6.20260124+really6.5.20250830",
         "desc": "Library for text-based user interfaces in a terminal-independent manner"
       }
     ],
     "ncurses-static": [
       {
-        "name": "ncurses-static_6.5.20240831-3_aarch64.deb",
-        "path": "pool/main/n/ncurses-static/ncurses-static_6.5.20240831-3_aarch64.deb",
-        "size": 154032,
+        "name": "ncurses-static_6.6.20260124_aarch64.deb",
+        "path": "pool/main/n/ncurses-static/ncurses-static_6.6.20260124_aarch64.deb",
+        "size": 153872,
         "package": "ncurses-static",
-        "version": "6.5.20240831-3",
+        "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for ncurses"
       }
     ],
     "ncurses-ui-libs": [
       {
-        "name": "ncurses-ui-libs_6.5.20240831-3_aarch64.deb",
-        "path": "pool/main/n/ncurses-ui-libs/ncurses-ui-libs_6.5.20240831-3_aarch64.deb",
-        "size": 32996,
+        "name": "ncurses-ui-libs_6.6.20260124_aarch64.deb",
+        "path": "pool/main/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260124_aarch64.deb",
+        "size": 32936,
         "package": "ncurses-ui-libs",
-        "version": "6.5.20240831-3",
+        "version": "6.6.20260124+really6.5.20250830",
         "desc": "Libraries for terminal user interfaces based on ncurses"
       }
     ],
     "ncurses-ui-libs-static": [
       {
-        "name": "ncurses-ui-libs-static_6.5.20240831-3_aarch64.deb",
-        "path": "pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.5.20240831-3_aarch64.deb",
-        "size": 39700,
+        "name": "ncurses-ui-libs-static_6.6.20260124_aarch64.deb",
+        "path": "pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124_aarch64.deb",
+        "size": 39548,
         "package": "ncurses-ui-libs-static",
-        "version": "6.5.20240831-3",
+        "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for terminal user interfaces based on ncurses"
       }
     ],
     "ncurses-utils": [
       {
-        "name": "ncurses-utils_6.5.20240831-3_aarch64.deb",
-        "path": "pool/main/n/ncurses-utils/ncurses-utils_6.5.20240831-3_aarch64.deb",
-        "size": 87908,
+        "name": "ncurses-utils_6.6.20260124_aarch64.deb",
+        "path": "pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124_aarch64.deb",
+        "size": 88952,
         "package": "ncurses-utils",
-        "version": "6.5.20240831-3",
+        "version": "6.6.20260124+really6.5.20250830",
         "desc": "Tools for working with terminals"
       }
     ],

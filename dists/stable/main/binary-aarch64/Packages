@@ -2903,72 +2903,72 @@ MD5Sum: 5137882ac8f1ad01a6f7fa5dd32980b2
 SHA256: 03fd57bbc2b51cb2b6eb8b8faae0be20b6e6f7c1b54da8b63b3a73436a248f35
 
 Package: ncurses
-Version: 6.5.20240831-3
+Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1540
+Installed-Size: 1608
 Breaks: ncurses-dev, ncurses-utils (<< 6.1.20190511-4)
 Replaces: ncurses-dev, ncurses-utils (<< 6.1.20190511-4)
 Homepage: https://invisible-island.net/ncurses/
 Description: Library for text-based user interfaces in a terminal-independent manner
-Filename: pool/main/n/ncurses/ncurses_6.5.20240831-3_aarch64.deb
-Size: 529216
-MD5Sum: 4a5cc4fa857a42467681544b72f12070
-SHA256: 659f232a3152d1f69d235b2f6a24da5037c2ca74495a4e6b7ea7426ffcb9ec45
+Filename: pool/main/n/ncurses/ncurses_6.6.20260124_aarch64.deb
+Size: 558468
+MD5Sum: 27f41b765c794862efb53b6d757e78c1
+SHA256: a07fcb87a8b0ca3d8a90486992b21c155fb0a8ec133c6fd4bc59f1f8cbe0b0f9
 
 Package: ncurses-static
-Version: 6.5.20240831-3
+Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 784
-Depends: ncurses (= 6.5.20240831-3)
+Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for ncurses
-Filename: pool/main/n/ncurses-static/ncurses-static_6.5.20240831-3_aarch64.deb
-Size: 154032
-MD5Sum: a18c4a201dcb001006c169c023d1bba0
-SHA256: 35140085bb9cad025fbad73e145a304826e267aad39acdc0b378db7a39752cef
+Filename: pool/main/n/ncurses-static/ncurses-static_6.6.20260124_aarch64.deb
+Size: 153872
+MD5Sum: f9c597e9c4f2d2fcff5b952cacd87dff
+SHA256: 07dca5a023d7a36c6d342c129926bb39533e7086edc94f30f132b4e27bf722aa
 
 Package: ncurses-ui-libs
-Version: 6.5.20240831-3
+Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 148
-Depends: ncurses (= 6.5.20240831-3)
+Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Breaks: ncurses (<< 6.4)
 Replaces: ncurses (<< 6.4)
 Homepage: https://invisible-island.net/ncurses/
 Description: Libraries for terminal user interfaces based on ncurses
-Filename: pool/main/n/ncurses-ui-libs/ncurses-ui-libs_6.5.20240831-3_aarch64.deb
-Size: 32996
-MD5Sum: 5e73eb93223e760adea3b78cab8d8fe6
-SHA256: b6ce9b8f0a94bbd772e887ef90f377e34687e3070e623f94d85c59f00b19042c
+Filename: pool/main/n/ncurses-ui-libs/ncurses-ui-libs_6.6.20260124_aarch64.deb
+Size: 32936
+MD5Sum: 3c840a352a5aa7c9d7cea3735291550b
+SHA256: 832172362b15f9d0ba4a1c9812866dde38023b2061470e5c18648f80ebdfb8d6
 
 Package: ncurses-ui-libs-static
-Version: 6.5.20240831-3
+Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 260
-Depends: ncurses-ui-libs, ncurses (= 6.5.20240831-3)
+Depends: ncurses-ui-libs, ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for terminal user interfaces based on ncurses
-Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.5.20240831-3_aarch64.deb
-Size: 39700
-MD5Sum: b55f9ab4ff938a8641812b6aa69e58c9
-SHA256: fbb3375521b3524a32c0131626f2c083f7602acd8c76f8e87581cbd330f8209e
+Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124_aarch64.deb
+Size: 39548
+MD5Sum: 1860f16b8c988c88952ae95224122eee
+SHA256: 893a06d816e457e483c3571ed7b200381d036fa73ba4e07a86a83b89da8a8edb
 
 Package: ncurses-utils
-Version: 6.5.20240831-3
+Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 268
-Depends: ncurses (= 6.5.20240831-3)
+Installed-Size: 272
+Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Tools for working with terminals
-Filename: pool/main/n/ncurses-utils/ncurses-utils_6.5.20240831-3_aarch64.deb
-Size: 87908
-MD5Sum: 5a9c561a2e4b2f7800422db632af6f29
-SHA256: ada908b42532623744aeddcea499931670a35f24a6a031a122c0d6631d7a239b
+Filename: pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124_aarch64.deb
+Size: 88952
+MD5Sum: 10366e00f588483964e8ac86a3a1ec29
+SHA256: 7877fbde38b48627e725dd8a68f5be9841311d946596f244cd6c92a703df1b6f
 
 Package: net-tools
 Version: 2.10.0-1
