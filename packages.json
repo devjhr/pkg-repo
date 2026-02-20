@@ -380,6 +380,16 @@
     ]
   },
   "f": {
+    "fd": [
+      {
+        "name": "fd_10.3.0-1_aarch64.deb",
+        "path": "pool/main/f/fd/fd_10.3.0-1_aarch64.deb",
+        "size": 929264,
+        "package": "fd",
+        "version": "10.3.0-1",
+        "desc": "Simple, fast and user-friendly alternative to find"
+      }
+    ],
     "fdisk": [
       {
         "name": "fdisk_2.41.2_aarch64.deb",

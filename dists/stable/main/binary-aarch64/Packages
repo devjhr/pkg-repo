@@ -505,6 +505,18 @@ Size: 42736
 MD5Sum: 1d935b8ae5f5d7c1456297ba134a5975
 SHA256: ec5ebeb16d595583db876c5be7b9b5654590c74ab545d8e2082ad1cab316a76f
 
+Package: fd
+Version: 10.3.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 3120
+Homepage: https://github.com/sharkdp/fd
+Description: Simple, fast and user-friendly alternative to find
+Filename: pool/main/f/fd/fd_10.3.0-1_aarch64.deb
+Size: 929264
+MD5Sum: 89709dd8cb05f92f07ad4967e7007cdd
+SHA256: 660d33bbaeb2619115139df93c3e9a53e90efc8da0ad2f4715c7ff610235ec17
+
 Package: fdisk
 Version: 2.41.2
 Architecture: aarch64
