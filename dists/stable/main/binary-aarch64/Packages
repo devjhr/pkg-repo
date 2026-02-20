@@ -848,6 +848,19 @@ Size: 187228
 MD5Sum: b2836faa340bae72c056f3d2a8309414
 SHA256: 27ccdab93f2f5d809c06d2c76ed26068979f05f03a05807904cc72abd54fbe50
 
+Package: gradle
+Version: 1:9.3.1
+Architecture: all
+Maintainer: @termux
+Installed-Size: 149048
+Depends: openjdk-21
+Homepage: https://gradle.org/
+Description: Powerful build system for the JVM
+Filename: https://github.com/devjhr/pkg-repo/releases/download/v1.0/gradle_9.3.1_all.deb
+Size: 135056252
+MD5Sum: 65af3c15dc001bf29af0447441e6711a
+SHA256: 5e9dfcd7cb5e7f224524a723033f0fa020a138c933dd538944e6cd1ec4fd9e36
+
 Package: grep
 Version: 3.12-2
 Architecture: aarch64

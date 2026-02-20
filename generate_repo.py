@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AndroStudio Repo Generator v2.0
+AndroStudio Repo Generator v3.0
 ================================
 Based on termux-apt-repo by Grimler91
 Modified for AndroStudio pkg-repo structure:
@@ -19,6 +19,8 @@ GPG signing is handled automatically by GitHub Actions.
 Usage:
     python generate_repo.py
     python generate_repo.py --input ~/pkg
+    python generate_repo.py --release v1.0
+    python generate_repo.py --input ~/pkg --release v1.0
 """
 
 import argparse, datetime, glob, gzip, hashlib, json
@@ -34,6 +36,12 @@ COMPONENT    = "main"
 DESCRIPTION  = "Official AndroStudio terminal package repository"
 SUPPORTED_ARCHES = ['all', 'arm', 'i686', 'aarch64', 'x86_64', 'arm64', 'amd64']
 HASHES       = ['md5', 'sha256']
+
+# GitHub repo slug — change to yours
+GH_REPO      = "devjhr/pkg-repo"
+
+# Files >= this size are expected to be in GitHub Releases
+LARGE_FILE_THRESHOLD = 90 * 1024 * 1024  # 90 MB
 
 
 def run(cmd):
@@ -97,8 +105,121 @@ def parse_control(text):
     return info
 
 
-def build_packages(pool_dir, repo_root):
-    """Scan pool/main for .deb files and generate Packages, Packages.gz, packages.json."""
+def fetch_release_urls(tag):
+    """
+    Fetch all asset download URLs from a GitHub Release.
+    Returns dict: { 'filename.deb': 'https://...' }
+    Requires: gh CLI installed and authenticated (gh auth login)
+    """
+    result = run(f"gh release view {tag} --repo {GH_REPO} --json assets")
+    if result is None:
+        print(f"  WARNING: Could not fetch release '{tag}' assets.")
+        print(f"  Make sure: pkg install gh && gh auth login")
+        return {}
+    try:
+        assets = json.loads(result).get('assets', [])
+        urls = {}
+        for a in assets:
+            if a['name'].endswith('.deb'):
+                urls[a['name']] = a['url']
+        print(f"  Found {len(urls)} .deb asset(s) in release {tag}")
+        return urls
+    except Exception as e:
+        print(f"  WARNING: Failed to parse release assets: {e}")
+        return {}
+
+
+def load_release_json(repo_root):
+    """
+    Load release.json — a manually maintained list of large packages
+    hosted on GitHub Releases.
+
+    Format of release.json:
+    [
+      {
+        "file": "gradle_9.3.1_all.deb",
+        "url":  "https://github.com/devjhr/pkg-repo/releases/download/v1.0/gradle_9.3.1_all.deb",
+        "size": 135056252,
+        "md5":  "65af3c15dc001bf29af0447441e6711a",
+        "sha256": "5e9dfcd7cb5e7f224524a723033f0fa020a138c933dd538944e6cd1ec4fd9e36"
+      }
+    ]
+    Run with --add-release to generate entries automatically from a .deb file.
+    """
+    rj = repo_root / 'release.json'
+    if not rj.exists():
+        return []
+    try:
+        entries = json.loads(rj.read_text(encoding='utf-8'))
+        print(f"  Loaded release.json ({len(entries)} large package(s))")
+        return entries
+    except Exception as e:
+        print(f"  WARNING: Failed to parse release.json: {e}")
+        return []
+
+
+def add_to_release_json(repo_root, deb_path, url):
+    """
+    Compute checksums for a large .deb and add/update its entry in release.json.
+    Called by --add-release flag.
+    """
+    deb_path = Path(deb_path)
+    if not deb_path.exists():
+        print(f"  ERROR: File not found: {deb_path}")
+        return False
+
+    print(f"  Computing checksums for {deb_path.name} ...")
+    size   = deb_path.stat().st_size
+    md5    = hash_file(str(deb_path), 'md5')
+    sha256 = hash_file(str(deb_path), 'sha256')
+
+    # Read control info
+    ctrl = control_file_contents(str(deb_path))
+    info = parse_control(ctrl) if ctrl else {}
+
+    entry = {
+        "file":    deb_path.name,
+        "url":     url,
+        "size":    size,
+        "md5":     md5,
+        "sha256":  sha256,
+        "package": info.get('Package', deb_path.stem.split('_')[0]),
+        "version": info.get('Version', ''),
+        "arch":    info.get('Architecture', 'all'),
+        "control": ctrl or "",
+    }
+
+    rj   = repo_root / 'release.json'
+    data = []
+    if rj.exists():
+        try:
+            data = json.loads(rj.read_text(encoding='utf-8'))
+        except Exception:
+            data = []
+
+    # Replace existing entry for same file or append
+    replaced = False
+    for i, e in enumerate(data):
+        if e.get('file') == deb_path.name:
+            data[i] = entry
+            replaced = True
+            break
+    if not replaced:
+        data.append(entry)
+
+    rj.write_text(json.dumps(data, indent=2), encoding='utf-8')
+    print(f"  {'Updated' if replaced else 'Added'} {deb_path.name} in release.json")
+    print(f"    URL    : {url}")
+    print(f"    Size   : {size:,} bytes ({size//1024//1024} MB)")
+    print(f"    MD5    : {md5}")
+    print(f"    SHA256 : {sha256}")
+    return True
+
+
+def build_packages(pool_dir, repo_root, release_urls=None):
+    """Scan pool/main for .deb files and generate Packages, Packages.gz, packages.json.
+    release_urls: dict { filename: url } for large files manually uploaded to GitHub Releases.
+    """
     bin_dir  = repo_root / 'dists' / CODENAME / COMPONENT / 'binary-aarch64'
     pkg_file = bin_dir / 'Packages'
     pkggz    = bin_dir / 'Packages.gz'
@@ -162,8 +283,17 @@ def build_packages(pool_dir, repo_root):
             continue
         encountered_arches.add(pkg_arch)
 
-        filename_path = 'pool/main/' + '/'.join(parts)
         size          = deb.stat().st_size
+        is_large      = size >= LARGE_FILE_THRESHOLD
+
+        # Large files: use Release URL as Filename, will be deleted from pool/ after indexing
+        if is_large and release_urls and deb.name in release_urls:
+            filename_path = release_urls[deb.name]
+            print(f"  Large {deb.name} ({size//1024//1024} MB) → Release URL")
+        else:
+            filename_path = 'pool/main/' + '/'.join(parts)
+            if is_large:
+                print(f"  Large {deb.name} ({size//1024//1024} MB) → pool/ (no release URL — add --release TAG)")
 
         # Build Packages entry
         block = []
@@ -197,6 +327,67 @@ def build_packages(pool_dir, repo_root):
             'package': pkg_name,
             'version': pkg_ver,
             'desc':    info.get('Description', '').split('\n')[0],
+            'release': is_large and release_urls and deb.name in release_urls,
+        })
+
+    # ── Process release.json entries (large files on GitHub Releases) ──────────
+    release_entries = load_release_json(repo_root)
+    for re in release_entries:
+        filename  = re.get('file', '')
+        url       = re.get('url', '')
+        size      = re.get('size', 0)
+        ctrl_text = re.get('control', '')
+
+        if not url:
+            print(f"  WARNING: release.json entry '{filename}' has no url — skipping")
+            continue
+
+        info = parse_control(ctrl_text) if ctrl_text else {}
+        pkg_name = re.get('package') or info.get('Package', filename.split('_')[0])
+        pkg_ver  = re.get('version') or info.get('Version', '')
+        pkg_arch = re.get('arch')    or info.get('Architecture', 'all')
+
+        print(f"  Release {filename} ({size//1024//1024} MB) → {url}")
+        encountered_arches.add(pkg_arch)
+
+        PRIORITY_KEYS_R = [
+            'Package', 'Version', 'Architecture', 'Maintainer',
+            'Installed-Size', 'Depends', 'Pre-Depends', 'Recommends',
+            'Suggests', 'Conflicts', 'Breaks', 'Replaces', 'Provides',
+            'Homepage', 'Description'
+        ]
+        block = []
+        added = set()
+        if ctrl_text:
+            parsed = parse_control(ctrl_text)
+            for key in PRIORITY_KEYS_R:
+                if key in parsed:
+                    block.append(f"{key}: {parsed[key]}")
+                    added.add(key)
+            for key, val in parsed.items():
+                if key not in added and key not in COMPUTED:
+                    block.append(f"{key}: {val}")
+        else:
+            block.append(f"Package: {pkg_name}")
+            block.append(f"Version: {pkg_ver}")
+            block.append(f"Architecture: {pkg_arch}")
+
+        block.append(f"Filename: {url}")
+        block.append(f"Size: {size}")
+        block.append(f"MD5Sum: {re.get('md5', '')}")
+        block.append(f"SHA256: {re.get('sha256', '')}")
+        entries.append('\n'.join(block))
+
+        # Add to packages.json
+        letter = pkg_name[0].lower() if pkg_name else 'z'
+        folder_map.setdefault(letter, {}).setdefault(pkg_name, []).append({
+            'name':    filename,
+            'path':    url,
+            'size':    size,
+            'package': pkg_name,
+            'version': pkg_ver,
+            'desc':    info.get('Description', '').split('\n')[0],
+            'release': True,
         })
 
     # Write Packages
@@ -280,7 +471,9 @@ def import_debs(input_path, pool_dir):
             continue
 
         shutil.copy2(str(deb), str(target))
-        print(f"  Copied  {letter}/{pkgname}/{deb.name}")
+        size_mb = deb.stat().st_size / 1024 / 1024
+        flag = " [LARGE]" if deb.stat().st_size >= LARGE_FILE_THRESHOLD else ""
+        print(f"  Copied  {letter}/{pkgname}/{deb.name} ({size_mb:.1f} MB){flag}")
         copied += 1
 
     print(f"\n  Copied: {copied}   Replaced: {replaced}   Skipped: {skipped} (unchanged)")
@@ -326,12 +519,48 @@ def sign_release(repo_root):
         return False
 
 
+
+def cleanup_large_files(pool_dir):
+    """
+    Delete large .deb files from pool/ after they have been indexed.
+    They are hosted on GitHub Releases so they don't need to be in the repo.
+    """
+    import glob as _glob
+    deb_files = [
+        Path(p) for p in _glob.glob(str(pool_dir / '**' / '*.deb'), recursive=True)
+    ]
+    removed = 0
+    for deb in deb_files:
+        if deb.stat().st_size >= LARGE_FILE_THRESHOLD:
+            size_mb = deb.stat().st_size / 1024 / 1024
+            # Also remove empty parent folder if it becomes empty
+            pkg_dir = deb.parent
+            deb.unlink()
+            print(f"  Deleted {deb.relative_to(pool_dir)} ({size_mb:.1f} MB)")
+            # Remove empty pkg folder and letter folder
+            try:
+                pkg_dir.rmdir()
+                pkg_dir.parent.rmdir()
+            except OSError:
+                pass  # not empty, that's fine
+            removed += 1
+    if removed:
+        print(f"  Cleaned {removed} large file(s) from pool/")
+    else:
+        print(f"  No large files in pool/ to clean")
+    return removed
+
+
 def main():
-    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v2.0')
+    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v3.0')
     parser.add_argument('--input', '-i', default=None,
                         help='Import .deb files from this folder into pool/main/ first')
     parser.add_argument('--repo', '-r', default=str(Path(__file__).parent),
                         help='Repo root folder (default: script directory)')
+    parser.add_argument('--release', '-R', default=None, metavar='TAG',
+                        help='GitHub Release tag where large .debs were manually uploaded (e.g. v1.0)')
+    parser.add_argument('--add-release', nargs=2, metavar=('DEB', 'URL'),
+                        help='Add a large .deb to release.json: --add-release file.deb https://...')
     parser.add_argument('--no-sign', action='store_true',
                         help='Skip GPG signing')
     args = parser.parse_args()
@@ -341,20 +570,40 @@ def main():
 
     print()
     print("╔══════════════════════════════════════════╗")
-    print("║   AndroStudio Repo Generator  v2.0       ║")
+    print("║   AndroStudio Repo Generator  v3.0       ║")
     print("╚══════════════════════════════════════════╝")
     print()
-    print(f"  Repo : {repo_root}")
-    print(f"  Pool : {pool_dir}")
+    print(f"  Repo    : {repo_root}")
+    print(f"  Pool    : {pool_dir}")
+    print(f"  Release : {args.release or '(none — use --release TAG for large files)'}")
     print()
+
+    # Handle --add-release: register a large file in release.json then exit
+    if args.add_release:
+        deb_path, url = args.add_release
+        print()
+        print("AddRelease  Registering large package ...")
+        add_to_release_json(repo_root, deb_path, url)
+        print()
+        print("Done  release.json updated.")
+        print("      Now run: python generate_repo.py")
+        print()
+        return
 
     if args.input:
         print(f"Import  Importing from {args.input} ...")
         import_debs(args.input, pool_dir)
         print()
 
+    # Fetch release asset URLs if --release tag given
+    release_urls = {}
+    if args.release:
+        print(f"Release Fetching asset URLs from release '{args.release}' ...")
+        release_urls = fetch_release_urls(args.release)
+        print()
+
     print("Build   Scanning pool/main/ ...")
-    bin_dir, pkg_file, pkggz, arches = build_packages(pool_dir, repo_root)
+    bin_dir, pkg_file, pkggz, arches = build_packages(pool_dir, repo_root, release_urls)
 
     print()
     print("Build   Generating Release ...")
@@ -364,6 +613,11 @@ def main():
         print()
         print("Sign    Signing Release with GPG ...")
         sign_release(repo_root)
+
+    # ── Cleanup: delete large files from pool/ (they live on GitHub Releases) ──
+    print()
+    print("Clean   Removing large files from pool/ ...")
+    cleanup_large_files(pool_dir)
 
     print()
     print("Done    Files updated:")
@@ -381,4 +635,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
