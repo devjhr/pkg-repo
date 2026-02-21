@@ -2,22 +2,22 @@
   "a": {
     "abseil-cpp": [
       {
-        "name": "abseil-cpp_20250814.0_aarch64.deb",
-        "path": "pool/main/a/abseil-cpp/abseil-cpp_20250814.0_aarch64.deb",
-        "size": 1118396,
+        "name": "abseil-cpp_20250814.1_aarch64.deb",
+        "path": "pool/main/a/abseil-cpp/abseil-cpp_20250814.1_aarch64.deb",
+        "size": 1116488,
         "package": "abseil-cpp",
-        "version": "20250814.0",
+        "version": "20250814.1",
         "desc": "Abseil C++ Common Libraries",
         "release": false
       }
     ],
     "alsa-lib": [
       {
-        "name": "alsa-lib_1.2.14-1_aarch64.deb",
-        "path": "pool/main/a/alsa-lib/alsa-lib_1.2.14-1_aarch64.deb",
-        "size": 444368,
+        "name": "alsa-lib_1.2.15.3_aarch64.deb",
+        "path": "pool/main/a/alsa-lib/alsa-lib_1.2.15.3_aarch64.deb",
+        "size": 448680,
         "package": "alsa-lib",
-        "version": "1.2.14-1",
+        "version": "1.2.15.3",
         "desc": "The Advanced Linux Sound Architecture (ALSA) - library",
         "release": false
       }
@@ -109,27 +109,49 @@
         "desc": "APT transport for anonymous package downloads via Tor",
         "release": false
       }
+    ],
+    "attr": [
+      {
+        "name": "attr_2.5.2-1_aarch64.deb",
+        "path": "pool/main/a/attr/attr_2.5.2-1_aarch64.deb",
+        "size": 52588,
+        "package": "attr",
+        "version": "2.5.2-1",
+        "desc": "Utilities for manipulating filesystem extended attributes",
+        "release": false
+      }
+    ],
+    "attr-static": [
+      {
+        "name": "attr-static_2.5.2-1_aarch64.deb",
+        "path": "pool/main/a/attr-static/attr-static_2.5.2-1_aarch64.deb",
+        "size": 7012,
+        "package": "attr-static",
+        "version": "2.5.2-1",
+        "desc": "Static libraries for attr",
+        "release": false
+      }
     ]
   },
   "b": {
     "bash": [
       {
-        "name": "bash_5.3.3-1_aarch64.deb",
-        "path": "pool/main/b/bash/bash_5.3.3-1_aarch64.deb",
-        "size": 955968,
+        "name": "bash_5.3.9_aarch64.deb",
+        "path": "pool/main/b/bash/bash_5.3.9_aarch64.deb",
+        "size": 955428,
         "package": "bash",
-        "version": "5.3.3-1",
+        "version": "5.3.9",
         "desc": "A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)",
         "release": false
       }
     ],
     "blk-utils": [
       {
-        "name": "blk-utils_2.41.2_aarch64.deb",
-        "path": "pool/main/b/blk-utils/blk-utils_2.41.2_aarch64.deb",
-        "size": 180472,
+        "name": "blk-utils_2.41.2-1_aarch64.deb",
+        "path": "pool/main/b/blk-utils/blk-utils_2.41.2-1_aarch64.deb",
+        "size": 179816,
         "package": "blk-utils",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Utilities for handling block device attributes",
         "release": false
       }
@@ -160,22 +182,22 @@
   "c": {
     "ca-certificates": [
       {
-        "name": "ca-certificates_1:2025.11.04_all.deb",
-        "path": "pool/main/c/ca-certificates/ca-certificates_1:2025.11.04_all.deb",
-        "size": 127216,
+        "name": "ca-certificates_1:2025.12.02_all.deb",
+        "path": "pool/main/c/ca-certificates/ca-certificates_1:2025.12.02_all.deb",
+        "size": 124240,
         "package": "ca-certificates",
-        "version": "1:2025.11.04",
+        "version": "1:2025.12.02",
         "desc": "Common CA certificates",
         "release": false
       }
     ],
     "ca-certificates-java": [
       {
-        "name": "ca-certificates-java_1:2025.11.04_all.deb",
-        "path": "pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.11.04_all.deb",
-        "size": 116772,
+        "name": "ca-certificates-java_1:2025.12.02_all.deb",
+        "path": "pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.12.02_all.deb",
+        "size": 113820,
         "package": "ca-certificates-java",
-        "version": "1:2025.11.04",
+        "version": "1:2025.12.02",
         "desc": "Common CA certificates (java keystore format)",
         "release": false
       }
@@ -215,44 +237,44 @@
     ],
     "coreutils": [
       {
-        "name": "coreutils_9.8-1_aarch64.deb",
-        "path": "pool/main/c/coreutils/coreutils_9.8-1_aarch64.deb",
-        "size": 772864,
+        "name": "coreutils_9.10-1_aarch64.deb",
+        "path": "pool/main/c/coreutils/coreutils_9.10-1_aarch64.deb",
+        "size": 809768,
         "package": "coreutils",
-        "version": "9.8-1",
+        "version": "9.10-1",
         "desc": "Basic file, shell and text manipulation utilities from the GNU project",
         "release": false
       }
     ],
     "cups": [
       {
-        "name": "cups_2.4.14_aarch64.deb",
-        "path": "pool/main/c/cups/cups_2.4.14_aarch64.deb",
-        "size": 5162968,
+        "name": "cups_2.4.16_aarch64.deb",
+        "path": "pool/main/c/cups/cups_2.4.16_aarch64.deb",
+        "size": 5158480,
         "package": "cups",
-        "version": "2.4.14",
+        "version": "2.4.16",
         "desc": "Common UNIX Printing System",
         "release": false
       }
     ],
     "cups-static": [
       {
-        "name": "cups-static_2.4.14_aarch64.deb",
-        "path": "pool/main/c/cups-static/cups-static_2.4.14_aarch64.deb",
-        "size": 726264,
+        "name": "cups-static_2.4.16_aarch64.deb",
+        "path": "pool/main/c/cups-static/cups-static_2.4.16_aarch64.deb",
+        "size": 727848,
         "package": "cups-static",
-        "version": "2.4.14",
+        "version": "2.4.16",
         "desc": "Static libraries for cups",
         "release": false
       }
     ],
     "curl": [
       {
-        "name": "curl_8.17.0_aarch64.deb",
-        "path": "pool/main/c/curl/curl_8.17.0_aarch64.deb",
-        "size": 235824,
+        "name": "curl_8.18.0-1_aarch64.deb",
+        "path": "pool/main/c/curl/curl_8.18.0-1_aarch64.deb",
+        "size": 237060,
         "package": "curl",
-        "version": "8.17.0",
+        "version": "8.18.0-1",
         "desc": "Command line tool for transferring data with URL syntax",
         "release": false
       }
@@ -261,11 +283,11 @@
   "d": {
     "dash": [
       {
-        "name": "dash_0.5.12-1_aarch64.deb",
-        "path": "pool/main/d/dash/dash_0.5.12-1_aarch64.deb",
-        "size": 65824,
+        "name": "dash_0.5.12-2_aarch64.deb",
+        "path": "pool/main/d/dash/dash_0.5.12-2_aarch64.deb",
+        "size": 65816,
         "package": "dash",
-        "version": "0.5.12-1",
+        "version": "0.5.12-2",
         "desc": "Small POSIX-compliant implementation of /bin/sh",
         "release": false
       }
@@ -430,11 +452,11 @@
     ],
     "fdisk": [
       {
-        "name": "fdisk_2.41.2_aarch64.deb",
-        "path": "pool/main/f/fdisk/fdisk_2.41.2_aarch64.deb",
-        "size": 115832,
+        "name": "fdisk_2.41.2-1_aarch64.deb",
+        "path": "pool/main/f/fdisk/fdisk_2.41.2-1_aarch64.deb",
+        "size": 115424,
         "package": "fdisk",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Utilities to manipulate disk partition tables",
         "release": false
       }
@@ -641,22 +663,22 @@
     ],
     "glib": [
       {
-        "name": "glib_2.86.1_aarch64.deb",
-        "path": "pool/main/g/glib/glib_2.86.1_aarch64.deb",
-        "size": 2550260,
+        "name": "glib_2.86.4_aarch64.deb",
+        "path": "pool/main/g/glib/glib_2.86.4_aarch64.deb",
+        "size": 2548424,
         "package": "glib",
-        "version": "2.86.1",
+        "version": "2.86.4",
         "desc": "Library providing core building blocks for libraries and applications written in C",
         "release": false
       }
     ],
     "glib-cross": [
       {
-        "name": "glib-cross_2.86.1_all.deb",
-        "path": "pool/main/g/glib-cross/glib-cross_2.86.1_all.deb",
-        "size": 12132344,
+        "name": "glib-cross_2.86.4_all.deb",
+        "path": "pool/main/g/glib-cross/glib-cross_2.86.4_all.deb",
+        "size": 12145408,
         "package": "glib-cross",
-        "version": "2.86.1",
+        "version": "2.86.4",
         "desc": "glib for host (NOT for Termux)",
         "release": false
       }
@@ -674,11 +696,11 @@
     ],
     "gnutls": [
       {
-        "name": "gnutls_3.8.10_aarch64.deb",
-        "path": "pool/main/g/gnutls/gnutls_3.8.10_aarch64.deb",
-        "size": 175560,
+        "name": "gnutls_3.8.11_aarch64.deb",
+        "path": "pool/main/g/gnutls/gnutls_3.8.11_aarch64.deb",
+        "size": 175844,
         "package": "gnutls",
-        "version": "3.8.10",
+        "version": "3.8.11",
         "desc": "Commandline utilities for interfacing with the gnutls library",
         "release": false
       }
@@ -707,11 +729,11 @@
     ],
     "grep": [
       {
-        "name": "grep_3.12-2_aarch64.deb",
-        "path": "pool/main/g/grep/grep_3.12-2_aarch64.deb",
-        "size": 128052,
+        "name": "grep_3.12-3_aarch64.deb",
+        "path": "pool/main/g/grep/grep_3.12-3_aarch64.deb",
+        "size": 128324,
         "package": "grep",
-        "version": "3.12-2",
+        "version": "3.12-3",
         "desc": "Command which searches one or more input files for lines containing a match to a specified pattern",
         "release": false
       }
@@ -801,12 +823,34 @@
     ],
     "less": [
       {
-        "name": "less_685_aarch64.deb",
-        "path": "pool/main/l/less/less_685_aarch64.deb",
-        "size": 131476,
+        "name": "less_692_aarch64.deb",
+        "path": "pool/main/l/less/less_692_aarch64.deb",
+        "size": 184132,
         "package": "less",
-        "version": "685",
+        "version": "692",
         "desc": "Terminal pager program used to view the contents of a text file one screen at a time",
+        "release": false
+      }
+    ],
+    "libacl": [
+      {
+        "name": "libacl_2.3.2_aarch64.deb",
+        "path": "pool/main/l/libacl/libacl_2.3.2_aarch64.deb",
+        "size": 115872,
+        "package": "libacl",
+        "version": "2.3.2",
+        "desc": "Access control list shared library",
+        "release": false
+      }
+    ],
+    "libacl-static": [
+      {
+        "name": "libacl-static_2.3.2_aarch64.deb",
+        "path": "pool/main/l/libacl-static/libacl-static_2.3.2_aarch64.deb",
+        "size": 16540,
+        "package": "libacl-static",
+        "version": "2.3.2",
+        "desc": "Static libraries for libacl",
         "release": false
       }
     ],
@@ -889,22 +933,22 @@
     ],
     "libandroid-shmem": [
       {
-        "name": "libandroid-shmem_0.5-1_aarch64.deb",
-        "path": "pool/main/l/libandroid-shmem/libandroid-shmem_0.5-1_aarch64.deb",
-        "size": 6876,
+        "name": "libandroid-shmem_0.7_aarch64.deb",
+        "path": "pool/main/l/libandroid-shmem/libandroid-shmem_0.7_aarch64.deb",
+        "size": 7216,
         "package": "libandroid-shmem",
-        "version": "0.5-1",
+        "version": "0.7",
         "desc": "System V shared memory emulation on Android using ashmem",
         "release": false
       }
     ],
     "libandroid-shmem-static": [
       {
-        "name": "libandroid-shmem-static_0.5-1_aarch64.deb",
-        "path": "pool/main/l/libandroid-shmem-static/libandroid-shmem-static_0.5-1_aarch64.deb",
-        "size": 5696,
+        "name": "libandroid-shmem-static_0.7_aarch64.deb",
+        "path": "pool/main/l/libandroid-shmem-static/libandroid-shmem-static_0.7_aarch64.deb",
+        "size": 6028,
         "package": "libandroid-shmem-static",
-        "version": "0.5-1",
+        "version": "0.7",
         "desc": "Static libraries for libandroid-shmem",
         "release": false
       }
@@ -1021,11 +1065,11 @@
     ],
     "libblkid": [
       {
-        "name": "libblkid_2.41.2_aarch64.deb",
-        "path": "pool/main/l/libblkid/libblkid_2.41.2_aarch64.deb",
-        "size": 125324,
+        "name": "libblkid_2.41.2-1_aarch64.deb",
+        "path": "pool/main/l/libblkid/libblkid_2.41.2-1_aarch64.deb",
+        "size": 125464,
         "package": "libblkid",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Block device identification library",
         "release": false
       }
@@ -1043,33 +1087,33 @@
     ],
     "libc++": [
       {
-        "name": "libc++_28c-1_aarch64.deb",
-        "path": "pool/main/l/libc++/libc++_28c-1_aarch64.deb",
-        "size": 291724,
+        "name": "libc++_29_aarch64.deb",
+        "path": "pool/main/l/libc++/libc++_29_aarch64.deb",
+        "size": 334632,
         "package": "libc++",
-        "version": "28c-1",
+        "version": "29",
         "desc": "C++ Standard Library",
         "release": false
       }
     ],
     "libcap-ng": [
       {
-        "name": "libcap-ng_2:0.8.5-1_aarch64.deb",
-        "path": "pool/main/l/libcap-ng/libcap-ng_2:0.8.5-1_aarch64.deb",
-        "size": 35684,
+        "name": "libcap-ng_2:0.9.1_aarch64.deb",
+        "path": "pool/main/l/libcap-ng/libcap-ng_2:0.9.1_aarch64.deb",
+        "size": 33888,
         "package": "libcap-ng",
-        "version": "2:0.8.5-1",
+        "version": "2:0.9.1",
         "desc": "Library making programming with POSIX capabilities easier than traditional libcap",
         "release": false
       }
     ],
     "libcap-ng-static": [
       {
-        "name": "libcap-ng-static_2:0.8.5-1_aarch64.deb",
-        "path": "pool/main/l/libcap-ng-static/libcap-ng-static_2:0.8.5-1_aarch64.deb",
-        "size": 8904,
+        "name": "libcap-ng-static_2:0.9.1_aarch64.deb",
+        "path": "pool/main/l/libcap-ng-static/libcap-ng-static_2:0.9.1_aarch64.deb",
+        "size": 8884,
         "package": "libcap-ng-static",
-        "version": "2:0.8.5-1",
+        "version": "2:0.9.1",
         "desc": "Static libraries for libcap-ng",
         "release": false
       }
@@ -1087,22 +1131,22 @@
     ],
     "libcurl": [
       {
-        "name": "libcurl_8.17.0_aarch64.deb",
-        "path": "pool/main/l/libcurl/libcurl_8.17.0_aarch64.deb",
-        "size": 989624,
+        "name": "libcurl_8.18.0-1_aarch64.deb",
+        "path": "pool/main/l/libcurl/libcurl_8.18.0-1_aarch64.deb",
+        "size": 996728,
         "package": "libcurl",
-        "version": "8.17.0",
+        "version": "8.18.0-1",
         "desc": "Easy-to-use client-side URL transfer library",
         "release": false
       }
     ],
     "libcurl-static": [
       {
-        "name": "libcurl-static_8.17.0_aarch64.deb",
-        "path": "pool/main/l/libcurl-static/libcurl-static_8.17.0_aarch64.deb",
-        "size": 396064,
+        "name": "libcurl-static_8.18.0-1_aarch64.deb",
+        "path": "pool/main/l/libcurl-static/libcurl-static_8.18.0-1_aarch64.deb",
+        "size": 403504,
         "package": "libcurl-static",
-        "version": "8.17.0",
+        "version": "8.18.0-1",
         "desc": "Static libraries for libcurl",
         "release": false
       }
@@ -1142,33 +1186,33 @@
     ],
     "libexpat": [
       {
-        "name": "libexpat_2.7.3_aarch64.deb",
-        "path": "pool/main/l/libexpat/libexpat_2.7.3_aarch64.deb",
-        "size": 90548,
+        "name": "libexpat_2.7.4_aarch64.deb",
+        "path": "pool/main/l/libexpat/libexpat_2.7.4_aarch64.deb",
+        "size": 92064,
         "package": "libexpat",
-        "version": "2.7.3",
+        "version": "2.7.4",
         "desc": "XML parsing C library",
         "release": false
       }
     ],
     "libexpat-static": [
       {
-        "name": "libexpat-static_2.7.3_aarch64.deb",
-        "path": "pool/main/l/libexpat-static/libexpat-static_2.7.3_aarch64.deb",
-        "size": 57404,
+        "name": "libexpat-static_2.7.4_aarch64.deb",
+        "path": "pool/main/l/libexpat-static/libexpat-static_2.7.4_aarch64.deb",
+        "size": 57656,
         "package": "libexpat-static",
-        "version": "2.7.3",
+        "version": "2.7.4",
         "desc": "Static libraries for libexpat",
         "release": false
       }
     ],
     "libfdisk": [
       {
-        "name": "libfdisk_2.41.2_aarch64.deb",
-        "path": "pool/main/l/libfdisk/libfdisk_2.41.2_aarch64.deb",
-        "size": 157440,
+        "name": "libfdisk_2.41.2-1_aarch64.deb",
+        "path": "pool/main/l/libfdisk/libfdisk_2.41.2-1_aarch64.deb",
+        "size": 157056,
         "package": "libfdisk",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Library for manipulating disk partition tables",
         "release": false
       }
@@ -1263,22 +1307,22 @@
     ],
     "libgnutls": [
       {
-        "name": "libgnutls_3.8.10_aarch64.deb",
-        "path": "pool/main/l/libgnutls/libgnutls_3.8.10_aarch64.deb",
-        "size": 732884,
+        "name": "libgnutls_3.8.11_aarch64.deb",
+        "path": "pool/main/l/libgnutls/libgnutls_3.8.11_aarch64.deb",
+        "size": 733776,
         "package": "libgnutls",
-        "version": "3.8.10",
+        "version": "3.8.11",
         "desc": "Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them",
         "release": false
       }
     ],
     "libgnutls-static": [
       {
-        "name": "libgnutls-static_3.8.10_aarch64.deb",
-        "path": "pool/main/l/libgnutls-static/libgnutls-static_3.8.10_aarch64.deb",
-        "size": 790508,
+        "name": "libgnutls-static_3.8.11_aarch64.deb",
+        "path": "pool/main/l/libgnutls-static/libgnutls-static_3.8.11_aarch64.deb",
+        "size": 784872,
         "package": "libgnutls-static",
-        "version": "3.8.10",
+        "version": "3.8.11",
         "desc": "Static libraries for libgnutls",
         "release": false
       }
@@ -1384,33 +1428,33 @@
     ],
     "libjpeg-turbo": [
       {
-        "name": "libjpeg-turbo_3.1.2_aarch64.deb",
-        "path": "pool/main/l/libjpeg-turbo/libjpeg-turbo_3.1.2_aarch64.deb",
-        "size": 382288,
+        "name": "libjpeg-turbo_3.1.3_aarch64.deb",
+        "path": "pool/main/l/libjpeg-turbo/libjpeg-turbo_3.1.3_aarch64.deb",
+        "size": 383760,
         "package": "libjpeg-turbo",
-        "version": "3.1.2",
+        "version": "3.1.3",
         "desc": "Library for reading and writing JPEG image files",
         "release": false
       }
     ],
     "libjpeg-turbo-progs": [
       {
-        "name": "libjpeg-turbo-progs_3.1.2_aarch64.deb",
-        "path": "pool/main/l/libjpeg-turbo-progs/libjpeg-turbo-progs_3.1.2_aarch64.deb",
-        "size": 96924,
+        "name": "libjpeg-turbo-progs_3.1.3_aarch64.deb",
+        "path": "pool/main/l/libjpeg-turbo-progs/libjpeg-turbo-progs_3.1.3_aarch64.deb",
+        "size": 97856,
         "package": "libjpeg-turbo-progs",
-        "version": "3.1.2",
+        "version": "3.1.3",
         "desc": "Programs for manipulating JPEG files",
         "release": false
       }
     ],
     "libjpeg-turbo-static": [
       {
-        "name": "libjpeg-turbo-static_3.1.2_aarch64.deb",
-        "path": "pool/main/l/libjpeg-turbo-static/libjpeg-turbo-static_3.1.2_aarch64.deb",
-        "size": 263572,
+        "name": "libjpeg-turbo-static_3.1.3_aarch64.deb",
+        "path": "pool/main/l/libjpeg-turbo-static/libjpeg-turbo-static_3.1.3_aarch64.deb",
+        "size": 264908,
         "package": "libjpeg-turbo-static",
-        "version": "3.1.2",
+        "version": "3.1.3",
         "desc": "Static libraries for libjpeg-turbo",
         "release": false
       }
@@ -1461,22 +1505,22 @@
     ],
     "liblzma": [
       {
-        "name": "liblzma_5.8.1-1_aarch64.deb",
-        "path": "pool/main/l/liblzma/liblzma_5.8.1-1_aarch64.deb",
-        "size": 191452,
+        "name": "liblzma_5.8.2_aarch64.deb",
+        "path": "pool/main/l/liblzma/liblzma_5.8.2_aarch64.deb",
+        "size": 192532,
         "package": "liblzma",
-        "version": "5.8.1-1",
+        "version": "5.8.2",
         "desc": "XZ-format compression library",
         "release": false
       }
     ],
     "liblzma-static": [
       {
-        "name": "liblzma-static_5.8.1-1_aarch64.deb",
-        "path": "pool/main/l/liblzma-static/liblzma-static_5.8.1-1_aarch64.deb",
-        "size": 89584,
+        "name": "liblzma-static_5.8.2_aarch64.deb",
+        "path": "pool/main/l/liblzma-static/liblzma-static_5.8.2_aarch64.deb",
+        "size": 89564,
         "package": "liblzma-static",
-        "version": "5.8.1-1",
+        "version": "5.8.2",
         "desc": "Static libraries for liblzma",
         "release": false
       }
@@ -1505,11 +1549,11 @@
     ],
     "libmount": [
       {
-        "name": "libmount_2.41.2_aarch64.deb",
-        "path": "pool/main/l/libmount/libmount_2.41.2_aarch64.deb",
-        "size": 152364,
+        "name": "libmount_2.41.2-1_aarch64.deb",
+        "path": "pool/main/l/libmount/libmount_2.41.2-1_aarch64.deb",
+        "size": 152788,
         "package": "libmount",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Library for (un)mounting filesystems",
         "release": false
       }
@@ -1560,67 +1604,89 @@
     ],
     "libnettle": [
       {
-        "name": "libnettle_3.10.2-1_aarch64.deb",
-        "path": "pool/main/l/libnettle/libnettle_3.10.2-1_aarch64.deb",
-        "size": 406564,
+        "name": "libnettle_4.0_aarch64.deb",
+        "path": "pool/main/l/libnettle/libnettle_4.0_aarch64.deb",
+        "size": 405892,
         "package": "libnettle",
-        "version": "3.10.2-1",
+        "version": "4.0+really3.10.2",
         "desc": "Cryptographic library that is designed to fit easily in more or less any context",
         "release": false
       }
     ],
     "libnettle-static": [
       {
-        "name": "libnettle-static_3.10.2-1_aarch64.deb",
-        "path": "pool/main/l/libnettle-static/libnettle-static_3.10.2-1_aarch64.deb",
-        "size": 683968,
+        "name": "libnettle-static_4.0_aarch64.deb",
+        "path": "pool/main/l/libnettle-static/libnettle-static_4.0_aarch64.deb",
+        "size": 683196,
         "package": "libnettle-static",
-        "version": "3.10.2-1",
+        "version": "4.0+really3.10.2",
         "desc": "Static libraries for libnettle",
         "release": false
       }
     ],
     "libnghttp2": [
       {
-        "name": "libnghttp2_1.68.0_aarch64.deb",
-        "path": "pool/main/l/libnghttp2/libnghttp2_1.68.0_aarch64.deb",
-        "size": 95504,
+        "name": "libnghttp2_1.68.0-1_aarch64.deb",
+        "path": "pool/main/l/libnghttp2/libnghttp2_1.68.0-1_aarch64.deb",
+        "size": 95324,
         "package": "libnghttp2",
-        "version": "1.68.0",
+        "version": "1.68.0-1",
         "desc": "nghttp HTTP 2.0 library",
         "release": false
       }
     ],
     "libnghttp2-static": [
       {
-        "name": "libnghttp2-static_1.68.0_aarch64.deb",
-        "path": "pool/main/l/libnghttp2-static/libnghttp2-static_1.68.0_aarch64.deb",
-        "size": 64000,
+        "name": "libnghttp2-static_1.68.0-1_aarch64.deb",
+        "path": "pool/main/l/libnghttp2-static/libnghttp2-static_1.68.0-1_aarch64.deb",
+        "size": 63404,
         "package": "libnghttp2-static",
-        "version": "1.68.0",
+        "version": "1.68.0-1",
         "desc": "Static libraries for libnghttp2",
         "release": false
       }
     ],
     "libnghttp3": [
       {
-        "name": "libnghttp3_1.12.0_aarch64.deb",
-        "path": "pool/main/l/libnghttp3/libnghttp3_1.12.0_aarch64.deb",
-        "size": 67056,
+        "name": "libnghttp3_1.15.0_aarch64.deb",
+        "path": "pool/main/l/libnghttp3/libnghttp3_1.15.0_aarch64.deb",
+        "size": 67884,
         "package": "libnghttp3",
-        "version": "1.12.0",
+        "version": "1.15.0",
         "desc": "HTTP/3 library written in C",
         "release": false
       }
     ],
     "libnghttp3-static": [
       {
-        "name": "libnghttp3-static_1.12.0_aarch64.deb",
-        "path": "pool/main/l/libnghttp3-static/libnghttp3-static_1.12.0_aarch64.deb",
-        "size": 62824,
+        "name": "libnghttp3-static_1.15.0_aarch64.deb",
+        "path": "pool/main/l/libnghttp3-static/libnghttp3-static_1.15.0_aarch64.deb",
+        "size": 63576,
         "package": "libnghttp3-static",
-        "version": "1.12.0",
+        "version": "1.15.0",
         "desc": "Static libraries for libnghttp3",
+        "release": false
+      }
+    ],
+    "libngtcp2": [
+      {
+        "name": "libngtcp2_1.20.0_aarch64.deb",
+        "path": "pool/main/l/libngtcp2/libngtcp2_1.20.0_aarch64.deb",
+        "size": 164816,
+        "package": "libngtcp2",
+        "version": "1.20.0",
+        "desc": "Implementation of IETF QUIC protocol",
+        "release": false
+      }
+    ],
+    "libngtcp2-static": [
+      {
+        "name": "libngtcp2-static_1.20.0_aarch64.deb",
+        "path": "pool/main/l/libngtcp2-static/libngtcp2-static_1.20.0_aarch64.deb",
+        "size": 146272,
+        "package": "libngtcp2-static",
+        "version": "1.20.0",
+        "desc": "Static libraries for libngtcp2",
         "release": false
       }
     ],
@@ -1670,44 +1736,44 @@
     ],
     "libopus": [
       {
-        "name": "libopus_1.5.2-1_aarch64.deb",
-        "path": "pool/main/l/libopus/libopus_1.5.2-1_aarch64.deb",
-        "size": 185012,
+        "name": "libopus_1.6.1_aarch64.deb",
+        "path": "pool/main/l/libopus/libopus_1.6.1_aarch64.deb",
+        "size": 191480,
         "package": "libopus",
-        "version": "1.5.2-1",
+        "version": "1.6.1",
         "desc": "Reference implementation of the Opus codec",
         "release": false
       }
     ],
     "libopus-static": [
       {
-        "name": "libopus-static_1.5.2-1_aarch64.deb",
-        "path": "pool/main/l/libopus-static/libopus-static_1.5.2-1_aarch64.deb",
-        "size": 194848,
+        "name": "libopus-static_1.6.1_aarch64.deb",
+        "path": "pool/main/l/libopus-static/libopus-static_1.6.1_aarch64.deb",
+        "size": 201872,
         "package": "libopus-static",
-        "version": "1.5.2-1",
+        "version": "1.6.1",
         "desc": "Static libraries for libopus",
         "release": false
       }
     ],
     "libpng": [
       {
-        "name": "libpng_1.6.50-1_aarch64.deb",
-        "path": "pool/main/l/libpng/libpng_1.6.50-1_aarch64.deb",
-        "size": 195408,
+        "name": "libpng_1.6.55_aarch64.deb",
+        "path": "pool/main/l/libpng/libpng_1.6.55_aarch64.deb",
+        "size": 195476,
         "package": "libpng",
-        "version": "1.6.50-1",
+        "version": "1.6.55",
         "desc": "Official PNG reference library",
         "release": false
       }
     ],
     "libpng-static": [
       {
-        "name": "libpng-static_1.6.50-1_aarch64.deb",
-        "path": "pool/main/l/libpng-static/libpng-static_1.6.50-1_aarch64.deb",
-        "size": 86196,
+        "name": "libpng-static_1.6.55_aarch64.deb",
+        "path": "pool/main/l/libpng-static/libpng-static_1.6.55_aarch64.deb",
+        "size": 86572,
         "package": "libpng-static",
-        "version": "1.6.50-1",
+        "version": "1.6.55",
         "desc": "Static libraries for libpng",
         "release": false
       }
@@ -1725,11 +1791,11 @@
     ],
     "libsmartcols": [
       {
-        "name": "libsmartcols_2.41.2_aarch64.deb",
-        "path": "pool/main/l/libsmartcols/libsmartcols_2.41.2_aarch64.deb",
-        "size": 99688,
+        "name": "libsmartcols_2.41.2-1_aarch64.deb",
+        "path": "pool/main/l/libsmartcols/libsmartcols_2.41.2-1_aarch64.deb",
+        "size": 100348,
         "package": "libsmartcols",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Library for smart adaptive formatting of tabular data",
         "release": false
       }
@@ -1769,33 +1835,33 @@
     ],
     "libsqlite": [
       {
-        "name": "libsqlite_3.51.0_aarch64.deb",
-        "path": "pool/main/l/libsqlite/libsqlite_3.51.0_aarch64.deb",
-        "size": 707852,
+        "name": "libsqlite_3.51.2_aarch64.deb",
+        "path": "pool/main/l/libsqlite/libsqlite_3.51.2_aarch64.deb",
+        "size": 711176,
         "package": "libsqlite",
-        "version": "3.51.0",
+        "version": "3.51.2",
         "desc": "Library implementing a self-contained and transactional SQL database engine",
         "release": false
       }
     ],
     "libsqlite-static": [
       {
-        "name": "libsqlite-static_3.51.0_aarch64.deb",
-        "path": "pool/main/l/libsqlite-static/libsqlite-static_3.51.0_aarch64.deb",
-        "size": 545500,
+        "name": "libsqlite-static_3.51.2_aarch64.deb",
+        "path": "pool/main/l/libsqlite-static/libsqlite-static_3.51.2_aarch64.deb",
+        "size": 544140,
         "package": "libsqlite-static",
-        "version": "3.51.0",
+        "version": "3.51.2",
         "desc": "Static libraries for libsqlite",
         "release": false
       }
     ],
     "libsqlite-tcl": [
       {
-        "name": "libsqlite-tcl_3.51.0_aarch64.deb",
-        "path": "pool/main/l/libsqlite-tcl/libsqlite-tcl_3.51.0_aarch64.deb",
-        "size": 510744,
+        "name": "libsqlite-tcl_3.51.2_aarch64.deb",
+        "path": "pool/main/l/libsqlite-tcl/libsqlite-tcl_3.51.2_aarch64.deb",
+        "size": 510304,
         "package": "libsqlite-tcl",
-        "version": "3.51.0",
+        "version": "3.51.2",
         "desc": "tcl bindings for SQLite",
         "release": false
       }
@@ -1890,22 +1956,22 @@
     ],
     "libunbound": [
       {
-        "name": "libunbound_1.24.1-1_aarch64.deb",
-        "path": "pool/main/l/libunbound/libunbound_1.24.1-1_aarch64.deb",
-        "size": 365764,
+        "name": "libunbound_1.24.2-1_aarch64.deb",
+        "path": "pool/main/l/libunbound/libunbound_1.24.2-1_aarch64.deb",
+        "size": 381260,
         "package": "libunbound",
-        "version": "1.24.1-1",
+        "version": "1.24.2-1",
         "desc": "A validating, recursive, caching DNS resolver",
         "release": false
       }
     ],
     "libunbound-static": [
       {
-        "name": "libunbound-static_1.24.1-1_aarch64.deb",
-        "path": "pool/main/l/libunbound-static/libunbound-static_1.24.1-1_aarch64.deb",
-        "size": 441952,
+        "name": "libunbound-static_1.24.2-1_aarch64.deb",
+        "path": "pool/main/l/libunbound-static/libunbound-static_1.24.2-1_aarch64.deb",
+        "size": 458708,
         "package": "libunbound-static",
-        "version": "1.24.1-1",
+        "version": "1.24.2-1",
         "desc": "Static libraries for libunbound",
         "release": false
       }
@@ -1956,11 +2022,11 @@
     ],
     "libuuid": [
       {
-        "name": "libuuid_2.41.2_aarch64.deb",
-        "path": "pool/main/l/libuuid/libuuid_2.41.2_aarch64.deb",
-        "size": 15392,
+        "name": "libuuid_2.41.2-1_aarch64.deb",
+        "path": "pool/main/l/libuuid/libuuid_2.41.2-1_aarch64.deb",
+        "size": 15460,
         "package": "libuuid",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Library for handling universally unique identifiers",
         "release": false
       }
@@ -1989,33 +2055,33 @@
     ],
     "libwebrtc-audio-processing": [
       {
-        "name": "libwebrtc-audio-processing_1.3-3_aarch64.deb",
-        "path": "pool/main/l/libwebrtc-audio-processing/libwebrtc-audio-processing_1.3-3_aarch64.deb",
-        "size": 407308,
+        "name": "libwebrtc-audio-processing_1.3-4_aarch64.deb",
+        "path": "pool/main/l/libwebrtc-audio-processing/libwebrtc-audio-processing_1.3-4_aarch64.deb",
+        "size": 408432,
         "package": "libwebrtc-audio-processing",
-        "version": "1.3-3",
+        "version": "1.3-4",
         "desc": "A library containing the AudioProcessing module from the WebRTC project",
         "release": false
       }
     ],
     "libx11": [
       {
-        "name": "libx11_1.8.12-1_aarch64.deb",
-        "path": "pool/main/l/libx11/libx11_1.8.12-1_aarch64.deb",
-        "size": 1911240,
+        "name": "libx11_1.8.13_aarch64.deb",
+        "path": "pool/main/l/libx11/libx11_1.8.13_aarch64.deb",
+        "size": 1910136,
         "package": "libx11",
-        "version": "1.8.12-1",
+        "version": "1.8.13",
         "desc": "X11 client-side library",
         "release": false
       }
     ],
     "libx11-static": [
       {
-        "name": "libx11-static_1.8.12-1_aarch64.deb",
-        "path": "pool/main/l/libx11-static/libx11-static_1.8.12-1_aarch64.deb",
-        "size": 566764,
+        "name": "libx11-static_1.8.13_aarch64.deb",
+        "path": "pool/main/l/libx11-static/libx11-static_1.8.13_aarch64.deb",
+        "size": 567592,
         "package": "libx11-static",
-        "version": "1.8.12-1",
+        "version": "1.8.13",
         "desc": "Static libraries for libx11",
         "release": false
       }
@@ -2077,22 +2143,22 @@
     ],
     "libxext": [
       {
-        "name": "libxext_1.3.6-1_aarch64.deb",
-        "path": "pool/main/l/libxext/libxext_1.3.6-1_aarch64.deb",
-        "size": 97744,
+        "name": "libxext_1.3.7_aarch64.deb",
+        "path": "pool/main/l/libxext/libxext_1.3.7_aarch64.deb",
+        "size": 98016,
         "package": "libxext",
-        "version": "1.3.6-1",
+        "version": "1.3.7",
         "desc": "X11 miscellaneous extensions library",
         "release": false
       }
     ],
     "libxext-static": [
       {
-        "name": "libxext-static_1.3.6-1_aarch64.deb",
-        "path": "pool/main/l/libxext-static/libxext-static_1.3.6-1_aarch64.deb",
-        "size": 26008,
+        "name": "libxext-static_1.3.7_aarch64.deb",
+        "path": "pool/main/l/libxext-static/libxext-static_1.3.7_aarch64.deb",
+        "size": 25944,
         "package": "libxext-static",
-        "version": "1.3.6-1",
+        "version": "1.3.7",
         "desc": "Static libraries for libxext",
         "release": false
       }
@@ -2198,22 +2264,22 @@
     ],
     "libxrandr": [
       {
-        "name": "libxrandr_1.5.4-1_aarch64.deb",
-        "path": "pool/main/l/libxrandr/libxrandr_1.5.4-1_aarch64.deb",
-        "size": 22232,
+        "name": "libxrandr_1.5.5_aarch64.deb",
+        "path": "pool/main/l/libxrandr/libxrandr_1.5.5_aarch64.deb",
+        "size": 22272,
         "package": "libxrandr",
-        "version": "1.5.4-1",
+        "version": "1.5.5",
         "desc": "X11 RandR extension library",
         "release": false
       }
     ],
     "libxrandr-static": [
       {
-        "name": "libxrandr-static_1.5.4-1_aarch64.deb",
-        "path": "pool/main/l/libxrandr-static/libxrandr-static_1.5.4-1_aarch64.deb",
-        "size": 14884,
+        "name": "libxrandr-static_1.5.5_aarch64.deb",
+        "path": "pool/main/l/libxrandr-static/libxrandr-static_1.5.5_aarch64.deb",
+        "size": 14812,
         "package": "libxrandr-static",
-        "version": "1.5.4-1",
+        "version": "1.5.5",
         "desc": "Static libraries for libxrandr",
         "release": false
       }
@@ -2308,33 +2374,33 @@
     ],
     "littlecms": [
       {
-        "name": "littlecms_2.17-1_aarch64.deb",
-        "path": "pool/main/l/littlecms/littlecms_2.17-1_aarch64.deb",
-        "size": 141700,
+        "name": "littlecms_2.18_aarch64.deb",
+        "path": "pool/main/l/littlecms/littlecms_2.18_aarch64.deb",
+        "size": 142716,
         "package": "littlecms",
-        "version": "2.17-1",
+        "version": "2.18",
         "desc": "Color management library",
         "release": false
       }
     ],
     "littlecms-static": [
       {
-        "name": "littlecms-static_2.17-1_aarch64.deb",
-        "path": "pool/main/l/littlecms-static/littlecms-static_2.17-1_aarch64.deb",
-        "size": 145220,
+        "name": "littlecms-static_2.18_aarch64.deb",
+        "path": "pool/main/l/littlecms-static/littlecms-static_2.18_aarch64.deb",
+        "size": 145820,
         "package": "littlecms-static",
-        "version": "2.17-1",
+        "version": "2.18",
         "desc": "Static libraries for littlecms",
         "release": false
       }
     ],
     "littlecms-utils": [
       {
-        "name": "littlecms-utils_2.17-1_aarch64.deb",
-        "path": "pool/main/l/littlecms-utils/littlecms-utils_2.17-1_aarch64.deb",
-        "size": 35104,
+        "name": "littlecms-utils_2.18_aarch64.deb",
+        "path": "pool/main/l/littlecms-utils/littlecms-utils_2.18_aarch64.deb",
+        "size": 35136,
         "package": "littlecms-utils",
-        "version": "2.17-1",
+        "version": "2.18",
         "desc": "Color management utilities",
         "release": false
       }
@@ -2398,11 +2464,11 @@
     ],
     "mount-utils": [
       {
-        "name": "mount-utils_2.41.2_aarch64.deb",
-        "path": "pool/main/m/mount-utils/mount-utils_2.41.2_aarch64.deb",
-        "size": 142612,
+        "name": "mount-utils_2.41.2-1_aarch64.deb",
+        "path": "pool/main/m/mount-utils/mount-utils_2.41.2-1_aarch64.deb",
+        "size": 142560,
         "package": "mount-utils",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Utilities for (un)mounting filesystems",
         "release": false
       }
@@ -2411,11 +2477,11 @@
   "n": {
     "nano": [
       {
-        "name": "nano_8.6-1_aarch64.deb",
-        "path": "pool/main/n/nano/nano_8.6-1_aarch64.deb",
-        "size": 229596,
+        "name": "nano_8.7.1_aarch64.deb",
+        "path": "pool/main/n/nano/nano_8.7.1_aarch64.deb",
+        "size": 230892,
         "package": "nano",
-        "version": "8.6-1",
+        "version": "8.7.1",
         "desc": "Small, free and friendly text editor",
         "release": false
       }
@@ -2488,46 +2554,112 @@
     ],
     "nettle": [
       {
-        "name": "nettle_3.10.2-1_aarch64.deb",
-        "path": "pool/main/n/nettle/nettle_3.10.2-1_aarch64.deb",
-        "size": 18208,
+        "name": "nettle_4.0+really3.10.2_aarch64.deb",
+        "path": "pool/main/n/nettle/nettle_4.0+really3.10.2_aarch64.deb",
+        "size": 18144,
         "package": "nettle",
-        "version": "3.10.2-1",
+        "version": "4.0+really3.10.2",
         "desc": "Low level cryptographic tools",
         "release": false
       }
     ]
   },
   "o": {
+    "openjdk-17": [
+      {
+        "name": "openjdk-17_17.0.18_aarch64.deb",
+        "path": "https://github.com/devjhr/pkg-repo/releases/download/v1.0/openjdk-17_17.0.18_aarch64.deb",
+        "size": 95501928,
+        "package": "openjdk-17",
+        "version": "17.0.18",
+        "desc": "Java development kit and runtime",
+        "release": true
+      }
+    ],
+    "openjdk-17-source": [
+      {
+        "name": "openjdk-17-source_17.0.18_all.deb",
+        "path": "pool/main/o/openjdk-17-source/openjdk-17-source_17.0.18_all.deb",
+        "size": 47026356,
+        "package": "openjdk-17-source",
+        "version": "17.0.18",
+        "desc": "Source files for openjdk-17",
+        "release": false
+      }
+    ],
+    "openjdk-17-x": [
+      {
+        "name": "openjdk-17-x_17.0.18_aarch64.deb",
+        "path": "pool/main/o/openjdk-17-x/openjdk-17-x_17.0.18_aarch64.deb",
+        "size": 12558664,
+        "package": "openjdk-17-x",
+        "version": "17.0.18",
+        "desc": "Portion of openjdk-17 requiring X11 functionality",
+        "release": false
+      }
+    ],
+    "openjdk-21": [
+      {
+        "name": "openjdk-21_21.0.10_aarch64.deb",
+        "path": "https://github.com/devjhr/pkg-repo/releases/download/v1.0/openjdk-21_21.0.10_aarch64.deb",
+        "size": 105693024,
+        "package": "openjdk-21",
+        "version": "21.0.10",
+        "desc": "Java development kit and runtime",
+        "release": true
+      }
+    ],
+    "openjdk-21-source": [
+      {
+        "name": "openjdk-21-source_21.0.10_all.deb",
+        "path": "pool/main/o/openjdk-21-source/openjdk-21-source_21.0.10_all.deb",
+        "size": 49016104,
+        "package": "openjdk-21-source",
+        "version": "21.0.10",
+        "desc": "Source files for openjdk-21",
+        "release": false
+      }
+    ],
+    "openjdk-21-x": [
+      {
+        "name": "openjdk-21-x_21.0.10_aarch64.deb",
+        "path": "pool/main/o/openjdk-21-x/openjdk-21-x_21.0.10_aarch64.deb",
+        "size": 12569284,
+        "package": "openjdk-21-x",
+        "version": "21.0.10",
+        "desc": "Portion of openjdk-21 requiring X11 functionality",
+        "release": false
+      }
+    ],
     "openssl": [
       {
-        "name": "openssl_1:3.5.2_aarch64.deb",
-        "path": "pool/main/o/openssl/openssl_1:3.5.2_aarch64.deb",
-        "size": 2447680,
+        "name": "openssl_1:3.6.1_aarch64.deb",
+        "path": "pool/main/o/openssl/openssl_1:3.6.1_aarch64.deb",
+        "size": 2476964,
         "package": "openssl",
-        "version": "1:3.5.2",
+        "version": "1:3.6.1",
         "desc": "Library implementing the SSL and TLS protocols as well as general purpose cryptography functions",
         "release": false
       }
     ],
     "openssl-static": [
       {
-        "name": "openssl-static_1:3.5.2_aarch64.deb",
-        "path": "pool/main/o/openssl-static/openssl-static_1:3.5.2_aarch64.deb",
-        "size": 2595244,
+        "name": "openssl-static_1:3.6.1_aarch64.deb",
+        "path": "pool/main/o/openssl-static/openssl-static_1:3.6.1_aarch64.deb",
+        "size": 2633340,
         "package": "openssl-static",
-        "version": "1:3.5.2",
+        "version": "1:3.6.1",
         "desc": "Static libraries for openssl",
         "release": false
       }
     ],
     "openssl-tool": [
       {
-        "name": "openssl-tool_1:3.5.2_aarch64.deb",
-        "path": "pool/main/o/openssl-tool/openssl-tool_1:3.5.2_aarch64.deb",
-        "size": 272548,
+        "name": "openssl-tool_1:3.6.1_aarch64.deb",
+        "path": "pool/main/o/openssl-tool/openssl-tool_1:3.6.1_aarch64.deb",
+        "size": 277440,
         "package": "openssl-tool",
-        "version": "1:3.5.2",
+        "version": "1:3.6.1",
         "desc": "The openssl command line cryptographic tool",
         "release": false
       }
@@ -2668,44 +2800,44 @@
     ],
     "python": [
       {
-        "name": "python_3.12.12_aarch64.deb",
-        "path": "pool/main/p/python/python_3.12.12_aarch64.deb",
-        "size": 7549328,
+        "name": "python_3.12.12-1_aarch64.deb",
+        "path": "pool/main/p/python/python_3.12.12-1_aarch64.deb",
+        "size": 4476420,
         "package": "python",
-        "version": "3.12.12",
+        "version": "3.12.12-1",
         "desc": "Python 3 programming language intended to enable clear programs",
         "release": false
       }
     ],
     "python-ensurepip-wheels": [
       {
-        "name": "python-ensurepip-wheels_3.12.12_all.deb",
-        "path": "pool/main/p/python-ensurepip-wheels/python-ensurepip-wheels_3.12.12_all.deb",
-        "size": 1801596,
+        "name": "python-ensurepip-wheels_3.12.12-1_all.deb",
+        "path": "pool/main/p/python-ensurepip-wheels/python-ensurepip-wheels_3.12.12-1_all.deb",
+        "size": 1801592,
         "package": "python-ensurepip-wheels",
-        "version": "3.12.12",
+        "version": "3.12.12-1",
         "desc": "Wheels for Python ensurepip",
         "release": false
       }
     ],
     "python-static": [
       {
-        "name": "python-static_3.12.12_aarch64.deb",
-        "path": "pool/main/p/python-static/python-static_3.12.12_aarch64.deb",
-        "size": 6730056,
+        "name": "python-static_3.12.12-1_aarch64.deb",
+        "path": "pool/main/p/python-static/python-static_3.12.12-1_aarch64.deb",
+        "size": 6759068,
         "package": "python-static",
-        "version": "3.12.12",
+        "version": "3.12.12-1",
         "desc": "Static libraries for python",
         "release": false
       }
     ],
     "python-tkinter": [
       {
-        "name": "python-tkinter_3.12.12_aarch64.deb",
-        "path": "pool/main/p/python-tkinter/python-tkinter_3.12.12_aarch64.deb",
-        "size": 1218044,
+        "name": "python-tkinter_3.12.12-1_aarch64.deb",
+        "path": "pool/main/p/python-tkinter/python-tkinter_3.12.12-1_aarch64.deb",
+        "size": 518372,
         "package": "python-tkinter",
-        "version": "3.12.12",
+        "version": "3.12.12-1",
         "desc": "Tkinter support for Python 3",
         "release": false
       }
@@ -2723,11 +2855,11 @@
     ],
     "pyunbound": [
       {
-        "name": "pyunbound_1.24.1-1_aarch64.deb",
-        "path": "pool/main/p/pyunbound/pyunbound_1.24.1-1_aarch64.deb",
-        "size": 40956,
+        "name": "pyunbound_1.24.2-1_aarch64.deb",
+        "path": "pool/main/p/pyunbound/pyunbound_1.24.2-1_aarch64.deb",
+        "size": 780,
         "package": "pyunbound",
-        "version": "1.24.1-1",
+        "version": "1.24.2-1",
         "desc": "Python bindings for Unbound",
         "release": false
       }
@@ -2747,22 +2879,22 @@
   "r": {
     "readline": [
       {
-        "name": "readline_8.3.1-1_aarch64.deb",
-        "path": "pool/main/r/readline/readline_8.3.1-1_aarch64.deb",
-        "size": 293448,
+        "name": "readline_8.3.1-2_aarch64.deb",
+        "path": "pool/main/r/readline/readline_8.3.1-2_aarch64.deb",
+        "size": 294264,
         "package": "readline",
-        "version": "8.3.1-1",
+        "version": "8.3.1-2",
         "desc": "Library that allow users to edit command lines as they are typed in",
         "release": false
       }
     ],
     "readline-static": [
       {
-        "name": "readline-static_8.3.1-1_aarch64.deb",
-        "path": "pool/main/r/readline-static/readline-static_8.3.1-1_aarch64.deb",
-        "size": 125160,
+        "name": "readline-static_8.3.1-2_aarch64.deb",
+        "path": "pool/main/r/readline-static/readline-static_8.3.1-2_aarch64.deb",
+        "size": 124960,
         "package": "readline-static",
-        "version": "8.3.1-1",
+        "version": "8.3.1-2",
         "desc": "Static libraries for readline",
         "release": false
       }
@@ -2848,11 +2980,11 @@
     ],
     "sqlite": [
       {
-        "name": "sqlite_3.51.0_aarch64.deb",
-        "path": "pool/main/s/sqlite/sqlite_3.51.0_aarch64.deb",
-        "size": 617864,
+        "name": "sqlite_3.51.2_aarch64.deb",
+        "path": "pool/main/s/sqlite/sqlite_3.51.2_aarch64.deb",
+        "size": 618112,
         "package": "sqlite",
-        "version": "3.51.0",
+        "version": "3.51.2",
         "desc": "Command line shell for SQLite",
         "release": false
       }
@@ -2903,11 +3035,11 @@
     ],
     "swig": [
       {
-        "name": "swig_4.4.0_aarch64.deb",
-        "path": "pool/main/s/swig/swig_4.4.0_aarch64.deb",
-        "size": 926004,
+        "name": "swig_4.4.1_aarch64.deb",
+        "path": "pool/main/s/swig/swig_4.4.1_aarch64.deb",
+        "size": 927976,
         "package": "swig",
-        "version": "4.4.0",
+        "version": "4.4.1",
         "desc": "Generate scripting interfaces to C/C++ code",
         "release": false
       }
@@ -2916,11 +3048,11 @@
   "t": {
     "tar": [
       {
-        "name": "tar_1.35-1_aarch64.deb",
-        "path": "pool/main/t/tar/tar_1.35-1_aarch64.deb",
-        "size": 342808,
+        "name": "tar_1.35-2_aarch64.deb",
+        "path": "pool/main/t/tar/tar_1.35-2_aarch64.deb",
+        "size": 345396,
         "package": "tar",
-        "version": "1.35-1",
+        "version": "1.35-2",
         "desc": "GNU tar for manipulating tar archives",
         "release": false
       }
@@ -3083,11 +3215,11 @@
   "u": {
     "unbound": [
       {
-        "name": "unbound_1.24.1-1_aarch64.deb",
-        "path": "pool/main/u/unbound/unbound_1.24.1-1_aarch64.deb",
-        "size": 620132,
+        "name": "unbound_1.24.2-1_aarch64.deb",
+        "path": "pool/main/u/unbound/unbound_1.24.2-1_aarch64.deb",
+        "size": 639900,
         "package": "unbound",
-        "version": "1.24.1-1",
+        "version": "1.24.2-1",
         "desc": "Unbound command-line tools",
         "release": false
       }
@@ -3138,33 +3270,33 @@
     ],
     "util-linux": [
       {
-        "name": "util-linux_2.41.2_aarch64.deb",
-        "path": "pool/main/u/util-linux/util-linux_2.41.2_aarch64.deb",
-        "size": 759892,
+        "name": "util-linux_2.41.2-1_aarch64.deb",
+        "path": "pool/main/u/util-linux/util-linux_2.41.2-1_aarch64.deb",
+        "size": 736996,
         "package": "util-linux",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Miscellaneous system utilities",
         "release": false
       }
     ],
     "util-linux-static": [
       {
-        "name": "util-linux-static_2.41.2_aarch64.deb",
-        "path": "pool/main/u/util-linux-static/util-linux-static_2.41.2_aarch64.deb",
-        "size": 431836,
+        "name": "util-linux-static_2.41.2-1_aarch64.deb",
+        "path": "pool/main/u/util-linux-static/util-linux-static_2.41.2-1_aarch64.deb",
+        "size": 431060,
         "package": "util-linux-static",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Static libraries for util-linux",
         "release": false
       }
     ],
     "uuid-utils": [
       {
-        "name": "uuid-utils_2.41.2_aarch64.deb",
-        "path": "pool/main/u/uuid-utils/uuid-utils_2.41.2_aarch64.deb",
-        "size": 41096,
+        "name": "uuid-utils_2.41.2-1_aarch64.deb",
+        "path": "pool/main/u/uuid-utils/uuid-utils_2.41.2-1_aarch64.deb",
+        "size": 41072,
         "package": "uuid-utils",
-        "version": "2.41.2",
+        "version": "2.41.2-1",
         "desc": "Utilities for handling universally unique identifiers",
         "release": false
       }
@@ -3208,11 +3340,11 @@
     ],
     "xorgproto": [
       {
-        "name": "xorgproto_2024.1_all.deb",
-        "path": "pool/main/x/xorgproto/xorgproto_2024.1_all.deb",
-        "size": 247828,
+        "name": "xorgproto_2025.1_all.deb",
+        "path": "pool/main/x/xorgproto/xorgproto_2025.1_all.deb",
+        "size": 249668,
         "package": "xorgproto",
-        "version": "2024.1",
+        "version": "2025.1",
         "desc": "X.Org X11 Protocol headers",
         "release": false
       }
@@ -3263,11 +3395,11 @@
     ],
     "xz-utils": [
       {
-        "name": "xz-utils_5.8.1-1_aarch64.deb",
-        "path": "pool/main/x/xz-utils/xz-utils_5.8.1-1_aarch64.deb",
-        "size": 71120,
+        "name": "xz-utils_5.8.2_aarch64.deb",
+        "path": "pool/main/x/xz-utils/xz-utils_5.8.2_aarch64.deb",
+        "size": 71176,
         "package": "xz-utils",
-        "version": "5.8.1-1",
+        "version": "5.8.2",
         "desc": "XZ-format compression tools",
         "release": false
       }
@@ -3276,22 +3408,22 @@
   "z": {
     "zlib": [
       {
-        "name": "zlib_1.3.1-1_aarch64.deb",
-        "path": "pool/main/z/zlib/zlib_1.3.1-1_aarch64.deb",
-        "size": 60140,
+        "name": "zlib_1.3.2_aarch64.deb",
+        "path": "pool/main/z/zlib/zlib_1.3.2_aarch64.deb",
+        "size": 62888,
         "package": "zlib",
-        "version": "1.3.1-1",
+        "version": "1.3.2",
         "desc": "Compression library implementing the deflate compression method found in gzip and PKZIP",
         "release": false
       }
     ],
     "zlib-static": [
       {
-        "name": "zlib-static_1.3.1-1_aarch64.deb",
-        "path": "pool/main/z/zlib-static/zlib-static_1.3.1-1_aarch64.deb",
-        "size": 34364,
+        "name": "zlib-static_1.3.2_aarch64.deb",
+        "path": "pool/main/z/zlib-static/zlib-static_1.3.2_aarch64.deb",
+        "size": 35448,
         "package": "zlib-static",
-        "version": "1.3.1-1",
+        "version": "1.3.2",
         "desc": "Static libraries for zlib",
         "release": false
       }
