@@ -5,30 +5,30 @@ Origin: AndroStudio
 Label: AndroStudio Package Repository
 Suite: stable
 Codename: stable
-Date: Sat, 21 Feb 2026 18:14:51 UTC
+Date: Sat, 21 Feb 2026 18:48:34 UTC
 Architectures: aarch64 all
 Components: main
 Description: Official AndroStudio terminal package repository
 MD5Sum:
  35ed41cfbb43caa914c7e5c82082f0a2     137177 main/binary-aarch64/Packages
- ea948a191adc0149389e3a4bb6db04ae      40290 main/binary-aarch64/Packages.gz
+ eccc6aa8dfcab0cad9f853d30e2883a8      40290 main/binary-aarch64/Packages.gz
 SHA256:
  285fd76529191fe5f37b7971f7cc3e818fdb1cf510f097eb5bb36ddb1bc61261     137177 main/binary-aarch64/Packages
- 2784e337a28b68581c4c92608646ab98457a1b8025882bee4dbce66383dd8eae      40290 main/binary-aarch64/Packages.gz
+ 415a7b32e14cd4404f9666891fb0d31dfa549e63fd681bf05ccb987909645185      40290 main/binary-aarch64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJPBAEBCAA5FiEEKDXtDRB9gNykYn56kVR8FqymkDgFAmmZ9hsbFIAAAAAABAAO
-bWFudTIsMi41KzEuMTEsMywyAAoJEJFUfBasppA4VG8P/AsK6kUGWm4S8O6KKLmN
-eijY6++dlT9v7hbASpcNH5BhIBJwn+HjSngffssLTWA9QR6nUwbXZZBFsSkzCjoX
-gtVB8CfQp8/ilmyHl+1bS0sauu2pm9Q5lyy5NaYYUeCzcom0DYnT3ZwfZy/5pBMr
-5gsdYqJn5sFwndCUnbE70EA8iHlimDSEZKO4thcUkQ+kqS1QIOFEJK9WigBcB8VA
-raYO4oYPz7KofpIj0DcKihY5tUP00nirwwTvsh76lJisqMm2P4bil0FXAXoJipjs
-NCp455HZLF0hHU5NGU2csn4YytpV0Cph8CmrKcnEAEklVPRCYFc4c1WChQtcbut3
-1LoXNEREjg5V6PJlmkJ2fq+743ngNXLWZGe+wOug9jow/S50bZvVRBEbDvE8JL6h
-+daFGXKS+PQ6sB05qyis+YkT3h23r8NVNxTDv+LCHqUEFChiWKodTjWigoecU4df
-RfKdDi/n5adfUWn9oMZ2vmx2an4TMDY+mqihTdRGVn7H/3DdRj+zIRpjInneTouL
-oHDx0wuX0qr+E6EQe9ZomNJczx18af8+ZXanK9Hu0Y5a/hyJz0mVfkpQGAb8+KKq
-WhXY0SVy03Mcm+txyqV34eK4NZsnQHSfXYzoqwWjMz8SH5AcCKhkCuGA1+qSQlbr
-sO/MLYTRpB9NomR7b6ew65Hp
-=VGOj
+iQJPBAEBCAA5FiEEKDXtDRB9gNykYn56kVR8FqymkDgFAmmZ/gIbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTEsMywyAAoJEJFUfBasppA4e1wP/iWVm8FaKrYnuhOHlpeL
+T3kY2EVm674Fcc6IiiiUDTKpviArMLvLKp0/+ad7IJGV34rdu4wMWKZlVu/sHR6L
+vs3f8iWdCBwH6NusaVEV4VRqcJOjTQWjFWSrUYwyphx19dZhtC62EeBLw+6cAeV3
+wItccnooAYQxo69LHFIo/1NHM0ZXR+RY/KZgnrxO4fmWgz7mvdz/qqccXamu7bjw
+fzfXIamxMv4ZSPzL5HIu8KOlReKl8qS5GfWUQgTJcWJH3bAUstab80S9Og8Ge220
+Ja3rLJqu5aX4FNyI2ikSeHLpuNpZX59cghy1E13gHAf4J/tSDkX9XT/Qm1B7Zu3r
+MqdcvquPpefxWfCZ0mUDqeKvfT9N4mq/oVOOrkMm6PPZGNRPC0ind3ancYom2l9X
+zlYW+cEzCAb4bOQ2x5XZY75274pjpuK/GpXSj01UKUmqgSRkRq3yjfunyyRJRJSt
+HDWy0euUzQohdjYvKlp9cXF5ECYE7mFGvuwbWPwWgIYvMRWHKI6GDm8SV2D/inft
+DzVcvjaivUrmN9v/e+oiYgA3mBj1IC9ghqEOE8FbwVvf+m7Hw1mY/zAE/+pNuUC4
+9bFPXIi0oHjDXcf+EblCPumZvq19MgeyZbliTprSyB+Vra7OafBs1puIrNBxoKA8
+jqb+hnlERds6p7ZslF6vaT0v
+=McAo
 -----END PGP SIGNATURE-----

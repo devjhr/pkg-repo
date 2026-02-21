@@ -107,22 +107,29 @@ def parse_control(text):
 
 def fetch_release_urls(tag):
     """
-    Fetch all asset download URLs from a GitHub Release.
-    Returns dict: { 'filename.deb': 'https://...' }
-    Requires: gh CLI installed and authenticated (gh auth login)
+    Build download URLs for all .deb assets in a GitHub Release.
+    URL format is always predictable — no JSON parsing needed:
+      https://github.com/{repo}/releases/download/{tag}/{filename}
+    Requires: gh CLI to verify the release exists and list filenames.
     """
     result = run(f"gh release view {tag} --repo {GH_REPO} --json assets")
     if result is None:
-        print(f"  WARNING: Could not fetch release '{tag}' assets.")
+        print(f"  WARNING: Could not fetch release '{tag}'.")
         print(f"  Make sure: pkg install gh && gh auth login")
         return {}
     try:
         assets = json.loads(result).get('assets', [])
         urls = {}
         for a in assets:
-            if a['name'].endswith('.deb'):
-                urls[a['name']] = a['url']
+            name = a.get('name', '')
+            if name.endswith('.deb'):
+                # Construct URL directly — always this format on GitHub
+                url = f"https://github.com/{GH_REPO}/releases/download/{tag}/{name}"
+                urls[name] = url
         print(f"  Found {len(urls)} .deb asset(s) in release {tag}")
+        for name, url in urls.items():
+            print(f"    {name}")
+            print(f"    → {url}")
         return urls
     except Exception as e:
         print(f"  WARNING: Failed to parse release assets: {e}")
