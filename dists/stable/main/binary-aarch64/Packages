@@ -276,6 +276,21 @@ Size: 22384
 MD5Sum: 333b1a2fba1bc7a7537f6ab8b3f2f493
 SHA256: 267bf1afd7a78b9d3aff16b99bd2b5a0924c084f9b42e504e85946f61879daaf
 
+Package: clang
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 186820
+Depends: libcompiler-rt, lld, llvm, ndk-sysroot, libllvm (= 21.1.8)
+Breaks: libllvm (<< 16.0.0), clangd
+Replaces: libllvm (<< 16.0.0), clangd
+Homepage: https://clang.llvm.org/
+Description: C language frontend for LLVM
+Filename: pool/main/c/clang/clang_21.1.8_aarch64.deb
+Size: 30427068
+MD5Sum: fc0db0e7bdd934fdc352f684c75a0a0f
+SHA256: 9553ef1a0911de43b24a9ad69e36afae7b5c756977910cf72ee9d93bae6b1d43
+
 Package: command-not-found
 Version: 3.2-2
 Architecture: aarch64
@@ -929,17 +944,17 @@ MD5Sum: 8a84641b9b14f93f6b528e3e0d482a55
 SHA256: 1411bd8a7cc85c835cb90798dee1e8502c476fe5e8d9fdf601e5507f2a2af108
 
 Package: icu-devtools
-Version: 77.1-2
+Version: 78.2
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 984
-Depends: libicu (= 77.1-2)
+Installed-Size: 964
+Depends: libicu (= 78.2)
 Homepage: http://site.icu-project.org/home
 Description: Development utilities for International Components for Unicode
-Filename: pool/main/i/icu-devtools/icu-devtools_77.1-2_aarch64.deb
-Size: 213320
-MD5Sum: 32a800c544de96266300458d4933d325
-SHA256: 9d968c5cc2af0822a8d21cd35806e4bb8c21e9af02bc7fde7af0e2e5e50cc287
+Filename: pool/main/i/icu-devtools/icu-devtools_78.2_aarch64.deb
+Size: 210232
+MD5Sum: de14a5b269c8c62d5b0609f205340f62
+SHA256: 362a2b5596ddae9ef58112d47d6b2b81f0261ab7257d22b5ed1a44f3c2e3f903
 
 Package: inetutils
 Version: 2.6-1
@@ -1354,6 +1369,20 @@ Size: 8884
 MD5Sum: 24d8d8a15d42aa92bb4c7002d28bb82f
 SHA256: 0d3d3469351151c202d409cf2294d0847c57d5a2e008c76ae4010ef40853a413
 
+Package: libcompiler-rt
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 34016
+Depends: libc++
+Conflicts: libllvm (<< 21.1.3), ndk-multilib (<< 23b-6)
+Homepage: https://clang.llvm.org/
+Description: Compiler runtime libraries for clang
+Filename: pool/main/l/libcompiler-rt/libcompiler-rt_21.1.8_aarch64.deb
+Size: 2713908
+MD5Sum: e9ab825defa675923119a7cbfa995a92
+SHA256: db95cc0527c6cac3a590286ab382fecd0d1abccc99f397c0f200d0cf3501a3c2
+
 Package: libcrypt
 Version: 0.2-6
 Architecture: aarch64
@@ -1426,6 +1455,34 @@ Filename: pool/main/l/libdb-static/libdb-static_18.1.40-5_aarch64.deb
 Size: 481120
 MD5Sum: eae0e7584f678ee66254c16994963b70
 SHA256: 04b0a404df54728af0bf34b63a99ec2697ea8512cd809262a0bd575beb863c77
+
+Package: libedit
+Version: 20240517-3.1-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 300
+Depends: ncurses
+Breaks: libedit-dev
+Replaces: libedit-dev
+Homepage: https://thrysoee.dk/editline/
+Description: Library providing line editing, history, and tokenization functions
+Filename: pool/main/l/libedit/libedit_20240517-3.1-1_aarch64.deb
+Size: 79228
+MD5Sum: df6c70f9d80094028582db7592c4e7a5
+SHA256: 863c16629db5081b91c6fddf4982e8153fe4f66a7809f079588f01f3ac41b33f
+
+Package: libedit-static
+Version: 20240517-3.1-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 384
+Depends: libedit (= 20240517-3.1-1)
+Homepage: https://thrysoee.dk/editline/
+Description: Static libraries for libedit
+Filename: pool/main/l/libedit-static/libedit-static_20240517-3.1-1_aarch64.deb
+Size: 76892
+MD5Sum: 535fba7a853cc9fec7c158b9b5ff03db
+SHA256: 82717a1531de4bac7efe1c73d960a409b82433d361f8b5f54351695f1e6c9523
 
 Package: libevent
 Version: 2.1.12-3
@@ -1687,32 +1744,32 @@ MD5Sum: f39d246df55449d8b0004499da58c1d3
 SHA256: 01fe6cf7615530941b059ab13c57779d5349673b5cf5fb2f125ac42a1d782dcb
 
 Package: libicu
-Version: 77.1-2
+Version: 78.2
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 42308
+Installed-Size: 43632
 Depends: libc++
 Breaks: libicu-dev
 Replaces: libicu-dev
 Homepage: http://site.icu-project.org/home
 Description: International Components for Unicode library
-Filename: pool/main/l/libicu/libicu_77.1-2_aarch64.deb
-Size: 9934872
-MD5Sum: d8ae6e5bfbe0a7d70dc28d17655d2113
-SHA256: 3f696cb6013bd8fa9fb09080ad93054acbd5ab9ebd0588fd590fad4ac0c5fbe0
+Filename: pool/main/l/libicu/libicu_78.2_aarch64.deb
+Size: 10211796
+MD5Sum: a612b418954941945d4204a20bf919bb
+SHA256: 1d59bb20e25303cba4a440b073cf34cc440f68e72251559015ffea9a14a2b105
 
 Package: libicu-static
-Version: 77.1-2
+Version: 78.2
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 45244
-Depends: libicu (= 77.1-2)
+Installed-Size: 45144
+Depends: libicu (= 78.2)
 Homepage: http://site.icu-project.org/home
 Description: Static libraries for libicu
-Filename: pool/main/l/libicu-static/libicu-static_77.1-2_aarch64.deb
-Size: 9824192
-MD5Sum: 3c8cf8f0980b6972a910fbe233d51885
-SHA256: 43ba0f2dd23bee51c78456a9dc59f1ab34ce8051ccab0f191471291f506dbc81
+Filename: pool/main/l/libicu-static/libicu-static_78.2_aarch64.deb
+Size: 9994976
+MD5Sum: 94a6e4e8e4e1f84b789be5a5c7c6604a
+SHA256: d0f1dbefd49d9320cbefa3709a43be0c60910a64bde617d7df10364cb2c478a2
 
 Package: libidn2
 Version: 2.3.8-1
@@ -1809,6 +1866,35 @@ Filename: pool/main/l/libksba-static/libksba-static_1.6.7-2_aarch64.deb
 Size: 91756
 MD5Sum: 8e726bc40aaac9942694717e590a6deb
 SHA256: 173c899f98eb24870d459df7120f473f9103a40eafa2eab3b2391f0f4979b123
+
+Package: libllvm
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 169548
+Depends: libc++, libffi, libxml2, ncurses, zlib, zstd
+Conflicts: gcc, clang (<< 3.9.1-3)
+Breaks: libclang, libclang-dev, libllvm-dev
+Replaces: gcc, libclang, libclang-dev, libllvm-dev
+Homepage: https://clang.llvm.org/
+Description: Modular compiler and toolchain technologies library
+Filename: pool/main/l/libllvm/libllvm_21.1.8_aarch64.deb
+Size: 30448388
+MD5Sum: c05cac8c91098f37cf21668aee12c72e
+SHA256: 530a3cdc8a4e0aacd81c74dd83f68884064a46f8c5fe59a17d655c658cc5215f
+
+Package: libllvm-static
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 913128
+Depends: libllvm (= 21.1.8)
+Homepage: https://clang.llvm.org/
+Description: Static libraries for libllvm
+Filename: pool/main/l/libllvm-static/libllvm-static_21.1.8_aarch64.deb
+Size: 87707620
+MD5Sum: cbde9fdbe2d5f48c9eb06986a4793f25
+SHA256: c265e72c4be5f53ec89094139e616cc2f47b6fd2e65d4f48340ede36b802ddae
 
 Package: libltdl
 Version: 2.5.4-2
@@ -2174,6 +2260,19 @@ Filename: pool/main/l/libpng-static/libpng-static_1.6.55_aarch64.deb
 Size: 86572
 MD5Sum: ffe94685ab9418b6400ece07dc4af41e
 SHA256: 4e6d82c8342aa28707db3b2dae935888423af753b1b14b74fed2aaf7c51f15a2
+
+Package: libpolly
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 5816
+Depends: libllvm (= 21.1.8)
+Homepage: https://clang.llvm.org/
+Description: High-level loop and data-locality optimizer for clang
+Filename: pool/main/l/libpolly/libpolly_21.1.8_aarch64.deb
+Size: 1224944
+MD5Sum: 422df1c48a04422f1a86282dc75bc3e7
+SHA256: 726a52b81b368b2c19bd025945607dc45f1a2a0c5670436799adc4021060046b
 
 Package: libsm
 Version: 1.2.6-1
@@ -2731,46 +2830,46 @@ MD5Sum: f9532ba217195ade65bb02c220a62d30
 SHA256: 885a25b3711f582e3090d0d3ad5c1d18f90c8c1d5723b8a206e80996b9dbb294
 
 Package: libxml2
-Version: 2.15.0
+Version: 2.15.1-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1652
-Depends: libiconv, libicu, zlib
+Installed-Size: 1644
+Depends: libandroid-glob, libiconv, libicu, zlib
 Breaks: libxml2-dev
 Replaces: libxml2-dev
 Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: Library for parsing XML documents
-Filename: pool/main/l/libxml2/libxml2_2.15.0_aarch64.deb
-Size: 440420
-MD5Sum: 29b883b0886a1ad2d5b15c69a8abb348
-SHA256: bddaa28d2434fc7e6483d33b0542635f0e0509b95ed019e87157f26bb8d60606
+Filename: pool/main/l/libxml2/libxml2_2.15.1-1_aarch64.deb
+Size: 440924
+MD5Sum: dc2e92c74251deb5db854ca77d737b31
+SHA256: c9eb699c0fd47cd398cb3f4d420a7855383187f0b4a0ad766d8b5241831812d1
 
 Package: libxml2-python
-Version: 2.15.0
+Version: 2.15.1-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 252
-Depends: python, libxml2 (= 2.15.0)
+Installed-Size: 164
+Depends: python, libxml2 (= 2.15.1-1)
 Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: Python bindings for libxml2
-Filename: pool/main/l/libxml2-python/libxml2-python_2.15.0_aarch64.deb
-Size: 47200
-MD5Sum: 8bc6d10fe6cd1092c23d6f7e2c698f34
-SHA256: d7cefe60b6085361a5903684610dfb7d81ee24f2ea4506ee7d83edbee825e90e
+Filename: pool/main/l/libxml2-python/libxml2-python_2.15.1-1_aarch64.deb
+Size: 29216
+MD5Sum: 50734f9065ca7cff9f38ef9b4a63c41c
+SHA256: 95a2b6dcc5d698bbf8424db6f2ae87f83c858d981dfd110dc631d7c8b2120c98
 
 Package: libxml2-utils
-Version: 2.15.0
+Version: 2.15.1-1
 Architecture: aarch64
 Maintainer: @termux
 Installed-Size: 136
-Depends: readline, libxml2 (= 2.15.0)
+Depends: readline, libxml2 (= 2.15.1-1)
 Provides: xmllint
 Homepage: https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
 Description: XML utilities
-Filename: pool/main/l/libxml2-utils/libxml2-utils_2.15.0_aarch64.deb
-Size: 34016
-MD5Sum: 7ec463ccebed44611f9985bb0fa86b47
-SHA256: 2986df8de985a3e1125b54459ce8e760d080944fac4fece21f5906a9b4a900ee
+Filename: pool/main/l/libxml2-utils/libxml2-utils_2.15.1-1_aarch64.deb
+Size: 33824
+MD5Sum: 334fea25ebe33cfcfb290cbc7a4887e0
+SHA256: 2215707a43d9aec5ca82d465fcf753d47c2d32726f892e3636f3fbc4550e9440
 
 Package: libxrandr
 Version: 1.5.5
@@ -2944,6 +3043,64 @@ Size: 35136
 MD5Sum: a4e523f7c3c0c17fb21f0060bcbbaf71
 SHA256: 64a1d662fa38566c681abb76fc0f902b9159fb7f7b3a2f8bcbad85e257a329a4
 
+Package: lld
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 20300
+Depends: libllvm (= 21.1.8)
+Homepage: https://clang.llvm.org/
+Description: LLVM-based linker
+Filename: pool/main/l/lld/lld_21.1.8_aarch64.deb
+Size: 2802820
+MD5Sum: c0a8542d183f0b772eea7fd1efbb3bd8
+SHA256: b4d9a811e5c769cef742be7e9b5cb305a47b0f7c49a05ad336f358c87a88abd6
+
+Package: lldb
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 26776
+Depends: clang, libandroid-spawn, libc++, libedit, libxml2, python, ncurses-ui-libs, libllvm (= 21.1.8)
+Breaks: lldb-dev, lldb-static
+Replaces: lldb-dev, lldb-static
+Homepage: https://clang.llvm.org/
+Description: LLVM-based debugger
+Filename: pool/main/l/lldb/lldb_21.1.8_aarch64.deb
+Size: 5480048
+MD5Sum: 5bbef4606f9465f21bd7898214e3337d
+SHA256: b60a8dc58072446531ae7fd9bb9d8c2f9ebc1765219758c2473e4e77585417ae
+
+Package: llvm
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 70572
+Depends: libllvm (= 21.1.8)
+Breaks: libllvm (<< 11.0.0-1)
+Replaces: libllvm (<< 11.0.0-1)
+Homepage: https://clang.llvm.org/
+Description: LLVM modular compiler and toolchain executables
+Filename: pool/main/l/llvm/llvm_21.1.8_aarch64.deb
+Size: 14769044
+MD5Sum: c36a8decd4de622e09f132ac7c3c5067
+SHA256: 45d503fa83549f593fd0989fc9d390a420ec14ae7eda95981bee0e46eeed31fe
+
+Package: llvm-tools
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 13008
+Depends: libc++, ncurses, zlib, zstd
+Breaks: libllvm (<< 16.0.0)
+Replaces: libllvm (<< 16.0.0)
+Homepage: https://clang.llvm.org/
+Description: LLVM Development Tools
+Filename: pool/main/l/llvm-tools/llvm-tools_21.1.8_aarch64.deb
+Size: 2377640
+MD5Sum: d0a170d4e3b64f475d879baec962ac85
+SHA256: d328cb6644df178896c5e00a4de274edcceffb5b28564e7b533b7669a4f66691
+
 Package: lsof
 Version: 4.99.5-2
 Architecture: aarch64
@@ -3009,6 +3166,19 @@ Filename: pool/main/m/micro/micro_2.0.15_aarch64.deb
 Size: 3613008
 MD5Sum: 2bcbd30a6599d209356db14d35da9440
 SHA256: b00ec7a3cf3e487889cafe47b3b32ff0174ad66d045b3903f1fe9d42edfaf3e6
+
+Package: mlir
+Version: 21.1.8
+Architecture: aarch64
+Maintainer: @finagolfin
+Installed-Size: 269072
+Depends: libc++, ncurses, libllvm (= 21.1.8)
+Homepage: https://clang.llvm.org/
+Description: A Multi-Level Intermediate Representation for compilers from LLVM
+Filename: pool/main/m/mlir/mlir_21.1.8_aarch64.deb
+Size: 29677632
+MD5Sum: cb697be1397f26826f26cbcca857d42f
+SHA256: f461910290d5f980e6d8c387da9adaa58ad8edcd86801fb2c2d95515c0cec7e5
 
 Package: mount-utils
 Version: 2.41.2-1
@@ -3104,6 +3274,20 @@ Filename: pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124_aarch64.deb
 Size: 88952
 MD5Sum: 10366e00f588483964e8ac86a3a1ec29
 SHA256: 7877fbde38b48627e725dd8a68f5be9841311d946596f244cd6c92a703df1b6f
+
+Package: ndk-sysroot
+Version: 29-2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 31264
+Conflicts: libutil-dev, libgcc, libandroid-support-dev
+Replaces: libutil-dev, libgcc, libandroid-support-dev, ndk-stl
+Homepage: https://developer.android.com/tools/sdk/ndk/index.html
+Description: System header and library files from the Android NDK needed for compiling C programs
+Filename: pool/main/n/ndk-sysroot/ndk-sysroot_29-2_aarch64.deb
+Size: 1952136
+MD5Sum: 1ac322181fa49fe95bfb5ff7cdea3402
+SHA256: 5f0f7aff0fa4a0027675afc825f708c52bb27206978822dd669bc2d2aabfbe21
 
 Package: net-tools
 Version: 2.10.0-1
@@ -3912,6 +4096,19 @@ Size: 3057372
 MD5Sum: f99f2ad0fd107713215448ac21995512
 SHA256: 395b1431d580238182eb499dccd38a28be4a89057ffb1490fac02b54a7db1c6e
 
+Package: tree
+Version: 2.3.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 140
+Depends: libandroid-support
+Homepage: http://mama.indstate.edu/users/ice/tree/
+Description: Recursive directory lister producing a depth indented listing of files
+Filename: pool/main/t/tree/tree_2.3.1_aarch64.deb
+Size: 35964
+MD5Sum: 81d95c0164dbe358f9584c1873d00234
+SHA256: 19828e22fdeb4ca1651dbe63a44a9e3768117adf0bed71edb83d6988793124e8
+
 Package: ttf-dejavu
 Version: 2.37-8
 Architecture: all
@@ -4044,6 +4241,19 @@ Filename: pool/main/w/wget/wget_1.25.0-1_aarch64.deb
 Size: 281340
 MD5Sum: 734ac5f841c12f376a686fa380807f88
 SHA256: e03acf69e89c3879c3d371952741a29e601c0c7c470e14e53b699eede0038ee3
+
+Package: which
+Version: 2.23-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 84
+Conflicts: debianutils (<< 5.7-1)
+Homepage: https://savannah.gnu.org/projects/which/
+Description: Shows the full path of (shell) commands
+Filename: pool/main/w/which/which_2.23-1_aarch64.deb
+Size: 12568
+MD5Sum: 18666200b5a1ab9e6673331e89a08234
+SHA256: 4d4f3ad3c398997759f9b080788c654799af6ce20cc0016c2858c55d6c435e9d
 
 Package: xcb-proto
 Version: 1.17.0-1

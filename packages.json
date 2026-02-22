@@ -224,6 +224,17 @@
         "release": false
       }
     ],
+    "clang": [
+      {
+        "name": "clang_21.1.8_aarch64.deb",
+        "path": "pool/main/c/clang/clang_21.1.8_aarch64.deb",
+        "size": 30427068,
+        "package": "clang",
+        "version": "21.1.8",
+        "desc": "C language frontend for LLVM",
+        "release": false
+      }
+    ],
     "command-not-found": [
       {
         "name": "command-not-found_3.2-2_aarch64.deb",
@@ -764,11 +775,11 @@
     ],
     "icu-devtools": [
       {
-        "name": "icu-devtools_77.1-2_aarch64.deb",
-        "path": "pool/main/i/icu-devtools/icu-devtools_77.1-2_aarch64.deb",
-        "size": 213320,
+        "name": "icu-devtools_78.2_aarch64.deb",
+        "path": "pool/main/i/icu-devtools/icu-devtools_78.2_aarch64.deb",
+        "size": 210232,
         "package": "icu-devtools",
-        "version": "77.1-2",
+        "version": "78.2",
         "desc": "Development utilities for International Components for Unicode",
         "release": false
       }
@@ -1118,6 +1129,17 @@
         "release": false
       }
     ],
+    "libcompiler-rt": [
+      {
+        "name": "libcompiler-rt_21.1.8_aarch64.deb",
+        "path": "pool/main/l/libcompiler-rt/libcompiler-rt_21.1.8_aarch64.deb",
+        "size": 2713908,
+        "package": "libcompiler-rt",
+        "version": "21.1.8",
+        "desc": "Compiler runtime libraries for clang",
+        "release": false
+      }
+    ],
     "libcrypt": [
       {
         "name": "libcrypt_0.2-6_aarch64.deb",
@@ -1170,6 +1192,28 @@
         "package": "libdb-static",
         "version": "18.1.40-5",
         "desc": "Static libraries for libdb",
+        "release": false
+      }
+    ],
+    "libedit": [
+      {
+        "name": "libedit_20240517-3.1-1_aarch64.deb",
+        "path": "pool/main/l/libedit/libedit_20240517-3.1-1_aarch64.deb",
+        "size": 79228,
+        "package": "libedit",
+        "version": "20240517-3.1-1",
+        "desc": "Library providing line editing, history, and tokenization functions",
+        "release": false
+      }
+    ],
+    "libedit-static": [
+      {
+        "name": "libedit-static_20240517-3.1-1_aarch64.deb",
+        "path": "pool/main/l/libedit-static/libedit-static_20240517-3.1-1_aarch64.deb",
+        "size": 76892,
+        "package": "libedit-static",
+        "version": "20240517-3.1-1",
+        "desc": "Static libraries for libedit",
         "release": false
       }
     ],
@@ -1384,22 +1428,22 @@
     ],
     "libicu": [
       {
-        "name": "libicu_77.1-2_aarch64.deb",
-        "path": "pool/main/l/libicu/libicu_77.1-2_aarch64.deb",
-        "size": 9934872,
+        "name": "libicu_78.2_aarch64.deb",
+        "path": "pool/main/l/libicu/libicu_78.2_aarch64.deb",
+        "size": 10211796,
         "package": "libicu",
-        "version": "77.1-2",
+        "version": "78.2",
         "desc": "International Components for Unicode library",
         "release": false
       }
     ],
     "libicu-static": [
       {
-        "name": "libicu-static_77.1-2_aarch64.deb",
-        "path": "pool/main/l/libicu-static/libicu-static_77.1-2_aarch64.deb",
-        "size": 9824192,
+        "name": "libicu-static_78.2_aarch64.deb",
+        "path": "pool/main/l/libicu-static/libicu-static_78.2_aarch64.deb",
+        "size": 9994976,
         "package": "libicu-static",
-        "version": "77.1-2",
+        "version": "78.2",
         "desc": "Static libraries for libicu",
         "release": false
       }
@@ -1478,6 +1522,28 @@
         "package": "libksba-static",
         "version": "1.6.7-2",
         "desc": "Static libraries for libksba",
+        "release": false
+      }
+    ],
+    "libllvm": [
+      {
+        "name": "libllvm_21.1.8_aarch64.deb",
+        "path": "pool/main/l/libllvm/libllvm_21.1.8_aarch64.deb",
+        "size": 30448388,
+        "package": "libllvm",
+        "version": "21.1.8",
+        "desc": "Modular compiler and toolchain technologies library",
+        "release": false
+      }
+    ],
+    "libllvm-static": [
+      {
+        "name": "libllvm-static_21.1.8_aarch64.deb",
+        "path": "pool/main/l/libllvm-static/libllvm-static_21.1.8_aarch64.deb",
+        "size": 87707620,
+        "package": "libllvm-static",
+        "version": "21.1.8",
+        "desc": "Static libraries for libllvm",
         "release": false
       }
     ],
@@ -1775,6 +1841,17 @@
         "package": "libpng-static",
         "version": "1.6.55",
         "desc": "Static libraries for libpng",
+        "release": false
+      }
+    ],
+    "libpolly": [
+      {
+        "name": "libpolly_21.1.8_aarch64.deb",
+        "path": "pool/main/l/libpolly/libpolly_21.1.8_aarch64.deb",
+        "size": 1224944,
+        "package": "libpolly",
+        "version": "21.1.8",
+        "desc": "High-level loop and data-locality optimizer for clang",
         "release": false
       }
     ],
@@ -2231,33 +2308,33 @@
     ],
     "libxml2": [
       {
-        "name": "libxml2_2.15.0_aarch64.deb",
-        "path": "pool/main/l/libxml2/libxml2_2.15.0_aarch64.deb",
-        "size": 440420,
+        "name": "libxml2_2.15.1-1_aarch64.deb",
+        "path": "pool/main/l/libxml2/libxml2_2.15.1-1_aarch64.deb",
+        "size": 440924,
         "package": "libxml2",
-        "version": "2.15.0",
+        "version": "2.15.1-1",
         "desc": "Library for parsing XML documents",
         "release": false
       }
     ],
     "libxml2-python": [
       {
-        "name": "libxml2-python_2.15.0_aarch64.deb",
-        "path": "pool/main/l/libxml2-python/libxml2-python_2.15.0_aarch64.deb",
-        "size": 47200,
+        "name": "libxml2-python_2.15.1-1_aarch64.deb",
+        "path": "pool/main/l/libxml2-python/libxml2-python_2.15.1-1_aarch64.deb",
+        "size": 29216,
         "package": "libxml2-python",
-        "version": "2.15.0",
+        "version": "2.15.1-1",
         "desc": "Python bindings for libxml2",
         "release": false
       }
     ],
     "libxml2-utils": [
       {
-        "name": "libxml2-utils_2.15.0_aarch64.deb",
-        "path": "pool/main/l/libxml2-utils/libxml2-utils_2.15.0_aarch64.deb",
-        "size": 34016,
+        "name": "libxml2-utils_2.15.1-1_aarch64.deb",
+        "path": "pool/main/l/libxml2-utils/libxml2-utils_2.15.1-1_aarch64.deb",
+        "size": 33824,
         "package": "libxml2-utils",
-        "version": "2.15.0",
+        "version": "2.15.1-1",
         "desc": "XML utilities",
         "release": false
       }
@@ -2405,6 +2482,50 @@
         "release": false
       }
     ],
+    "lld": [
+      {
+        "name": "lld_21.1.8_aarch64.deb",
+        "path": "pool/main/l/lld/lld_21.1.8_aarch64.deb",
+        "size": 2802820,
+        "package": "lld",
+        "version": "21.1.8",
+        "desc": "LLVM-based linker",
+        "release": false
+      }
+    ],
+    "lldb": [
+      {
+        "name": "lldb_21.1.8_aarch64.deb",
+        "path": "pool/main/l/lldb/lldb_21.1.8_aarch64.deb",
+        "size": 5480048,
+        "package": "lldb",
+        "version": "21.1.8",
+        "desc": "LLVM-based debugger",
+        "release": false
+      }
+    ],
+    "llvm": [
+      {
+        "name": "llvm_21.1.8_aarch64.deb",
+        "path": "pool/main/l/llvm/llvm_21.1.8_aarch64.deb",
+        "size": 14769044,
+        "package": "llvm",
+        "version": "21.1.8",
+        "desc": "LLVM modular compiler and toolchain executables",
+        "release": false
+      }
+    ],
+    "llvm-tools": [
+      {
+        "name": "llvm-tools_21.1.8_aarch64.deb",
+        "path": "pool/main/l/llvm-tools/llvm-tools_21.1.8_aarch64.deb",
+        "size": 2377640,
+        "package": "llvm-tools",
+        "version": "21.1.8",
+        "desc": "LLVM Development Tools",
+        "release": false
+      }
+    ],
     "lsof": [
       {
         "name": "lsof_4.99.5-2_aarch64.deb",
@@ -2459,6 +2580,17 @@
         "package": "micro",
         "version": "2.0.15",
         "desc": "Modern and intuitive terminal-based text editor",
+        "release": false
+      }
+    ],
+    "mlir": [
+      {
+        "name": "mlir_21.1.8_aarch64.deb",
+        "path": "pool/main/m/mlir/mlir_21.1.8_aarch64.deb",
+        "size": 29677632,
+        "package": "mlir",
+        "version": "21.1.8",
+        "desc": "A Multi-Level Intermediate Representation for compilers from LLVM",
         "release": false
       }
     ],
@@ -2538,6 +2670,17 @@
         "package": "ncurses-utils",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Tools for working with terminals",
+        "release": false
+      }
+    ],
+    "ndk-sysroot": [
+      {
+        "name": "ndk-sysroot_29-2_aarch64.deb",
+        "path": "pool/main/n/ndk-sysroot/ndk-sysroot_29-2_aarch64.deb",
+        "size": 1952136,
+        "package": "ndk-sysroot",
+        "version": "29-2",
+        "desc": "System header and library files from the Android NDK needed for compiling C programs",
         "release": false
       }
     ],
@@ -3200,6 +3343,17 @@
         "release": false
       }
     ],
+    "tree": [
+      {
+        "name": "tree_2.3.1_aarch64.deb",
+        "path": "pool/main/t/tree/tree_2.3.1_aarch64.deb",
+        "size": 35964,
+        "package": "tree",
+        "version": "2.3.1",
+        "desc": "Recursive directory lister producing a depth indented listing of files",
+        "release": false
+      }
+    ],
     "ttf-dejavu": [
       {
         "name": "ttf-dejavu_2.37-8_all.deb",
@@ -3311,6 +3465,17 @@
         "package": "wget",
         "version": "1.25.0-1",
         "desc": "Commandline tool for retrieving files using HTTP, HTTPS and FTP",
+        "release": false
+      }
+    ],
+    "which": [
+      {
+        "name": "which_2.23-1_aarch64.deb",
+        "path": "pool/main/w/which/which_2.23-1_aarch64.deb",
+        "size": 12568,
+        "package": "which",
+        "version": "2.23-1",
+        "desc": "Shows the full path of (shell) commands",
         "release": false
       }
     ]
