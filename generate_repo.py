@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AndroStudio Repo Generator v3.0
+AndroStudio Repo Generator v2.1
 ================================
 Based on termux-apt-repo by Grimler91
 Modified for AndroStudio pkg-repo structure:
@@ -19,8 +19,6 @@ GPG signing is handled automatically by GitHub Actions.
 Usage:
     python generate_repo.py
     python generate_repo.py --input ~/pkg
-    python generate_repo.py --release v1.0
-    python generate_repo.py --input ~/pkg --release v1.0
 """
 
 import argparse, datetime, glob, gzip, hashlib, json
@@ -41,7 +39,7 @@ HASHES       = ['md5', 'sha256']
 GH_REPO      = "devjhr/pkg-repo"
 
 # Files >= this size are expected to be in GitHub Releases
-LARGE_FILE_THRESHOLD = 90 * 1024 * 1024  # 90 MB
+LARGE_FILE_THRESHOLD = 100 * 1024 * 1024  # 100MB hard limit — use LFS for large files
 
 
 def run(cmd):
@@ -223,10 +221,8 @@ def add_to_release_json(repo_root, deb_path, url):
     return True
 
 
-def build_packages(pool_dir, repo_root, release_urls=None):
-    """Scan pool/main for .deb files and generate Packages, Packages.gz, packages.json.
-    release_urls: dict { filename: url } for large files manually uploaded to GitHub Releases.
-    """
+def build_packages(pool_dir, repo_root):
+    """Scan pool/main for .deb files and generate Packages, Packages.gz, packages.json."""
     bin_dir  = repo_root / 'dists' / CODENAME / COMPONENT / 'binary-aarch64'
     pkg_file = bin_dir / 'Packages'
     pkggz    = bin_dir / 'Packages.gz'
@@ -291,16 +287,7 @@ def build_packages(pool_dir, repo_root, release_urls=None):
         encountered_arches.add(pkg_arch)
 
         size          = deb.stat().st_size
-        is_large      = size >= LARGE_FILE_THRESHOLD
-
-        # Large files: use Release URL as Filename, will be deleted from pool/ after indexing
-        if is_large and release_urls and deb.name in release_urls:
-            filename_path = release_urls[deb.name]
-            print(f"  Large {deb.name} ({size//1024//1024} MB) → Release URL")
-        else:
-            filename_path = 'pool/main/' + '/'.join(parts)
-            if is_large:
-                print(f"  Large {deb.name} ({size//1024//1024} MB) → pool/ (no release URL — add --release TAG)")
+        filename_path = 'pool/main/' + '/'.join(parts)
 
         # Build Packages entry
         block = []
@@ -334,7 +321,6 @@ def build_packages(pool_dir, repo_root, release_urls=None):
             'package': pkg_name,
             'version': pkg_ver,
             'desc':    info.get('Description', '').split('\n')[0],
-            'release': is_large and release_urls and deb.name in release_urls,
         })
 
     # ── Process release.json entries (large files on GitHub Releases) ──────────
@@ -411,6 +397,31 @@ def build_packages(pool_dir, repo_root, release_urls=None):
     (repo_root / 'packages.json').write_text(json.dumps(folder_map, indent=2), encoding='utf-8')
     print(f"  OK   packages.json")
 
+    # ── LFS Summary: list files that should be tracked with Git LFS ────────────
+    lfs_threshold = 50 * 1024 * 1024  # warn about files >= 50MB
+    import glob as _glob2
+    all_debs = [Path(p) for p in _glob2.glob(str(pool_dir / '**' / '*.deb'), recursive=True)]
+    lfs_files = [d for d in all_debs if d.stat().st_size >= lfs_threshold]
+    lfs_files.sort(key=lambda f: f.stat().st_size, reverse=True)
+
+    if lfs_files:
+        print()
+        print("  ┌─────────────────────────────────────────────────────────────┐")
+        print("  │  GIT LFS — Files you should track (>= 50MB)                │")
+        print("  ├─────────────────────────────────────────────────────────────┤")
+        for f in lfs_files:
+            size_mb = f.stat().st_size / 1024 / 1024
+            rel     = f.relative_to(pool_dir)
+            flag    = " ← MUST (>100MB)" if f.stat().st_size >= 100 * 1024 * 1024 else " ← recommended"
+            print(f"  │  {str(rel):<40} {size_mb:>6.1f} MB{flag}")
+        print("  ├─────────────────────────────────────────────────────────────┤")
+        print("  │  Run once to track:                                         │")
+        print("  │    git lfs install                                          │")
+        print("  │    git lfs track 'pool/main/**/*.deb'                       │")
+        print("  │    git add .gitattributes && git commit -m 'enable lfs'     │")
+        print("  └─────────────────────────────────────────────────────────────┘")
+        print()
+
     return bin_dir, pkg_file, pkggz, encountered_arches
 
 
@@ -479,8 +490,7 @@ def import_debs(input_path, pool_dir):
 
         shutil.copy2(str(deb), str(target))
         size_mb = deb.stat().st_size / 1024 / 1024
-        flag = " [LARGE]" if deb.stat().st_size >= LARGE_FILE_THRESHOLD else ""
-        print(f"  Copied  {letter}/{pkgname}/{deb.name} ({size_mb:.1f} MB){flag}")
+        print(f"  Copied  {letter}/{pkgname}/{deb.name} ({size_mb:.1f} MB)")
         copied += 1
 
     print(f"\n  Copied: {copied}   Replaced: {replaced}   Skipped: {skipped} (unchanged)")
@@ -559,7 +569,7 @@ def cleanup_large_files(pool_dir):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v3.0')
+    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v2.1')
     parser.add_argument('--input', '-i', default=None,
                         help='Import .deb files from this folder into pool/main/ first')
     parser.add_argument('--repo', '-r', default=str(Path(__file__).parent),
@@ -577,12 +587,11 @@ def main():
 
     print()
     print("╔══════════════════════════════════════════╗")
-    print("║   AndroStudio Repo Generator  v3.0       ║")
+    print("║   AndroStudio Repo Generator  v2.1       ║")
     print("╚══════════════════════════════════════════╝")
     print()
     print(f"  Repo    : {repo_root}")
     print(f"  Pool    : {pool_dir}")
-    print(f"  Release : {args.release or '(none — use --release TAG for large files)'}")
     print()
 
     # Handle --add-release: register a large file in release.json then exit
@@ -602,15 +611,8 @@ def main():
         import_debs(args.input, pool_dir)
         print()
 
-    # Fetch release asset URLs if --release tag given
-    release_urls = {}
-    if args.release:
-        print(f"Release Fetching asset URLs from release '{args.release}' ...")
-        release_urls = fetch_release_urls(args.release)
-        print()
-
     print("Build   Scanning pool/main/ ...")
-    bin_dir, pkg_file, pkggz, arches = build_packages(pool_dir, repo_root, release_urls)
+    bin_dir, pkg_file, pkggz, arches = build_packages(pool_dir, repo_root)
 
     print()
     print("Build   Generating Release ...")
@@ -620,11 +622,6 @@ def main():
         print()
         print("Sign    Signing Release with GPG ...")
         sign_release(repo_root)
-
-    # ── Cleanup: delete large files from pool/ (they live on GitHub Releases) ──
-    print()
-    print("Clean   Removing large files from pool/ ...")
-    cleanup_large_files(pool_dir)
 
     print()
     print("Done    Files updated:")

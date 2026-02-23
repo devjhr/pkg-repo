@@ -7,8 +7,7 @@
         "size": 1116488,
         "package": "abseil-cpp",
         "version": "20250814.1",
-        "desc": "Abseil C++ Common Libraries",
-        "release": false
+        "desc": "Abseil C++ Common Libraries"
       }
     ],
     "alsa-lib": [
@@ -18,8 +17,7 @@
         "size": 448680,
         "package": "alsa-lib",
         "version": "1.2.15.3",
-        "desc": "The Advanced Linux Sound Architecture (ALSA) - library",
-        "release": false
+        "desc": "The Advanced Linux Sound Architecture (ALSA) - library"
       }
     ],
     "alsa-plugins": [
@@ -29,8 +27,7 @@
         "size": 25620,
         "package": "alsa-plugins",
         "version": "1.2.12-1",
-        "desc": "The Advanced Linux Sound Architecture (ALSA) - plugins",
-        "release": false
+        "desc": "The Advanced Linux Sound Architecture (ALSA) - plugins"
       }
     ],
     "apr": [
@@ -40,8 +37,7 @@
         "size": 237780,
         "package": "apr",
         "version": "1.7.6-2",
-        "desc": "Apache Portable Runtime Library",
-        "release": false
+        "desc": "Apache Portable Runtime Library"
       }
     ],
     "apr-static": [
@@ -51,8 +47,7 @@
         "size": 83860,
         "package": "apr-static",
         "version": "1.7.6-2",
-        "desc": "Static libraries for apr",
-        "release": false
+        "desc": "Static libraries for apr"
       }
     ],
     "apr-util": [
@@ -62,8 +57,7 @@
         "size": 111340,
         "package": "apr-util",
         "version": "1.6.3-3",
-        "desc": "Apache Portable Runtime Utility Library",
-        "release": false
+        "desc": "Apache Portable Runtime Utility Library"
       }
     ],
     "apr-util-static": [
@@ -73,8 +67,7 @@
         "size": 68604,
         "package": "apr-util-static",
         "version": "1.6.3-3",
-        "desc": "Static libraries for apr-util",
-        "release": false
+        "desc": "Static libraries for apr-util"
       }
     ],
     "apt": [
@@ -84,8 +77,7 @@
         "size": 1031364,
         "package": "apt",
         "version": "2.8.1-2",
-        "desc": "Front-end for the dpkg package manager",
-        "release": false
+        "desc": "Front-end for the dpkg package manager"
       }
     ],
     "apt-ftparchive": [
@@ -95,8 +87,7 @@
         "size": 95132,
         "package": "apt-ftparchive",
         "version": "2.8.1-2",
-        "desc": "apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source",
-        "release": false
+        "desc": "apt-ftparchive is the command line tool that generates the index files that APT uses to access a distribution source"
       }
     ],
     "apt-transport-tor": [
@@ -106,8 +97,7 @@
         "size": 912,
         "package": "apt-transport-tor",
         "version": "2.8.1-2",
-        "desc": "APT transport for anonymous package downloads via Tor",
-        "release": false
+        "desc": "APT transport for anonymous package downloads via Tor"
       }
     ],
     "attr": [
@@ -117,8 +107,7 @@
         "size": 52588,
         "package": "attr",
         "version": "2.5.2-1",
-        "desc": "Utilities for manipulating filesystem extended attributes",
-        "release": false
+        "desc": "Utilities for manipulating filesystem extended attributes"
       }
     ],
     "attr-static": [
@@ -128,8 +117,7 @@
         "size": 7012,
         "package": "attr-static",
         "version": "2.5.2-1",
-        "desc": "Static libraries for attr",
-        "release": false
+        "desc": "Static libraries for attr"
       }
     ]
   },
@@ -141,8 +129,7 @@
         "size": 955428,
         "package": "bash",
         "version": "5.3.9",
-        "desc": "A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)",
-        "release": false
+        "desc": "A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)"
       }
     ],
     "blk-utils": [
@@ -152,8 +139,7 @@
         "size": 179816,
         "package": "blk-utils",
         "version": "2.41.2-1",
-        "desc": "Utilities for handling block device attributes",
-        "release": false
+        "desc": "Utilities for handling block device attributes"
       }
     ],
     "brotli": [
@@ -163,8 +149,7 @@
         "size": 340508,
         "package": "brotli",
         "version": "1.2.0",
-        "desc": "lossless compression algorithm and format (command line utility)",
-        "release": false
+        "desc": "lossless compression algorithm and format (command line utility)"
       }
     ],
     "bzip2": [
@@ -174,8 +159,7 @@
         "size": 26140,
         "package": "bzip2",
         "version": "1.0.8-8",
-        "desc": "Tools for working with bzip2 compression",
-        "release": false
+        "desc": "Tools for working with bzip2 compression"
       }
     ]
   },
@@ -187,8 +171,7 @@
         "size": 124240,
         "package": "ca-certificates",
         "version": "1:2025.12.02",
-        "desc": "Common CA certificates",
-        "release": false
+        "desc": "Common CA certificates"
       }
     ],
     "ca-certificates-java": [
@@ -198,8 +181,7 @@
         "size": 113820,
         "package": "ca-certificates-java",
         "version": "1:2025.12.02",
-        "desc": "Common CA certificates (java keystore format)",
-        "release": false
+        "desc": "Common CA certificates (java keystore format)"
       }
     ],
     "check": [
@@ -209,8 +191,7 @@
         "size": 97432,
         "package": "check",
         "version": "0.15.2-3",
-        "desc": "A unit testing framework for C",
-        "release": false
+        "desc": "A unit testing framework for C"
       }
     ],
     "check-static": [
@@ -220,8 +201,7 @@
         "size": 22384,
         "package": "check-static",
         "version": "0.15.2-3",
-        "desc": "Static libraries for check",
-        "release": false
+        "desc": "Static libraries for check"
       }
     ],
     "clang": [
@@ -231,8 +211,7 @@
         "size": 30427068,
         "package": "clang",
         "version": "21.1.8",
-        "desc": "C language frontend for LLVM",
-        "release": false
+        "desc": "C language frontend for LLVM"
       }
     ],
     "command-not-found": [
@@ -242,8 +221,7 @@
         "size": 16732,
         "package": "command-not-found",
         "version": "3.2-2",
-        "desc": "Suggest installation of packages in interactive shell sessions",
-        "release": false
+        "desc": "Suggest installation of packages in interactive shell sessions"
       }
     ],
     "coreutils": [
@@ -253,8 +231,7 @@
         "size": 809768,
         "package": "coreutils",
         "version": "9.10-1",
-        "desc": "Basic file, shell and text manipulation utilities from the GNU project",
-        "release": false
+        "desc": "Basic file, shell and text manipulation utilities from the GNU project"
       }
     ],
     "cups": [
@@ -264,8 +241,7 @@
         "size": 5158480,
         "package": "cups",
         "version": "2.4.16",
-        "desc": "Common UNIX Printing System",
-        "release": false
+        "desc": "Common UNIX Printing System"
       }
     ],
     "cups-static": [
@@ -275,8 +251,7 @@
         "size": 727848,
         "package": "cups-static",
         "version": "2.4.16",
-        "desc": "Static libraries for cups",
-        "release": false
+        "desc": "Static libraries for cups"
       }
     ],
     "curl": [
@@ -286,8 +261,7 @@
         "size": 237060,
         "package": "curl",
         "version": "8.18.0-1",
-        "desc": "Command line tool for transferring data with URL syntax",
-        "release": false
+        "desc": "Command line tool for transferring data with URL syntax"
       }
     ]
   },
@@ -299,8 +273,7 @@
         "size": 65816,
         "package": "dash",
         "version": "0.5.12-2",
-        "desc": "Small POSIX-compliant implementation of /bin/sh",
-        "release": false
+        "desc": "Small POSIX-compliant implementation of /bin/sh"
       }
     ],
     "db": [
@@ -310,8 +283,7 @@
         "size": 40748,
         "package": "db",
         "version": "18.1.40-5",
-        "desc": "The Berkeley DB embedded database system",
-        "release": false
+        "desc": "The Berkeley DB embedded database system"
       }
     ],
     "dbus": [
@@ -321,8 +293,7 @@
         "size": 429324,
         "package": "dbus",
         "version": "1.16.2-2",
-        "desc": "Freedesktop.org message bus system",
-        "release": false
+        "desc": "Freedesktop.org message bus system"
       }
     ],
     "debianutils": [
@@ -332,8 +303,7 @@
         "size": 16776,
         "package": "debianutils",
         "version": "5.23.2-1",
-        "desc": "Small utilities which are used primarily by the installation scripts of Debian packages",
-        "release": false
+        "desc": "Small utilities which are used primarily by the installation scripts of Debian packages"
       }
     ],
     "dialog": [
@@ -343,8 +313,7 @@
         "size": 100140,
         "package": "dialog",
         "version": "1.3-20240307-1",
-        "desc": "Application used in shell scripts which displays text user interface widgets",
-        "release": false
+        "desc": "Application used in shell scripts which displays text user interface widgets"
       }
     ],
     "dialog-static": [
@@ -354,8 +323,7 @@
         "size": 93348,
         "package": "dialog-static",
         "version": "1.3-20240307-1",
-        "desc": "Static libraries for dialog",
-        "release": false
+        "desc": "Static libraries for dialog"
       }
     ],
     "diffutils": [
@@ -365,8 +333,7 @@
         "size": 162672,
         "package": "diffutils",
         "version": "3.12-2",
-        "desc": "Programs (cmp, diff, diff3 and sdiff) related to finding differences between files",
-        "release": false
+        "desc": "Programs (cmp, diff, diff3 and sdiff) related to finding differences between files"
       }
     ],
     "docbook-xml": [
@@ -376,8 +343,7 @@
         "size": 78232,
         "package": "docbook-xml",
         "version": "5.1-1",
-        "desc": "A widely used XML scheme for writing documentation and help",
-        "release": false
+        "desc": "A widely used XML scheme for writing documentation and help"
       }
     ],
     "docbook-xsl": [
@@ -387,8 +353,7 @@
         "size": 1236108,
         "package": "docbook-xsl",
         "version": "1.79.2-4",
-        "desc": "XML stylesheets for Docbook-xml transformations",
-        "release": false
+        "desc": "XML stylesheets for Docbook-xml transformations"
       }
     ],
     "dos2unix": [
@@ -398,8 +363,7 @@
         "size": 64432,
         "package": "dos2unix",
         "version": "7.5.2-1",
-        "desc": "Converts between DOS and Unix text files",
-        "release": false
+        "desc": "Converts between DOS and Unix text files"
       }
     ],
     "dpkg": [
@@ -409,8 +373,7 @@
         "size": 308324,
         "package": "dpkg",
         "version": "1.22.6-5",
-        "desc": "Debian package management system",
-        "release": false
+        "desc": "Debian package management system"
       }
     ],
     "dpkg-perl": [
@@ -420,8 +383,7 @@
         "size": 126244,
         "package": "dpkg-perl",
         "version": "1.22.6-5",
-        "desc": "Perl modules for dpkg",
-        "release": false
+        "desc": "Perl modules for dpkg"
       }
     ],
     "dpkg-scanpackages": [
@@ -431,8 +393,7 @@
         "size": 6496,
         "package": "dpkg-scanpackages",
         "version": "1.22.6-5",
-        "desc": "Creates Packages index files",
-        "release": false
+        "desc": "Creates Packages index files"
       }
     ]
   },
@@ -444,8 +405,7 @@
         "size": 42736,
         "package": "ed",
         "version": "1.22.2-1",
-        "desc": "Classic UNIX line editor",
-        "release": false
+        "desc": "Classic UNIX line editor"
       }
     ]
   },
@@ -457,8 +417,7 @@
         "size": 929264,
         "package": "fd",
         "version": "10.3.0-1",
-        "desc": "Simple, fast and user-friendly alternative to find",
-        "release": false
+        "desc": "Simple, fast and user-friendly alternative to find"
       }
     ],
     "fdisk": [
@@ -468,8 +427,7 @@
         "size": 115424,
         "package": "fdisk",
         "version": "2.41.2-1",
-        "desc": "Utilities to manipulate disk partition tables",
-        "release": false
+        "desc": "Utilities to manipulate disk partition tables"
       }
     ],
     "findutils": [
@@ -479,8 +437,7 @@
         "size": 251288,
         "package": "findutils",
         "version": "4.10.0-1",
-        "desc": "Utilities to find files meeting specified criteria and perform various actions on the files which are found",
-        "release": false
+        "desc": "Utilities to find files meeting specified criteria and perform various actions on the files which are found"
       }
     ],
     "flac": [
@@ -490,8 +447,7 @@
         "size": 104512,
         "package": "flac",
         "version": "1.5.0-1",
-        "desc": "FLAC (Free Lossless Audio Codec) command-line tool",
-        "release": false
+        "desc": "FLAC (Free Lossless Audio Codec) command-line tool"
       }
     ],
     "fontconfig": [
@@ -501,8 +457,7 @@
         "size": 123088,
         "package": "fontconfig",
         "version": "2.17.1-1",
-        "desc": "Library for configuring and customizing font access",
-        "release": false
+        "desc": "Library for configuring and customizing font access"
       }
     ],
     "fontconfig-static": [
@@ -512,8 +467,7 @@
         "size": 117884,
         "package": "fontconfig-static",
         "version": "2.17.1-1",
-        "desc": "Static libraries for fontconfig",
-        "release": false
+        "desc": "Static libraries for fontconfig"
       }
     ],
     "fontconfig-utils": [
@@ -523,8 +477,7 @@
         "size": 14480,
         "package": "fontconfig-utils",
         "version": "2.17.1-1",
-        "desc": "Fontconfig binaries",
-        "release": false
+        "desc": "Fontconfig binaries"
       }
     ],
     "freetype": [
@@ -534,8 +487,7 @@
         "size": 412236,
         "package": "freetype",
         "version": "2.14.1",
-        "desc": "Software font engine capable of producing high-quality output",
-        "release": false
+        "desc": "Software font engine capable of producing high-quality output"
       }
     ],
     "freetype-static": [
@@ -545,8 +497,7 @@
         "size": 302336,
         "package": "freetype-static",
         "version": "2.14.1",
-        "desc": "Static libraries for freetype",
-        "release": false
+        "desc": "Static libraries for freetype"
       }
     ]
   },
@@ -558,8 +509,7 @@
         "size": 782072,
         "package": "gawk",
         "version": "5.3.1-2",
-        "desc": "Programming language designed for text processing",
-        "release": false
+        "desc": "Programming language designed for text processing"
       }
     ],
     "gawk-static": [
@@ -569,8 +519,7 @@
         "size": 24936,
         "package": "gawk-static",
         "version": "5.3.1-2",
-        "desc": "Static libraries for gawk",
-        "release": false
+        "desc": "Static libraries for gawk"
       }
     ],
     "gdbm": [
@@ -580,8 +529,7 @@
         "size": 150280,
         "package": "gdbm",
         "version": "1.26-1",
-        "desc": "Library of database functions that use extensible hashing",
-        "release": false
+        "desc": "Library of database functions that use extensible hashing"
       }
     ],
     "gdbm-static": [
@@ -591,8 +539,7 @@
         "size": 32196,
         "package": "gdbm-static",
         "version": "1.26-1",
-        "desc": "Static libraries for gdbm",
-        "release": false
+        "desc": "Static libraries for gdbm"
       }
     ],
     "giflib": [
@@ -602,8 +549,7 @@
         "size": 18244,
         "package": "giflib",
         "version": "5.2.2-1",
-        "desc": "A library for reading and writing gif images",
-        "release": false
+        "desc": "A library for reading and writing gif images"
       }
     ],
     "giflib-static": [
@@ -613,8 +559,7 @@
         "size": 15020,
         "package": "giflib-static",
         "version": "5.2.2-1",
-        "desc": "Static libraries for giflib",
-        "release": false
+        "desc": "Static libraries for giflib"
       }
     ],
     "giflib-utils": [
@@ -624,8 +569,7 @@
         "size": 50612,
         "package": "giflib-utils",
         "version": "5.2.2-1",
-        "desc": "A set of utilities that comes with giflib package",
-        "release": false
+        "desc": "A set of utilities that comes with giflib package"
       }
     ],
     "git": [
@@ -635,8 +579,7 @@
         "size": 4576184,
         "package": "git",
         "version": "2.51.2",
-        "desc": "Fast, scalable, distributed revision control system",
-        "release": false
+        "desc": "Fast, scalable, distributed revision control system"
       }
     ],
     "git-gitk": [
@@ -646,8 +589,7 @@
         "size": 143040,
         "package": "git-gitk",
         "version": "2.51.2",
-        "desc": "Git repository browser",
-        "release": false
+        "desc": "Git repository browser"
       }
     ],
     "git-gui": [
@@ -657,8 +599,7 @@
         "size": 214624,
         "package": "git-gui",
         "version": "2.51.2",
-        "desc": "A graphical interface to Git",
-        "release": false
+        "desc": "A graphical interface to Git"
       }
     ],
     "git-svn": [
@@ -668,8 +609,7 @@
         "size": 75512,
         "package": "git-svn",
         "version": "2.51.2",
-        "desc": "Convert between Git and Subversion repositories",
-        "release": false
+        "desc": "Convert between Git and Subversion repositories"
       }
     ],
     "glib": [
@@ -679,8 +619,7 @@
         "size": 2548424,
         "package": "glib",
         "version": "2.86.4",
-        "desc": "Library providing core building blocks for libraries and applications written in C",
-        "release": false
+        "desc": "Library providing core building blocks for libraries and applications written in C"
       }
     ],
     "glib-cross": [
@@ -690,8 +629,7 @@
         "size": 12145408,
         "package": "glib-cross",
         "version": "2.86.4",
-        "desc": "glib for host (NOT for Termux)",
-        "release": false
+        "desc": "glib for host (NOT for Termux)"
       }
     ],
     "gnupg": [
@@ -701,8 +639,7 @@
         "size": 1400960,
         "package": "gnupg",
         "version": "2.5.11",
-        "desc": "Implementation of the OpenPGP standard for encrypting and signing data and communication",
-        "release": false
+        "desc": "Implementation of the OpenPGP standard for encrypting and signing data and communication"
       }
     ],
     "gnutls": [
@@ -712,8 +649,7 @@
         "size": 175844,
         "package": "gnutls",
         "version": "3.8.11",
-        "desc": "Commandline utilities for interfacing with the gnutls library",
-        "release": false
+        "desc": "Commandline utilities for interfacing with the gnutls library"
       }
     ],
     "gpgv": [
@@ -723,19 +659,17 @@
         "size": 187228,
         "package": "gpgv",
         "version": "2.5.11",
-        "desc": "GNU privacy guard - signature verification tool",
-        "release": false
+        "desc": "GNU privacy guard - signature verification tool"
       }
     ],
     "gradle": [
       {
         "name": "gradle_9.3.1_all.deb",
-        "path": "https://github.com/devjhr/pkg-repo/releases/download/v1.0/gradle_9.3.1_all.deb",
+        "path": "pool/main/g/gradle/gradle_9.3.1_all.deb",
         "size": 135056252,
         "package": "gradle",
         "version": "1:9.3.1",
-        "desc": "Powerful build system for the JVM",
-        "release": true
+        "desc": "Powerful build system for the JVM"
       }
     ],
     "grep": [
@@ -745,8 +679,7 @@
         "size": 128324,
         "package": "grep",
         "version": "3.12-3",
-        "desc": "Command which searches one or more input files for lines containing a match to a specified pattern",
-        "release": false
+        "desc": "Command which searches one or more input files for lines containing a match to a specified pattern"
       }
     ],
     "gzip": [
@@ -756,8 +689,7 @@
         "size": 87564,
         "package": "gzip",
         "version": "1.14-1",
-        "desc": "Standard GNU file compression utilities",
-        "release": false
+        "desc": "Standard GNU file compression utilities"
       }
     ]
   },
@@ -769,8 +701,7 @@
         "size": 10032,
         "package": "iconv",
         "version": "1.18-1",
-        "desc": "Utility converting between different character encodings",
-        "release": false
+        "desc": "Utility converting between different character encodings"
       }
     ],
     "icu-devtools": [
@@ -780,8 +711,7 @@
         "size": 210232,
         "package": "icu-devtools",
         "version": "78.2",
-        "desc": "Development utilities for International Components for Unicode",
-        "release": false
+        "desc": "Development utilities for International Components for Unicode"
       }
     ],
     "inetutils": [
@@ -791,8 +721,7 @@
         "size": 223360,
         "package": "inetutils",
         "version": "2.6-1",
-        "desc": "Collection of common network programs",
-        "release": false
+        "desc": "Collection of common network programs"
       }
     ]
   },
@@ -804,8 +733,7 @@
         "size": 309788,
         "package": "jq",
         "version": "1.8.1-1",
-        "desc": "Command-line JSON processor",
-        "release": false
+        "desc": "Command-line JSON processor"
       }
     ],
     "jq-static": [
@@ -815,8 +743,7 @@
         "size": 277204,
         "package": "jq-static",
         "version": "1.8.1-1",
-        "desc": "Static libraries for jq",
-        "release": false
+        "desc": "Static libraries for jq"
       }
     ]
   },
@@ -828,8 +755,7 @@
         "size": 192628,
         "package": "lame",
         "version": "3.100-7",
-        "desc": "High quality MPEG Audio Layer III (MP3) encoder - frontend",
-        "release": false
+        "desc": "High quality MPEG Audio Layer III (MP3) encoder - frontend"
       }
     ],
     "less": [
@@ -839,8 +765,7 @@
         "size": 184132,
         "package": "less",
         "version": "692",
-        "desc": "Terminal pager program used to view the contents of a text file one screen at a time",
-        "release": false
+        "desc": "Terminal pager program used to view the contents of a text file one screen at a time"
       }
     ],
     "libacl": [
@@ -850,8 +775,7 @@
         "size": 115872,
         "package": "libacl",
         "version": "2.3.2",
-        "desc": "Access control list shared library",
-        "release": false
+        "desc": "Access control list shared library"
       }
     ],
     "libacl-static": [
@@ -861,8 +785,7 @@
         "size": 16540,
         "package": "libacl-static",
         "version": "2.3.2",
-        "desc": "Static libraries for libacl",
-        "release": false
+        "desc": "Static libraries for libacl"
       }
     ],
     "libandroid-execinfo": [
@@ -872,8 +795,7 @@
         "size": 14980,
         "package": "libandroid-execinfo",
         "version": "0.1-3",
-        "desc": "Shared library for the backtrace system function",
-        "release": false
+        "desc": "Shared library for the backtrace system function"
       }
     ],
     "libandroid-execinfo-static": [
@@ -883,8 +805,7 @@
         "size": 2404,
         "package": "libandroid-execinfo-static",
         "version": "0.1-3",
-        "desc": "Static libraries for libandroid-execinfo",
-        "release": false
+        "desc": "Static libraries for libandroid-execinfo"
       }
     ],
     "libandroid-glob": [
@@ -894,8 +815,7 @@
         "size": 7036,
         "package": "libandroid-glob",
         "version": "0.6-3",
-        "desc": "Shared library for the glob(3) system function",
-        "release": false
+        "desc": "Shared library for the glob(3) system function"
       }
     ],
     "libandroid-glob-static": [
@@ -905,8 +825,7 @@
         "size": 4696,
         "package": "libandroid-glob-static",
         "version": "0.6-3",
-        "desc": "Static libraries for libandroid-glob",
-        "release": false
+        "desc": "Static libraries for libandroid-glob"
       }
     ],
     "libandroid-posix-semaphore": [
@@ -916,8 +835,7 @@
         "size": 4076,
         "package": "libandroid-posix-semaphore",
         "version": "0.1-4",
-        "desc": "Shared library for the posix semaphore system function",
-        "release": false
+        "desc": "Shared library for the posix semaphore system function"
       }
     ],
     "libandroid-posix-semaphore-static": [
@@ -927,8 +845,7 @@
         "size": 2860,
         "package": "libandroid-posix-semaphore-static",
         "version": "0.1-4",
-        "desc": "Static libraries for libandroid-posix-semaphore",
-        "release": false
+        "desc": "Static libraries for libandroid-posix-semaphore"
       }
     ],
     "libandroid-selinux": [
@@ -938,8 +855,7 @@
         "size": 59824,
         "package": "libandroid-selinux",
         "version": "14.0.0.11-1",
-        "desc": "Android fork of libselinux, an SELinux userland library",
-        "release": false
+        "desc": "Android fork of libselinux, an SELinux userland library"
       }
     ],
     "libandroid-shmem": [
@@ -949,8 +865,7 @@
         "size": 7216,
         "package": "libandroid-shmem",
         "version": "0.7",
-        "desc": "System V shared memory emulation on Android using ashmem",
-        "release": false
+        "desc": "System V shared memory emulation on Android using ashmem"
       }
     ],
     "libandroid-shmem-static": [
@@ -960,8 +875,7 @@
         "size": 6028,
         "package": "libandroid-shmem-static",
         "version": "0.7",
-        "desc": "Static libraries for libandroid-shmem",
-        "release": false
+        "desc": "Static libraries for libandroid-shmem"
       }
     ],
     "libandroid-spawn": [
@@ -971,8 +885,7 @@
         "size": 15852,
         "package": "libandroid-spawn",
         "version": "0.3",
-        "desc": "Shared library for the posix_spawn system function",
-        "release": false
+        "desc": "Shared library for the posix_spawn system function"
       }
     ],
     "libandroid-spawn-static": [
@@ -982,8 +895,7 @@
         "size": 4072,
         "package": "libandroid-spawn-static",
         "version": "0.3",
-        "desc": "Static libraries for libandroid-spawn",
-        "release": false
+        "desc": "Static libraries for libandroid-spawn"
       }
     ],
     "libandroid-support": [
@@ -993,8 +905,7 @@
         "size": 10880,
         "package": "libandroid-support",
         "version": "29-1",
-        "desc": "Library extending the Android C library (Bionic) for additional multibyte, locale and math support",
-        "release": false
+        "desc": "Library extending the Android C library (Bionic) for additional multibyte, locale and math support"
       }
     ],
     "libandroid-support-static": [
@@ -1004,8 +915,7 @@
         "size": 8632,
         "package": "libandroid-support-static",
         "version": "29-1",
-        "desc": "Static libraries for libandroid-support",
-        "release": false
+        "desc": "Static libraries for libandroid-support"
       }
     ],
     "libandroid-sysv-semaphore": [
@@ -1015,8 +925,7 @@
         "size": 3564,
         "package": "libandroid-sysv-semaphore",
         "version": "0.1-1",
-        "desc": "A shared library providing System V semaphores",
-        "release": false
+        "desc": "A shared library providing System V semaphores"
       }
     ],
     "libandroid-sysv-semaphore-static": [
@@ -1026,8 +935,7 @@
         "size": 1700,
         "package": "libandroid-sysv-semaphore-static",
         "version": "0.1-1",
-        "desc": "Static libraries for libandroid-sysv-semaphore",
-        "release": false
+        "desc": "Static libraries for libandroid-sysv-semaphore"
       }
     ],
     "libandroid-utimes": [
@@ -1037,8 +945,7 @@
         "size": 3088,
         "package": "libandroid-utimes",
         "version": "0.4",
-        "desc": "futimes, futimesat and lutimes from bionic",
-        "release": false
+        "desc": "futimes, futimesat and lutimes from bionic"
       }
     ],
     "libandroid-utimes-static": [
@@ -1048,8 +955,7 @@
         "size": 1688,
         "package": "libandroid-utimes-static",
         "version": "0.4",
-        "desc": "Static libraries for libandroid-utimes",
-        "release": false
+        "desc": "Static libraries for libandroid-utimes"
       }
     ],
     "libassuan": [
@@ -1059,8 +965,7 @@
         "size": 73844,
         "package": "libassuan",
         "version": "3.0.2-1",
-        "desc": "Library implementing the Assuan IPC protocol used between most newer GnuPG components",
-        "release": false
+        "desc": "Library implementing the Assuan IPC protocol used between most newer GnuPG components"
       }
     ],
     "libassuan-static": [
@@ -1070,8 +975,7 @@
         "size": 33692,
         "package": "libassuan-static",
         "version": "3.0.2-1",
-        "desc": "Static libraries for libassuan",
-        "release": false
+        "desc": "Static libraries for libassuan"
       }
     ],
     "libblkid": [
@@ -1081,8 +985,7 @@
         "size": 125464,
         "package": "libblkid",
         "version": "2.41.2-1",
-        "desc": "Block device identification library",
-        "release": false
+        "desc": "Block device identification library"
       }
     ],
     "libbz2": [
@@ -1092,8 +995,7 @@
         "size": 26116,
         "package": "libbz2",
         "version": "1.0.8-8",
-        "desc": "BZ2 format compression library",
-        "release": false
+        "desc": "BZ2 format compression library"
       }
     ],
     "libc++": [
@@ -1103,8 +1005,7 @@
         "size": 334632,
         "package": "libc++",
         "version": "29",
-        "desc": "C++ Standard Library",
-        "release": false
+        "desc": "C++ Standard Library"
       }
     ],
     "libcap-ng": [
@@ -1114,8 +1015,7 @@
         "size": 33888,
         "package": "libcap-ng",
         "version": "2:0.9.1",
-        "desc": "Library making programming with POSIX capabilities easier than traditional libcap",
-        "release": false
+        "desc": "Library making programming with POSIX capabilities easier than traditional libcap"
       }
     ],
     "libcap-ng-static": [
@@ -1125,8 +1025,7 @@
         "size": 8884,
         "package": "libcap-ng-static",
         "version": "2:0.9.1",
-        "desc": "Static libraries for libcap-ng",
-        "release": false
+        "desc": "Static libraries for libcap-ng"
       }
     ],
     "libcompiler-rt": [
@@ -1136,8 +1035,7 @@
         "size": 2713908,
         "package": "libcompiler-rt",
         "version": "21.1.8",
-        "desc": "Compiler runtime libraries for clang",
-        "release": false
+        "desc": "Compiler runtime libraries for clang"
       }
     ],
     "libcrypt": [
@@ -1147,8 +1045,7 @@
         "size": 8876,
         "package": "libcrypt",
         "version": "0.2-6",
-        "desc": "A crypt(3) implementation",
-        "release": false
+        "desc": "A crypt(3) implementation"
       }
     ],
     "libcurl": [
@@ -1158,8 +1055,7 @@
         "size": 996728,
         "package": "libcurl",
         "version": "8.18.0-1",
-        "desc": "Easy-to-use client-side URL transfer library",
-        "release": false
+        "desc": "Easy-to-use client-side URL transfer library"
       }
     ],
     "libcurl-static": [
@@ -1169,8 +1065,7 @@
         "size": 403504,
         "package": "libcurl-static",
         "version": "8.18.0-1",
-        "desc": "Static libraries for libcurl",
-        "release": false
+        "desc": "Static libraries for libcurl"
       }
     ],
     "libdb": [
@@ -1180,8 +1075,7 @@
         "size": 508360,
         "package": "libdb",
         "version": "18.1.40-5",
-        "desc": "The Berkeley DB embedded database system (library)",
-        "release": false
+        "desc": "The Berkeley DB embedded database system (library)"
       }
     ],
     "libdb-static": [
@@ -1191,8 +1085,7 @@
         "size": 481120,
         "package": "libdb-static",
         "version": "18.1.40-5",
-        "desc": "Static libraries for libdb",
-        "release": false
+        "desc": "Static libraries for libdb"
       }
     ],
     "libedit": [
@@ -1202,8 +1095,7 @@
         "size": 79228,
         "package": "libedit",
         "version": "20240517-3.1-1",
-        "desc": "Library providing line editing, history, and tokenization functions",
-        "release": false
+        "desc": "Library providing line editing, history, and tokenization functions"
       }
     ],
     "libedit-static": [
@@ -1213,8 +1105,7 @@
         "size": 76892,
         "package": "libedit-static",
         "version": "20240517-3.1-1",
-        "desc": "Static libraries for libedit",
-        "release": false
+        "desc": "Static libraries for libedit"
       }
     ],
     "libevent": [
@@ -1224,8 +1115,7 @@
         "size": 202688,
         "package": "libevent",
         "version": "2.1.12-3",
-        "desc": "Library that provides asynchronous event notification",
-        "release": false
+        "desc": "Library that provides asynchronous event notification"
       }
     ],
     "libexpat": [
@@ -1235,8 +1125,7 @@
         "size": 92064,
         "package": "libexpat",
         "version": "2.7.4",
-        "desc": "XML parsing C library",
-        "release": false
+        "desc": "XML parsing C library"
       }
     ],
     "libexpat-static": [
@@ -1246,8 +1135,7 @@
         "size": 57656,
         "package": "libexpat-static",
         "version": "2.7.4",
-        "desc": "Static libraries for libexpat",
-        "release": false
+        "desc": "Static libraries for libexpat"
       }
     ],
     "libfdisk": [
@@ -1257,8 +1145,7 @@
         "size": 157056,
         "package": "libfdisk",
         "version": "2.41.2-1",
-        "desc": "Library for manipulating disk partition tables",
-        "release": false
+        "desc": "Library for manipulating disk partition tables"
       }
     ],
     "libffi": [
@@ -1268,8 +1155,7 @@
         "size": 30696,
         "package": "libffi",
         "version": "3.4.7-1",
-        "desc": "Library providing a portable, high level programming interface to various calling conventions",
-        "release": false
+        "desc": "Library providing a portable, high level programming interface to various calling conventions"
       }
     ],
     "libffi-static": [
@@ -1279,8 +1165,7 @@
         "size": 16272,
         "package": "libffi-static",
         "version": "3.4.7-1",
-        "desc": "Static libraries for libffi",
-        "release": false
+        "desc": "Static libraries for libffi"
       }
     ],
     "libflac": [
@@ -1290,8 +1175,7 @@
         "size": 202664,
         "package": "libflac",
         "version": "1.5.0-1",
-        "desc": "FLAC (Free Lossless Audio Codec) library",
-        "release": false
+        "desc": "FLAC (Free Lossless Audio Codec) library"
       }
     ],
     "libflac-static": [
@@ -1301,8 +1185,7 @@
         "size": 110680,
         "package": "libflac-static",
         "version": "1.5.0-1",
-        "desc": "Static libraries for libflac",
-        "release": false
+        "desc": "Static libraries for libflac"
       }
     ],
     "libgcrypt": [
@@ -1312,8 +1195,7 @@
         "size": 499820,
         "package": "libgcrypt",
         "version": "1.11.2-1",
-        "desc": "General purpose cryptographic library based on the code from GnuPG",
-        "release": false
+        "desc": "General purpose cryptographic library based on the code from GnuPG"
       }
     ],
     "libgcrypt-static": [
@@ -1323,8 +1205,7 @@
         "size": 468180,
         "package": "libgcrypt-static",
         "version": "1.11.2-1",
-        "desc": "Static libraries for libgcrypt",
-        "release": false
+        "desc": "Static libraries for libgcrypt"
       }
     ],
     "libgmp": [
@@ -1334,8 +1215,7 @@
         "size": 327348,
         "package": "libgmp",
         "version": "6.3.0-2",
-        "desc": "Library for arbitrary precision arithmetic",
-        "release": false
+        "desc": "Library for arbitrary precision arithmetic"
       }
     ],
     "libgmp-static": [
@@ -1345,8 +1225,7 @@
         "size": 227100,
         "package": "libgmp-static",
         "version": "6.3.0-2",
-        "desc": "Static libraries for libgmp",
-        "release": false
+        "desc": "Static libraries for libgmp"
       }
     ],
     "libgnutls": [
@@ -1356,8 +1235,7 @@
         "size": 733776,
         "package": "libgnutls",
         "version": "3.8.11",
-        "desc": "Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them",
-        "release": false
+        "desc": "Secure communications library implementing the SSL, TLS and DTLS protocols and technologies around them"
       }
     ],
     "libgnutls-static": [
@@ -1367,8 +1245,7 @@
         "size": 784872,
         "package": "libgnutls-static",
         "version": "3.8.11",
-        "desc": "Static libraries for libgnutls",
-        "release": false
+        "desc": "Static libraries for libgnutls"
       }
     ],
     "libgpg-error": [
@@ -1378,8 +1255,7 @@
         "size": 120052,
         "package": "libgpg-error",
         "version": "1.55-1",
-        "desc": "Small library that defines common error values for all GnuPG components",
-        "release": false
+        "desc": "Small library that defines common error values for all GnuPG components"
       }
     ],
     "libgpg-error-static": [
@@ -1389,8 +1265,7 @@
         "size": 65572,
         "package": "libgpg-error-static",
         "version": "1.55-1",
-        "desc": "Static libraries for libgpg-error",
-        "release": false
+        "desc": "Static libraries for libgpg-error"
       }
     ],
     "libice": [
@@ -1400,8 +1275,7 @@
         "size": 68484,
         "package": "libice",
         "version": "1.1.2-1",
-        "desc": "X11 Inter-Client Exchange library",
-        "release": false
+        "desc": "X11 Inter-Client Exchange library"
       }
     ],
     "libiconv": [
@@ -1411,8 +1285,7 @@
         "size": 562476,
         "package": "libiconv",
         "version": "1.18-1",
-        "desc": "An implementation of iconv()",
-        "release": false
+        "desc": "An implementation of iconv()"
       }
     ],
     "libiconv-static": [
@@ -1422,8 +1295,7 @@
         "size": 558004,
         "package": "libiconv-static",
         "version": "1.18-1",
-        "desc": "Static libraries for libiconv",
-        "release": false
+        "desc": "Static libraries for libiconv"
       }
     ],
     "libicu": [
@@ -1433,8 +1305,7 @@
         "size": 10211796,
         "package": "libicu",
         "version": "78.2",
-        "desc": "International Components for Unicode library",
-        "release": false
+        "desc": "International Components for Unicode library"
       }
     ],
     "libicu-static": [
@@ -1444,8 +1315,7 @@
         "size": 9994976,
         "package": "libicu-static",
         "version": "78.2",
-        "desc": "Static libraries for libicu",
-        "release": false
+        "desc": "Static libraries for libicu"
       }
     ],
     "libidn2": [
@@ -1455,8 +1325,7 @@
         "size": 104960,
         "package": "libidn2",
         "version": "2.3.8-1",
-        "desc": "Free software implementation of IDNA2008, Punycode and TR46",
-        "release": false
+        "desc": "Free software implementation of IDNA2008, Punycode and TR46"
       }
     ],
     "libidn2-static": [
@@ -1466,8 +1335,7 @@
         "size": 73260,
         "package": "libidn2-static",
         "version": "2.3.8-1",
-        "desc": "Static libraries for libidn2",
-        "release": false
+        "desc": "Static libraries for libidn2"
       }
     ],
     "libjpeg-turbo": [
@@ -1477,8 +1345,7 @@
         "size": 383760,
         "package": "libjpeg-turbo",
         "version": "3.1.3",
-        "desc": "Library for reading and writing JPEG image files",
-        "release": false
+        "desc": "Library for reading and writing JPEG image files"
       }
     ],
     "libjpeg-turbo-progs": [
@@ -1488,8 +1355,7 @@
         "size": 97856,
         "package": "libjpeg-turbo-progs",
         "version": "3.1.3",
-        "desc": "Programs for manipulating JPEG files",
-        "release": false
+        "desc": "Programs for manipulating JPEG files"
       }
     ],
     "libjpeg-turbo-static": [
@@ -1499,8 +1365,7 @@
         "size": 264908,
         "package": "libjpeg-turbo-static",
         "version": "3.1.3",
-        "desc": "Static libraries for libjpeg-turbo",
-        "release": false
+        "desc": "Static libraries for libjpeg-turbo"
       }
     ],
     "libksba": [
@@ -1510,8 +1375,7 @@
         "size": 105704,
         "package": "libksba",
         "version": "1.6.7-2",
-        "desc": "Library for using X.509 certificates and CMS (Cryptographic Message Syntax) easily accessible",
-        "release": false
+        "desc": "Library for using X.509 certificates and CMS (Cryptographic Message Syntax) easily accessible"
       }
     ],
     "libksba-static": [
@@ -1521,8 +1385,7 @@
         "size": 91756,
         "package": "libksba-static",
         "version": "1.6.7-2",
-        "desc": "Static libraries for libksba",
-        "release": false
+        "desc": "Static libraries for libksba"
       }
     ],
     "libllvm": [
@@ -1532,8 +1395,7 @@
         "size": 30448388,
         "package": "libllvm",
         "version": "21.1.8",
-        "desc": "Modular compiler and toolchain technologies library",
-        "release": false
+        "desc": "Modular compiler and toolchain technologies library"
       }
     ],
     "libllvm-static": [
@@ -1543,8 +1405,7 @@
         "size": 87707620,
         "package": "libllvm-static",
         "version": "21.1.8",
-        "desc": "Static libraries for libllvm",
-        "release": false
+        "desc": "Static libraries for libllvm"
       }
     ],
     "libltdl": [
@@ -1554,8 +1415,7 @@
         "size": 18020,
         "package": "libltdl",
         "version": "2.5.4-2",
-        "desc": "Library for dlopening libraries",
-        "release": false
+        "desc": "Library for dlopening libraries"
       }
     ],
     "liblz4": [
@@ -1565,8 +1425,7 @@
         "size": 84616,
         "package": "liblz4",
         "version": "1.10.0-1",
-        "desc": "Fast LZ compression algorithm library",
-        "release": false
+        "desc": "Fast LZ compression algorithm library"
       }
     ],
     "liblzma": [
@@ -1576,8 +1435,7 @@
         "size": 192532,
         "package": "liblzma",
         "version": "5.8.2",
-        "desc": "XZ-format compression library",
-        "release": false
+        "desc": "XZ-format compression library"
       }
     ],
     "liblzma-static": [
@@ -1587,8 +1445,7 @@
         "size": 89564,
         "package": "liblzma-static",
         "version": "5.8.2",
-        "desc": "Static libraries for liblzma",
-        "release": false
+        "desc": "Static libraries for liblzma"
       }
     ],
     "libmd": [
@@ -1598,8 +1455,7 @@
         "size": 40536,
         "package": "libmd",
         "version": "1.1.0-1",
-        "desc": "Message Digest functions from BSD systems",
-        "release": false
+        "desc": "Message Digest functions from BSD systems"
       }
     ],
     "libmd-static": [
@@ -1609,8 +1465,7 @@
         "size": 17888,
         "package": "libmd-static",
         "version": "1.1.0-1",
-        "desc": "Static libraries for libmd",
-        "release": false
+        "desc": "Static libraries for libmd"
       }
     ],
     "libmount": [
@@ -1620,8 +1475,7 @@
         "size": 152788,
         "package": "libmount",
         "version": "2.41.2-1",
-        "desc": "Library for (un)mounting filesystems",
-        "release": false
+        "desc": "Library for (un)mounting filesystems"
       }
     ],
     "libmp3lame": [
@@ -1631,8 +1485,7 @@
         "size": 114696,
         "package": "libmp3lame",
         "version": "3.100-7",
-        "desc": "High quality MPEG Audio Layer III (MP3) encoder",
-        "release": false
+        "desc": "High quality MPEG Audio Layer III (MP3) encoder"
       }
     ],
     "libmp3lame-static": [
@@ -1642,8 +1495,7 @@
         "size": 121756,
         "package": "libmp3lame-static",
         "version": "3.100-7",
-        "desc": "Static libraries for libmp3lame",
-        "release": false
+        "desc": "Static libraries for libmp3lame"
       }
     ],
     "libmpfr": [
@@ -1653,8 +1505,7 @@
         "size": 272304,
         "package": "libmpfr",
         "version": "4.2.1-1",
-        "desc": "C library for multiple-precision floating-point computations with correct rounding",
-        "release": false
+        "desc": "C library for multiple-precision floating-point computations with correct rounding"
       }
     ],
     "libmpfr-static": [
@@ -1664,8 +1515,7 @@
         "size": 208788,
         "package": "libmpfr-static",
         "version": "4.2.1-1",
-        "desc": "Static libraries for libmpfr",
-        "release": false
+        "desc": "Static libraries for libmpfr"
       }
     ],
     "libnettle": [
@@ -1675,8 +1525,7 @@
         "size": 405892,
         "package": "libnettle",
         "version": "4.0+really3.10.2",
-        "desc": "Cryptographic library that is designed to fit easily in more or less any context",
-        "release": false
+        "desc": "Cryptographic library that is designed to fit easily in more or less any context"
       }
     ],
     "libnettle-static": [
@@ -1686,8 +1535,7 @@
         "size": 683196,
         "package": "libnettle-static",
         "version": "4.0+really3.10.2",
-        "desc": "Static libraries for libnettle",
-        "release": false
+        "desc": "Static libraries for libnettle"
       }
     ],
     "libnghttp2": [
@@ -1697,8 +1545,7 @@
         "size": 95324,
         "package": "libnghttp2",
         "version": "1.68.0-1",
-        "desc": "nghttp HTTP 2.0 library",
-        "release": false
+        "desc": "nghttp HTTP 2.0 library"
       }
     ],
     "libnghttp2-static": [
@@ -1708,8 +1555,7 @@
         "size": 63404,
         "package": "libnghttp2-static",
         "version": "1.68.0-1",
-        "desc": "Static libraries for libnghttp2",
-        "release": false
+        "desc": "Static libraries for libnghttp2"
       }
     ],
     "libnghttp3": [
@@ -1719,8 +1565,7 @@
         "size": 67884,
         "package": "libnghttp3",
         "version": "1.15.0",
-        "desc": "HTTP/3 library written in C",
-        "release": false
+        "desc": "HTTP/3 library written in C"
       }
     ],
     "libnghttp3-static": [
@@ -1730,8 +1575,7 @@
         "size": 63576,
         "package": "libnghttp3-static",
         "version": "1.15.0",
-        "desc": "Static libraries for libnghttp3",
-        "release": false
+        "desc": "Static libraries for libnghttp3"
       }
     ],
     "libngtcp2": [
@@ -1741,8 +1585,7 @@
         "size": 164816,
         "package": "libngtcp2",
         "version": "1.20.0",
-        "desc": "Implementation of IETF QUIC protocol",
-        "release": false
+        "desc": "Implementation of IETF QUIC protocol"
       }
     ],
     "libngtcp2-static": [
@@ -1752,8 +1595,7 @@
         "size": 146272,
         "package": "libngtcp2-static",
         "version": "1.20.0",
-        "desc": "Static libraries for libngtcp2",
-        "release": false
+        "desc": "Static libraries for libngtcp2"
       }
     ],
     "libnpth": [
@@ -1763,8 +1605,7 @@
         "size": 11220,
         "package": "libnpth",
         "version": "1.6-3",
-        "desc": "New GNU Portable Threads Library",
-        "release": false
+        "desc": "New GNU Portable Threads Library"
       }
     ],
     "libnpth-static": [
@@ -1774,8 +1615,7 @@
         "size": 4696,
         "package": "libnpth-static",
         "version": "1.6-3",
-        "desc": "Static libraries for libnpth",
-        "release": false
+        "desc": "Static libraries for libnpth"
       }
     ],
     "libogg": [
@@ -1785,8 +1625,7 @@
         "size": 188600,
         "package": "libogg",
         "version": "1.3.6-1",
-        "desc": "Library for working with the Ogg multimedia container format",
-        "release": false
+        "desc": "Library for working with the Ogg multimedia container format"
       }
     ],
     "libogg-static": [
@@ -1796,8 +1635,7 @@
         "size": 16616,
         "package": "libogg-static",
         "version": "1.3.6-1",
-        "desc": "Static libraries for libogg",
-        "release": false
+        "desc": "Static libraries for libogg"
       }
     ],
     "libopus": [
@@ -1807,8 +1645,7 @@
         "size": 191480,
         "package": "libopus",
         "version": "1.6.1",
-        "desc": "Reference implementation of the Opus codec",
-        "release": false
+        "desc": "Reference implementation of the Opus codec"
       }
     ],
     "libopus-static": [
@@ -1818,8 +1655,7 @@
         "size": 201872,
         "package": "libopus-static",
         "version": "1.6.1",
-        "desc": "Static libraries for libopus",
-        "release": false
+        "desc": "Static libraries for libopus"
       }
     ],
     "libpng": [
@@ -1829,8 +1665,7 @@
         "size": 195476,
         "package": "libpng",
         "version": "1.6.55",
-        "desc": "Official PNG reference library",
-        "release": false
+        "desc": "Official PNG reference library"
       }
     ],
     "libpng-static": [
@@ -1840,8 +1675,7 @@
         "size": 86572,
         "package": "libpng-static",
         "version": "1.6.55",
-        "desc": "Static libraries for libpng",
-        "release": false
+        "desc": "Static libraries for libpng"
       }
     ],
     "libpolly": [
@@ -1851,8 +1685,7 @@
         "size": 1224944,
         "package": "libpolly",
         "version": "21.1.8",
-        "desc": "High-level loop and data-locality optimizer for clang",
-        "release": false
+        "desc": "High-level loop and data-locality optimizer for clang"
       }
     ],
     "libsm": [
@@ -1862,8 +1695,7 @@
         "size": 41168,
         "package": "libsm",
         "version": "1.2.6-1",
-        "desc": "X11 Session Management library",
-        "release": false
+        "desc": "X11 Session Management library"
       }
     ],
     "libsmartcols": [
@@ -1873,8 +1705,7 @@
         "size": 100348,
         "package": "libsmartcols",
         "version": "2.41.2-1",
-        "desc": "Library for smart adaptive formatting of tabular data",
-        "release": false
+        "desc": "Library for smart adaptive formatting of tabular data"
       }
     ],
     "libsndfile": [
@@ -1884,8 +1715,7 @@
         "size": 216972,
         "package": "libsndfile",
         "version": "1.2.2-2",
-        "desc": "Library for reading/writing audio files",
-        "release": false
+        "desc": "Library for reading/writing audio files"
       }
     ],
     "libsndfile-static": [
@@ -1895,8 +1725,7 @@
         "size": 187564,
         "package": "libsndfile-static",
         "version": "1.2.2-2",
-        "desc": "Static libraries for libsndfile",
-        "release": false
+        "desc": "Static libraries for libsndfile"
       }
     ],
     "libsoxr": [
@@ -1906,8 +1735,7 @@
         "size": 282612,
         "package": "libsoxr",
         "version": "0.1.3-8",
-        "desc": "High quality, one-dimensional sample-rate conversion library",
-        "release": false
+        "desc": "High quality, one-dimensional sample-rate conversion library"
       }
     ],
     "libsqlite": [
@@ -1917,8 +1745,7 @@
         "size": 711176,
         "package": "libsqlite",
         "version": "3.51.2",
-        "desc": "Library implementing a self-contained and transactional SQL database engine",
-        "release": false
+        "desc": "Library implementing a self-contained and transactional SQL database engine"
       }
     ],
     "libsqlite-static": [
@@ -1928,8 +1755,7 @@
         "size": 544140,
         "package": "libsqlite-static",
         "version": "3.51.2",
-        "desc": "Static libraries for libsqlite",
-        "release": false
+        "desc": "Static libraries for libsqlite"
       }
     ],
     "libsqlite-tcl": [
@@ -1939,8 +1765,7 @@
         "size": 510304,
         "package": "libsqlite-tcl",
         "version": "3.51.2",
-        "desc": "tcl bindings for SQLite",
-        "release": false
+        "desc": "tcl bindings for SQLite"
       }
     ],
     "libssh2": [
@@ -1950,8 +1775,7 @@
         "size": 218424,
         "package": "libssh2",
         "version": "1.11.1-1",
-        "desc": "Client-side library implementing the SSH2 protocol",
-        "release": false
+        "desc": "Client-side library implementing the SSH2 protocol"
       }
     ],
     "libssh2-static": [
@@ -1961,8 +1785,7 @@
         "size": 110928,
         "package": "libssh2-static",
         "version": "1.11.1-1",
-        "desc": "Static libraries for libssh2",
-        "release": false
+        "desc": "Static libraries for libssh2"
       }
     ],
     "libtiff": [
@@ -1972,8 +1795,7 @@
         "size": 848344,
         "package": "libtiff",
         "version": "4.7.1",
-        "desc": "Support for the Tag Image File Format (TIFF) for storing image data",
-        "release": false
+        "desc": "Support for the Tag Image File Format (TIFF) for storing image data"
       }
     ],
     "libtiff-static": [
@@ -1983,8 +1805,7 @@
         "size": 171396,
         "package": "libtiff-static",
         "version": "4.7.1",
-        "desc": "Static libraries for libtiff",
-        "release": false
+        "desc": "Static libraries for libtiff"
       }
     ],
     "libtiff-utils": [
@@ -1994,8 +1815,7 @@
         "size": 257136,
         "package": "libtiff-utils",
         "version": "4.7.1",
-        "desc": "Tools for working with tiff files",
-        "release": false
+        "desc": "Tools for working with tiff files"
       }
     ],
     "libtirpc": [
@@ -2005,8 +1825,7 @@
         "size": 123964,
         "package": "libtirpc",
         "version": "1.3.7-1",
-        "desc": "Transport Independent RPC library",
-        "release": false
+        "desc": "Transport Independent RPC library"
       }
     ],
     "libtirpc-static": [
@@ -2016,8 +1835,7 @@
         "size": 69892,
         "package": "libtirpc-static",
         "version": "1.3.7-1",
-        "desc": "Static libraries for libtirpc",
-        "release": false
+        "desc": "Static libraries for libtirpc"
       }
     ],
     "libtool": [
@@ -2027,8 +1845,7 @@
         "size": 392088,
         "package": "libtool",
         "version": "2.5.4-2",
-        "desc": "Generic library support script hiding the complexity of using shared libraries behind a consistent, portable interface",
-        "release": false
+        "desc": "Generic library support script hiding the complexity of using shared libraries behind a consistent, portable interface"
       }
     ],
     "libunbound": [
@@ -2038,8 +1855,7 @@
         "size": 381260,
         "package": "libunbound",
         "version": "1.24.2-1",
-        "desc": "A validating, recursive, caching DNS resolver",
-        "release": false
+        "desc": "A validating, recursive, caching DNS resolver"
       }
     ],
     "libunbound-static": [
@@ -2049,8 +1865,7 @@
         "size": 458708,
         "package": "libunbound-static",
         "version": "1.24.2-1",
-        "desc": "Static libraries for libunbound",
-        "release": false
+        "desc": "Static libraries for libunbound"
       }
     ],
     "libunistring": [
@@ -2060,8 +1875,7 @@
         "size": 555012,
         "package": "libunistring",
         "version": "1.3-1",
-        "desc": "Library providing functions for manipulating Unicode strings",
-        "release": false
+        "desc": "Library providing functions for manipulating Unicode strings"
       }
     ],
     "libunistring-static": [
@@ -2071,8 +1885,7 @@
         "size": 469964,
         "package": "libunistring-static",
         "version": "1.3-1",
-        "desc": "Static libraries for libunistring",
-        "release": false
+        "desc": "Static libraries for libunistring"
       }
     ],
     "libusb": [
@@ -2082,8 +1895,7 @@
         "size": 58644,
         "package": "libusb",
         "version": "1.0.29-1",
-        "desc": "A C library that provides generic access to USB devices",
-        "release": false
+        "desc": "A C library that provides generic access to USB devices"
       }
     ],
     "libusb-static": [
@@ -2093,8 +1905,7 @@
         "size": 47044,
         "package": "libusb-static",
         "version": "1.0.29-1",
-        "desc": "Static libraries for libusb",
-        "release": false
+        "desc": "Static libraries for libusb"
       }
     ],
     "libuuid": [
@@ -2104,8 +1915,7 @@
         "size": 15460,
         "package": "libuuid",
         "version": "2.41.2-1",
-        "desc": "Library for handling universally unique identifiers",
-        "release": false
+        "desc": "Library for handling universally unique identifiers"
       }
     ],
     "libvorbis": [
@@ -2115,8 +1925,7 @@
         "size": 261996,
         "package": "libvorbis",
         "version": "1.3.7-4",
-        "desc": "Library for using the Ogg Vorbis compressed audio format",
-        "release": false
+        "desc": "Library for using the Ogg Vorbis compressed audio format"
       }
     ],
     "libvorbis-static": [
@@ -2126,8 +1935,7 @@
         "size": 156868,
         "package": "libvorbis-static",
         "version": "1.3.7-4",
-        "desc": "Static libraries for libvorbis",
-        "release": false
+        "desc": "Static libraries for libvorbis"
       }
     ],
     "libwebrtc-audio-processing": [
@@ -2137,8 +1945,7 @@
         "size": 408432,
         "package": "libwebrtc-audio-processing",
         "version": "1.3-4",
-        "desc": "A library containing the AudioProcessing module from the WebRTC project",
-        "release": false
+        "desc": "A library containing the AudioProcessing module from the WebRTC project"
       }
     ],
     "libx11": [
@@ -2148,8 +1955,7 @@
         "size": 1910136,
         "package": "libx11",
         "version": "1.8.13",
-        "desc": "X11 client-side library",
-        "release": false
+        "desc": "X11 client-side library"
       }
     ],
     "libx11-static": [
@@ -2159,8 +1965,7 @@
         "size": 567592,
         "package": "libx11-static",
         "version": "1.8.13",
-        "desc": "Static libraries for libx11",
-        "release": false
+        "desc": "Static libraries for libx11"
       }
     ],
     "libxau": [
@@ -2170,8 +1975,7 @@
         "size": 9132,
         "package": "libxau",
         "version": "1.0.12-2",
-        "desc": "X11 authorisation library",
-        "release": false
+        "desc": "X11 authorisation library"
       }
     ],
     "libxcb": [
@@ -2181,8 +1985,7 @@
         "size": 914204,
         "package": "libxcb",
         "version": "1.17.0-1",
-        "desc": "X11 client-side library",
-        "release": false
+        "desc": "X11 client-side library"
       }
     ],
     "libxcb-static": [
@@ -2192,8 +1995,7 @@
         "size": 158516,
         "package": "libxcb-static",
         "version": "1.17.0-1",
-        "desc": "Static libraries for libxcb",
-        "release": false
+        "desc": "Static libraries for libxcb"
       }
     ],
     "libxdmcp": [
@@ -2203,8 +2005,7 @@
         "size": 24456,
         "package": "libxdmcp",
         "version": "1.1.5-2",
-        "desc": "X11 Display Manager Control Protocol library",
-        "release": false
+        "desc": "X11 Display Manager Control Protocol library"
       }
     ],
     "libxdmcp-static": [
@@ -2214,8 +2015,7 @@
         "size": 8016,
         "package": "libxdmcp-static",
         "version": "1.1.5-2",
-        "desc": "Static libraries for libxdmcp",
-        "release": false
+        "desc": "Static libraries for libxdmcp"
       }
     ],
     "libxext": [
@@ -2225,8 +2025,7 @@
         "size": 98016,
         "package": "libxext",
         "version": "1.3.7",
-        "desc": "X11 miscellaneous extensions library",
-        "release": false
+        "desc": "X11 miscellaneous extensions library"
       }
     ],
     "libxext-static": [
@@ -2236,8 +2035,7 @@
         "size": 25944,
         "package": "libxext-static",
         "version": "1.3.7",
-        "desc": "Static libraries for libxext",
-        "release": false
+        "desc": "Static libraries for libxext"
       }
     ],
     "libxfixes": [
@@ -2247,8 +2045,7 @@
         "size": 11528,
         "package": "libxfixes",
         "version": "6.0.2",
-        "desc": "X11 miscellaneous 'fixes' extension library",
-        "release": false
+        "desc": "X11 miscellaneous 'fixes' extension library"
       }
     ],
     "libxfixes-static": [
@@ -2258,8 +2055,7 @@
         "size": 7960,
         "package": "libxfixes-static",
         "version": "6.0.2",
-        "desc": "Static libraries for libxfixes",
-        "release": false
+        "desc": "Static libraries for libxfixes"
       }
     ],
     "libxft": [
@@ -2269,8 +2065,7 @@
         "size": 48040,
         "package": "libxft",
         "version": "2.3.9-1",
-        "desc": "FreeType-based font drawing library for X",
-        "release": false
+        "desc": "FreeType-based font drawing library for X"
       }
     ],
     "libxft-static": [
@@ -2280,8 +2075,7 @@
         "size": 36500,
         "package": "libxft-static",
         "version": "2.3.9-1",
-        "desc": "Static libraries for libxft",
-        "release": false
+        "desc": "Static libraries for libxft"
       }
     ],
     "libxi": [
@@ -2291,8 +2085,7 @@
         "size": 141476,
         "package": "libxi",
         "version": "1.8.2-1",
-        "desc": "X11 Input extension library",
-        "release": false
+        "desc": "X11 Input extension library"
       }
     ],
     "libxi-static": [
@@ -2302,8 +2095,7 @@
         "size": 27036,
         "package": "libxi-static",
         "version": "1.8.2-1",
-        "desc": "Static libraries for libxi",
-        "release": false
+        "desc": "Static libraries for libxi"
       }
     ],
     "libxml2": [
@@ -2313,8 +2105,7 @@
         "size": 440924,
         "package": "libxml2",
         "version": "2.15.1-1",
-        "desc": "Library for parsing XML documents",
-        "release": false
+        "desc": "Library for parsing XML documents"
       }
     ],
     "libxml2-python": [
@@ -2324,8 +2115,7 @@
         "size": 29216,
         "package": "libxml2-python",
         "version": "2.15.1-1",
-        "desc": "Python bindings for libxml2",
-        "release": false
+        "desc": "Python bindings for libxml2"
       }
     ],
     "libxml2-utils": [
@@ -2335,8 +2125,7 @@
         "size": 33824,
         "package": "libxml2-utils",
         "version": "2.15.1-1",
-        "desc": "XML utilities",
-        "release": false
+        "desc": "XML utilities"
       }
     ],
     "libxrandr": [
@@ -2346,8 +2135,7 @@
         "size": 22272,
         "package": "libxrandr",
         "version": "1.5.5",
-        "desc": "X11 RandR extension library",
-        "release": false
+        "desc": "X11 RandR extension library"
       }
     ],
     "libxrandr-static": [
@@ -2357,8 +2145,7 @@
         "size": 14812,
         "package": "libxrandr-static",
         "version": "1.5.5",
-        "desc": "Static libraries for libxrandr",
-        "release": false
+        "desc": "Static libraries for libxrandr"
       }
     ],
     "libxrender": [
@@ -2368,8 +2155,7 @@
         "size": 24632,
         "package": "libxrender",
         "version": "0.9.12-1",
-        "desc": "X Rendering Extension client library",
-        "release": false
+        "desc": "X Rendering Extension client library"
       }
     ],
     "libxslt": [
@@ -2379,8 +2165,7 @@
         "size": 225272,
         "package": "libxslt",
         "version": "1.1.43-2",
-        "desc": "XSLT processing library",
-        "release": false
+        "desc": "XSLT processing library"
       }
     ],
     "libxss": [
@@ -2390,8 +2175,7 @@
         "size": 11960,
         "package": "libxss",
         "version": "1.2.5",
-        "desc": "X11 Screen Saver extension library",
-        "release": false
+        "desc": "X11 Screen Saver extension library"
       }
     ],
     "libxss-static": [
@@ -2401,8 +2185,7 @@
         "size": 4416,
         "package": "libxss-static",
         "version": "1.2.5",
-        "desc": "Static libraries for libxss",
-        "release": false
+        "desc": "Static libraries for libxss"
       }
     ],
     "libxt": [
@@ -2412,8 +2195,7 @@
         "size": 483748,
         "package": "libxt",
         "version": "1.3.1-1",
-        "desc": "X11 toolkit intrinsics library",
-        "release": false
+        "desc": "X11 toolkit intrinsics library"
       }
     ],
     "libxt-static": [
@@ -2423,8 +2205,7 @@
         "size": 150004,
         "package": "libxt-static",
         "version": "1.3.1-1",
-        "desc": "Static libraries for libxt",
-        "release": false
+        "desc": "Static libraries for libxt"
       }
     ],
     "libxtst": [
@@ -2434,8 +2215,7 @@
         "size": 25644,
         "package": "libxtst",
         "version": "1.2.5-1",
-        "desc": "Xlib-based library for XTEST & RECORD extensions",
-        "release": false
+        "desc": "Xlib-based library for XTEST & RECORD extensions"
       }
     ],
     "libxtst-static": [
@@ -2445,8 +2225,7 @@
         "size": 8572,
         "package": "libxtst-static",
         "version": "1.2.5-1",
-        "desc": "Static libraries for libxtst",
-        "release": false
+        "desc": "Static libraries for libxtst"
       }
     ],
     "littlecms": [
@@ -2456,8 +2235,7 @@
         "size": 142716,
         "package": "littlecms",
         "version": "2.18",
-        "desc": "Color management library",
-        "release": false
+        "desc": "Color management library"
       }
     ],
     "littlecms-static": [
@@ -2467,8 +2245,7 @@
         "size": 145820,
         "package": "littlecms-static",
         "version": "2.18",
-        "desc": "Static libraries for littlecms",
-        "release": false
+        "desc": "Static libraries for littlecms"
       }
     ],
     "littlecms-utils": [
@@ -2478,8 +2255,7 @@
         "size": 35136,
         "package": "littlecms-utils",
         "version": "2.18",
-        "desc": "Color management utilities",
-        "release": false
+        "desc": "Color management utilities"
       }
     ],
     "lld": [
@@ -2489,8 +2265,7 @@
         "size": 2802820,
         "package": "lld",
         "version": "21.1.8",
-        "desc": "LLVM-based linker",
-        "release": false
+        "desc": "LLVM-based linker"
       }
     ],
     "lldb": [
@@ -2500,8 +2275,7 @@
         "size": 5480048,
         "package": "lldb",
         "version": "21.1.8",
-        "desc": "LLVM-based debugger",
-        "release": false
+        "desc": "LLVM-based debugger"
       }
     ],
     "llvm": [
@@ -2511,8 +2285,7 @@
         "size": 14769044,
         "package": "llvm",
         "version": "21.1.8",
-        "desc": "LLVM modular compiler and toolchain executables",
-        "release": false
+        "desc": "LLVM modular compiler and toolchain executables"
       }
     ],
     "llvm-tools": [
@@ -2522,8 +2295,7 @@
         "size": 2377640,
         "package": "llvm-tools",
         "version": "21.1.8",
-        "desc": "LLVM Development Tools",
-        "release": false
+        "desc": "LLVM Development Tools"
       }
     ],
     "lsof": [
@@ -2533,8 +2305,7 @@
         "size": 121940,
         "package": "lsof",
         "version": "4.99.5-2",
-        "desc": "Lists open files for running Unix processes",
-        "release": false
+        "desc": "Lists open files for running Unix processes"
       }
     ],
     "lsof-static": [
@@ -2544,8 +2315,7 @@
         "size": 55904,
         "package": "lsof-static",
         "version": "4.99.5-2",
-        "desc": "Static libraries for lsof",
-        "release": false
+        "desc": "Static libraries for lsof"
       }
     ],
     "lz4": [
@@ -2555,8 +2325,7 @@
         "size": 90868,
         "package": "lz4",
         "version": "1.10.0-1",
-        "desc": "Fast LZ compression algorithm tool",
-        "release": false
+        "desc": "Fast LZ compression algorithm tool"
       }
     ]
   },
@@ -2568,8 +2337,7 @@
         "size": 240536,
         "package": "make",
         "version": "4.4.1-1",
-        "desc": "Tool to control the generation of non-source files from source files",
-        "release": false
+        "desc": "Tool to control the generation of non-source files from source files"
       }
     ],
     "micro": [
@@ -2579,8 +2347,7 @@
         "size": 3613008,
         "package": "micro",
         "version": "2.0.15",
-        "desc": "Modern and intuitive terminal-based text editor",
-        "release": false
+        "desc": "Modern and intuitive terminal-based text editor"
       }
     ],
     "mlir": [
@@ -2590,8 +2357,7 @@
         "size": 29677632,
         "package": "mlir",
         "version": "21.1.8",
-        "desc": "A Multi-Level Intermediate Representation for compilers from LLVM",
-        "release": false
+        "desc": "A Multi-Level Intermediate Representation for compilers from LLVM"
       }
     ],
     "mount-utils": [
@@ -2601,8 +2367,7 @@
         "size": 142560,
         "package": "mount-utils",
         "version": "2.41.2-1",
-        "desc": "Utilities for (un)mounting filesystems",
-        "release": false
+        "desc": "Utilities for (un)mounting filesystems"
       }
     ]
   },
@@ -2614,8 +2379,7 @@
         "size": 230892,
         "package": "nano",
         "version": "8.7.1",
-        "desc": "Small, free and friendly text editor",
-        "release": false
+        "desc": "Small, free and friendly text editor"
       }
     ],
     "ncurses": [
@@ -2625,8 +2389,7 @@
         "size": 558468,
         "package": "ncurses",
         "version": "6.6.20260124+really6.5.20250830",
-        "desc": "Library for text-based user interfaces in a terminal-independent manner",
-        "release": false
+        "desc": "Library for text-based user interfaces in a terminal-independent manner"
       }
     ],
     "ncurses-static": [
@@ -2636,8 +2399,7 @@
         "size": 153872,
         "package": "ncurses-static",
         "version": "6.6.20260124+really6.5.20250830",
-        "desc": "Static libraries for ncurses",
-        "release": false
+        "desc": "Static libraries for ncurses"
       }
     ],
     "ncurses-ui-libs": [
@@ -2647,8 +2409,7 @@
         "size": 32936,
         "package": "ncurses-ui-libs",
         "version": "6.6.20260124+really6.5.20250830",
-        "desc": "Libraries for terminal user interfaces based on ncurses",
-        "release": false
+        "desc": "Libraries for terminal user interfaces based on ncurses"
       }
     ],
     "ncurses-ui-libs-static": [
@@ -2658,8 +2419,7 @@
         "size": 39548,
         "package": "ncurses-ui-libs-static",
         "version": "6.6.20260124+really6.5.20250830",
-        "desc": "Static libraries for terminal user interfaces based on ncurses",
-        "release": false
+        "desc": "Static libraries for terminal user interfaces based on ncurses"
       }
     ],
     "ncurses-utils": [
@@ -2669,8 +2429,7 @@
         "size": 88952,
         "package": "ncurses-utils",
         "version": "6.6.20260124+really6.5.20250830",
-        "desc": "Tools for working with terminals",
-        "release": false
+        "desc": "Tools for working with terminals"
       }
     ],
     "ndk-sysroot": [
@@ -2680,8 +2439,7 @@
         "size": 1952136,
         "package": "ndk-sysroot",
         "version": "29-2",
-        "desc": "System header and library files from the Android NDK needed for compiling C programs",
-        "release": false
+        "desc": "System header and library files from the Android NDK needed for compiling C programs"
       }
     ],
     "net-tools": [
@@ -2691,8 +2449,7 @@
         "size": 118628,
         "package": "net-tools",
         "version": "2.10.0-1",
-        "desc": "Configuration tools for Linux networking",
-        "release": false
+        "desc": "Configuration tools for Linux networking"
       }
     ],
     "nettle": [
@@ -2702,8 +2459,7 @@
         "size": 18144,
         "package": "nettle",
         "version": "4.0+really3.10.2",
-        "desc": "Low level cryptographic tools",
-        "release": false
+        "desc": "Low level cryptographic tools"
       }
     ]
   },
@@ -2711,12 +2467,11 @@
     "openjdk-17": [
       {
         "name": "openjdk-17_17.0.18_aarch64.deb",
-        "path": "https://github.com/devjhr/pkg-repo/releases/download/v1.0/openjdk-17_17.0.18_aarch64.deb",
+        "path": "pool/main/o/openjdk-17/openjdk-17_17.0.18_aarch64.deb",
         "size": 95501928,
         "package": "openjdk-17",
         "version": "17.0.18",
-        "desc": "Java development kit and runtime",
-        "release": true
+        "desc": "Java development kit and runtime"
       }
     ],
     "openjdk-17-source": [
@@ -2726,8 +2481,7 @@
         "size": 47026356,
         "package": "openjdk-17-source",
         "version": "17.0.18",
-        "desc": "Source files for openjdk-17",
-        "release": false
+        "desc": "Source files for openjdk-17"
       }
     ],
     "openjdk-17-x": [
@@ -2737,19 +2491,17 @@
         "size": 12558664,
         "package": "openjdk-17-x",
         "version": "17.0.18",
-        "desc": "Portion of openjdk-17 requiring X11 functionality",
-        "release": false
+        "desc": "Portion of openjdk-17 requiring X11 functionality"
       }
     ],
     "openjdk-21": [
       {
         "name": "openjdk-21_21.0.10_aarch64.deb",
-        "path": "https://github.com/devjhr/pkg-repo/releases/download/v1.0/openjdk-21_21.0.10_aarch64.deb",
+        "path": "pool/main/o/openjdk-21/openjdk-21_21.0.10_aarch64.deb",
         "size": 105693024,
         "package": "openjdk-21",
         "version": "21.0.10",
-        "desc": "Java development kit and runtime",
-        "release": true
+        "desc": "Java development kit and runtime"
       }
     ],
     "openjdk-21-source": [
@@ -2759,8 +2511,7 @@
         "size": 49016104,
         "package": "openjdk-21-source",
         "version": "21.0.10",
-        "desc": "Source files for openjdk-21",
-        "release": false
+        "desc": "Source files for openjdk-21"
       }
     ],
     "openjdk-21-x": [
@@ -2770,8 +2521,7 @@
         "size": 12569284,
         "package": "openjdk-21-x",
         "version": "21.0.10",
-        "desc": "Portion of openjdk-21 requiring X11 functionality",
-        "release": false
+        "desc": "Portion of openjdk-21 requiring X11 functionality"
       }
     ],
     "openssl": [
@@ -2781,8 +2531,7 @@
         "size": 2476964,
         "package": "openssl",
         "version": "1:3.6.1",
-        "desc": "Library implementing the SSL and TLS protocols as well as general purpose cryptography functions",
-        "release": false
+        "desc": "Library implementing the SSL and TLS protocols as well as general purpose cryptography functions"
       }
     ],
     "openssl-static": [
@@ -2792,8 +2541,7 @@
         "size": 2633340,
         "package": "openssl-static",
         "version": "1:3.6.1",
-        "desc": "Static libraries for openssl",
-        "release": false
+        "desc": "Static libraries for openssl"
       }
     ],
     "openssl-tool": [
@@ -2803,8 +2551,7 @@
         "size": 277440,
         "package": "openssl-tool",
         "version": "1:3.6.1",
-        "desc": "The openssl command line cryptographic tool",
-        "release": false
+        "desc": "The openssl command line cryptographic tool"
       }
     ]
   },
@@ -2816,8 +2563,7 @@
         "size": 73820,
         "package": "patch",
         "version": "2.8-1",
-        "desc": "GNU patch which applies diff files to create patched files",
-        "release": false
+        "desc": "GNU patch which applies diff files to create patched files"
       }
     ],
     "pcre2": [
@@ -2827,8 +2573,7 @@
         "size": 961120,
         "package": "pcre2",
         "version": "10.47",
-        "desc": "Perl 5 compatible regular expression library",
-        "release": false
+        "desc": "Perl 5 compatible regular expression library"
       }
     ],
     "pcre2-static": [
@@ -2838,8 +2583,7 @@
         "size": 376704,
         "package": "pcre2-static",
         "version": "10.47",
-        "desc": "Static libraries for pcre2",
-        "release": false
+        "desc": "Static libraries for pcre2"
       }
     ],
     "pcre2grep": [
@@ -2849,8 +2593,7 @@
         "size": 34016,
         "package": "pcre2grep",
         "version": "10.47",
-        "desc": "A grep with Perl-compatible regular expressions",
-        "release": false
+        "desc": "A grep with Perl-compatible regular expressions"
       }
     ],
     "perl": [
@@ -2860,8 +2603,7 @@
         "size": 14831464,
         "package": "perl",
         "version": "5.40.3-3",
-        "desc": "Capable, feature-rich programming language",
-        "release": false
+        "desc": "Capable, feature-rich programming language"
       }
     ],
     "pinentry": [
@@ -2871,8 +2613,7 @@
         "size": 47136,
         "package": "pinentry",
         "version": "1.3.2-1",
-        "desc": "Dialog allowing secure password entry",
-        "release": false
+        "desc": "Dialog allowing secure password entry"
       }
     ],
     "pkg-config": [
@@ -2882,8 +2623,7 @@
         "size": 32780,
         "package": "pkg-config",
         "version": "0.29.2-3",
-        "desc": "Helper tool used when compiling applications and libraries",
-        "release": false
+        "desc": "Helper tool used when compiling applications and libraries"
       }
     ],
     "procps": [
@@ -2893,8 +2633,7 @@
         "size": 142888,
         "package": "procps",
         "version": "3.3.17-6",
-        "desc": "Utilities that give information about processes using the /proc filesystem",
-        "release": false
+        "desc": "Utilities that give information about processes using the /proc filesystem"
       }
     ],
     "procps-static": [
@@ -2904,8 +2643,7 @@
         "size": 28596,
         "package": "procps-static",
         "version": "3.3.17-6",
-        "desc": "Static libraries for procps",
-        "release": false
+        "desc": "Static libraries for procps"
       }
     ],
     "psmisc": [
@@ -2915,8 +2653,7 @@
         "size": 92640,
         "package": "psmisc",
         "version": "23.7-1",
-        "desc": "Some small useful utilities that use the proc filesystem",
-        "release": false
+        "desc": "Some small useful utilities that use the proc filesystem"
       }
     ],
     "pulseaudio": [
@@ -2926,8 +2663,7 @@
         "size": 853616,
         "package": "pulseaudio",
         "version": "17.0-1",
-        "desc": "A featureful, general-purpose sound server",
-        "release": false
+        "desc": "A featureful, general-purpose sound server"
       }
     ],
     "pulseaudio-glib": [
@@ -2937,8 +2673,7 @@
         "size": 6912,
         "package": "pulseaudio-glib",
         "version": "17.0-1",
-        "desc": "PulseAudio GLIB mainloop component",
-        "release": false
+        "desc": "PulseAudio GLIB mainloop component"
       }
     ],
     "python": [
@@ -2948,8 +2683,7 @@
         "size": 4476420,
         "package": "python",
         "version": "3.12.12-1",
-        "desc": "Python 3 programming language intended to enable clear programs",
-        "release": false
+        "desc": "Python 3 programming language intended to enable clear programs"
       }
     ],
     "python-ensurepip-wheels": [
@@ -2959,8 +2693,7 @@
         "size": 1801592,
         "package": "python-ensurepip-wheels",
         "version": "3.12.12-1",
-        "desc": "Wheels for Python ensurepip",
-        "release": false
+        "desc": "Wheels for Python ensurepip"
       }
     ],
     "python-static": [
@@ -2970,8 +2703,7 @@
         "size": 6759068,
         "package": "python-static",
         "version": "3.12.12-1",
-        "desc": "Static libraries for python",
-        "release": false
+        "desc": "Static libraries for python"
       }
     ],
     "python-tkinter": [
@@ -2981,8 +2713,7 @@
         "size": 518372,
         "package": "python-tkinter",
         "version": "3.12.12-1",
-        "desc": "Tkinter support for Python 3",
-        "release": false
+        "desc": "Tkinter support for Python 3"
       }
     ],
     "python-xcbgen": [
@@ -2992,8 +2723,7 @@
         "size": 44588,
         "package": "python-xcbgen",
         "version": "1.17.0-1",
-        "desc": "The xcbgen Python module",
-        "release": false
+        "desc": "The xcbgen Python module"
       }
     ],
     "pyunbound": [
@@ -3003,8 +2733,7 @@
         "size": 780,
         "package": "pyunbound",
         "version": "1.24.2-1",
-        "desc": "Python bindings for Unbound",
-        "release": false
+        "desc": "Python bindings for Unbound"
       }
     ],
     "pzstd": [
@@ -3014,8 +2743,7 @@
         "size": 42144,
         "package": "pzstd",
         "version": "1.5.7-1",
-        "desc": "A Pigz-like tool for Zstandard",
-        "release": false
+        "desc": "A Pigz-like tool for Zstandard"
       }
     ]
   },
@@ -3027,8 +2755,7 @@
         "size": 294264,
         "package": "readline",
         "version": "8.3.1-2",
-        "desc": "Library that allow users to edit command lines as they are typed in",
-        "release": false
+        "desc": "Library that allow users to edit command lines as they are typed in"
       }
     ],
     "readline-static": [
@@ -3038,8 +2765,7 @@
         "size": 124960,
         "package": "readline-static",
         "version": "8.3.1-2",
-        "desc": "Static libraries for readline",
-        "release": false
+        "desc": "Static libraries for readline"
       }
     ],
     "resolv-conf": [
@@ -3049,8 +2775,7 @@
         "size": 1000,
         "package": "resolv-conf",
         "version": "1.3",
-        "desc": "Resolver configuration file",
-        "release": false
+        "desc": "Resolver configuration file"
       }
     ]
   },
@@ -3062,8 +2787,7 @@
         "size": 182776,
         "package": "scdaemon",
         "version": "2.5.11",
-        "desc": "Daemon invoked by gpg to manage smartcards",
-        "release": false
+        "desc": "Daemon invoked by gpg to manage smartcards"
       }
     ],
     "sed": [
@@ -3073,8 +2797,7 @@
         "size": 117616,
         "package": "sed",
         "version": "4.9-2",
-        "desc": "GNU stream editor for filtering/transforming text",
-        "release": false
+        "desc": "GNU stream editor for filtering/transforming text"
       }
     ],
     "serf": [
@@ -3084,8 +2807,7 @@
         "size": 47668,
         "package": "serf",
         "version": "1.3.10-2",
-        "desc": "High performance C-based HTTP client library",
-        "release": false
+        "desc": "High performance C-based HTTP client library"
       }
     ],
     "serf-static": [
@@ -3095,8 +2817,7 @@
         "size": 39252,
         "package": "serf-static",
         "version": "1.3.10-2",
-        "desc": "Static libraries for serf",
-        "release": false
+        "desc": "Static libraries for serf"
       }
     ],
     "speexdsp": [
@@ -3106,8 +2827,7 @@
         "size": 37388,
         "package": "speexdsp",
         "version": "1.2.1-1",
-        "desc": "Speex audio processing library",
-        "release": false
+        "desc": "Speex audio processing library"
       }
     ],
     "speexdsp-static": [
@@ -3117,8 +2837,7 @@
         "size": 32884,
         "package": "speexdsp-static",
         "version": "1.2.1-1",
-        "desc": "Static libraries for speexdsp",
-        "release": false
+        "desc": "Static libraries for speexdsp"
       }
     ],
     "sqlite": [
@@ -3128,8 +2847,7 @@
         "size": 618112,
         "package": "sqlite",
         "version": "3.51.2",
-        "desc": "Command line shell for SQLite",
-        "release": false
+        "desc": "Command line shell for SQLite"
       }
     ],
     "subversion": [
@@ -3139,8 +2857,7 @@
         "size": 1389984,
         "package": "subversion",
         "version": "1.14.5-1",
-        "desc": "Centralized version control system characterized by its simplicity",
-        "release": false
+        "desc": "Centralized version control system characterized by its simplicity"
       }
     ],
     "subversion-perl": [
@@ -3150,8 +2867,7 @@
         "size": 767128,
         "package": "subversion-perl",
         "version": "1.14.5-1",
-        "desc": "Perl interface to Subversion",
-        "release": false
+        "desc": "Perl interface to Subversion"
       }
     ],
     "subversion-perl-static": [
@@ -3161,8 +2877,7 @@
         "size": 15572,
         "package": "subversion-perl-static",
         "version": "1.14.5-1",
-        "desc": "Static libraries for subversion-perl",
-        "release": false
+        "desc": "Static libraries for subversion-perl"
       }
     ],
     "subversion-static": [
@@ -3172,8 +2887,7 @@
         "size": 1139196,
         "package": "subversion-static",
         "version": "1.14.5-1",
-        "desc": "Static libraries for subversion",
-        "release": false
+        "desc": "Static libraries for subversion"
       }
     ],
     "swig": [
@@ -3183,8 +2897,7 @@
         "size": 927976,
         "package": "swig",
         "version": "4.4.1",
-        "desc": "Generate scripting interfaces to C/C++ code",
-        "release": false
+        "desc": "Generate scripting interfaces to C/C++ code"
       }
     ]
   },
@@ -3196,8 +2909,7 @@
         "size": 345396,
         "package": "tar",
         "version": "1.35-2",
-        "desc": "GNU tar for manipulating tar archives",
-        "release": false
+        "desc": "GNU tar for manipulating tar archives"
       }
     ],
     "tcl": [
@@ -3207,8 +2919,7 @@
         "size": 2257168,
         "package": "tcl",
         "version": "8.6.14-1",
-        "desc": "Powerful but easy to learn dynamic programming language",
-        "release": false
+        "desc": "Powerful but easy to learn dynamic programming language"
       }
     ],
     "termux-am": [
@@ -3218,8 +2929,7 @@
         "size": 577068,
         "package": "termux-am",
         "version": "0.8.0-2",
-        "desc": "Android Oreo-compatible am command reimplementation",
-        "release": false
+        "desc": "Android Oreo-compatible am command reimplementation"
       }
     ],
     "termux-am-socket": [
@@ -3229,8 +2939,7 @@
         "size": 16132,
         "package": "termux-am-socket",
         "version": "1.5.0-1",
-        "desc": "A faster version of am with less features that only works while Termux is running",
-        "release": false
+        "desc": "A faster version of am with less features that only works while Termux is running"
       }
     ],
     "termux-core": [
@@ -3240,8 +2949,7 @@
         "size": 197776,
         "package": "termux-core",
         "version": "0.4.0-1",
-        "desc": "Utils and libraries for Termux core",
-        "release": false
+        "desc": "Utils and libraries for Termux core"
       }
     ],
     "termux-core-static": [
@@ -3251,8 +2959,7 @@
         "size": 20156,
         "package": "termux-core-static",
         "version": "0.4.0-1",
-        "desc": "Static libraries for termux-core",
-        "release": false
+        "desc": "Static libraries for termux-core"
       }
     ],
     "termux-exec": [
@@ -3262,8 +2969,7 @@
         "size": 287544,
         "package": "termux-exec",
         "version": "1:2.4.0-1",
-        "desc": "Utils and libraries for Termux exec including a LD_PRELOAD shared library for proper functioning of the Termux execution environment",
-        "release": false
+        "desc": "Utils and libraries for Termux exec including a LD_PRELOAD shared library for proper functioning of the Termux execution environment"
       }
     ],
     "termux-exec-static": [
@@ -3273,8 +2979,7 @@
         "size": 10640,
         "package": "termux-exec-static",
         "version": "1:2.4.0-1",
-        "desc": "Static libraries for termux-exec",
-        "release": false
+        "desc": "Static libraries for termux-exec"
       }
     ],
     "termux-keyring": [
@@ -3284,8 +2989,7 @@
         "size": 39796,
         "package": "termux-keyring",
         "version": "3.13",
-        "desc": "GPG public keys for the official Termux repositories",
-        "release": false
+        "desc": "GPG public keys for the official Termux repositories"
       }
     ],
     "termux-licenses": [
@@ -3295,8 +2999,7 @@
         "size": 52568,
         "package": "termux-licenses",
         "version": "2.1",
-        "desc": "Contains LICENSE files for common licenses",
-        "release": false
+        "desc": "Contains LICENSE files for common licenses"
       }
     ],
     "termux-tools": [
@@ -3306,8 +3009,7 @@
         "size": 33640,
         "package": "termux-tools",
         "version": "1.46.0+really1.45.0-1",
-        "desc": "Basic system tools for Termux",
-        "release": false
+        "desc": "Basic system tools for Termux"
       }
     ],
     "texinfo": [
@@ -3317,8 +3019,7 @@
         "size": 1081748,
         "package": "texinfo",
         "version": "7.2-4",
-        "desc": "Documentation system for on-line information and printed output",
-        "release": false
+        "desc": "Documentation system for on-line information and printed output"
       }
     ],
     "tk": [
@@ -3328,8 +3029,7 @@
         "size": 1753824,
         "package": "tk",
         "version": "8.6.14-1",
-        "desc": "A windowing toolkit for use with tcl",
-        "release": false
+        "desc": "A windowing toolkit for use with tcl"
       }
     ],
     "tor": [
@@ -3339,8 +3039,7 @@
         "size": 3057372,
         "package": "tor",
         "version": "0.4.8.19",
-        "desc": "The Onion Router anonymizing overlay network",
-        "release": false
+        "desc": "The Onion Router anonymizing overlay network"
       }
     ],
     "tree": [
@@ -3350,8 +3049,7 @@
         "size": 35964,
         "package": "tree",
         "version": "2.3.1",
-        "desc": "Recursive directory lister producing a depth indented listing of files",
-        "release": false
+        "desc": "Recursive directory lister producing a depth indented listing of files"
       }
     ],
     "ttf-dejavu": [
@@ -3361,8 +3059,7 @@
         "size": 2459180,
         "package": "ttf-dejavu",
         "version": "2.37-8",
-        "desc": "Font family based on the Bitstream Vera Fonts with a wider range of characters",
-        "release": false
+        "desc": "Font family based on the Bitstream Vera Fonts with a wider range of characters"
       }
     ]
   },
@@ -3374,8 +3071,7 @@
         "size": 639900,
         "package": "unbound",
         "version": "1.24.2-1",
-        "desc": "Unbound command-line tools",
-        "release": false
+        "desc": "Unbound command-line tools"
       }
     ],
     "unzip": [
@@ -3385,8 +3081,7 @@
         "size": 117248,
         "package": "unzip",
         "version": "6.0-10",
-        "desc": "Tools for working with zip files",
-        "release": false
+        "desc": "Tools for working with zip files"
       }
     ],
     "update-info-dir": [
@@ -3396,8 +3091,7 @@
         "size": 2464,
         "package": "update-info-dir",
         "version": "7.2-4",
-        "desc": "Update or create index file from all installed info files in directory",
-        "release": false
+        "desc": "Update or create index file from all installed info files in directory"
       }
     ],
     "utf8proc": [
@@ -3407,8 +3101,7 @@
         "size": 58868,
         "package": "utf8proc",
         "version": "2.11.0",
-        "desc": "Library for processing UTF-8 Unicode data",
-        "release": false
+        "desc": "Library for processing UTF-8 Unicode data"
       }
     ],
     "utf8proc-static": [
@@ -3418,8 +3111,7 @@
         "size": 48832,
         "package": "utf8proc-static",
         "version": "2.11.0",
-        "desc": "Static libraries for utf8proc",
-        "release": false
+        "desc": "Static libraries for utf8proc"
       }
     ],
     "util-linux": [
@@ -3429,8 +3121,7 @@
         "size": 736996,
         "package": "util-linux",
         "version": "2.41.2-1",
-        "desc": "Miscellaneous system utilities",
-        "release": false
+        "desc": "Miscellaneous system utilities"
       }
     ],
     "util-linux-static": [
@@ -3440,8 +3131,7 @@
         "size": 431060,
         "package": "util-linux-static",
         "version": "2.41.2-1",
-        "desc": "Static libraries for util-linux",
-        "release": false
+        "desc": "Static libraries for util-linux"
       }
     ],
     "uuid-utils": [
@@ -3451,8 +3141,7 @@
         "size": 41072,
         "package": "uuid-utils",
         "version": "2.41.2-1",
-        "desc": "Utilities for handling universally unique identifiers",
-        "release": false
+        "desc": "Utilities for handling universally unique identifiers"
       }
     ]
   },
@@ -3464,8 +3153,7 @@
         "size": 281340,
         "package": "wget",
         "version": "1.25.0-1",
-        "desc": "Commandline tool for retrieving files using HTTP, HTTPS and FTP",
-        "release": false
+        "desc": "Commandline tool for retrieving files using HTTP, HTTPS and FTP"
       }
     ],
     "which": [
@@ -3475,8 +3163,7 @@
         "size": 12568,
         "package": "which",
         "version": "2.23-1",
-        "desc": "Shows the full path of (shell) commands",
-        "release": false
+        "desc": "Shows the full path of (shell) commands"
       }
     ]
   },
@@ -3488,8 +3175,7 @@
         "size": 78584,
         "package": "xcb-proto",
         "version": "1.17.0-1",
-        "desc": "XML-XCB protocol descriptions",
-        "release": false
+        "desc": "XML-XCB protocol descriptions"
       }
     ],
     "xorg-util-macros": [
@@ -3499,8 +3185,7 @@
         "size": 21952,
         "package": "xorg-util-macros",
         "version": "1.20.2",
-        "desc": "X.Org Autotools macros",
-        "release": false
+        "desc": "X.Org Autotools macros"
       }
     ],
     "xorgproto": [
@@ -3510,8 +3195,7 @@
         "size": 249668,
         "package": "xorgproto",
         "version": "2025.1",
-        "desc": "X.Org X11 Protocol headers",
-        "release": false
+        "desc": "X.Org X11 Protocol headers"
       }
     ],
     "xsltproc": [
@@ -3521,8 +3205,7 @@
         "size": 11892,
         "package": "xsltproc",
         "version": "1.1.43-2",
-        "desc": "XSLT command line processor",
-        "release": false
+        "desc": "XSLT command line processor"
       }
     ],
     "xtrans": [
@@ -3532,8 +3215,7 @@
         "size": 39872,
         "package": "xtrans",
         "version": "1.6.0",
-        "desc": "X transport library",
-        "release": false
+        "desc": "X transport library"
       }
     ],
     "xxhash": [
@@ -3543,8 +3225,7 @@
         "size": 76568,
         "package": "xxhash",
         "version": "0.8.3-1",
-        "desc": "Extremely fast non-cryptographic hash algorithm",
-        "release": false
+        "desc": "Extremely fast non-cryptographic hash algorithm"
       }
     ],
     "xxhash-static": [
@@ -3554,8 +3235,7 @@
         "size": 8452,
         "package": "xxhash-static",
         "version": "0.8.3-1",
-        "desc": "Static libraries for xxhash",
-        "release": false
+        "desc": "Static libraries for xxhash"
       }
     ],
     "xz-utils": [
@@ -3565,8 +3245,7 @@
         "size": 71176,
         "package": "xz-utils",
         "version": "5.8.2",
-        "desc": "XZ-format compression tools",
-        "release": false
+        "desc": "XZ-format compression tools"
       }
     ]
   },
@@ -3578,8 +3257,7 @@
         "size": 62888,
         "package": "zlib",
         "version": "1.3.2",
-        "desc": "Compression library implementing the deflate compression method found in gzip and PKZIP",
-        "release": false
+        "desc": "Compression library implementing the deflate compression method found in gzip and PKZIP"
       }
     ],
     "zlib-static": [
@@ -3589,8 +3267,7 @@
         "size": 35448,
         "package": "zlib-static",
         "version": "1.3.2",
-        "desc": "Static libraries for zlib",
-        "release": false
+        "desc": "Static libraries for zlib"
       }
     ],
     "zstd": [
@@ -3600,8 +3277,7 @@
         "size": 360640,
         "package": "zstd",
         "version": "1.5.7-1",
-        "desc": "Zstandard compression",
-        "release": false
+        "desc": "Zstandard compression"
       }
     ]
   }
