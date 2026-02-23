@@ -1518,6 +1518,26 @@
         "desc": "Static libraries for libmpfr"
       }
     ],
+    "libmsgpack": [
+      {
+        "name": "libmsgpack_6.1.0-1_aarch64.deb",
+        "path": "pool/main/l/libmsgpack/libmsgpack_6.1.0-1_aarch64.deb",
+        "size": 26272,
+        "package": "libmsgpack",
+        "version": "6.1.0-1",
+        "desc": "MessagePack implementation for C"
+      }
+    ],
+    "libmsgpack-static": [
+      {
+        "name": "libmsgpack-static_6.1.0-1_aarch64.deb",
+        "path": "pool/main/l/libmsgpack-static/libmsgpack-static_6.1.0-1_aarch64.deb",
+        "size": 10596,
+        "package": "libmsgpack-static",
+        "version": "6.1.0-1",
+        "desc": "Static libraries for libmsgpack"
+      }
+    ],
     "libnettle": [
       {
         "name": "libnettle_4.0_aarch64.deb",
@@ -1868,6 +1888,16 @@
         "desc": "Static libraries for libunbound"
       }
     ],
+    "libunibilium": [
+      {
+        "name": "libunibilium_2.1.2-1_aarch64.deb",
+        "path": "pool/main/l/libunibilium/libunibilium_2.1.2-1_aarch64.deb",
+        "size": 21948,
+        "package": "libunibilium",
+        "version": "2.1.2-1",
+        "desc": "Terminfo parsing library"
+      }
+    ],
     "libunistring": [
       {
         "name": "libunistring_1.3-1_aarch64.deb",
@@ -1918,6 +1948,26 @@
         "desc": "Library for handling universally unique identifiers"
       }
     ],
+    "libuv": [
+      {
+        "name": "libuv_1.52.0_aarch64.deb",
+        "path": "pool/main/l/libuv/libuv_1.52.0_aarch64.deb",
+        "size": 82152,
+        "package": "libuv",
+        "version": "1.52.0",
+        "desc": "Support library with a focus on asynchronous I/O"
+      }
+    ],
+    "libuv-static": [
+      {
+        "name": "libuv-static_1.52.0_aarch64.deb",
+        "path": "pool/main/l/libuv-static/libuv-static_1.52.0_aarch64.deb",
+        "size": 286520,
+        "package": "libuv-static",
+        "version": "1.52.0",
+        "desc": "Static libraries for libuv"
+      }
+    ],
     "libvorbis": [
       {
         "name": "libvorbis_1.3.7-4_aarch64.deb",
@@ -1936,6 +1986,16 @@
         "package": "libvorbis-static",
         "version": "1.3.7-4",
         "desc": "Static libraries for libvorbis"
+      }
+    ],
+    "libvterm": [
+      {
+        "name": "libvterm_1:0.3.3-2_aarch64.deb",
+        "path": "pool/main/l/libvterm/libvterm_1:0.3.3-2_aarch64.deb",
+        "size": 33008,
+        "package": "libvterm",
+        "version": "1:0.3.3-2",
+        "desc": "Terminal emulator library"
       }
     ],
     "libwebrtc-audio-processing": [
@@ -2318,6 +2378,186 @@
         "desc": "Static libraries for lsof"
       }
     ],
+    "lua-lpeg": [
+      {
+        "name": "lua-lpeg_1.1.0-4_aarch64.deb",
+        "path": "pool/main/l/lua-lpeg/lua-lpeg_1.1.0-4_aarch64.deb",
+        "size": 26544,
+        "package": "lua-lpeg",
+        "version": "1.1.0-4",
+        "desc": "Pattern-matching library for Lua 5.4"
+      }
+    ],
+    "lua51": [
+      {
+        "name": "lua51_5.1.5-7_aarch64.deb",
+        "path": "pool/main/l/lua51/lua51_5.1.5-7_aarch64.deb",
+        "size": 103248,
+        "package": "lua51",
+        "version": "5.1.5-7",
+        "desc": "Shared library for the Lua interpreter (v5.1.x)"
+      }
+    ],
+    "lua51-lpeg": [
+      {
+        "name": "lua51-lpeg_1.1.0-4_aarch64.deb",
+        "path": "pool/main/l/lua51-lpeg/lua51-lpeg_1.1.0-4_aarch64.deb",
+        "size": 21536,
+        "package": "lua51-lpeg",
+        "version": "1.1.0-4",
+        "desc": "Pattern-matching library for Lua 5.1"
+      }
+    ],
+    "lua51-static": [
+      {
+        "name": "lua51-static_5.1.5-7_aarch64.deb",
+        "path": "pool/main/l/lua51-static/lua51-static_5.1.5-7_aarch64.deb",
+        "size": 75400,
+        "package": "lua51-static",
+        "version": "5.1.5-7",
+        "desc": "Static libraries for lua51"
+      }
+    ],
+    "lua52": [
+      {
+        "name": "lua52_5.2.4-15_aarch64.deb",
+        "path": "pool/main/l/lua52/lua52_5.2.4-15_aarch64.deb",
+        "size": 112424,
+        "package": "lua52",
+        "version": "5.2.4-15",
+        "desc": "Shared library for the Lua interpreter (v5.2.x)"
+      }
+    ],
+    "lua52-lpeg": [
+      {
+        "name": "lua52-lpeg_1.1.0-4_aarch64.deb",
+        "path": "pool/main/l/lua52-lpeg/lua52-lpeg_1.1.0-4_aarch64.deb",
+        "size": 21600,
+        "package": "lua52-lpeg",
+        "version": "1.1.0-4",
+        "desc": "Pattern-matching library for Lua 5.2"
+      }
+    ],
+    "lua52-static": [
+      {
+        "name": "lua52-static_5.2.4-15_aarch64.deb",
+        "path": "pool/main/l/lua52-static/lua52-static_5.2.4-15_aarch64.deb",
+        "size": 85132,
+        "package": "lua52-static",
+        "version": "5.2.4-15",
+        "desc": "Static libraries for lua52"
+      }
+    ],
+    "lua53": [
+      {
+        "name": "lua53_5.3.6-6_aarch64.deb",
+        "path": "pool/main/l/lua53/lua53_5.3.6-6_aarch64.deb",
+        "size": 124432,
+        "package": "lua53",
+        "version": "5.3.6-6",
+        "desc": "Shared library for the Lua interpreter (v5.3.x)"
+      }
+    ],
+    "lua53-lpeg": [
+      {
+        "name": "lua53-lpeg_1.1.0-4_aarch64.deb",
+        "path": "pool/main/l/lua53-lpeg/lua53-lpeg_1.1.0-4_aarch64.deb",
+        "size": 21744,
+        "package": "lua53-lpeg",
+        "version": "1.1.0-4",
+        "desc": "Pattern-matching library for Lua 5.3"
+      }
+    ],
+    "lua53-static": [
+      {
+        "name": "lua53-static_5.3.6-6_aarch64.deb",
+        "path": "pool/main/l/lua53-static/lua53-static_5.3.6-6_aarch64.deb",
+        "size": 95600,
+        "package": "lua53-static",
+        "version": "5.3.6-6",
+        "desc": "Static libraries for lua53"
+      }
+    ],
+    "lua54": [
+      {
+        "name": "lua54_5.4.8-6_aarch64.deb",
+        "path": "pool/main/l/lua54/lua54_5.4.8-6_aarch64.deb",
+        "size": 140892,
+        "package": "lua54",
+        "version": "5.4.8-6",
+        "desc": "Shared library for the Lua interpreter (v5.4.x)"
+      }
+    ],
+    "lua54-lpeg": [
+      {
+        "name": "lua54-lpeg_1.1.0-4_aarch64.deb",
+        "path": "pool/main/l/lua54-lpeg/lua54-lpeg_1.1.0-4_aarch64.deb",
+        "size": 21836,
+        "package": "lua54-lpeg",
+        "version": "1.1.0-4",
+        "desc": "Pattern-matching library for Lua 5.4"
+      }
+    ],
+    "lua54-static": [
+      {
+        "name": "lua54-static_5.4.8-6_aarch64.deb",
+        "path": "pool/main/l/lua54-static/lua54-static_5.4.8-6_aarch64.deb",
+        "size": 108212,
+        "package": "lua54-static",
+        "version": "5.4.8-6",
+        "desc": "Static libraries for lua54"
+      }
+    ],
+    "lua55": [
+      {
+        "name": "lua55_5.5.0-2_aarch64.deb",
+        "path": "pool/main/l/lua55/lua55_5.5.0-2_aarch64.deb",
+        "size": 145168,
+        "package": "lua55",
+        "version": "5.5.0-2",
+        "desc": "Shared library for the Lua interpreter (v5.5.x)"
+      }
+    ],
+    "lua55-static": [
+      {
+        "name": "lua55-static_5.5.0-2_aarch64.deb",
+        "path": "pool/main/l/lua55-static/lua55-static_5.5.0-2_aarch64.deb",
+        "size": 114196,
+        "package": "lua55-static",
+        "version": "5.5.0-2",
+        "desc": "Static libraries for lua55"
+      }
+    ],
+    "luajit": [
+      {
+        "name": "luajit_1:2.1.1767980792+g707c12b-1_aarch64.deb",
+        "path": "pool/main/l/luajit/luajit_1:2.1.1767980792+g707c12b-1_aarch64.deb",
+        "size": 289332,
+        "package": "luajit",
+        "version": "1:2.1.1767980792+g707c12b-1",
+        "desc": "Just-In-Time Compiler for Lua"
+      }
+    ],
+    "luajit-static": [
+      {
+        "name": "luajit-static_1:2.1.1767980792+g707c12b-1_aarch64.deb",
+        "path": "pool/main/l/luajit-static/luajit-static_1:2.1.1767980792+g707c12b-1_aarch64.deb",
+        "size": 220744,
+        "package": "luajit-static",
+        "version": "1:2.1.1767980792+g707c12b-1",
+        "desc": "Static libraries for luajit"
+      }
+    ],
+    "luv": [
+      {
+        "name": "luv_1.51.0-2-0_aarch64.deb",
+        "path": "pool/main/l/luv/luv_1.51.0-2-0_aarch64.deb",
+        "size": 49532,
+        "package": "luv",
+        "version": "1.51.0-2-0",
+        "desc": "Bare libuv bindings for lua"
+      }
+    ],
     "lz4": [
       {
         "name": "lz4_1.10.0-1_aarch64.deb",
@@ -2338,6 +2578,16 @@
         "package": "make",
         "version": "4.4.1-1",
         "desc": "Tool to control the generation of non-source files from source files"
+      }
+    ],
+    "mandoc": [
+      {
+        "name": "mandoc_1.14.6-6_aarch64.deb",
+        "path": "pool/main/m/mandoc/mandoc_1.14.6-6_aarch64.deb",
+        "size": 277000,
+        "package": "mandoc",
+        "version": "1.14.6-6",
+        "desc": "Man page viewer from the mandoc toolset"
       }
     ],
     "micro": [
@@ -2440,6 +2690,16 @@
         "package": "ndk-sysroot",
         "version": "29-2",
         "desc": "System header and library files from the Android NDK needed for compiling C programs"
+      }
+    ],
+    "neovim": [
+      {
+        "name": "neovim_0.11.6-2_aarch64.deb",
+        "path": "pool/main/n/neovim/neovim_0.11.6-2_aarch64.deb",
+        "size": 5640792,
+        "package": "neovim",
+        "version": "0.11.6-2",
+        "desc": "Ambitious Vim-fork focused on extensibility and agility (nvim)"
       }
     ],
     "net-tools": [
@@ -3052,6 +3312,96 @@
         "desc": "Recursive directory lister producing a depth indented listing of files"
       }
     ],
+    "tree-sitter": [
+      {
+        "name": "tree-sitter_0.25.10-2_aarch64.deb",
+        "path": "pool/main/t/tree-sitter/tree-sitter_0.25.10-2_aarch64.deb",
+        "size": 1948596,
+        "package": "tree-sitter",
+        "version": "0.25.10-2",
+        "desc": "An incremental parsing system for programming tools"
+      }
+    ],
+    "tree-sitter-c": [
+      {
+        "name": "tree-sitter-c_0.24.1-5_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-c/tree-sitter-c_0.24.1-5_aarch64.deb",
+        "size": 49332,
+        "package": "tree-sitter-c",
+        "version": "0.24.1-5",
+        "desc": "C grammar for tree-sitter"
+      }
+    ],
+    "tree-sitter-lua": [
+      {
+        "name": "tree-sitter-lua_0.4.1_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-lua/tree-sitter-lua_0.4.1_aarch64.deb",
+        "size": 13404,
+        "package": "tree-sitter-lua",
+        "version": "0.4.1",
+        "desc": "Lua grammar for tree-sitter"
+      }
+    ],
+    "tree-sitter-markdown": [
+      {
+        "name": "tree-sitter-markdown_0.5.2-1_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-markdown/tree-sitter-markdown_0.5.2-1_aarch64.deb",
+        "size": 87604,
+        "package": "tree-sitter-markdown",
+        "version": "0.5.2-1",
+        "desc": "Markdown grammar for tree-sitter"
+      }
+    ],
+    "tree-sitter-parsers": [
+      {
+        "name": "tree-sitter-parsers_0.1.0_all.deb",
+        "path": "pool/main/t/tree-sitter-parsers/tree-sitter-parsers_0.1.0_all.deb",
+        "size": 824,
+        "package": "tree-sitter-parsers",
+        "version": "0.1.0",
+        "desc": "A metapackage that provides commonly used treesitter parsers"
+      }
+    ],
+    "tree-sitter-query": [
+      {
+        "name": "tree-sitter-query_0.8.0-1_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-query/tree-sitter-query_0.8.0-1_aarch64.deb",
+        "size": 6372,
+        "package": "tree-sitter-query",
+        "version": "0.8.0-1",
+        "desc": "TS query grammar for tree-sitter"
+      }
+    ],
+    "tree-sitter-static": [
+      {
+        "name": "tree-sitter-static_0.25.10-2_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-static/tree-sitter-static_0.25.10-2_aarch64.deb",
+        "size": 80704,
+        "package": "tree-sitter-static",
+        "version": "0.25.10-2",
+        "desc": "Static libraries for tree-sitter"
+      }
+    ],
+    "tree-sitter-vim": [
+      {
+        "name": "tree-sitter-vim_0.8.0_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-vim/tree-sitter-vim_0.8.0_aarch64.deb",
+        "size": 111760,
+        "package": "tree-sitter-vim",
+        "version": "0.8.0",
+        "desc": "Vimscript grammar for tree-sitter"
+      }
+    ],
+    "tree-sitter-vimdoc": [
+      {
+        "name": "tree-sitter-vimdoc_4.1.0-1_aarch64.deb",
+        "path": "pool/main/t/tree-sitter-vimdoc/tree-sitter-vimdoc_4.1.0-1_aarch64.deb",
+        "size": 21192,
+        "package": "tree-sitter-vimdoc",
+        "version": "4.1.0-1",
+        "desc": "Tree-sitter parser for Vim help files"
+      }
+    ],
     "ttf-dejavu": [
       {
         "name": "ttf-dejavu_2.37-8_all.deb",
@@ -3096,21 +3446,21 @@
     ],
     "utf8proc": [
       {
-        "name": "utf8proc_2.11.0_aarch64.deb",
-        "path": "pool/main/u/utf8proc/utf8proc_2.11.0_aarch64.deb",
-        "size": 58868,
+        "name": "utf8proc_2.11.3_aarch64.deb",
+        "path": "pool/main/u/utf8proc/utf8proc_2.11.3_aarch64.deb",
+        "size": 60192,
         "package": "utf8proc",
-        "version": "2.11.0",
+        "version": "2.11.3",
         "desc": "Library for processing UTF-8 Unicode data"
       }
     ],
     "utf8proc-static": [
       {
-        "name": "utf8proc-static_2.11.0_aarch64.deb",
-        "path": "pool/main/u/utf8proc-static/utf8proc-static_2.11.0_aarch64.deb",
-        "size": 48832,
+        "name": "utf8proc-static_2.11.3_aarch64.deb",
+        "path": "pool/main/u/utf8proc-static/utf8proc-static_2.11.3_aarch64.deb",
+        "size": 49000,
         "package": "utf8proc-static",
-        "version": "2.11.0",
+        "version": "2.11.3",
         "desc": "Static libraries for utf8proc"
       }
     ],
