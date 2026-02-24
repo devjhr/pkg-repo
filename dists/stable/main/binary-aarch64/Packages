@@ -1799,6 +1799,18 @@ Size: 73260
 MD5Sum: 3bc3f2b96fcb0e31920e00206a75aba7
 SHA256: bf714c5cbdee6390876f14fd6473c2f3550fc363dcd1838cbd73f58f379a704a
 
+Package: libjansi
+Version: 2.4.2-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 60
+Homepage: https://fusesource.github.io/jansi/
+Description: A small java library that allows you to use ANSI escape codes to format your console output
+Filename: pool/main/l/libjansi/libjansi_2.4.2-1_aarch64.deb
+Size: 4836
+MD5Sum: 072b98270d956e6b4a33b55ffcebe744
+SHA256: 68b6be986b16784fbb7e493c324345284afe8e7abc39033c0bae12697afc5b1e
+
 Package: libjpeg-turbo
 Version: 3.1.3
 Architecture: aarch64
@@ -3492,6 +3504,19 @@ Filename: pool/main/m/mandoc/mandoc_1.14.6-6_aarch64.deb
 Size: 277000
 MD5Sum: 581c8d636a36d0a2b91bed7dd4aa5207
 SHA256: 2b1c4a4ce8b2af32fb0f5cd65eb10d75a5435b95ac61f8aa3172f117c2746f5c
+
+Package: maven
+Version: 3.9.12
+Architecture: all
+Maintainer: @termux
+Installed-Size: 10480
+Depends: libjansi (>= 2.4.0-1), openjdk-21
+Homepage: https://maven.apache.org/
+Description: A Java software project management and comprehension tool
+Filename: pool/main/m/maven/maven_3.9.12_all.deb
+Size: 8887240
+MD5Sum: 1f1753c15f37204ef07b29e38f73140e
+SHA256: a6127a8236ac7212fa74c3a1acf3ddcc9a3c4c2fde2ea6b4cafa52594d5de046
 
 Package: micro
 Version: 2.0.15

@@ -1338,6 +1338,16 @@
         "desc": "Static libraries for libidn2"
       }
     ],
+    "libjansi": [
+      {
+        "name": "libjansi_2.4.2-1_aarch64.deb",
+        "path": "pool/main/l/libjansi/libjansi_2.4.2-1_aarch64.deb",
+        "size": 4836,
+        "package": "libjansi",
+        "version": "2.4.2-1",
+        "desc": "A small java library that allows you to use ANSI escape codes to format your console output"
+      }
+    ],
     "libjpeg-turbo": [
       {
         "name": "libjpeg-turbo_3.1.3_aarch64.deb",
@@ -2588,6 +2598,16 @@
         "package": "mandoc",
         "version": "1.14.6-6",
         "desc": "Man page viewer from the mandoc toolset"
+      }
+    ],
+    "maven": [
+      {
+        "name": "maven_3.9.12_all.deb",
+        "path": "pool/main/m/maven/maven_3.9.12_all.deb",
+        "size": 8887240,
+        "package": "maven",
+        "version": "3.9.12",
+        "desc": "A Java software project management and comprehension tool"
       }
     ],
     "micro": [
