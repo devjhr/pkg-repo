@@ -30,6 +30,16 @@
         "desc": "The Advanced Linux Sound Architecture (ALSA) - plugins"
       }
     ],
+    "apksigner": [
+      {
+        "name": "apksigner_33.0.1-1_all.deb",
+        "path": "pool/main/a/apksigner/apksigner_33.0.1-1_all.deb",
+        "size": 913340,
+        "package": "apksigner",
+        "version": "33.0.1-1",
+        "desc": "APK signing tool from Android SDK"
+      }
+    ],
     "apr": [
       {
         "name": "apr_1.7.6-2_aarch64.deb",

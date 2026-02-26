@@ -38,6 +38,19 @@ Size: 25620
 MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
+Package: apksigner
+Version: 33.0.1-1
+Architecture: all
+Maintainer: @termux
+Installed-Size: 1036
+Depends: openjdk-21
+Homepage: https://developer.android.com/studio/command-line/apksigner
+Description: APK signing tool from Android SDK
+Filename: pool/main/a/apksigner/apksigner_33.0.1-1_all.deb
+Size: 913340
+MD5Sum: 9dee40b2797452cb9d435d3c00c7a1eb
+SHA256: f5de20c23d880ca85c88b1de3b43ab398554c87f9f58ee8c543ea1e99e7f418b
+
 Package: apr
 Version: 1.7.6-2
 Architecture: aarch64
