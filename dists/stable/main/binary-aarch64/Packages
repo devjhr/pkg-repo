@@ -52,6 +52,22 @@ Size: 25620
 MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
+Package: androstudio
+Version: 1.0
+Architecture: all
+Maintainer: AndroStudio <repo@androstudio.dev>
+Installed-Size: 25
+Depends: openjdk-21, gradle, aapt2, git
+Homepage: https://devjhr.github.io/pkg-repo
+Description: AndroStudio IDE environment setup
+ Meta package that installs and configures all required
+ dependencies for the AndroStudio IDE on Android/Termux.
+ Sets up JAVA_HOME, ANDROID_HOME and PATH automatically.
+Filename: pool/main/a/androstudio/androstudio_1.0_all.deb
+Size: 2160
+MD5Sum: 867d7e76ee4a4d7d3f277f92912ea6e2
+SHA256: 191c405321367b4094213db15ebf1e93bd3920c55d8a93fa03167bf7df2b3e32
+
 Package: apksigner
 Version: 33.0.1-1
 Architecture: all

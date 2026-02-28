@@ -40,6 +40,16 @@
         "desc": "The Advanced Linux Sound Architecture (ALSA) - plugins"
       }
     ],
+    "androstudio": [
+      {
+        "name": "androstudio_1.0_all.deb",
+        "path": "pool/main/a/androstudio/androstudio_1.0_all.deb",
+        "size": 2160,
+        "package": "androstudio",
+        "version": "1.0",
+        "desc": "AndroStudio IDE environment setup"
+      }
+    ],
     "apksigner": [
       {
         "name": "apksigner_33.0.1-1_all.deb",
