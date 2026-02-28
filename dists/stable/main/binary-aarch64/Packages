@@ -57,16 +57,16 @@ Version: 1.1
 Architecture: all
 Maintainer: AndroStudio <repo@androstudio.dev>
 Installed-Size: 49
-Depends: openjdk-21, gradle, aapt2, git
+Depends: openjdk-21, gradle, aapt2, git, which
 Homepage: https://devjhr.github.io/pkg-repo
 Description: AndroStudio IDE environment setup
  Meta package that installs and configures all required
  dependencies for the AndroStudio IDE on Android.
- Sets up JAVA_HOME, ANDROID_HOME and PATH automatically.
+ Sets up ANDROID_HOME, JAVA_HOME and PATH automatically.
 Filename: pool/main/a/androstudio/androstudio_1.1_all.deb
-Size: 6924
-MD5Sum: a8e8d0384ac9a75d4f638e740edf7ca9
-SHA256: b28f76b5acf0bd229791adf2b4efae0f9763bfd0085db76a6888bb98a61b9aa6
+Size: 6408
+MD5Sum: eef89eb65cd1676cf2acac0f6b13d591
+SHA256: 315ba392a591156036d4a5111b061a46ea1d34c4b0c97f795abca7ad0f46c8f3
 
 Package: apksigner
 Version: 33.0.1-1
