@@ -1,3 +1,17 @@
+Package: aapt2
+Version: 2.19-compiler260130142929
+Architecture: aarch64
+Maintainer: AndroStudio <repo@androstudio.dev>
+Installed-Size: 6183
+Homepage: https://developer.android.com/tools/aapt2
+Description: Android Asset Packaging Tool 2
+ High-performance resource compiler for Android development.
+ Built with NDK r26b for aarch64 Android devices.
+Filename: pool/main/a/aapt2/aapt2_2.19-compiler260130142929_aarch64.deb
+Size: 1462680
+MD5Sum: f95feefe931483e290d84b7806c92f18
+SHA256: a7ff384ee8e2e9141cc95bb69c9a31a1be03e171828469734d16383c643393ad
+
 Package: abseil-cpp
 Version: 20250814.1
 Architecture: aarch64

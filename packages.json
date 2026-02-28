@@ -1,5 +1,15 @@
 {
   "a": {
+    "aapt2": [
+      {
+        "name": "aapt2_2.19-compiler260130142929_aarch64.deb",
+        "path": "pool/main/a/aapt2/aapt2_2.19-compiler260130142929_aarch64.deb",
+        "size": 1462680,
+        "package": "aapt2",
+        "version": "2.19-compiler260130142929",
+        "desc": "Android Asset Packaging Tool 2"
+      }
+    ],
     "abseil-cpp": [
       {
         "name": "abseil-cpp_20250814.1_aarch64.deb",
