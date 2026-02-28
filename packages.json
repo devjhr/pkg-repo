@@ -44,7 +44,7 @@
       {
         "name": "androstudio_1.1_all.deb",
         "path": "pool/main/a/androstudio/androstudio_1.1_all.deb",
-        "size": 6968,
+        "size": 6924,
         "package": "androstudio",
         "version": "1.1",
         "desc": "AndroStudio IDE environment setup"

@@ -61,12 +61,12 @@ Depends: openjdk-21, gradle, aapt2, git
 Homepage: https://devjhr.github.io/pkg-repo
 Description: AndroStudio IDE environment setup
  Meta package that installs and configures all required
- dependencies for the AndroStudio IDE on Android/Termux.
+ dependencies for the AndroStudio IDE on Android.
  Sets up JAVA_HOME, ANDROID_HOME and PATH automatically.
 Filename: pool/main/a/androstudio/androstudio_1.1_all.deb
-Size: 6968
-MD5Sum: 5dcae8cd32e13804aef495d579f9ea3c
-SHA256: 7a499578e518226819cfd7762a24cc120903f42e97abd43e300676a210e0c6c8
+Size: 6924
+MD5Sum: a8e8d0384ac9a75d4f638e740edf7ca9
+SHA256: b28f76b5acf0bd229791adf2b4efae0f9763bfd0085db76a6888bb98a61b9aa6
 
 Package: apksigner
 Version: 33.0.1-1
