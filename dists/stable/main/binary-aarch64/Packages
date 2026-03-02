@@ -53,7 +53,7 @@ MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
 Package: androstudio
-Version: 1.1
+Version: 1.2
 Architecture: all
 Maintainer: AndroStudio <repo@androstudio.dev>
 Installed-Size: 49
@@ -63,10 +63,10 @@ Description: AndroStudio IDE environment setup
  Meta package that installs and configures all required
  dependencies for the AndroStudio IDE on Android.
  Sets up ANDROID_HOME, JAVA_HOME and PATH automatically.
-Filename: pool/main/a/androstudio/androstudio_1.1_all.deb
-Size: 6516
-MD5Sum: e4296eba1d84047147771f0deb1f1de5
-SHA256: 2da38013c2e6f7bdcb1935cd059e65c9d44fad6a5414308d0e0e6b317d97b172
+Filename: pool/main/a/androstudio/androstudio_1.2_all.deb
+Size: 6644
+MD5Sum: b8f3a1da2cba04f9ca6275677fd2a039
+SHA256: ac5ecc9b4d4df9805afefbe42f1dcaef5d049b4fda788ba79bcd746586f893f7
 
 Package: apksigner
 Version: 33.0.1-1
