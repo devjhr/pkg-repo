@@ -64,9 +64,9 @@ Description: AndroStudio IDE environment setup
  dependencies for the AndroStudio IDE on Android.
  Sets up ANDROID_HOME, JAVA_HOME and PATH automatically.
 Filename: pool/main/a/androstudio/androstudio_1.1_all.deb
-Size: 6408
-MD5Sum: eef89eb65cd1676cf2acac0f6b13d591
-SHA256: 315ba392a591156036d4a5111b061a46ea1d34c4b0c97f795abca7ad0f46c8f3
+Size: 6516
+MD5Sum: e4296eba1d84047147771f0deb1f1de5
+SHA256: 2da38013c2e6f7bdcb1935cd059e65c9d44fad6a5414308d0e0e6b317d97b172
 
 Package: apksigner
 Version: 33.0.1-1
