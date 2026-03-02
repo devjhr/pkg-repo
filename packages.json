@@ -2866,6 +2866,16 @@
     ]
   },
   "p": {
+    "p7zip": [
+      {
+        "name": "p7zip_17.06-1_aarch64.deb",
+        "path": "pool/main/p/p7zip/p7zip_17.06-1_aarch64.deb",
+        "size": 1774336,
+        "package": "p7zip",
+        "version": "17.06-1",
+        "desc": "Command-line version of the 7zip compressed file archiver"
+      }
+    ],
     "patch": [
       {
         "name": "patch_2.8-1_aarch64.deb",
