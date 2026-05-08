@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-AndroStudio Repo Generator v2.1
+AndroStudio Repo Generator v2.2
 ================================
 Based on termux-apt-repo by Grimler91
 Modified for AndroStudio pkg-repo structure:
@@ -569,9 +569,10 @@ def cleanup_large_files(pool_dir):
 
 
 def main():
-    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v2.1')
-    parser.add_argument('--input', '-i', default=None,
-                        help='Import .deb files from this folder into pool/main/ first')
+    parser = argparse.ArgumentParser(description='AndroStudio Repo Generator v2.2')
+    
+    parser.add_argument('--input', '-i', default=str(Path(__file__).parent / 'pkg'),
+                    help='Import .deb files from this folder into pool/main/ first (default: pkg/ next to script)')
     parser.add_argument('--repo', '-r', default=str(Path(__file__).parent),
                         help='Repo root folder (default: script directory)')
     parser.add_argument('--release', '-R', default=None, metavar='TAG',
@@ -587,7 +588,7 @@ def main():
 
     print()
     print("╔══════════════════════════════════════════╗")
-    print("║   AndroStudio Repo Generator  v2.1       ║")
+    print("║   AndroStudio Repo Generator  v2.2       ║")
     print("╚══════════════════════════════════════════╝")
     print()
     print(f"  Repo    : {repo_root}")
@@ -607,8 +608,12 @@ def main():
         return
 
     if args.input:
-        print(f"Import  Importing from {args.input} ...")
-        import_debs(args.input, pool_dir)
+        input_path = Path(args.input)
+        if input_path.exists():
+            print(f"Import  Importing from {args.input} ...")
+            import_debs(args.input, pool_dir)
+        else:
+            print(f"Import  Skipping — folder not found: {args.input}")
         print()
 
     print("Build   Scanning pool/main/ ...")
