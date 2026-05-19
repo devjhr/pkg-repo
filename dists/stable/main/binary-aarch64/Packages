@@ -3735,6 +3735,20 @@ Size: 18144
 MD5Sum: 9d307fd1032b2be5732bf218a5d9e2b4
 SHA256: ef5decc823ea3f9d26a12ee48de86ee8cd9acf2ff3dc42b2fee495da7bb7bb40
 
+Package: npm
+Version: 11.10.1
+Architecture: all
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 15988
+Depends: nodejs | nodejs-lts
+Conflicts: nodejs (<= 25.3.0), nodejs-lts (<= 24.13.0)
+Homepage: https://docs.npmjs.com/cli/
+Description: The package manager for JavaScript
+Filename: pool/main/n/npm/npm_11.10.1_all.deb
+Size: 1750836
+MD5Sum: 4808ebf9fa94d2c912fa4ce0d9ea89ae
+SHA256: a0a5a81a3c869363e8385a56fa92111cd052fdf32c39930136ae0c24913a9622
+
 Package: openjdk-17
 Version: 17.0.18
 Architecture: aarch64

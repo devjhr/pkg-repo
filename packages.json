@@ -2771,6 +2771,16 @@
         "version": "4.0+really3.10.2",
         "desc": "Low level cryptographic tools"
       }
+    ],
+    "npm": [
+      {
+        "name": "npm_11.10.1_all.deb",
+        "path": "pool/main/n/npm/npm_11.10.1_all.deb",
+        "size": 1750836,
+        "package": "npm",
+        "version": "11.10.1",
+        "desc": "The package manager for JavaScript"
+      }
     ]
   },
   "o": {
