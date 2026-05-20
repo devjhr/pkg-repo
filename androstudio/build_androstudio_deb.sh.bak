@@ -1,0 +1,206 @@
+#!/bin/bash
+# ╔══════════════════════════════════════════════════════════════╗
+# ║   build-androstudio-deb.sh — Build AndroStudio meta package  ║
+# ╚══════════════════════════════════════════════════════════════╝
+#
+# Usage:
+#   Place this file and 'androstudio' CLI in the same folder
+#   chmod +x build-androstudio-deb.sh androstudio
+#   ./build-androstudio-deb.sh
+#
+# Output:
+#   androstudio_1.1_all.deb
+
+set -e
+
+PKG_NAME="androstudio"
+PKG_VERSION="1.2"
+PKG_ARCH="all"
+PKG_MAINTAINER="AndroStudio <repo@androstudio.dev>"
+PKG_DEPENDS="openjdk-21, gradle, aapt2, git, which"
+PKG_DESCRIPTION="AndroStudio IDE environment setup
+ Meta package that installs and configures all required
+ dependencies for the AndroStudio IDE on Android.
+ Sets up ANDROID_HOME, JAVA_HOME and PATH automatically."
+PKG_HOMEPAGE="https://devjhr.github.io/pkg-repo"
+PREFIX="/data/data/com.jahangir/files/usr"
+
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+BUILD_DIR="$SCRIPT_DIR/build-androstudio"
+PKG_DIR="$BUILD_DIR/pkg"
+DEB_NAME="${PKG_NAME}_${PKG_VERSION}_${PKG_ARCH}.deb"
+
+echo ""
+echo "╔══════════════════════════════════════════════════════════════╗"
+echo "║   Building AndroStudio .deb package                          ║"
+echo "╚══════════════════════════════════════════════════════════════╝"
+echo ""
+echo "  Build dir : $BUILD_DIR"
+echo "  Output    : $SCRIPT_DIR/$DEB_NAME"
+echo "  Depends   : $PKG_DEPENDS"
+echo ""
+
+# ── Check androstudio CLI exists ──────────────────────────────
+if [ ! -f "$SCRIPT_DIR/androstudio" ]; then
+    echo "  ERROR: 'androstudio' CLI script not found in $SCRIPT_DIR"
+    exit 1
+fi
+
+# ── Setup build dir ───────────────────────────────────────────
+rm -rf "$BUILD_DIR"
+mkdir -p "$PKG_DIR/DEBIAN"
+mkdir -p "$PKG_DIR${PREFIX}/bin"
+mkdir -p "$PKG_DIR${PREFIX}/etc/androstudio"
+mkdir -p "$PKG_DIR${PREFIX}/share/doc/androstudio"
+
+# ── Copy androstudio CLI ──────────────────────────────────────
+echo "  Copying androstudio CLI..."
+cp "$SCRIPT_DIR/androstudio" "$PKG_DIR${PREFIX}/bin/androstudio"
+echo "  OK  androstudio → $PREFIX/bin/androstudio"
+
+# ── Write postinst ────────────────────────────────────────────
+echo "  Writing postinst..."
+cat > "$PKG_DIR/DEBIAN/postinst" << 'POSTINST'
+#!/bin/bash
+echo ""
+echo "╔══════════════════════════════════════════════════════════╗"
+echo "║   AndroStudio — Configuring environment...               ║"
+echo "╚══════════════════════════════════════════════════════════╝"
+echo ""
+
+# ── Detect shell config ───────────────────────────────────────
+if [ -f "$HOME/.zshrc" ]; then
+    SHELL_RC="$HOME/.zshrc"
+else
+    SHELL_RC="$HOME/.bashrc"
+    touch "$SHELL_RC"
+fi
+echo "  Shell config : $SHELL_RC"
+
+# ── Create android-sdk dir ────────────────────────────────────
+mkdir -p "$HOME/android-sdk"
+echo "  ANDROID_HOME : $HOME/android-sdk"
+echo "  JAVA_HOME    : auto-detected via readlink + which"
+
+# ── Write env block ───────────────────────────────────────────
+sed -i '/# ── AndroStudio Environment/,/# ── End AndroStudio/d' "$SHELL_RC" 2>/dev/null
+cat >> "$SHELL_RC" << 'ENV'
+
+# ── AndroStudio Environment ────────────────────────────────
+export ANDROID_HOME="$HOME/android-sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+
+export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+for ver in $(ls -r $ANDROID_HOME/build-tools/ 2>/dev/null); do
+    export PATH="$ANDROID_HOME/build-tools/$ver:$PATH"
+done
+# ── End AndroStudio ─────────────────────────────────────────
+ENV
+echo "  Environment variables written to $SHELL_RC"
+
+# ── Apply to current session ──────────────────────────────────
+export ANDROID_HOME="$HOME/android-sdk"
+export ANDROID_SDK_ROOT="$ANDROID_HOME"
+export PATH="$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH"
+export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))) 2>/dev/null)"
+export PATH="$JAVA_HOME/bin:$PATH"
+
+# ── Verify tools ──────────────────────────────────────────────
+echo ""
+echo "  Verifying tools..."
+check() {
+    local cmd="$1" name="$2"
+    if command -v "$cmd" &>/dev/null; then
+        local ver; ver=$("$cmd" --version 2>/dev/null | head -1 || echo "ok")
+        printf "  \033[0;32m✓\033[0m %-12s %s\n" "$name" "$ver"
+    else
+        printf "  \033[0;31m✗\033[0m %-12s not found\n" "$name"
+    fi
+}
+check java   "Java"
+check gradle "Gradle"
+check aapt2  "aapt2"
+check git    "Git"
+
+echo ""
+printf "  \033[0;32m✓\033[0m AndroStudio environment ready!\n"
+echo ""
+echo "  ┌─────────────────────────────────────────────────────┐"
+echo "  │  Getting started:                                   │"
+echo "  │                                                     │"
+echo "  │  1. source ~/.bashrc                                │"
+echo "  │  2. androstudio setup       ← download Android SDK │"
+echo "  │  3. androstudio install ndk ← install NDK + cmake  │"
+echo "  │                                                     │"
+echo "  │  Other commands:                                    │"
+echo "  │    androstudio status       ← see installed tools  │"
+echo "  │    androstudio doctor       ← check for issues     │"
+echo "  │    androstudio -help        ← show all commands    │"
+echo "  └─────────────────────────────────────────────────────┘"
+echo ""
+POSTINST
+
+# ── Write prerm ───────────────────────────────────────────────
+echo "  Writing prerm..."
+cat > "$PKG_DIR/DEBIAN/prerm" << 'PRERM'
+#!/bin/bash
+echo "  Removing AndroStudio environment config..."
+for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
+    if [ -f "$rc" ]; then
+        sed -i '/# ── AndroStudio Environment/,/# ── End AndroStudio/d' "$rc"
+        echo "  Cleaned $rc"
+    fi
+done
+PRERM
+
+# ── Write control file ────────────────────────────────────────
+echo "  Writing control file..."
+INSTALLED_SIZE=$(du -sk "$PKG_DIR${PREFIX}" | cut -f1)
+cat > "$PKG_DIR/DEBIAN/control" << EOF
+Package: $PKG_NAME
+Version: $PKG_VERSION
+Architecture: $PKG_ARCH
+Maintainer: $PKG_MAINTAINER
+Installed-Size: $INSTALLED_SIZE
+Depends: $PKG_DEPENDS
+Homepage: $PKG_HOMEPAGE
+Description: $PKG_DESCRIPTION
+EOF
+
+# ── Fix permissions ───────────────────────────────────────────
+chmod 755 "$PKG_DIR/DEBIAN"
+find "$PKG_DIR" -type d | xargs chmod 755
+find "$PKG_DIR" -type f | xargs chmod 644
+chmod 755 "$PKG_DIR/DEBIAN/postinst"
+chmod 755 "$PKG_DIR/DEBIAN/prerm"
+chmod 755 "$PKG_DIR${PREFIX}/bin/androstudio"
+
+# ── Build .deb ────────────────────────────────────────────────
+echo "  Building .deb..."
+cd "$SCRIPT_DIR"
+dpkg-deb --build --root-owner-group "$PKG_DIR" "$DEB_NAME"
+
+# ── Result ────────────────────────────────────────────────────
+if [ -f "$DEB_NAME" ]; then
+    SIZE=$(du -sh "$DEB_NAME" | cut -f1)
+    echo ""
+    echo "  ✓ Built : $DEB_NAME ($SIZE)"
+    echo ""
+    echo "  Control:"
+    dpkg-deb -I "$DEB_NAME" | sed 's/^/    /'
+    echo ""
+    echo "  Next steps:"
+    echo "    ~/pkg-add.sh $SCRIPT_DIR/$DEB_NAME"
+    echo "    python ~/pkg-repo/generate_repo.py --input ~/pkg"
+    echo "    git -C ~/pkg-repo add . && git -C ~/pkg-repo commit -m 'update androstudio' && git -C ~/pkg-repo push"
+    echo ""
+else
+    echo "  ERROR: Build failed!"
+    exit 1
+fi
+
+rm -rf "$BUILD_DIR"
+
