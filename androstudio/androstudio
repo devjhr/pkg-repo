@@ -107,8 +107,6 @@ cmd_install_pkg() {
         echo -e "  ${BOLD}AndroStudio — Installing all packages${RESET}"
         divider
         for entry in "${RELEASE_PACKAGES[@]}"; do
-            local name
-            name=$(echo "$entry" | cut -d'|' -f1)
             _do_install_pkg "$entry"
         done
         return
@@ -144,7 +142,6 @@ _do_install_pkg() {
     file=$(echo "$entry" | cut -d'|' -f2)
     url=$(echo "$entry"  | cut -d'|' -f3)
 
-    # Check already installed
     if dpkg -l "$name" &>/dev/null 2>&1; then
         success "$name already installed"
         return
@@ -173,16 +170,44 @@ cmd_setup() {
     echo -e "  ${BOLD}AndroStudio — Full Environment Setup${RESET}"
     divider
 
-    check_curl; check_unzip; check_java
+    check_curl; check_unzip
 
     local shell_rc
     shell_rc=$(detect_shell_rc)
 
-    step "1/6" "Creating SDK directory structure..."
+    # ── Pre-step 1: openjdk-21 ────────────────────────────────
+    step "1/8" "Installing openjdk-21..."
+    local jdk_entry=""
+    for entry in "${RELEASE_PACKAGES[@]}"; do
+        [[ "$entry" == openjdk-21* ]] && jdk_entry="$entry" && break
+    done
+    if [ -n "$jdk_entry" ]; then
+        _do_install_pkg "$jdk_entry"
+    else
+        warn "openjdk-21 not found in package list"
+    fi
+
+    check_java
+
+    # ── Pre-step 2: gradle ────────────────────────────────────
+    step "2/8" "Installing gradle..."
+    local gradle_entry=""
+    for entry in "${RELEASE_PACKAGES[@]}"; do
+        [[ "$entry" == gradle* ]] && gradle_entry="$entry" && break
+    done
+    if [ -n "$gradle_entry" ]; then
+        _do_install_pkg "$gradle_entry"
+    else
+        warn "gradle not found in package list"
+    fi
+
+    # ── Step 3: SDK directory ─────────────────────────────────
+    step "3/8" "Creating SDK directory structure..."
     mkdir -p "$SDK_DIR"/{cmdline-tools,platform-tools,platforms,build-tools,ndk,cmake,licenses}
     success "SDK root: $SDK_DIR"
 
-    step "2/6" "Downloading Android cmdline-tools..."
+    # ── Step 4: cmdline-tools ─────────────────────────────────
+    step "4/8" "Downloading Android cmdline-tools..."
     if [ -f "$SDKMANAGER" ]; then
         success "cmdline-tools already installed"
     else
@@ -202,7 +227,8 @@ cmd_setup() {
     fi
     chmod -R 755 "$CMDTOOLS_DIR/bin/" 2>/dev/null
 
-    step "3/6" "Accepting Android SDK licenses..."
+    # ── Step 5: Accept licenses ───────────────────────────────
+    step "5/8" "Accepting Android SDK licenses..."
     export ANDROID_HOME="$SDK_DIR"
     export ANDROID_SDK_ROOT="$SDK_DIR"
     export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
@@ -211,10 +237,12 @@ cmd_setup() {
         && success "All licenses accepted" \
         || warn "Some licenses may not have been accepted"
 
-    step "4/6" "Installing platform-tools..."
+    # ── Step 6: platform-tools ────────────────────────────────
+    step "6/8" "Installing platform-tools..."
     "$SDKMANAGER" "platform-tools" && success "platform-tools installed" || warn "Failed"
 
-    step "5/6" "Installing latest platform and build-tools..."
+    # ── Step 7: platform + build-tools ───────────────────────
+    step "7/8" "Installing latest platform and build-tools..."
     local latest_platform latest_buildtools
     latest_platform=$("$SDKMANAGER" --list 2>/dev/null | grep "platforms;android-" | grep -v "preview\|beta\|rc" | awk '{print $1}' | sort -t- -k2 -Vr | head -1)
     latest_buildtools=$("$SDKMANAGER" --list 2>/dev/null | grep "build-tools;" | grep -v "preview\|beta\|rc" | awk '{print $1}' | sort -t\; -k2 -Vr | head -1)
@@ -225,7 +253,8 @@ cmd_setup() {
     "$SDKMANAGER" "$latest_platform" "$latest_buildtools" \
         && success "Platform + build-tools installed" || warn "Partially failed"
 
-    step "6/6" "Writing environment variables..."
+    # ── Step 8: Write env ─────────────────────────────────────
+    step "8/8" "Writing environment variables..."
     write_env "$shell_rc"
     success "Written to $shell_rc"
 
@@ -294,7 +323,6 @@ cmd_install_ndk() {
         success "NDK $ndk_name already installed at $ndk_install_dir"
         echo ""
     else
-        # Check if already extracted in home dir
         local home_ndk=""
         [ -d "$HOME_DIR/$ndk_ver" ]              && home_ndk="$HOME_DIR/$ndk_ver"
         [ -d "$HOME_DIR/android-ndk-$ndk_name" ] && home_ndk="$HOME_DIR/android-ndk-$ndk_name"
@@ -584,7 +612,7 @@ case "${1:-}" in
         echo -e "  ${MUTED}    Show NDK versions and install selected + cmake${RESET}"
         echo ""
         echo -e "  ${CYAN}androstudio setup${RESET}"
-        echo -e "  ${MUTED}    Download Android SDK, platform, build-tools, licenses${RESET}"
+        echo -e "  ${MUTED}    Install openjdk-21, gradle, Android SDK, platform, build-tools${RESET}"
         echo ""
         echo -e "  ${CYAN}androstudio status${RESET}"
         echo -e "  ${MUTED}    Show all installed tools and components${RESET}"

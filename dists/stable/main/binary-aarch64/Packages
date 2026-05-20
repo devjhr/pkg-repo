@@ -61,12 +61,13 @@ Depends: git, which, curl, dpkg
 Homepage: https://devjhr.github.io/pkg-repo
 Description: AndroStudio IDE environment setup
  Installs and configures all required dependencies for
- AndroStudio IDE on Android. Downloads openjdk-21, gradle
- from GitHub Releases and sets up ANDROID_HOME, JAVA_HOME.
+ AndroStudio IDE on Android. Use 'androstudio setup' to
+ download openjdk-21, gradle, Android SDK, platform and
+ build-tools and set up ANDROID_HOME and JAVA_HOME.
 Filename: pool/main/a/androstudio/androstudio_2.4_all.deb
-Size: 7440
-MD5Sum: fa7246cd2553f29ea5c33c6634cb6817
-SHA256: f8fdf274f62a7b3f643c0d5542cbc8b97944028d80cf2d6365feedaeff9eca5c
+Size: 6660
+MD5Sum: fd34df26a412a9ccc6ec5af228001473
+SHA256: 4bba62484da28fd666bcf0a72520925dfa8b89c157c2315f96f717149ea21a0c
 
 Package: apksigner
 Version: 33.0.1-1
