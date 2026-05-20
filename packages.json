@@ -42,11 +42,11 @@
     ],
     "androstudio": [
       {
-        "name": "androstudio_2.3_all.deb",
-        "path": "pool/main/a/androstudio/androstudio_2.3_all.deb",
+        "name": "androstudio_2.4_all.deb",
+        "path": "pool/main/a/androstudio/androstudio_2.4_all.deb",
         "size": 7440,
         "package": "androstudio",
-        "version": "2.3",
+        "version": "2.4",
         "desc": "AndroStudio IDE environment setup"
       }
     ],

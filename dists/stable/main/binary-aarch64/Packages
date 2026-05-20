@@ -53,7 +53,7 @@ MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
 Package: androstudio
-Version: 2.3
+Version: 2.4
 Architecture: all
 Maintainer: AndroStudio <repo@androstudio.dev>
 Installed-Size: 53
@@ -63,10 +63,10 @@ Description: AndroStudio IDE environment setup
  Installs and configures all required dependencies for
  AndroStudio IDE on Android. Downloads openjdk-21, gradle
  from GitHub Releases and sets up ANDROID_HOME, JAVA_HOME.
-Filename: pool/main/a/androstudio/androstudio_2.3_all.deb
+Filename: pool/main/a/androstudio/androstudio_2.4_all.deb
 Size: 7440
-MD5Sum: 73977916aa13dc8b8f3dfe3a42718171
-SHA256: 9f315f2904446aab527acad8b9d82162b267010970bac8e7e485e0d02ff4bccb
+MD5Sum: fa7246cd2553f29ea5c33c6634cb6817
+SHA256: f8fdf274f62a7b3f643c0d5542cbc8b97944028d80cf2d6365feedaeff9eca5c
 
 Package: apksigner
 Version: 33.0.1-1
