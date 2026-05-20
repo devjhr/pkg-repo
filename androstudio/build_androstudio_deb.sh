@@ -14,7 +14,7 @@ PKG_NAME="androstudio"
 PKG_VERSION="2.4"
 PKG_ARCH="all"
 PKG_MAINTAINER="AndroStudio <repo@androstudio.dev>"
-PKG_DEPENDS="git, which, curl, dpkg"
+PKG_DEPENDS="git, which, curl, dpkg, aapt2"
 PKG_DESCRIPTION="AndroStudio IDE environment setup
  Installs and configures all required dependencies for
  AndroStudio IDE on Android. Use 'androstudio setup' to
@@ -24,6 +24,7 @@ PKG_HOMEPAGE="https://devjhr.github.io/pkg-repo"
 PREFIX="/data/data/com.jahangir/files/usr"
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+OUTPUT_DIR="$(dirname "$SCRIPT_DIR")/pkg"
 BUILD_DIR="$SCRIPT_DIR/build-androstudio"
 PKG_DIR="$BUILD_DIR/pkg"
 DEB_NAME="${PKG_NAME}_${PKG_VERSION}_${PKG_ARCH}.deb"
@@ -34,7 +35,7 @@ echo "║   Building AndroStudio .deb package v$PKG_VERSION                     
 echo "╚══════════════════════════════════════════════════════════════╝"
 echo ""
 echo "  Build dir : $BUILD_DIR"
-echo "  Output    : $SCRIPT_DIR/$DEB_NAME"
+echo "  Output    : $OUTPUT_DIR/$DEB_NAME"
 echo "  Depends   : $PKG_DEPENDS"
 echo ""
 
@@ -112,22 +113,21 @@ chmod 755 "$PKG_DIR${PREFIX}/bin/androstudio"
 
 # ── Build .deb ────────────────────────────────────────────────
 echo "  Building .deb..."
-cd "$SCRIPT_DIR"
-dpkg-deb --build --root-owner-group "$PKG_DIR" "$DEB_NAME"
+mkdir -p "$OUTPUT_DIR"
+dpkg-deb --build --root-owner-group "$PKG_DIR" "$OUTPUT_DIR/$DEB_NAME"
 
 # ── Result ────────────────────────────────────────────────────
-if [ -f "$DEB_NAME" ]; then
-    SIZE=$(du -sh "$DEB_NAME" | cut -f1)
+if [ -f "$OUTPUT_DIR/$DEB_NAME" ]; then
+    SIZE=$(du -sh "$OUTPUT_DIR/$DEB_NAME" | cut -f1)
     echo ""
-    echo "  ✓ Built : $DEB_NAME ($SIZE)"
+    echo "  ✓ Built : $OUTPUT_DIR/$DEB_NAME ($SIZE)"
     echo ""
     echo "  Control:"
-    dpkg-deb -I "$DEB_NAME" | sed 's/^/    /'
+    dpkg-deb -I "$OUTPUT_DIR/$DEB_NAME" | sed 's/^/    /'
     echo ""
     echo "  Next steps:"
-    echo "    ~/pkg-add.sh $SCRIPT_DIR/$DEB_NAME"
-    echo "    python ~/pkg-repo/generate_repo.py --input ~/pkg"
-    echo "    git -C ~/pkg-repo add . && git -C ~/pkg-repo commit -m 'androstudio v2.4' && git -C ~/pkg-repo push"
+    echo "    python $(dirname "$SCRIPT_DIR")/generate_repo.py --input $(dirname "$SCRIPT_DIR")/pkg"
+    echo "    git -C $(dirname "$SCRIPT_DIR") add . && git -C $(dirname "$SCRIPT_DIR") commit -m 'androstudio v$PKG_VERSION' && git -C $(dirname "$SCRIPT_DIR") push"
     echo ""
 else
     echo "  ERROR: Build failed!"

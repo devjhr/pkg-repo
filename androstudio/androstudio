@@ -410,20 +410,20 @@ cmd_status() {
     divider
 
     show_tool() {
-        local name="$1" cmd="$2" pkg="$3"
+        local name="$1" cmd="$2" fix="$3"
         if command -v "$cmd" &>/dev/null; then
             local ver; ver=$("$cmd" --version 2>/dev/null | head -1 || echo "")
             echo -e "  ${GREEN}✓${RESET} $(printf '%-16s' "$name") ${MUTED}$ver${RESET}"
         else
-            echo -e "  ${RED}✗${RESET} $(printf '%-16s' "$name") ${MUTED}not installed — androstudio install pkg $pkg${RESET}"
+            echo -e "  ${RED}✗${RESET} $(printf '%-16s' "$name") ${MUTED}not installed — $fix${RESET}"
         fi
     }
 
     echo -e "\n  ${BOLD}Core Tools${RESET}"
-    show_tool "java"   "java"   "openjdk-21"
-    show_tool "gradle" "gradle" "gradle"
-    show_tool "aapt2"  "aapt2"  "aapt2"
-    show_tool "git"    "git"    "git"
+    show_tool "java"   "java"   "androstudio install pkg openjdk-21"
+    show_tool "gradle" "gradle" "androstudio install pkg gradle"
+    show_tool "aapt2"  "aapt2"  "pkg install aapt2"
+    show_tool "git"    "git"    "pkg install git"
 
     echo -e "\n  ${BOLD}Environment${RESET}"
     local java_home; java_home="$(dirname $(dirname $(readlink -f $(which java))) 2>/dev/null)"
