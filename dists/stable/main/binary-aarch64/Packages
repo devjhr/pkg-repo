@@ -347,9 +347,9 @@ Depends: ca-certificates (= 1:2025.12.02)
 Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates (java keystore format)
 Filename: pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.12.02_all.deb
-Size: 113812
-MD5Sum: 2178ce195cd323f83478440c80b1e509
-SHA256: 2a885f7ee46137dfd15193bd30afb6921454d76218f4c6252b89254738c4caca
+Size: 113816
+MD5Sum: 017c1a2390cf638fa7add84a80f3b2be
+SHA256: 094d4dfe843e7600d72540f414d33414ec0b7671b50a7d915423902ec9e08166
 
 Package: check
 Version: 0.15.2-3
@@ -460,6 +460,18 @@ Filename: pool/main/c/curl/curl_8.18.0-1_aarch64.deb
 Size: 237060
 MD5Sum: ce316c34ec78a8cd8e6491f76e57c42e
 SHA256: 748b3f44590811f97ee6a0915b23ed3df2ebe8c68f62dd1ce5ed0ea46b87b310
+
+Package: dart
+Version: 3.11.0
+Architecture: aarch64
+Maintainer: @0x1ACA663
+Installed-Size: 378112
+Homepage: https://dart.dev/
+Description: Dart is a general-purpose programming language
+Filename: pool/main/d/dart/dart_3.11.0_aarch64.deb
+Size: 86025208
+MD5Sum: f06dfc92c7fa0b2d956a651886affb55
+SHA256: 9bb1e87ff60f3af652a9b6761c203cf9bedbb63ca5c2c7598aaa276c881ac2a6
 
 Package: dash
 Version: 0.5.12-2
@@ -977,6 +989,45 @@ Filename: pool/main/g/gnutls/gnutls_3.8.11_aarch64.deb
 Size: 175844
 MD5Sum: 37ebe4d445dd55bbdf5543eb0042e3ed
 SHA256: b560adad0e4aa893a366bbc894a3c719697231b015a5b7c240a70225a29e1c96
+
+Package: golang
+Version: 3:1.26.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 213176
+Depends: clang
+Recommends: resolv-conf
+Homepage: https://go.dev/
+Description: Go programming language compiler
+Filename: pool/main/g/golang/golang_3:1.26.0_aarch64.deb
+Size: 34284180
+MD5Sum: be2f39a4a87d34c1c64db59076fc2326
+SHA256: e403025356027cf21231df68bdf1e312d2b1237c29763967371b96d1fbded319
+
+Package: golang-doc
+Version: 3:1.26.0
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 472
+Depends: golang (= 3:1.26.0)
+Homepage: https://go.dev/
+Description: Go programming language - documentation
+Filename: pool/main/g/golang-doc/golang-doc_3:1.26.0_aarch64.deb
+Size: 93664
+MD5Sum: 1cf95ffb3284fded944f8fe38300df7e
+SHA256: d094d426e53ec81687058286010220babbf2238e8c2b152042132c331df67da5
+
+Package: gopls
+Version: 0.21.1
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 30312
+Homepage: https://github.com/golang/tools
+Description: The official Go language server
+Filename: pool/main/g/gopls/gopls_0.21.1_aarch64.deb
+Size: 7232080
+MD5Sum: 20872064a6677e2031c57f56290c9dfd
+SHA256: 47cf307eceaa509a27f56d1a28e1eaa9455d72f1d934f3f314d786f3d9c716f1
 
 Package: gpgv
 Version: 2.5.11
@@ -3688,15 +3739,15 @@ Package: ncurses
 Version: 6.6.20260124+really6.5.20250830
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1608
+Installed-Size: 1604
 Breaks: ncurses-dev, ncurses-utils (<< 6.1.20190511-4)
 Replaces: ncurses-dev, ncurses-utils (<< 6.1.20190511-4)
 Homepage: https://invisible-island.net/ncurses/
 Description: Library for text-based user interfaces in a terminal-independent manner
 Filename: pool/main/n/ncurses/ncurses_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 557664
-MD5Sum: b76380686373d34c15715d5e1cc84abf
-SHA256: 68a0d03758c05ad6e5d1bbdb498aa1ea39dcb385bccfc6ed4a4e88edca5047a8
+Size: 558392
+MD5Sum: 5e83eb5332389a17a3305334dd1f041c
+SHA256: 63af85cca0c8df21bcd33c29be6f2365d1678a3df5a310e8a751831f41e3cdcf
 
 Package: ncurses-static
 Version: 6.6.20260124+really6.5.20250830
@@ -3707,9 +3758,9 @@ Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for ncurses
 Filename: pool/main/n/ncurses-static/ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 154032
-MD5Sum: 8c4391e5d23902413e01d24f609e9935
-SHA256: cc2e25072c677ac6a9f2a13a0e86c8b0b79292c8b1eb875fc2a2d0c5ea0c1887
+Size: 154084
+MD5Sum: 5fb4fcfe1ef01ee1e85ac37c4b8f11c7
+SHA256: 474d8ad1485af898797b74fd8d8bb789743fcf0319231765180164f2ad547fb8
 
 Package: ncurses-ui-libs
 Version: 6.6.20260124+really6.5.20250830
@@ -3735,9 +3786,9 @@ Depends: ncurses-ui-libs, ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for terminal user interfaces based on ncurses
 Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 39504
-MD5Sum: 45f493df4ff674c4e55b445fb0ab6816
-SHA256: 2c259239df047d4b37973bf421bb4fb4df62dd395f6fc5655831c7fb80acabdc
+Size: 39536
+MD5Sum: 5875c2fcffa9cdbcdd66e5842fac9c1b
+SHA256: b451d8ab459ade5e335a396ae951a96543645a55303b427ec72352a6e2211353
 
 Package: ncurses-utils
 Version: 6.6.20260124+really6.5.20250830
@@ -3748,9 +3799,9 @@ Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Tools for working with terminals
 Filename: pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 89012
-MD5Sum: 59abce3ac04be50c977371bd9ead7aa5
-SHA256: 7754c9fa39c864fbd6e2f3c4770e4800b774a48f9bdf3ce8b45b82ebf28c0730
+Size: 89032
+MD5Sum: d4d0f75b0a9653fb62234c6c614b5dcc
+SHA256: 5ae5fa56e76f9122ad235eb2a28fc44cf659cd928d271cc266ae2640e65ba61e
 
 Package: ndk-sysroot
 Version: 29-2
@@ -4294,6 +4345,19 @@ Size: 1000
 MD5Sum: 1b1250ae1ef5fed1f76e80e915a9e521
 SHA256: eff427469751f7ba21c2d8072a7f8a5ad2c472ebafe5218da950cc84399a8699
 
+Package: rust-analyzer
+Version: 20260216
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 35944
+Depends: rust-src
+Homepage: https://rust-analyzer.github.io/
+Description: A Rust compiler front-end for IDEs
+Filename: pool/main/r/rust-analyzer/rust-analyzer_20260216_aarch64.deb
+Size: 7892236
+MD5Sum: 3fd406f8b8c04a1aa66b0a677759f36f
+SHA256: 1711e2d1fd42c058fa24b467a814f91910531a80e2b873df5ce953c090ba536c
+
 Package: scdaemon
 Version: 2.5.11
 Architecture: aarch64
@@ -4349,6 +4413,19 @@ Filename: pool/main/s/serf-static/serf-static_1.3.10-2_aarch64.deb
 Size: 39252
 MD5Sum: 5ddd5d3dba9a6633be47881cc42687e0
 SHA256: d77ebf94bc70ca5492ad73293eafc3513dfb38f6706fc1f5a4fff9341993e66e
+
+Package: socat
+Version: 1.8.1.1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 712
+Depends: openssl, readline
+Homepage: http://www.dest-unreach.org/socat/
+Description: Relay for bidirectional data transfer between two independent data channels
+Filename: pool/main/s/socat/socat_1.8.1.1_aarch64.deb
+Size: 195672
+MD5Sum: 074b91be09e050f15ab7a083b4cc9f1f
+SHA256: a81606243e1f81c8f9bae7a821a0f05b84464316ef868b424d8d2458f01f2f5b
 
 Package: speexdsp
 Version: 1.2.1-1
