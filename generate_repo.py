@@ -69,7 +69,7 @@ def control_file_contents(debfile):
         print(f"  WARNING: Cannot list contents of '{os.path.basename(debfile)}' - skipping")
         return None
 
-    file_list = file_list.split('\n')
+    file_list = [f.strip() for f in file_list.split('\n')]
 
     if 'control.tar.gz' in file_list:
         ctrl, flag = 'control.tar.gz', '-z'
