@@ -162,6 +162,36 @@
         "desc": "A sh-compatible shell that incorporates useful features from the Korn shell (ksh) and C shell (csh)"
       }
     ],
+    "binutils": [
+      {
+        "name": "binutils_2.46.0-1_aarch64.deb",
+        "path": "pool/main/b/binutils/binutils_2.46.0-1_aarch64.deb",
+        "size": 1172840,
+        "package": "binutils",
+        "version": "2.46.0-1",
+        "desc": "A GNU collection of binary utilities"
+      }
+    ],
+    "binutils-bin": [
+      {
+        "name": "binutils-bin_2.46.0-1_aarch64.deb",
+        "path": "pool/main/b/binutils-bin/binutils-bin_2.46.0-1_aarch64.deb",
+        "size": 1325536,
+        "package": "binutils-bin",
+        "version": "2.46.0-1",
+        "desc": "Collection of binary tools, the main ones being ld, the GNU linker, and as, the GNU assembler"
+      }
+    ],
+    "binutils-cross": [
+      {
+        "name": "binutils-cross_2.46.0-1_aarch64.deb",
+        "path": "pool/main/b/binutils-cross/binutils-cross_2.46.0-1_aarch64.deb",
+        "size": 2305600,
+        "package": "binutils-cross",
+        "version": "2.46.0-1",
+        "desc": "GNU Binutils for cross build on the host (NOT for Termux)"
+      }
+    ],
     "blk-utils": [
       {
         "name": "blk-utils_2.41.2-1_aarch64.deb",
@@ -176,7 +206,7 @@
       {
         "name": "brotli_1.2.0_aarch64.deb",
         "path": "pool/main/b/brotli/brotli_1.2.0_aarch64.deb",
-        "size": 340508,
+        "size": 340400,
         "package": "brotli",
         "version": "1.2.0",
         "desc": "lossless compression algorithm and format (command line utility)"
@@ -186,7 +216,7 @@
       {
         "name": "bzip2_1.0.8-8_aarch64.deb",
         "path": "pool/main/b/bzip2/bzip2_1.0.8-8_aarch64.deb",
-        "size": 26140,
+        "size": 26296,
         "package": "bzip2",
         "version": "1.0.8-8",
         "desc": "Tools for working with bzip2 compression"
@@ -494,7 +524,7 @@
       {
         "name": "fontconfig_2.17.1-1_aarch64.deb",
         "path": "pool/main/f/fontconfig/fontconfig_2.17.1-1_aarch64.deb",
-        "size": 123088,
+        "size": 122956,
         "package": "fontconfig",
         "version": "2.17.1-1",
         "desc": "Library for configuring and customizing font access"
@@ -504,7 +534,7 @@
       {
         "name": "fontconfig-static_2.17.1-1_aarch64.deb",
         "path": "pool/main/f/fontconfig-static/fontconfig-static_2.17.1-1_aarch64.deb",
-        "size": 117884,
+        "size": 117848,
         "package": "fontconfig-static",
         "version": "2.17.1-1",
         "desc": "Static libraries for fontconfig"
@@ -514,7 +544,7 @@
       {
         "name": "fontconfig-utils_2.17.1-1_aarch64.deb",
         "path": "pool/main/f/fontconfig-utils/fontconfig-utils_2.17.1-1_aarch64.deb",
-        "size": 14480,
+        "size": 14348,
         "package": "fontconfig-utils",
         "version": "2.17.1-1",
         "desc": "Fontconfig binaries"
@@ -524,7 +554,7 @@
       {
         "name": "freetype_2.14.1_aarch64.deb",
         "path": "pool/main/f/freetype/freetype_2.14.1_aarch64.deb",
-        "size": 412236,
+        "size": 412448,
         "package": "freetype",
         "version": "2.14.1",
         "desc": "Software font engine capable of producing high-quality output"
@@ -534,7 +564,7 @@
       {
         "name": "freetype-static_2.14.1_aarch64.deb",
         "path": "pool/main/f/freetype-static/freetype-static_2.14.1_aarch64.deb",
-        "size": 302336,
+        "size": 302344,
         "package": "freetype-static",
         "version": "2.14.1",
         "desc": "Static libraries for freetype"
@@ -566,7 +596,7 @@
       {
         "name": "gdbm_1.26-1_aarch64.deb",
         "path": "pool/main/g/gdbm/gdbm_1.26-1_aarch64.deb",
-        "size": 150280,
+        "size": 150128,
         "package": "gdbm",
         "version": "1.26-1",
         "desc": "Library of database functions that use extensible hashing"
@@ -576,7 +606,7 @@
       {
         "name": "gdbm-static_1.26-1_aarch64.deb",
         "path": "pool/main/g/gdbm-static/gdbm-static_1.26-1_aarch64.deb",
-        "size": 32196,
+        "size": 31960,
         "package": "gdbm-static",
         "version": "1.26-1",
         "desc": "Static libraries for gdbm"
@@ -872,7 +902,7 @@
       {
         "name": "libandroid-posix-semaphore_0.1-4_aarch64.deb",
         "path": "pool/main/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_aarch64.deb",
-        "size": 4076,
+        "size": 4096,
         "package": "libandroid-posix-semaphore",
         "version": "0.1-4",
         "desc": "Shared library for the posix semaphore system function"
@@ -882,7 +912,7 @@
       {
         "name": "libandroid-posix-semaphore-static_0.1-4_aarch64.deb",
         "path": "pool/main/l/libandroid-posix-semaphore-static/libandroid-posix-semaphore-static_0.1-4_aarch64.deb",
-        "size": 2860,
+        "size": 2864,
         "package": "libandroid-posix-semaphore-static",
         "version": "0.1-4",
         "desc": "Static libraries for libandroid-posix-semaphore"
@@ -922,7 +952,7 @@
       {
         "name": "libandroid-spawn_0.3_aarch64.deb",
         "path": "pool/main/l/libandroid-spawn/libandroid-spawn_0.3_aarch64.deb",
-        "size": 15852,
+        "size": 16108,
         "package": "libandroid-spawn",
         "version": "0.3",
         "desc": "Shared library for the posix_spawn system function"
@@ -932,7 +962,7 @@
       {
         "name": "libandroid-spawn-static_0.3_aarch64.deb",
         "path": "pool/main/l/libandroid-spawn-static/libandroid-spawn-static_0.3_aarch64.deb",
-        "size": 4072,
+        "size": 4024,
         "package": "libandroid-spawn-static",
         "version": "0.3",
         "desc": "Static libraries for libandroid-spawn"
@@ -1032,7 +1062,7 @@
       {
         "name": "libbz2_1.0.8-8_aarch64.deb",
         "path": "pool/main/l/libbz2/libbz2_1.0.8-8_aarch64.deb",
-        "size": 26116,
+        "size": 26120,
         "package": "libbz2",
         "version": "1.0.8-8",
         "desc": "BZ2 format compression library"
@@ -1082,7 +1112,7 @@
       {
         "name": "libcrypt_0.2-6_aarch64.deb",
         "path": "pool/main/l/libcrypt/libcrypt_0.2-6_aarch64.deb",
-        "size": 8876,
+        "size": 8824,
         "package": "libcrypt",
         "version": "0.2-6",
         "desc": "A crypt(3) implementation"
@@ -1162,7 +1192,7 @@
       {
         "name": "libexpat_2.7.4_aarch64.deb",
         "path": "pool/main/l/libexpat/libexpat_2.7.4_aarch64.deb",
-        "size": 92064,
+        "size": 92056,
         "package": "libexpat",
         "version": "2.7.4",
         "desc": "XML parsing C library"
@@ -1172,7 +1202,7 @@
       {
         "name": "libexpat-static_2.7.4_aarch64.deb",
         "path": "pool/main/l/libexpat-static/libexpat-static_2.7.4_aarch64.deb",
-        "size": 57656,
+        "size": 57600,
         "package": "libexpat-static",
         "version": "2.7.4",
         "desc": "Static libraries for libexpat"
@@ -1192,7 +1222,7 @@
       {
         "name": "libffi_3.4.7-1_aarch64.deb",
         "path": "pool/main/l/libffi/libffi_3.4.7-1_aarch64.deb",
-        "size": 30696,
+        "size": 30672,
         "package": "libffi",
         "version": "3.4.7-1",
         "desc": "Library providing a portable, high level programming interface to various calling conventions"
@@ -1202,7 +1232,7 @@
       {
         "name": "libffi-static_3.4.7-1_aarch64.deb",
         "path": "pool/main/l/libffi-static/libffi-static_3.4.7-1_aarch64.deb",
-        "size": 16272,
+        "size": 16080,
         "package": "libffi-static",
         "version": "3.4.7-1",
         "desc": "Static libraries for libffi"
@@ -1482,7 +1512,7 @@
       {
         "name": "liblzma_5.8.2_aarch64.deb",
         "path": "pool/main/l/liblzma/liblzma_5.8.2_aarch64.deb",
-        "size": 192532,
+        "size": 192524,
         "package": "liblzma",
         "version": "5.8.2",
         "desc": "XZ-format compression library"
@@ -1492,7 +1522,7 @@
       {
         "name": "liblzma-static_5.8.2_aarch64.deb",
         "path": "pool/main/l/liblzma-static/liblzma-static_5.8.2_aarch64.deb",
-        "size": 89564,
+        "size": 89528,
         "package": "liblzma-static",
         "version": "5.8.2",
         "desc": "Static libraries for liblzma"
@@ -1732,7 +1762,7 @@
       {
         "name": "libpng_1.6.55_aarch64.deb",
         "path": "pool/main/l/libpng/libpng_1.6.55_aarch64.deb",
-        "size": 195476,
+        "size": 195560,
         "package": "libpng",
         "version": "1.6.55",
         "desc": "Official PNG reference library"
@@ -1742,7 +1772,7 @@
       {
         "name": "libpng-static_1.6.55_aarch64.deb",
         "path": "pool/main/l/libpng-static/libpng-static_1.6.55_aarch64.deb",
-        "size": 86572,
+        "size": 86588,
         "package": "libpng-static",
         "version": "1.6.55",
         "desc": "Static libraries for libpng"
@@ -2062,7 +2092,7 @@
       {
         "name": "libx11_1.8.13_aarch64.deb",
         "path": "pool/main/l/libx11/libx11_1.8.13_aarch64.deb",
-        "size": 1910136,
+        "size": 1909772,
         "package": "libx11",
         "version": "1.8.13",
         "desc": "X11 client-side library"
@@ -2072,7 +2102,7 @@
       {
         "name": "libx11-static_1.8.13_aarch64.deb",
         "path": "pool/main/l/libx11-static/libx11-static_1.8.13_aarch64.deb",
-        "size": 567592,
+        "size": 567644,
         "package": "libx11-static",
         "version": "1.8.13",
         "desc": "Static libraries for libx11"
@@ -2082,7 +2112,7 @@
       {
         "name": "libxau_1.0.12-2_aarch64.deb",
         "path": "pool/main/l/libxau/libxau_1.0.12-2_aarch64.deb",
-        "size": 9132,
+        "size": 9160,
         "package": "libxau",
         "version": "1.0.12-2",
         "desc": "X11 authorisation library"
@@ -2092,7 +2122,7 @@
       {
         "name": "libxcb_1.17.0-1_aarch64.deb",
         "path": "pool/main/l/libxcb/libxcb_1.17.0-1_aarch64.deb",
-        "size": 914204,
+        "size": 915696,
         "package": "libxcb",
         "version": "1.17.0-1",
         "desc": "X11 client-side library"
@@ -2102,7 +2132,7 @@
       {
         "name": "libxcb-static_1.17.0-1_aarch64.deb",
         "path": "pool/main/l/libxcb-static/libxcb-static_1.17.0-1_aarch64.deb",
-        "size": 158516,
+        "size": 160680,
         "package": "libxcb-static",
         "version": "1.17.0-1",
         "desc": "Static libraries for libxcb"
@@ -2112,7 +2142,7 @@
       {
         "name": "libxdmcp_1.1.5-2_aarch64.deb",
         "path": "pool/main/l/libxdmcp/libxdmcp_1.1.5-2_aarch64.deb",
-        "size": 24456,
+        "size": 24404,
         "package": "libxdmcp",
         "version": "1.1.5-2",
         "desc": "X11 Display Manager Control Protocol library"
@@ -2122,7 +2152,7 @@
       {
         "name": "libxdmcp-static_1.1.5-2_aarch64.deb",
         "path": "pool/main/l/libxdmcp-static/libxdmcp-static_1.1.5-2_aarch64.deb",
-        "size": 8016,
+        "size": 7936,
         "package": "libxdmcp-static",
         "version": "1.1.5-2",
         "desc": "Static libraries for libxdmcp"
@@ -2132,7 +2162,7 @@
       {
         "name": "libxext_1.3.7_aarch64.deb",
         "path": "pool/main/l/libxext/libxext_1.3.7_aarch64.deb",
-        "size": 98016,
+        "size": 98080,
         "package": "libxext",
         "version": "1.3.7",
         "desc": "X11 miscellaneous extensions library"
@@ -2142,7 +2172,7 @@
       {
         "name": "libxext-static_1.3.7_aarch64.deb",
         "path": "pool/main/l/libxext-static/libxext-static_1.3.7_aarch64.deb",
-        "size": 25944,
+        "size": 25940,
         "package": "libxext-static",
         "version": "1.3.7",
         "desc": "Static libraries for libxext"
@@ -2172,7 +2202,7 @@
       {
         "name": "libxft_2.3.9-1_aarch64.deb",
         "path": "pool/main/l/libxft/libxft_2.3.9-1_aarch64.deb",
-        "size": 48040,
+        "size": 48032,
         "package": "libxft",
         "version": "2.3.9-1",
         "desc": "FreeType-based font drawing library for X"
@@ -2182,7 +2212,7 @@
       {
         "name": "libxft-static_2.3.9-1_aarch64.deb",
         "path": "pool/main/l/libxft-static/libxft-static_2.3.9-1_aarch64.deb",
-        "size": 36500,
+        "size": 36600,
         "package": "libxft-static",
         "version": "2.3.9-1",
         "desc": "Static libraries for libxft"
@@ -2262,7 +2292,7 @@
       {
         "name": "libxrender_0.9.12-1_aarch64.deb",
         "path": "pool/main/l/libxrender/libxrender_0.9.12-1_aarch64.deb",
-        "size": 24632,
+        "size": 24684,
         "package": "libxrender",
         "version": "0.9.12-1",
         "desc": "X Rendering Extension client library"
@@ -2282,7 +2312,7 @@
       {
         "name": "libxss_1.2.5_aarch64.deb",
         "path": "pool/main/l/libxss/libxss_1.2.5_aarch64.deb",
-        "size": 11960,
+        "size": 12004,
         "package": "libxss",
         "version": "1.2.5",
         "desc": "X11 Screen Saver extension library"
@@ -2292,7 +2322,7 @@
       {
         "name": "libxss-static_1.2.5_aarch64.deb",
         "path": "pool/main/l/libxss-static/libxss-static_1.2.5_aarch64.deb",
-        "size": 4416,
+        "size": 4388,
         "package": "libxss-static",
         "version": "1.2.5",
         "desc": "Static libraries for libxss"
@@ -2426,6 +2456,16 @@
         "package": "lsof-static",
         "version": "4.99.5-2",
         "desc": "Static libraries for lsof"
+      }
+    ],
+    "lua-language-server": [
+      {
+        "name": "lua-language-server_3.17.1-1_aarch64.deb",
+        "path": "pool/main/l/lua-language-server/lua-language-server_3.17.1-1_aarch64.deb",
+        "size": 1720772,
+        "package": "lua-language-server",
+        "version": "3.17.1-1",
+        "desc": "Sumneko Lua Language Server coded in Lua"
       }
     ],
     "lua-lpeg": [
@@ -2706,7 +2746,7 @@
       {
         "name": "ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses-static/ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 154008,
+        "size": 154032,
         "package": "ncurses-static",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for ncurses"
@@ -2726,7 +2766,7 @@
       {
         "name": "ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 39516,
+        "size": 39504,
         "package": "ncurses-ui-libs-static",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for terminal user interfaces based on ncurses"
@@ -3030,7 +3070,7 @@
       {
         "name": "python_3.12.12-1_aarch64.deb",
         "path": "pool/main/p/python/python_3.12.12-1_aarch64.deb",
-        "size": 4476420,
+        "size": 4474380,
         "package": "python",
         "version": "3.12.12-1",
         "desc": "Python 3 programming language intended to enable clear programs"
@@ -3046,11 +3086,21 @@
         "desc": "Wheels for Python ensurepip"
       }
     ],
+    "python-pip": [
+      {
+        "name": "python-pip_26.0.1_all.deb",
+        "path": "pool/main/p/python-pip/python-pip_26.0.1_all.deb",
+        "size": 1171468,
+        "package": "python-pip",
+        "version": "26.0.1",
+        "desc": "The PyPA recommended tool for installing Python packages"
+      }
+    ],
     "python-static": [
       {
         "name": "python-static_3.12.12-1_aarch64.deb",
         "path": "pool/main/p/python-static/python-static_3.12.12-1_aarch64.deb",
-        "size": 6759068,
+        "size": 6769640,
         "package": "python-static",
         "version": "3.12.12-1",
         "desc": "Static libraries for python"
@@ -3060,7 +3110,7 @@
       {
         "name": "python-tkinter_3.12.12-1_aarch64.deb",
         "path": "pool/main/p/python-tkinter/python-tkinter_3.12.12-1_aarch64.deb",
-        "size": 518372,
+        "size": 518300,
         "package": "python-tkinter",
         "version": "3.12.12-1",
         "desc": "Tkinter support for Python 3"
@@ -3070,7 +3120,7 @@
       {
         "name": "python-xcbgen_1.17.0-1_all.deb",
         "path": "pool/main/p/python-xcbgen/python-xcbgen_1.17.0-1_all.deb",
-        "size": 44588,
+        "size": 15180,
         "package": "python-xcbgen",
         "version": "1.17.0-1",
         "desc": "The xcbgen Python module"
@@ -3090,7 +3140,7 @@
       {
         "name": "pzstd_1.5.7-1_aarch64.deb",
         "path": "pool/main/p/pzstd/pzstd_1.5.7-1_aarch64.deb",
-        "size": 42144,
+        "size": 42080,
         "package": "pzstd",
         "version": "1.5.7-1",
         "desc": "A Pigz-like tool for Zstandard"
@@ -3376,7 +3426,7 @@
       {
         "name": "tk_8.6.14-1_aarch64.deb",
         "path": "pool/main/t/tk/tk_8.6.14-1_aarch64.deb",
-        "size": 1753824,
+        "size": 1754760,
         "package": "tk",
         "version": "8.6.14-1",
         "desc": "A windowing toolkit for use with tcl"
@@ -3496,7 +3546,7 @@
       {
         "name": "ttf-dejavu_2.37-8_all.deb",
         "path": "pool/main/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb",
-        "size": 2459180,
+        "size": 2459792,
         "package": "ttf-dejavu",
         "version": "2.37-8",
         "desc": "Font family based on the Bitstream Vera Fonts with a wider range of characters"
@@ -3612,7 +3662,7 @@
       {
         "name": "xcb-proto_1.17.0-1_all.deb",
         "path": "pool/main/x/xcb-proto/xcb-proto_1.17.0-1_all.deb",
-        "size": 78584,
+        "size": 78624,
         "package": "xcb-proto",
         "version": "1.17.0-1",
         "desc": "XML-XCB protocol descriptions"
@@ -3622,7 +3672,7 @@
       {
         "name": "xorg-util-macros_1.20.2_all.deb",
         "path": "pool/main/x/xorg-util-macros/xorg-util-macros_1.20.2_all.deb",
-        "size": 21952,
+        "size": 21956,
         "package": "xorg-util-macros",
         "version": "1.20.2",
         "desc": "X.Org Autotools macros"
@@ -3632,7 +3682,7 @@
       {
         "name": "xorgproto_2025.1_all.deb",
         "path": "pool/main/x/xorgproto/xorgproto_2025.1_all.deb",
-        "size": 249668,
+        "size": 249552,
         "package": "xorgproto",
         "version": "2025.1",
         "desc": "X.Org X11 Protocol headers"
@@ -3682,7 +3732,7 @@
       {
         "name": "xz-utils_5.8.2_aarch64.deb",
         "path": "pool/main/x/xz-utils/xz-utils_5.8.2_aarch64.deb",
-        "size": 71176,
+        "size": 71204,
         "package": "xz-utils",
         "version": "5.8.2",
         "desc": "XZ-format compression tools"
@@ -3714,7 +3764,7 @@
       {
         "name": "zstd_1.5.7-1_aarch64.deb",
         "path": "pool/main/z/zstd/zstd_1.5.7-1_aarch64.deb",
-        "size": 360640,
+        "size": 359500,
         "package": "zstd",
         "version": "1.5.7-1",
         "desc": "Zstandard compression"

@@ -226,6 +226,48 @@ Size: 955428
 MD5Sum: 363e9fcae53cea034b9d36bb956ec1ef
 SHA256: 4900a4f726a3dc366d53de92b23ffe39eaa045ee90b4fd587967c645cdea8319
 
+Package: binutils
+Version: 2.46.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 12936
+Depends: binutils-bin, zlib, zstd
+Breaks: binutils (<< 2.46), binutils-libs, binutils-dev
+Replaces: binutils (<< 2.46), binutils-libs, binutils-dev
+Homepage: https://www.gnu.org/software/binutils/
+Description: A GNU collection of binary utilities
+Filename: pool/main/b/binutils/binutils_2.46.0-1_aarch64.deb
+Size: 1172840
+MD5Sum: 31c8567c5365584b4350b31dc7114918
+SHA256: ed78f73a1d105ef767d37b898886d42d23578e97e9d687aabce149bd35f47bbd
+
+Package: binutils-bin
+Version: 2.46.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 6856
+Depends: libc++, zlib, zstd, binutils (= 2.46.0-1)
+Breaks: binutils (<< 2.46)
+Replaces: binutils (<< 2.46)
+Homepage: https://www.gnu.org/software/binutils/
+Description: Collection of binary tools, the main ones being ld, the GNU linker, and as, the GNU assembler
+Filename: pool/main/b/binutils-bin/binutils-bin_2.46.0-1_aarch64.deb
+Size: 1325536
+MD5Sum: 12013b1e03f6341e3f64c85875b6d0cb
+SHA256: daed723dc56665c30f1bd589c45247f8f73ffb2c967f4d0fdb785b2e191e5d0f
+
+Package: binutils-cross
+Version: 2.46.0-1
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 17844
+Homepage: https://www.gnu.org/software/binutils/
+Description: GNU Binutils for cross build on the host (NOT for Termux)
+Filename: pool/main/b/binutils-cross/binutils-cross_2.46.0-1_aarch64.deb
+Size: 2305600
+MD5Sum: 58bf95cca3019e1febe522fc9acb1903
+SHA256: 86f705423cfdbbebe56a3248862b44f70d9a61fc99b210b464643e4b7c999d43
+
 Package: blk-utils
 Version: 2.41.2-1
 Architecture: aarch64
@@ -251,9 +293,9 @@ Replaces: brotli-dev
 Homepage: https://github.com/google/brotli
 Description: lossless compression algorithm and format (command line utility)
 Filename: pool/main/b/brotli/brotli_1.2.0_aarch64.deb
-Size: 340508
-MD5Sum: 6439ab10ac1f4ce868353032095d78ce
-SHA256: 6990f38c9ce3dd795aa8e30d6bb0d307b780f3662e6877864fac77d09a29653c
+Size: 340400
+MD5Sum: 34e228869ef66b1db4e763cb2635118e
+SHA256: 602830f2e1b824d4dfa3cb8c9b184897c0fccc05be6dd577b3ba051b8b4a0b38
 
 Package: bzip2
 Version: 1.0.8-8
@@ -265,9 +307,9 @@ Homepage: http://www.bzip.org/
 Description: Tools for working with bzip2 compression
 Essential: yes
 Filename: pool/main/b/bzip2/bzip2_1.0.8-8_aarch64.deb
-Size: 26140
-MD5Sum: 1dc80cd457b9de3c1503d9813bb441c6
-SHA256: 96c521c0236d9d3d6bb2a151f86f659c8e933edf09916787e1464f09bb88d830
+Size: 26296
+MD5Sum: 8de13f8300928dba9de62c2dfe8d4eec
+SHA256: 5234c2448113b4bb3d9d2f8fb241d113f78dcb6cf4e2828ed42328c7de6a3302
 
 Package: c-ares
 Version: 1.34.6
@@ -669,9 +711,9 @@ Replaces: fontconfig-dev
 Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Library for configuring and customizing font access
 Filename: pool/main/f/fontconfig/fontconfig_2.17.1-1_aarch64.deb
-Size: 123088
-MD5Sum: b6276d9fd3340174c5dd3a904204867b
-SHA256: 3feb9cfce7f8649e05d523e27051c2e656e009a05dc4e948b0de68a923dc370c
+Size: 122956
+MD5Sum: 1534ba6395449cad29d52577c580ba15
+SHA256: bbd5ec9a731c59e6d30112ed599fbfa99ce41a5a23b938db52a9959c8d4c08d8
 
 Package: fontconfig-static
 Version: 2.17.1-1
@@ -682,37 +724,37 @@ Depends: fontconfig (= 2.17.1-1)
 Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Static libraries for fontconfig
 Filename: pool/main/f/fontconfig-static/fontconfig-static_2.17.1-1_aarch64.deb
-Size: 117884
-MD5Sum: d2e2687c8bfa286a7ed8193098d4feff
-SHA256: f360b6029b5f52c0506ee6c25200696f7e3e4dafd6e00903ce0d34679d2a352d
+Size: 117848
+MD5Sum: 5c453877ef0c05291459a7ef087e5d37
+SHA256: 9b3ded3b702f903b199571046d055ca61889e0cdc0a5ef016ed87eeff064a890
 
 Package: fontconfig-utils
 Version: 2.17.1-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 128
+Installed-Size: 132
 Depends: fontconfig (= 2.17.1-1)
 Homepage: https://www.freedesktop.org/wiki/Software/fontconfig/
 Description: Fontconfig binaries
 Filename: pool/main/f/fontconfig-utils/fontconfig-utils_2.17.1-1_aarch64.deb
-Size: 14480
-MD5Sum: ffba8bea2ac166632017952de435ef04
-SHA256: 8f643c640613f1ef9e8d937db60faefc011b36023c8369c6a3f2551ff4c1fc73
+Size: 14348
+MD5Sum: 6c32241cd95af9c275bf9305905a23ae
+SHA256: 46cb337ff3ac9ab70516064d235f5edacb8dc95d632c4aecdbde42d446ac3d02
 
 Package: freetype
 Version: 2.14.1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1708
+Installed-Size: 1704
 Depends: brotli, libbz2, libpng, zlib
 Breaks: freetype-dev
 Replaces: freetype-dev
 Homepage: https://www.freetype.org
 Description: Software font engine capable of producing high-quality output
 Filename: pool/main/f/freetype/freetype_2.14.1_aarch64.deb
-Size: 412236
-MD5Sum: 6929550385afa09244853ec883f4572c
-SHA256: f06e422bad6f8adaf7c7727718750bb4638ac1225ad6f53c1a27cadf23b996ed
+Size: 412448
+MD5Sum: c4c8f610586b00e2acf433371dda958d
+SHA256: 3f73d18e1d0506db9435b6914017281e133900e1a95b031ee6ad1ef73c8d3c7c
 
 Package: freetype-static
 Version: 2.14.1
@@ -723,9 +765,9 @@ Depends: freetype (= 2.14.1)
 Homepage: https://www.freetype.org
 Description: Static libraries for freetype
 Filename: pool/main/f/freetype-static/freetype-static_2.14.1_aarch64.deb
-Size: 302336
-MD5Sum: 4b2afb7caf9fc97039e5b6afcd651afb
-SHA256: f9f379b84f42671764dec841dc17025e517cd2edd1e18054c712994c2772fe3d
+Size: 302344
+MD5Sum: 85bd63499d1dcdfd899c8a67038076b6
+SHA256: 5c56f01c6ad67ee0858f8ac26f1f748c97db9f793b9d9ea6ca62a18a76c654ac
 
 Package: gawk
 Version: 5.3.1-2
@@ -767,9 +809,9 @@ Replaces: gdbm-dev
 Homepage: https://www.gnu.org.ua/software/gdbm/
 Description: Library of database functions that use extensible hashing
 Filename: pool/main/g/gdbm/gdbm_1.26-1_aarch64.deb
-Size: 150280
-MD5Sum: faf8201e1d289e2e688da29f1e763ab2
-SHA256: 9b3a6be3f289990bbc06322a8dfb8ec200773015de553ef261a48e9bbeb7f4fe
+Size: 150128
+MD5Sum: 8205a66834a27899228fa5b272394254
+SHA256: cd6e6a9c0d0df674238a8b8936096e0126e4779198329ffebcba9eee3ae1d377
 
 Package: gdbm-static
 Version: 1.26-1
@@ -780,9 +822,9 @@ Depends: gdbm (= 1.26-1)
 Homepage: https://www.gnu.org.ua/software/gdbm/
 Description: Static libraries for gdbm
 Filename: pool/main/g/gdbm-static/gdbm-static_1.26-1_aarch64.deb
-Size: 32196
-MD5Sum: a23eb72de4553acf5c49370a29218f45
-SHA256: 78ba66c7a7d63052dc37eab1476ca969bdd8c2f459897dc07e3592466b09801a
+Size: 31960
+MD5Sum: b42e4a4ff82c7cef624f6c2666b28c85
+SHA256: 7cfcaf8c217770c597c58b982d658f44d6b8d73eb62985d2c95d6780f0cb4528
 
 Package: giflib
 Version: 5.2.2-1
@@ -1173,9 +1215,9 @@ Installed-Size: 52
 Homepage: https://man7.org/linux/man-pages/man7/sem_overview.7.html
 Description: Shared library for the posix semaphore system function
 Filename: pool/main/l/libandroid-posix-semaphore/libandroid-posix-semaphore_0.1-4_aarch64.deb
-Size: 4076
-MD5Sum: 7b0c75d8acce8866f369309f8f5a92bc
-SHA256: e2722fd88802a71d0c07584bddc55a4a01ed5c857ff2c491cda3ee4c90e3d202
+Size: 4096
+MD5Sum: 10cf6b4bff72feaa0a48beec8de1c7f8
+SHA256: 35c13edc47b917f274517cec9f183b6d36d9cc1371be606af195c0da5b5bd01e
 
 Package: libandroid-posix-semaphore-static
 Version: 0.1-4
@@ -1186,9 +1228,9 @@ Depends: libandroid-posix-semaphore (= 0.1-4)
 Homepage: https://man7.org/linux/man-pages/man7/sem_overview.7.html
 Description: Static libraries for libandroid-posix-semaphore
 Filename: pool/main/l/libandroid-posix-semaphore-static/libandroid-posix-semaphore-static_0.1-4_aarch64.deb
-Size: 2860
-MD5Sum: 988a059fe120e7a9e5a1bf6905652e7a
-SHA256: 0d1b985d98206050c00d357f9a3191f6bea72fa3dce6b7eec060ce3840530161
+Size: 2864
+MD5Sum: 42c0dcc509671a0686183cb4016510f1
+SHA256: b5ac5491a472c0fe978d02094100f5509bd72ccbed52deffc4c59262ce56bcfa
 
 Package: libandroid-selinux
 Version: 14.0.0.11-1
@@ -1239,9 +1281,9 @@ Depends: libc++
 Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
 Description: Shared library for the posix_spawn system function
 Filename: pool/main/l/libandroid-spawn/libandroid-spawn_0.3_aarch64.deb
-Size: 15852
-MD5Sum: fec7787d7a6b972031d4847172fcb8eb
-SHA256: ba961575e270a4501fe7247464a8465875fc58ae4b1237a8abce79c25be89c0d
+Size: 16108
+MD5Sum: d982e7130c9e64acdf86d4659c4c6073
+SHA256: 0122cfd5bcea3648b309d43badf98e910237339214f866a97164f9a9ed10975f
 
 Package: libandroid-spawn-static
 Version: 0.3
@@ -1252,9 +1294,9 @@ Depends: libandroid-spawn (= 0.3)
 Homepage: https://man7.org/linux/man-pages/man3/posix_spawn.3.html
 Description: Static libraries for libandroid-spawn
 Filename: pool/main/l/libandroid-spawn-static/libandroid-spawn-static_0.3_aarch64.deb
-Size: 4072
-MD5Sum: ad279c3be149971cf2c21489bfb5b7d9
-SHA256: 135cb2f86872a87e651b46b29ba2ef99c0d13fb0497bb85918d2bdd1f8aa42d7
+Size: 4024
+MD5Sum: 9c9bc5f5fe88dc0cd8e33ff60c173e44
+SHA256: 990c2fe5f1fedd2a11375ef7b71c5c92f7832b84f6d9df34a4f909aaa470c1ca
 
 Package: libandroid-support
 Version: 29-1
@@ -1386,9 +1428,9 @@ Homepage: http://www.bzip.org/
 Description: BZ2 format compression library
 Essential: yes
 Filename: pool/main/l/libbz2/libbz2_1.0.8-8_aarch64.deb
-Size: 26116
-MD5Sum: 265f2a67a91ebbd33aac5f1f32ea18ea
-SHA256: e12a001c2fe1bb8899a5baf94cec92aa59bfa7d07162b67ba7669b43e05da29e
+Size: 26120
+MD5Sum: f23222ad94437fca421654adf1e00476
+SHA256: b1d4820876664398fd7c08c664fe9c36c58d77bfa48dc8489eccdcfce17f5a4b
 
 Package: libc++
 Version: 29
@@ -1453,9 +1495,9 @@ Replaces: libcrypt-dev
 Homepage: http://michael.dipperstein.com/crypt/
 Description: A crypt(3) implementation
 Filename: pool/main/l/libcrypt/libcrypt_0.2-6_aarch64.deb
-Size: 8876
-MD5Sum: 80ec43ddfd66e552ae75cef9a466b153
-SHA256: 2403d33a6072b1b00ce673555b17c80b98ccf7dc21ef0e053b44937f19808582
+Size: 8824
+MD5Sum: ac84475f03e6a800cc6c7d813204594b
+SHA256: 4c6bd1e5eb8620a1fbda1bf342968526edfbda6de6ba5f4d0b724b56dd3708e5
 
 Package: libcurl
 Version: 8.18.0-1
@@ -1567,9 +1609,9 @@ Replaces: libexpat-dev
 Homepage: https://libexpat.github.io/
 Description: XML parsing C library
 Filename: pool/main/l/libexpat/libexpat_2.7.4_aarch64.deb
-Size: 92064
-MD5Sum: 04b8df5e87dca646783d4273a8714302
-SHA256: c8af48d79f6bfa27097081a1f4ffb38860df2c80045915236376904bf733ccfc
+Size: 92056
+MD5Sum: d67175ea6fc89c2865873cf75fd57375
+SHA256: 84513d96c2fee171ce3453aa6669b8ad58aa5f1ee2c1d8429cfc92d28b030cad
 
 Package: libexpat-static
 Version: 2.7.4
@@ -1580,9 +1622,9 @@ Depends: libexpat (= 2.7.4)
 Homepage: https://libexpat.github.io/
 Description: Static libraries for libexpat
 Filename: pool/main/l/libexpat-static/libexpat-static_2.7.4_aarch64.deb
-Size: 57656
-MD5Sum: 168d103ab764de56d8f276dd841e5326
-SHA256: 432de23acddaf781a18af7a1d65f031e9ed60cf16286f055cffa191de0046611
+Size: 57600
+MD5Sum: 8c13696acaff9e8a899da10a911de135
+SHA256: 4deadc8f15cd586ccf70253f370016a006d4f2c67fb974c4864655eca94c69a1
 
 Package: libfdisk
 Version: 2.41.2-1
@@ -1601,15 +1643,15 @@ Package: libffi
 Version: 3.4.7-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 228
+Installed-Size: 232
 Breaks: libffi-dev
 Replaces: libffi-dev
 Homepage: https://sourceware.org/libffi/
 Description: Library providing a portable, high level programming interface to various calling conventions
 Filename: pool/main/l/libffi/libffi_3.4.7-1_aarch64.deb
-Size: 30696
-MD5Sum: 493e39bf2a1ced1602682ecfa7938cf7
-SHA256: 346996c5a3a00e22180a2e7eedb99785b17d604beb4cbcd339daf253f0b19712
+Size: 30672
+MD5Sum: 3aa6094fe12aaf8b47c41361b7baec34
+SHA256: a021a376bb1650eb578d744e7e179fbadb5a1c50616518457c2e9879aa2a3a01
 
 Package: libffi-static
 Version: 3.4.7-1
@@ -1620,9 +1662,9 @@ Depends: libffi (= 3.4.7-1)
 Homepage: https://sourceware.org/libffi/
 Description: Static libraries for libffi
 Filename: pool/main/l/libffi-static/libffi-static_3.4.7-1_aarch64.deb
-Size: 16272
-MD5Sum: 8f027eb58449a7b793e37a14377fde1e
-SHA256: ed7f4205f71d448d4f42b85e844a3af44af1b3c426c23e86a0d686deaea38bf9
+Size: 16080
+MD5Sum: 59035dcfa8818bb8e4ac59982b9f6894
+SHA256: 71688b8b01381c440e677ecf6f4bcae9950c479f43983d5b6eab122f75e8e010
 
 Package: libflac
 Version: 1.5.0-1
@@ -2006,9 +2048,9 @@ Homepage: https://tukaani.org/xz/
 Description: XZ-format compression library
 Essential: yes
 Filename: pool/main/l/liblzma/liblzma_5.8.2_aarch64.deb
-Size: 192532
-MD5Sum: bc7440dcb03e6da6ae84f9678a03d97a
-SHA256: 1de14cc3835767e12467e4e8ad0113b14f0da9889d85467951197be74a069c26
+Size: 192524
+MD5Sum: e2c81cfc533b2f55059a09bc9924b312
+SHA256: 5cabcb0f378fccb38dac11197fd145e8a56392bd2c43cf925ba4550a211a855a
 
 Package: liblzma-static
 Version: 5.8.2
@@ -2019,9 +2061,9 @@ Depends: liblzma (= 5.8.2)
 Homepage: https://tukaani.org/xz/
 Description: Static libraries for liblzma
 Filename: pool/main/l/liblzma-static/liblzma-static_5.8.2_aarch64.deb
-Size: 89564
-MD5Sum: d4c7f0f5eae3b019daae3ebe74250435
-SHA256: 077c19419474f41dc92faace1e464a767fa1fa15b9ceb9811ed9771400ed9ea7
+Size: 89528
+MD5Sum: 834bba6c935b2a0685538b055f51589b
+SHA256: 40b8729d6e018cec5b48a7e2708bc144f5541888b7c84aa98c14991c53aa70a1
 
 Package: libmd
 Version: 1.1.0-1
@@ -2342,9 +2384,9 @@ Replaces: libpng-dev
 Homepage: http://www.libpng.org/pub/png/libpng.html
 Description: Official PNG reference library
 Filename: pool/main/l/libpng/libpng_1.6.55_aarch64.deb
-Size: 195476
-MD5Sum: f303f450dc1db1f8bf0367cc5bb0e299
-SHA256: 6bea64636ab0ef4bb033b6c49984159c12537abdafc9aebd6a4f5385eac8692a
+Size: 195560
+MD5Sum: 9723286b81411eb88e0be57321d45e07
+SHA256: d4a9a4e7d1ac29c569e6a91ff4b1f92d959d202995d91cc6a8bb4f734a4eab88
 
 Package: libpng-static
 Version: 1.6.55
@@ -2355,9 +2397,9 @@ Depends: libpng (= 1.6.55)
 Homepage: http://www.libpng.org/pub/png/libpng.html
 Description: Static libraries for libpng
 Filename: pool/main/l/libpng-static/libpng-static_1.6.55_aarch64.deb
-Size: 86572
-MD5Sum: ffe94685ab9418b6400ece07dc4af41e
-SHA256: 4e6d82c8342aa28707db3b2dae935888423af753b1b14b74fed2aaf7c51f15a2
+Size: 86588
+MD5Sum: ef4f89062c021609472038f6c532a386
+SHA256: 4ac4666d5e2a78cd9e029b4e91df0a787bfef5fd49037e1088f11fca78159fee
 
 Package: libpolly
 Version: 21.1.8
@@ -2797,9 +2839,9 @@ Recommends: xorg-xauth
 Homepage: https://xorg.freedesktop.org/
 Description: X11 client-side library
 Filename: pool/main/l/libx11/libx11_1.8.13_aarch64.deb
-Size: 1910136
-MD5Sum: 10fd6f7bea8c1d906fbf68a4627c5db5
-SHA256: 7a23906e71bcdcc30ddfed12fc4574b446529a5a34f373841f7137ab7b8251d3
+Size: 1909772
+MD5Sum: ece861685f8618cdfcae3d30893894a0
+SHA256: 81c15cb7f42d262e667fdec1168842ebd376e0a3cb13585015ad2a8c8c04eca0
 
 Package: libx11-static
 Version: 1.8.13
@@ -2810,9 +2852,9 @@ Depends: libx11 (= 1.8.13)
 Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libx11
 Filename: pool/main/l/libx11-static/libx11-static_1.8.13_aarch64.deb
-Size: 567592
-MD5Sum: 2eaaa0e150f96e9662c7d05b3573cbf7
-SHA256: 7398a67254c4a5a41c6bef51a25eefc01bbd093325768279ef5bb8f4ea5ab9ff
+Size: 567644
+MD5Sum: aa4422cc0ccb97af3d023804c988133a
+SHA256: 5bf97aa7a4594889322e7281d3161183ff56d868fc40d0c4cd7b92055085da2e
 
 Package: libxau
 Version: 1.0.12-2
@@ -2822,36 +2864,36 @@ Installed-Size: 128
 Homepage: https://xorg.freedesktop.org/
 Description: X11 authorisation library
 Filename: pool/main/l/libxau/libxau_1.0.12-2_aarch64.deb
-Size: 9132
-MD5Sum: 8fe79b151a483807f19be0769c42d8c5
-SHA256: 0c2eb84fff4de1220de45b8b05ed080777fa9109d1b4b0f48a4642f979b8108e
+Size: 9160
+MD5Sum: 69104c8c8e927f72ab698770528436a2
+SHA256: e4e62ff6f5b8fc0efdd8a6470e61c4fcf7270f9fcfae05efc4ae0d5167f2dc7b
 
 Package: libxcb
 Version: 1.17.0-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 12768
+Installed-Size: 12776
 Depends: libxau, libxdmcp
 Recommends: xorg-xauth
 Homepage: https://xcb.freedesktop.org/
 Description: X11 client-side library
 Filename: pool/main/l/libxcb/libxcb_1.17.0-1_aarch64.deb
-Size: 914204
-MD5Sum: 92ce0e7bed00ae0740af15ce9769b7b1
-SHA256: 75859737c47b14f2c4c081a1818da92c00c800f432bad0f04d568c083701ccee
+Size: 915696
+MD5Sum: 3b6dc2a6fc37ee71bab02bffd2201402
+SHA256: 629da1d57f39492b2030c18e18aae703db68c7967fc5582e3bf25c6f6f51fc9e
 
 Package: libxcb-static
 Version: 1.17.0-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1336
+Installed-Size: 1332
 Depends: libxcb (= 1.17.0-1)
 Homepage: https://xcb.freedesktop.org/
 Description: Static libraries for libxcb
 Filename: pool/main/l/libxcb-static/libxcb-static_1.17.0-1_aarch64.deb
-Size: 158516
-MD5Sum: 5d2654bd12f5127444587d5cffe7da11
-SHA256: 120c0f3de84ca1f0c098b7358739996b5917fd272231b2fb5535ef4243a66a22
+Size: 160680
+MD5Sum: dccdec1c96cb40b030ae2dff1c60c911
+SHA256: a91e541e865aca3f39fa6bbd4abab08ab7cc8a1f4e74e3ea0119cc8175e206b9
 
 Package: libxdmcp
 Version: 1.1.5-2
@@ -2861,9 +2903,9 @@ Installed-Size: 196
 Homepage: https://xorg.freedesktop.org/
 Description: X11 Display Manager Control Protocol library
 Filename: pool/main/l/libxdmcp/libxdmcp_1.1.5-2_aarch64.deb
-Size: 24456
-MD5Sum: 5eb053c2b186f0f5c8f7274c2adc611b
-SHA256: 5c2291abc366983f6a183ac4d29e82f3a2ddc656f36254b1b473bea27eb3d582
+Size: 24404
+MD5Sum: edffc20607914d46fa7f98c4207c4f8f
+SHA256: 4d8cace13315c1709be709345b53825cb65c2ab9057fd201722925e8ff7d57ff
 
 Package: libxdmcp-static
 Version: 1.1.5-2
@@ -2874,9 +2916,9 @@ Depends: libxdmcp (= 1.1.5-2)
 Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxdmcp
 Filename: pool/main/l/libxdmcp-static/libxdmcp-static_1.1.5-2_aarch64.deb
-Size: 8016
-MD5Sum: 9c814f5be358c6289be3132f0f00ca74
-SHA256: ffc528fb9b4689ee4618884bc2401f6465f1d452cc29ba3d09fa0df280d369d5
+Size: 7936
+MD5Sum: 974abcf35591a2b597c8712661d9b55b
+SHA256: 96670ad7743e479d3e61062cef42aa36843e95e3b2f0bdf7dcf40130a20b408d
 
 Package: libxext
 Version: 1.3.7
@@ -2887,9 +2929,9 @@ Depends: libx11
 Homepage: https://xorg.freedesktop.org/
 Description: X11 miscellaneous extensions library
 Filename: pool/main/l/libxext/libxext_1.3.7_aarch64.deb
-Size: 98016
-MD5Sum: fa14e41e02dcdd280ce639e7c6431b69
-SHA256: a2869afceff5a4220d81dc1f3df0df92269d5832d298c34de31fe68ecaa54f2c
+Size: 98080
+MD5Sum: b047db2adde0c79b0b717f4bab2e982c
+SHA256: c373b17c2bf88fe9f3af64695b741b85fd4a287403aecb48d1aca4e016bc3762
 
 Package: libxext-static
 Version: 1.3.7
@@ -2900,9 +2942,9 @@ Depends: libxext (= 1.3.7)
 Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxext
 Filename: pool/main/l/libxext-static/libxext-static_1.3.7_aarch64.deb
-Size: 25944
-MD5Sum: 0ec1544ed06fb5750911f3de805b7f61
-SHA256: 737c793f1403382779057fb84b8120ae8fb98d46614bbe88cd5af677b102653a
+Size: 25940
+MD5Sum: 181f4a1d7629c3a1cea265b8cc33184d
+SHA256: 8564b82783bea3ce4d70dd89933333dd5a0e6e45b5c4379f82a19addb67cd087
 
 Package: libxfixes
 Version: 6.0.2
@@ -2939,9 +2981,9 @@ Depends: fontconfig, freetype, libx11, libxrender
 Homepage: https://xorg.freedesktop.org/
 Description: FreeType-based font drawing library for X
 Filename: pool/main/l/libxft/libxft_2.3.9-1_aarch64.deb
-Size: 48040
-MD5Sum: 75c94aaad5a6c2d96d0d234040e5e662
-SHA256: 21b9620793c15ad7e579fa44db98b9a7949ee38db708ae8fdddb20e17e434f42
+Size: 48032
+MD5Sum: ca4166933a98ebd63773245186965b90
+SHA256: ae02c5010e2dc87553b1b35a669d26d1709548bb3a18e5d175c6491a8d459c7f
 
 Package: libxft-static
 Version: 2.3.9-1
@@ -2952,9 +2994,9 @@ Depends: libxft (= 2.3.9-1)
 Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxft
 Filename: pool/main/l/libxft-static/libxft-static_2.3.9-1_aarch64.deb
-Size: 36500
-MD5Sum: 5a3f40729a9e320996452596f905873b
-SHA256: 882a066a205504ae5b3fa291051fa0e53e2c65553cf55942e91a0146686a0c75
+Size: 36600
+MD5Sum: 14b433196226384c811303fc8503e052
+SHA256: f4515cc4b05fd946e591b4e094f5ca484c99a4ac64cf045483dbedfc60d8a7a2
 
 Package: libxi
 Version: 1.8.2-1
@@ -3059,9 +3101,9 @@ Depends: libx11
 Homepage: https://xorg.freedesktop.org/
 Description: X Rendering Extension client library
 Filename: pool/main/l/libxrender/libxrender_0.9.12-1_aarch64.deb
-Size: 24632
-MD5Sum: 9a17a31830790efefde2366d659f7de9
-SHA256: d38b0cb143e22fac7fca3b6d3a0aa156be1ab854d3fa23a2beedcc031cabce7e
+Size: 24684
+MD5Sum: 174411c53f7a220aedaea2f54a4a9308
+SHA256: 4e884c8890fd39b18b32cc79e0a1c8b5bfcac0ee462a52877f949199c2b04985
 
 Package: libxslt
 Version: 1.1.43-2
@@ -3087,9 +3129,9 @@ Depends: libx11, libxau, libxcb, libxdmcp, libxext
 Homepage: https://xorg.freedesktop.org/
 Description: X11 Screen Saver extension library
 Filename: pool/main/l/libxss/libxss_1.2.5_aarch64.deb
-Size: 11960
-MD5Sum: cb4b4fa31e655f4470d6262111bde537
-SHA256: b342ff7db220604d1a5d3331f3c8267cc0ed46a0568882ef14e6d1bbdb5a75db
+Size: 12004
+MD5Sum: 7d731588be90868c7a4d8c2189e0f5bb
+SHA256: e5a60a3a45143b3a80c2ec52790a1bd4eaf6197055578e82d894782119eb53a3
 
 Package: libxss-static
 Version: 1.2.5
@@ -3100,9 +3142,9 @@ Depends: libxss (= 1.2.5)
 Homepage: https://xorg.freedesktop.org/
 Description: Static libraries for libxss
 Filename: pool/main/l/libxss-static/libxss-static_1.2.5_aarch64.deb
-Size: 4416
-MD5Sum: 4a2d7a5ff08c24aaf3d676507dbb2202
-SHA256: 6c4560092a7a6a261e9808fcfa6a98fbf6477aa87b09d84e2da22b3b407779b4
+Size: 4388
+MD5Sum: 14bfcf08f49fe2e5c66715d4b93d938f
+SHA256: 999d539351c91677e496907bb20a055267562d531b381ec6f6e23011b8340bf4
 
 Package: libxt
 Version: 1.3.1-1
@@ -3279,6 +3321,19 @@ Filename: pool/main/l/lsof-static/lsof-static_4.99.5-2_aarch64.deb
 Size: 55904
 MD5Sum: 29f34c42df0bb66302c90490d8c11ac4
 SHA256: 8268cd38a201f2944896a19bb4b8aacac63a899000832090bdbef44afddb96a3
+
+Package: lua-language-server
+Version: 3.17.1-1
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 11340
+Depends: binutils, libandroid-spawn, libc++
+Homepage: https://github.com/sumneko/lua-language-server
+Description: Sumneko Lua Language Server coded in Lua
+Filename: pool/main/l/lua-language-server/lua-language-server_3.17.1-1_aarch64.deb
+Size: 1720772
+MD5Sum: 6fbf251169a69d8464dd31c2edc76dc8
+SHA256: 16e6a70b9221b032222135d34e207bba6d8d78690bc3bab877f2c28c5d12d7e3
 
 Package: lua-lpeg
 Version: 1.1.0-4
@@ -3652,9 +3707,9 @@ Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for ncurses
 Filename: pool/main/n/ncurses-static/ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 154008
-MD5Sum: 760d157bb17d63baa59133ec5467b056
-SHA256: 4143b021e079c7fc951bcc07243f2c2c0ab77e22ebec33649a2367d701352ac4
+Size: 154032
+MD5Sum: 8c4391e5d23902413e01d24f609e9935
+SHA256: cc2e25072c677ac6a9f2a13a0e86c8b0b79292c8b1eb875fc2a2d0c5ea0c1887
 
 Package: ncurses-ui-libs
 Version: 6.6.20260124+really6.5.20250830
@@ -3680,9 +3735,9 @@ Depends: ncurses-ui-libs, ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for terminal user interfaces based on ncurses
 Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 39516
-MD5Sum: f53c76eab69881f155917bbaded6ab81
-SHA256: 2961af03871bc8647ac962c87d0e85b3d1a27a849a577e28781e34fab20f11b7
+Size: 39504
+MD5Sum: 45f493df4ff674c4e55b445fb0ab6816
+SHA256: 2c259239df047d4b37973bf421bb4fb4df62dd395f6fc5655831c7fb80acabdc
 
 Package: ncurses-utils
 Version: 6.6.20260124+really6.5.20250830
@@ -4084,7 +4139,7 @@ Package: python
 Version: 3.12.12-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 25544
+Installed-Size: 25536
 Depends: gdbm, libandroid-posix-semaphore, libandroid-support, libbz2, libcrypt, libexpat, libffi, liblzma, libsqlite, ncurses, ncurses-ui-libs, openssl, readline, zlib
 Recommends: python-ensurepip-wheels, python-pip
 Suggests: python-tkinter
@@ -4094,9 +4149,9 @@ Provides: python3
 Homepage: https://python.org/
 Description: Python 3 programming language intended to enable clear programs
 Filename: pool/main/p/python/python_3.12.12-1_aarch64.deb
-Size: 4476420
-MD5Sum: e97c69594fef69eacbdab7065e1f8ef9
-SHA256: 44a5d5582899f9fabb66971c1ef23c510ea28177081a18268b50fc82b0eb5129
+Size: 4474380
+MD5Sum: 823e96c3cca3f1d77fb9196293c5d68e
+SHA256: 3a7e5ad848a57933d2421f5886735d174a6807450adea64a6642d4119e10db2d
 
 Package: python-ensurepip-wheels
 Version: 3.12.12-1
@@ -4113,6 +4168,21 @@ Size: 1801592
 MD5Sum: d21142b0d2dd16930ef6b9eb5c2e9337
 SHA256: a7aa1c6dba84c818da416218837fe29ceb866fc92c27cf2b01baba25421474a2
 
+Package: python-pip
+Version: 26.0.1
+Architecture: all
+Maintainer: @termux
+Installed-Size: 7232
+Depends: python (>= 3.11.1-1)
+Recommends: clang, make, pkg-config
+Breaks: python (<< 3.11.1-1)
+Homepage: https://pip.pypa.io/
+Description: The PyPA recommended tool for installing Python packages
+Filename: pool/main/p/python-pip/python-pip_26.0.1_all.deb
+Size: 1171468
+MD5Sum: 9cf38352534b76640ffa804eb37add3b
+SHA256: ea6ffa571d88b451b22e900afa1a0a9349ce9c2064bdf29b3898010bd7800661
+
 Package: python-static
 Version: 3.12.12-1
 Architecture: aarch64
@@ -4122,9 +4192,9 @@ Depends: python (= 3.12.12-1)
 Homepage: https://python.org/
 Description: Static libraries for python
 Filename: pool/main/p/python-static/python-static_3.12.12-1_aarch64.deb
-Size: 6759068
-MD5Sum: c46ef835c4d2cd19e0317725c16945a4
-SHA256: d31708eee7e211992d2f0b096c33b5fab47740546364896e7cce1497f7822c7f
+Size: 6769640
+MD5Sum: db4a3fea12233666fa928e0950240861
+SHA256: d8587cd2ec7a9a22a9ed6c34fd8cfe5f163d52f581a038a8f371336d4bff7199
 
 Package: python-tkinter
 Version: 3.12.12-1
@@ -4137,15 +4207,15 @@ Replaces: python (<< 3.11.1-3)
 Homepage: https://python.org/
 Description: Tkinter support for Python 3
 Filename: pool/main/p/python-tkinter/python-tkinter_3.12.12-1_aarch64.deb
-Size: 518372
-MD5Sum: 40f5a1c26b0fd8a43bc01045af4ec75e
-SHA256: 45211a81a99eb0a629b5e174b8802951b624a68f1a187f2401fda61db6475a2f
+Size: 518300
+MD5Sum: cb02111eb4720e9b58f3954b673f5eec
+SHA256: df6e7dea23cd51b5d67b779e9f186e8b0f98bdb93be78b19e4c3eb2727ef7734
 
 Package: python-xcbgen
 Version: 1.17.0-1
 Architecture: all
 Maintainer: @termux
-Installed-Size: 444
+Installed-Size: 132
 Depends: xcb-proto (= 1.17.0-1)
 Recommends: python
 Breaks: xcb-proto (<< 1.15.2)
@@ -4153,9 +4223,9 @@ Replaces: xcb-proto (<< 1.15.2)
 Homepage: https://xcb.freedesktop.org/
 Description: The xcbgen Python module
 Filename: pool/main/p/python-xcbgen/python-xcbgen_1.17.0-1_all.deb
-Size: 44588
-MD5Sum: 571567182c46be9db562005b9f9e9ae1
-SHA256: ea4b3364435f500e6d42b253e29850b612e5427fc833faf01bff3c9e81c1730a
+Size: 15180
+MD5Sum: 6a911d757a5d858822c863befae4e320
+SHA256: 27a5ba9aeceeb7923cd787c809ae0d8a430153797c3b527e78064019ec82c0f6
 
 Package: pyunbound
 Version: 1.24.2-1
@@ -4180,9 +4250,9 @@ Depends: libc++, zstd (= 1.5.7-1)
 Homepage: https://github.com/facebook/zstd
 Description: A Pigz-like tool for Zstandard
 Filename: pool/main/p/pzstd/pzstd_1.5.7-1_aarch64.deb
-Size: 42144
-MD5Sum: 9162449e476b85051c2d7408623272a5
-SHA256: d19a5d430bb2a42b2e1608a05e8d4b259030393f29611b25c97d5fd29213b06e
+Size: 42080
+MD5Sum: 575ce01768759cc9be774bef0f6194ce
+SHA256: a9fa069b548dd11caf0f3d3073adf0ec7e4912e3e085995d7362890d29f5bcee
 
 Package: readline
 Version: 8.3.1-2
@@ -4561,9 +4631,9 @@ Depends: fontconfig, libx11, libxft, libxss, tcl
 Homepage: https://tcl.sourceforge.net/
 Description: A windowing toolkit for use with tcl
 Filename: pool/main/t/tk/tk_8.6.14-1_aarch64.deb
-Size: 1753824
-MD5Sum: 9b1b75b491ad99d9e63329b288ead8be
-SHA256: 93e16a8926b6586b6bed05afad8ded17e24c71ad677d9aa914cda460d1df10b3
+Size: 1754760
+MD5Sum: ad4d4e29db64c18b75a8654ec3bf2b62
+SHA256: 14c0f1d0785d797cd7c61dbb0ed9f4eda200999aa81640769d6fe6864ba46597
 
 Package: tor
 Version: 0.4.8.19
@@ -4712,9 +4782,9 @@ Installed-Size: 10108
 Homepage: https://dejavu-fonts.github.io/
 Description: Font family based on the Bitstream Vera Fonts with a wider range of characters
 Filename: pool/main/t/ttf-dejavu/ttf-dejavu_2.37-8_all.deb
-Size: 2459180
-MD5Sum: 578b3296734dce3ae1fda7b36335e3e0
-SHA256: d97e97865ae55e8559862518586ceb1400e7226b5078839466a3ed8320ffed42
+Size: 2459792
+MD5Sum: d0547d97101aa49cf480f303d00fb39d
+SHA256: 94f57de18d2816705ebc8a40f3eee4326bf3ea208d5b4aa9d4b22d893be11830
 
 Package: unbound
 Version: 1.24.2-1
@@ -4860,9 +4930,9 @@ Replaces: xcbproto
 Homepage: https://xcb.freedesktop.org/
 Description: XML-XCB protocol descriptions
 Filename: pool/main/x/xcb-proto/xcb-proto_1.17.0-1_all.deb
-Size: 78584
-MD5Sum: 1908f9e6a779873200c0f8395fff3347
-SHA256: f9f884921107bdfa18b1d18a9ae44cab35657d9cb312c099dc93b407dc51704a
+Size: 78624
+MD5Sum: f4ddccdafd66e4cac6448c68dadd8d87
+SHA256: d788b86993a5f71e31ff921764a55832efb175427e21ee50620875a0581425fa
 
 Package: xorg-util-macros
 Version: 1.20.2
@@ -4872,9 +4942,9 @@ Installed-Size: 144
 Homepage: https://xorg.freedesktop.org/
 Description: X.Org Autotools macros
 Filename: pool/main/x/xorg-util-macros/xorg-util-macros_1.20.2_all.deb
-Size: 21952
-MD5Sum: ce3b012617a3ba3b63d7d8dcd7c46368
-SHA256: 8c43c3c30ca26bba98ac26813b14f6860d955f9a02e7f71eae7a62f14299a3f4
+Size: 21956
+MD5Sum: 59813205817340b1c972ca774c7fc734
+SHA256: 35963da9309b2137dd4d9ee9457c05a325ea39912474727232b65d30cb99d5e8
 
 Package: xorgproto
 Version: 2025.1
@@ -4887,9 +4957,9 @@ Replaces: x11-proto
 Homepage: https://xorg.freedesktop.org/
 Description: X.Org X11 Protocol headers
 Filename: pool/main/x/xorgproto/xorgproto_2025.1_all.deb
-Size: 249668
-MD5Sum: 529d825874952e7556fc5510bd875caf
-SHA256: 5e9e911c5069af84da93cc221db0c14d94339a986e5a2243cec40107cb480ada
+Size: 249552
+MD5Sum: 4864e00b9f619b78f399479b83864e5b
+SHA256: 25a9a78441b82898790d3b5c8bce6b3eff7423e66ff5404d86b8f4b70823cbf5
 
 Package: xsltproc
 Version: 1.1.43-2
@@ -4951,9 +5021,9 @@ Homepage: https://tukaani.org/xz/
 Description: XZ-format compression tools
 Essential: yes
 Filename: pool/main/x/xz-utils/xz-utils_5.8.2_aarch64.deb
-Size: 71176
-MD5Sum: eb5fbebd31e594ea060eb6a040de5b73
-SHA256: 2e8bbfa830c2104a0dc18900f716ee5e96c2a437a27cfa31c4c0a49a07b14284
+Size: 71204
+MD5Sum: 3575539a48babc8b8f74dd0ea6820088
+SHA256: 0aa5622de6a7abe6dbd424747571c25c5b460b5ebc09bf2e9c03a8c15fcc389e
 
 Package: zlib
 Version: 1.3.2
@@ -4986,13 +5056,13 @@ Package: zstd
 Version: 1.5.7-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1308
+Installed-Size: 1312
 Depends: liblzma, zlib
 Breaks: zstd-dev
 Replaces: zstd-dev
 Homepage: https://github.com/facebook/zstd
 Description: Zstandard compression
 Filename: pool/main/z/zstd/zstd_1.5.7-1_aarch64.deb
-Size: 360640
-MD5Sum: a42ad05732092f6b3e3a93915527dc1e
-SHA256: 820f91f6950ce3d99e83d7adcbc2fd0d41860b6315dd005b42a9b708c9aa9e16
+Size: 359500
+MD5Sum: aa2627c9ee6de98f58f8368c802491b1
+SHA256: e2668537dc1bb3492e27895b117b68f004d63fdbafbce3a672a2a2d613494f1e
