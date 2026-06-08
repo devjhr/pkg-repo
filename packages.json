@@ -268,7 +268,7 @@
       {
         "name": "ca-certificates-java_1:2025.12.02_all.deb",
         "path": "pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.12.02_all.deb",
-        "size": 113816,
+        "size": 113812,
         "package": "ca-certificates-java",
         "version": "1:2025.12.02",
         "desc": "Common CA certificates (java keystore format)"
@@ -2796,7 +2796,7 @@
       {
         "name": "ncurses_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses/ncurses_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 558392,
+        "size": 557664,
         "package": "ncurses",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Library for text-based user interfaces in a terminal-independent manner"
@@ -2806,7 +2806,7 @@
       {
         "name": "ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses-static/ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 154084,
+        "size": 153892,
         "package": "ncurses-static",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for ncurses"
@@ -2826,7 +2826,7 @@
       {
         "name": "ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 39536,
+        "size": 39500,
         "package": "ncurses-ui-libs-static",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Static libraries for terminal user interfaces based on ncurses"
@@ -2836,7 +2836,7 @@
       {
         "name": "ncurses-utils_6.6.20260124+really6.5.20250830_aarch64.deb",
         "path": "pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124+really6.5.20250830_aarch64.deb",
-        "size": 89032,
+        "size": 89012,
         "package": "ncurses-utils",
         "version": "6.6.20260124+really6.5.20250830",
         "desc": "Tools for working with terminals"
@@ -2889,6 +2889,16 @@
         "size": 9601980,
         "package": "nodejs",
         "version": "25.3.0-1",
+        "desc": "Open Source, cross-platform JavaScript runtime environment"
+      }
+    ],
+    "nodejs-lts": [
+      {
+        "name": "nodejs-lts_24.13.0-1_aarch64.deb",
+        "path": "pool/main/n/nodejs-lts/nodejs-lts_24.13.0-1_aarch64.deb",
+        "size": 9605412,
+        "package": "nodejs-lts",
+        "version": "24.13.0-1",
         "desc": "Open Source, cross-platform JavaScript runtime environment"
       }
     ],

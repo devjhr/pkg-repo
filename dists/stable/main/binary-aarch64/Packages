@@ -374,9 +374,9 @@ Depends: ca-certificates (= 1:2025.12.02)
 Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates (java keystore format)
 Filename: pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.12.02_all.deb
-Size: 113816
-MD5Sum: 017c1a2390cf638fa7add84a80f3b2be
-SHA256: 094d4dfe843e7600d72540f414d33414ec0b7671b50a7d915423902ec9e08166
+Size: 113812
+MD5Sum: e9cfe0a7af0ce5dcc6444c20d2d65513
+SHA256: 3fba92f29debb5039d55d3dc4a481cbb5abc4b9e658454f357509edeebc7d329
 
 Package: check
 Version: 0.15.2-3
@@ -3772,9 +3772,9 @@ Replaces: ncurses-dev, ncurses-utils (<< 6.1.20190511-4)
 Homepage: https://invisible-island.net/ncurses/
 Description: Library for text-based user interfaces in a terminal-independent manner
 Filename: pool/main/n/ncurses/ncurses_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 558392
-MD5Sum: 5e83eb5332389a17a3305334dd1f041c
-SHA256: 63af85cca0c8df21bcd33c29be6f2365d1678a3df5a310e8a751831f41e3cdcf
+Size: 557664
+MD5Sum: fb4e24c4d1bdae42cfe28b15d7132fd3
+SHA256: 9829320569d4ef4c40e29d24a2e45dcf2e9a4d384c9083d7c2bb30f7cfa204c8
 
 Package: ncurses-static
 Version: 6.6.20260124+really6.5.20250830
@@ -3785,9 +3785,9 @@ Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for ncurses
 Filename: pool/main/n/ncurses-static/ncurses-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 154084
-MD5Sum: 5fb4fcfe1ef01ee1e85ac37c4b8f11c7
-SHA256: 474d8ad1485af898797b74fd8d8bb789743fcf0319231765180164f2ad547fb8
+Size: 153892
+MD5Sum: ca5783165e10d5ba0c1b1f632128e3b0
+SHA256: 7707f9cf2a56110c479b89cd6df501d47a6ff8bbfdab9883b96ca920e3a19202
 
 Package: ncurses-ui-libs
 Version: 6.6.20260124+really6.5.20250830
@@ -3813,9 +3813,9 @@ Depends: ncurses-ui-libs, ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Static libraries for terminal user interfaces based on ncurses
 Filename: pool/main/n/ncurses-ui-libs-static/ncurses-ui-libs-static_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 39536
-MD5Sum: 5875c2fcffa9cdbcdd66e5842fac9c1b
-SHA256: b451d8ab459ade5e335a396ae951a96543645a55303b427ec72352a6e2211353
+Size: 39500
+MD5Sum: dd4371d14904fba34c42efa79b589b77
+SHA256: 4cc773634c1dfc823ff3a8fb0c326c18f94068bdd150557ae63f7cc6af24dace
 
 Package: ncurses-utils
 Version: 6.6.20260124+really6.5.20250830
@@ -3826,9 +3826,9 @@ Depends: ncurses (= 6.6.20260124+really6.5.20250830)
 Homepage: https://invisible-island.net/ncurses/
 Description: Tools for working with terminals
 Filename: pool/main/n/ncurses-utils/ncurses-utils_6.6.20260124+really6.5.20250830_aarch64.deb
-Size: 89032
-MD5Sum: d4d0f75b0a9653fb62234c6c614b5dcc
-SHA256: 5ae5fa56e76f9122ad235eb2a28fc44cf659cd928d271cc266ae2640e65ba61e
+Size: 89012
+MD5Sum: 59abce3ac04be50c977371bd9ead7aa5
+SHA256: 7754c9fa39c864fbd6e2f3c4770e4800b774a48f9bdf3ce8b45b82ebf28c0730
 
 Package: ndk-sysroot
 Version: 29-2
@@ -3901,6 +3901,24 @@ Filename: pool/main/n/nodejs/nodejs_25.3.0-1_aarch64.deb
 Size: 9601980
 MD5Sum: ba3a45b8e6137f48c87b47f5b4b23833
 SHA256: e5d932e9ab45171cc6599a934b5d57fa1a3057633a6c6fcf28fa43886442061e
+
+Package: nodejs-lts
+Version: 24.13.0-1
+Architecture: aarch64
+Maintainer: Yaksh Bariya <thunder-coding@termux.dev>
+Installed-Size: 46496
+Depends: libc++, openssl, c-ares, libicu, libsqlite, zlib
+Recommends: npm
+Suggests: clang, make, pkg-config, python
+Conflicts: nodejs, nodejs-current
+Breaks: nodejs-dev
+Replaces: nodejs-current, nodejs-dev
+Homepage: https://nodejs.org/
+Description: Open Source, cross-platform JavaScript runtime environment
+Filename: pool/main/n/nodejs-lts/nodejs-lts_24.13.0-1_aarch64.deb
+Size: 9605412
+MD5Sum: 0dbb58b57466fcc0c94f9d6bac244501
+SHA256: 12eef445120a35a9832c968e3c8f171faa510744db328914a5af1bc4bad621c7
 
 Package: npm
 Version: 11.10.1
