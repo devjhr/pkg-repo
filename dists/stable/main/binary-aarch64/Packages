@@ -320,9 +320,9 @@ Replaces: brotli-dev
 Homepage: https://github.com/google/brotli
 Description: lossless compression algorithm and format (command line utility)
 Filename: pool/main/b/brotli/brotli_1.2.0_aarch64.deb
-Size: 340400
-MD5Sum: 34e228869ef66b1db4e763cb2635118e
-SHA256: 602830f2e1b824d4dfa3cb8c9b184897c0fccc05be6dd577b3ba051b8b4a0b38
+Size: 341708
+MD5Sum: 758863654048194361f324bd3c1a644d
+SHA256: c7848c9bb3af761db23cf3310e0512b6bec2fdf3aed0f59591adf3f89d49a0a2
 
 Package: bzip2
 Version: 1.0.8-8
@@ -360,10 +360,10 @@ Maintainer: @termux
 Installed-Size: 264
 Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates
-Filename: pool/main/c/ca-certificates/ca-certificates_1:2025.12.02_all.deb
-Size: 124236
-MD5Sum: c28dcfda0fde37b521105c4836127f79
-SHA256: c605711faae840a4471390cf7596eed0dc26cb09d270e678ebecf42af8ebf520
+Filename: pool/main/c/ca-certificates/ca-certificates_1_2025.12.02_all.deb
+Size: 124244
+MD5Sum: 3e7b7c2739dcf798c1e73f0e9d99aacb
+SHA256: 3f06e4b6cfcf731b8e39fa279f0158d1df16a2c74c43870cffd1b17fde531d2c
 
 Package: ca-certificates-java
 Version: 1:2025.12.02
@@ -373,10 +373,23 @@ Installed-Size: 208
 Depends: ca-certificates (= 1:2025.12.02)
 Homepage: https://curl.se/docs/caextract.html
 Description: Common CA certificates (java keystore format)
-Filename: pool/main/c/ca-certificates-java/ca-certificates-java_1:2025.12.02_all.deb
-Size: 113812
-MD5Sum: e9cfe0a7af0ce5dcc6444c20d2d65513
-SHA256: 3fba92f29debb5039d55d3dc4a481cbb5abc4b9e658454f357509edeebc7d329
+Filename: pool/main/c/ca-certificates-java/ca-certificates-java_1_2025.12.02_all.deb
+Size: 113820
+MD5Sum: 99224a15d360df33b08bde87b1be9a87
+SHA256: 0c7a6b520331b73b0663c262158547d41b4dcbbf0fde4961aceffe05d1c8d26d
+
+Package: cargo-c
+Version: 0.10.20
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 90948
+Depends: libcurl, libgit2, libssh2, openssl, zlib
+Homepage: https://github.com/lu-zero/cargo-c
+Description: Cargo C-ABI helpers
+Filename: pool/main/c/cargo-c/cargo-c_0.10.20_aarch64.deb
+Size: 24398148
+MD5Sum: b4ef6e9e4fb4b90272f2a47c87974fdd
+SHA256: b28e6ac23625af651b709225ed36851aa96bf8fa2a2431a23b2684f9e7ede571
 
 Package: check
 Version: 0.15.2-3
@@ -484,9 +497,9 @@ Homepage: https://curl.se/
 Description: Command line tool for transferring data with URL syntax
 Essential: yes
 Filename: pool/main/c/curl/curl_8.18.0-1_aarch64.deb
-Size: 237060
-MD5Sum: ce316c34ec78a8cd8e6491f76e57c42e
-SHA256: 748b3f44590811f97ee6a0915b23ed3df2ebe8c68f62dd1ce5ed0ea46b87b310
+Size: 237608
+MD5Sum: 18138334437b02f86cf0fd0043df8aa8
+SHA256: a44ead44a4efe252f34d9810672b14c150a54e0a8188bbfa2d97d8b714270d34
 
 Package: dart
 Version: 3.11.0
@@ -1118,9 +1131,9 @@ Depends: libiconv (= 1.18-1)
 Homepage: https://www.gnu.org/software/libiconv/
 Description: Utility converting between different character encodings
 Filename: pool/main/i/iconv/iconv_1.18-1_aarch64.deb
-Size: 10128
-MD5Sum: d123481bfd96252fc61575bd187db8b8
-SHA256: e74bb9a70e19426ec274483260a277dbf5da3e0f4e18b0f7f658aa8d083f670f
+Size: 10120
+MD5Sum: b884a5c1416001a8a9b85e8b569bc8d5
+SHA256: b055dde22a80a5af029187282cbced8e72301b55fa5ed648c25c48a0ab14a142
 
 Package: icu-devtools
 Version: 78.2
@@ -1581,7 +1594,7 @@ Package: libcurl
 Version: 8.18.0-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 3456
+Installed-Size: 3452
 Depends: libnghttp2, libnghttp3, libngtcp2, libssh2, openssl (>= 1:3.2.1-1), zlib
 Conflicts: apt (<< 1.4.8-8)
 Breaks: libcurl-dev
@@ -1590,9 +1603,9 @@ Homepage: https://curl.se/
 Description: Easy-to-use client-side URL transfer library
 Essential: yes
 Filename: pool/main/l/libcurl/libcurl_8.18.0-1_aarch64.deb
-Size: 996728
-MD5Sum: 5efa4c75f9a7da39ba284fffa6040cfe
-SHA256: 62aca4680c9a607006a9acd3e844d779f2db4e87cedec150e28cfe9cb3bf4ae7
+Size: 996268
+MD5Sum: 83b115228affc66b9934ab2829e462c5
+SHA256: 63bdfb739639dd4fc6a68fed64db6355a075823bca922473de1d372e20cea74f
 
 Package: libcurl-static
 Version: 8.18.0-1
@@ -1603,9 +1616,9 @@ Depends: libcurl (= 8.18.0-1)
 Homepage: https://curl.se/
 Description: Static libraries for libcurl
 Filename: pool/main/l/libcurl-static/libcurl-static_8.18.0-1_aarch64.deb
-Size: 403504
-MD5Sum: 8d394740f7407093076ce3a4a88bd80d
-SHA256: 2b021cb85c6039fd0f69a34e4ba85ca45dcdcf3ebdc3235db2fabb368144fefa
+Size: 403496
+MD5Sum: 89e5e0cc1e239f7275857d2e7bcf9656
+SHA256: 1850042ddeed6f0d6fef980d847e93b3b3b74389267407cb1436f1131c7bfdef
 
 Package: libdb
 Version: 18.1.40-5
@@ -1800,6 +1813,21 @@ Size: 468180
 MD5Sum: 4d558e62b6e365deef6de0e6afd756f1
 SHA256: 5ea42cd1357e6d32990930d670366724ce12264c41dc4691cfd8f8d1660d05ea
 
+Package: libgit2
+Version: 1.9.2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 3704
+Depends: libssh2, openssl, pcre2, zlib
+Breaks: libgit2-dev
+Replaces: libgit2-dev
+Homepage: https://libgit2.github.com/
+Description: C library implementing Git core methods
+Filename: pool/main/l/libgit2/libgit2_1.9.2_aarch64.deb
+Size: 721752
+MD5Sum: 1f490d8f27ce09c909985ecd972b24f9
+SHA256: b530ef6713d57b936d4a35a6715d97d39f60448e40c3e2d4a6dcc5f58f18b505
+
 Package: libgmp
 Version: 6.3.0-2
 Architecture: aarch64
@@ -1905,9 +1933,9 @@ Replaces: libandroid-support (<= 24), libiconv-dev, libandroid-support-dev
 Homepage: https://www.gnu.org/software/libiconv/
 Description: An implementation of iconv()
 Filename: pool/main/l/libiconv/libiconv_1.18-1_aarch64.deb
-Size: 561368
-MD5Sum: 3547832de6ae0e5297d7c0c689379216
-SHA256: 17a4c613869faca2f5fd081301f5b9f7f5b67ec3ea56615089be7809bfb494dd
+Size: 562468
+MD5Sum: c147c731a10ba7d2a00decd0dc5dfdb4
+SHA256: 3caeee234cf63670f59999d3f8bb053dc31f21bc29fc57e725ee3d962903c694
 
 Package: libiconv-static
 Version: 1.18-1
@@ -1918,9 +1946,9 @@ Depends: libiconv (= 1.18-1)
 Homepage: https://www.gnu.org/software/libiconv/
 Description: Static libraries for libiconv
 Filename: pool/main/l/libiconv-static/libiconv-static_1.18-1_aarch64.deb
-Size: 556228
-MD5Sum: b841cdf3f75e3917742b957d8c301ef7
-SHA256: 99c2c48fe3f41f1dbbd5d6e521d2af8fbcd24a05ac321e8536ee43934c6e0ac6
+Size: 557192
+MD5Sum: b5596c6728786e22bc0b7c836a87647b
+SHA256: 9b780b82204170c392e58978574f2d0584dae2347a8b375778000812d9e80aeb
 
 Package: libicu
 Version: 78.2
@@ -2301,9 +2329,9 @@ Replaces: libnghttp2-dev
 Homepage: https://nghttp2.org/
 Description: nghttp HTTP 2.0 library
 Filename: pool/main/l/libnghttp2/libnghttp2_1.68.0-1_aarch64.deb
-Size: 95324
-MD5Sum: 8651b984ba486233d08305ac5dfd8152
-SHA256: 91e6f13cd30a7afc1b21ec0e8b41f3f89dbb543fa0d64eaaec74f1f8fbf1e581
+Size: 95364
+MD5Sum: e19d1d21708bfd5219e8a8eb4bf289e6
+SHA256: 5258e5634b7e0141967af18b99a2ee88303b0ce92e8f1bb11691b1d3e08b1afe
 
 Package: libnghttp2-static
 Version: 1.68.0-1
@@ -2327,9 +2355,9 @@ Homepage: https://nghttp2.org/nghttp3/
 Description: HTTP/3 library written in C
 Essential: yes
 Filename: pool/main/l/libnghttp3/libnghttp3_1.15.0_aarch64.deb
-Size: 67884
-MD5Sum: 2cce49bfabc881866c7ceb2259b98693
-SHA256: 10694c18b1edd713f5099b0b2a1feeb995f75e1827d190a26313ec4bb3fc3a39
+Size: 67856
+MD5Sum: ac79cc9978f2701ba280adcc33078002
+SHA256: 0ebea85d34b0cbc184611eaeb8f124497a06933ae79c9a9000950272330ee360
 
 Package: libnghttp3-static
 Version: 1.15.0
@@ -2340,9 +2368,9 @@ Depends: libnghttp3 (= 1.15.0)
 Homepage: https://nghttp2.org/nghttp3/
 Description: Static libraries for libnghttp3
 Filename: pool/main/l/libnghttp3-static/libnghttp3-static_1.15.0_aarch64.deb
-Size: 63576
-MD5Sum: e95829b4e862206218477d7c3150b92e
-SHA256: b3df6435f53808a14a54d82f474f964abc3f8ca7a3ca1c00ff7ac3a470f22c2a
+Size: 63304
+MD5Sum: d6d9fb40c853161ab3f33b70f04ff2ee
+SHA256: 9d474288fe004a681e5ec7f65bca6100dde9f182804f02c914b800ea387830d7
 
 Package: libngtcp2
 Version: 1.20.0
@@ -2353,9 +2381,9 @@ Depends: openssl
 Homepage: https://github.com/ngtcp2/ngtcp2
 Description: Implementation of IETF QUIC protocol
 Filename: pool/main/l/libngtcp2/libngtcp2_1.20.0_aarch64.deb
-Size: 164816
-MD5Sum: ac46d5f467c830d502c5accb5bbca660
-SHA256: 95cfa21d373c3cb2da8786e4092cbc54b35df42f1c60a7bec7aa93bf00061282
+Size: 164804
+MD5Sum: ae579958d77f855f404fa10def690946
+SHA256: 20fedcf1000a350fd630ed4aeaa1fbaf02781d2b59af7ef61f9a82540db12274
 
 Package: libngtcp2-static
 Version: 1.20.0
@@ -2366,9 +2394,9 @@ Depends: libngtcp2 (= 1.20.0)
 Homepage: https://github.com/ngtcp2/ngtcp2
 Description: Static libraries for libngtcp2
 Filename: pool/main/l/libngtcp2-static/libngtcp2-static_1.20.0_aarch64.deb
-Size: 146272
-MD5Sum: 65293554b75ce554c5c4d4647e3440a4
-SHA256: 0fb83873df12fce20ecf4c6922eef3856d2bc778cb856297361351ef0569a0eb
+Size: 146200
+MD5Sum: 7baca257afa77b7aeb496f56fad2b575
+SHA256: 23da6f204f1f11ba6c661adb0400d2b65beca59e5fcc748a43acc8493b6da559
 
 Package: libnpth
 Version: 1.6-3
@@ -2615,22 +2643,22 @@ Replaces: libssh2-dev
 Homepage: https://www.libssh2.org
 Description: Client-side library implementing the SSH2 protocol
 Filename: pool/main/l/libssh2/libssh2_1.11.1-1_aarch64.deb
-Size: 218424
-MD5Sum: 07f6a114d5e864c9043b7f0b89571111
-SHA256: d15853c3970acca58493b8c128b6ffcb3ce29ba0d71bd1b4e29982940e9fe29d
+Size: 219188
+MD5Sum: ff535169373b21b448fd3eb82dcede24
+SHA256: ed8190746d7ced7a7a37ee9df7036779ec0663e1f2ef47a520e72cc39d36f2fa
 
 Package: libssh2-static
 Version: 1.11.1-1
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 484
+Installed-Size: 488
 Depends: libssh2 (= 1.11.1-1)
 Homepage: https://www.libssh2.org
 Description: Static libraries for libssh2
 Filename: pool/main/l/libssh2-static/libssh2-static_1.11.1-1_aarch64.deb
-Size: 110928
-MD5Sum: 77b6e834a3acfebb8c88fc14ca47b02c
-SHA256: d92d6c13c0d20f2edb32b90deb2495a89d6afc92f2ed1472035f124c541993dd
+Size: 111524
+MD5Sum: a573099f125497b1c055a0e66c06bec5
+SHA256: 904c3bb70e97a5629127226c27c3e308a05979029171720c1225d16265e66af2
 
 Package: libtiff
 Version: 4.7.1
@@ -4025,10 +4053,10 @@ Breaks: openssl-tool (<< 1.1.1b-1), openssl-dev
 Replaces: openssl-tool (<< 1.1.1b-1), openssl-dev
 Homepage: https://www.openssl.org/
 Description: Library implementing the SSL and TLS protocols as well as general purpose cryptography functions
-Filename: pool/main/o/openssl/openssl_1:3.6.1_aarch64.deb
-Size: 2476860
-MD5Sum: f0e71e3273acf108d6853e0be9af6736
-SHA256: a85adb83e633a39201a8ed1f710602a2add937abc13c9309c6cc8b786c51f490
+Filename: pool/main/o/openssl/openssl_1_3.6.1_aarch64.deb
+Size: 2475900
+MD5Sum: 38c379f46895aa8a441219aeccd2ac7b
+SHA256: fd2a4ba6e115c5dc9e4cebae116e42b5d0a916198fa923555e0adfe069fba4af
 
 Package: openssl-static
 Version: 1:3.6.1
@@ -4038,10 +4066,10 @@ Installed-Size: 12064
 Depends: openssl (= 1:3.6.1)
 Homepage: https://www.openssl.org/
 Description: Static libraries for openssl
-Filename: pool/main/o/openssl-static/openssl-static_1:3.6.1_aarch64.deb
-Size: 2633816
-MD5Sum: 7274d20f71eafcd149411337e108f718
-SHA256: 5c0a899c44442a274be78373ef4c89b83392c05d2f6fe4c8a20c4155844242f9
+Filename: pool/main/o/openssl-static/openssl-static_1_3.6.1_aarch64.deb
+Size: 2632520
+MD5Sum: 389303379dbc01763bee0e3776626821
+SHA256: f9c13e6cedeeb7afe233cfc455661acb0072141a5c89bae883fb58863021d9c3
 
 Package: openssl-tool
 Version: 1:3.6.1
@@ -4051,10 +4079,10 @@ Installed-Size: 968
 Depends: openssl (= 1:3.6.1)
 Homepage: https://www.openssl.org/
 Description: The openssl command line cryptographic tool
-Filename: pool/main/o/openssl-tool/openssl-tool_1:3.6.1_aarch64.deb
-Size: 277628
-MD5Sum: f29fd65c2af1e28941953b5ba7169728
-SHA256: 674d9e3a1cdffc92a9f3446b449515a9b46f03607996456aab08a5c95dd6b424
+Filename: pool/main/o/openssl-tool/openssl-tool_1_3.6.1_aarch64.deb
+Size: 276112
+MD5Sum: 9b19e41297dbbfe6d3371ad204fe10ed
+SHA256: e8b677a5cc43f56fc5d1b16727e5685a5407d2391b0a1baa37494c7eb4582c8e
 
 Package: p7zip
 Version: 17.06-1
@@ -4085,28 +4113,28 @@ Package: pcre2
 Version: 10.47
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 4380
+Installed-Size: 4348
 Breaks: pcre2-dev
 Replaces: pcre2-dev
 Homepage: https://pcre2project.github.io/pcre2/
 Description: Perl 5 compatible regular expression library
 Filename: pool/main/p/pcre2/pcre2_10.47_aarch64.deb
-Size: 961120
-MD5Sum: 18a7d976e97a8c734b54dba01621fcaa
-SHA256: cff5f0c2b2291a64e506b1178bfec7eb3682d8d104de6daa6df5164e076f55cc
+Size: 960444
+MD5Sum: fbbdfc5ed82c8153982fa30ab735e8e1
+SHA256: a1d81e008bdfae73342c2b79ad56e072d97adfc5c91fdce944e90ea02af418ed
 
 Package: pcre2-static
 Version: 10.47
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1852
+Installed-Size: 1836
 Depends: pcre2 (= 10.47)
 Homepage: https://pcre2project.github.io/pcre2/
 Description: Static libraries for pcre2
 Filename: pool/main/p/pcre2-static/pcre2-static_10.47_aarch64.deb
-Size: 376704
-MD5Sum: f720927477684ffa5f1ace6767d79720
-SHA256: 807be246ce76e9affc47764ba92c5350421d37ae8523ea49d3a8b479260293de
+Size: 375976
+MD5Sum: 834d97fd6c25aa27cfaf9b8664e39276
+SHA256: fe304d32b8fd82e07eac7c1c298e75fb6b9c99ef8e6abf4a1b0b3f0bd1dddd99
 
 Package: pcre2grep
 Version: 10.47
@@ -4117,9 +4145,9 @@ Depends: pcre2 (= 10.47)
 Homepage: https://pcre2project.github.io/pcre2/
 Description: A grep with Perl-compatible regular expressions
 Filename: pool/main/p/pcre2grep/pcre2grep_10.47_aarch64.deb
-Size: 34016
-MD5Sum: ba9b611bbf3bad3ee8d6ac4921d09271
-SHA256: a7fca9280e2856065fc7beb1690367411ea1c8385df80d63140ecc84fe20f50b
+Size: 34104
+MD5Sum: 622d39693e0cf92a3322eb3a0229cbf9
+SHA256: 29cd11865c660c0aa830e313e934c77be39de7a11310426955c892c3f99e6eed
 
 Package: perl
 Version: 5.40.3-3
@@ -5170,9 +5198,9 @@ Replaces: ndk-sysroot (<< 19b-3), zlib-dev
 Homepage: https://www.zlib.net/
 Description: Compression library implementing the deflate compression method found in gzip and PKZIP
 Filename: pool/main/z/zlib/zlib_1.3.2_aarch64.deb
-Size: 62908
-MD5Sum: fee9096416ada9198a2a49020db87527
-SHA256: a6516677556424f259a71947c682f2174a86f8d50d72f66b2f0105772e328da6
+Size: 62896
+MD5Sum: 24c09f775762501d6389f06982c43e35
+SHA256: 39f3bd5a7b0e44098160d0ee7da3496d47667fdac8c5fc24a4f62926e35fb945
 
 Package: zlib-static
 Version: 1.3.2
@@ -5183,9 +5211,9 @@ Depends: zlib (= 1.3.2)
 Homepage: https://www.zlib.net/
 Description: Static libraries for zlib
 Filename: pool/main/z/zlib-static/zlib-static_1.3.2_aarch64.deb
-Size: 35460
-MD5Sum: 6ce00999975648df5098b4c4e5db0733
-SHA256: 9e0974b3314ac6847fb0d1fedad5f447bf2d8495b8a26e71d3a4ed47b86fa93d
+Size: 35504
+MD5Sum: 8a20e4f236e62689ce81344a384f0a51
+SHA256: 183f5f26dec5f52d187ee2b9643166100049aec6e696a9c306d5894f5efade7f
 
 Package: zstd
 Version: 1.5.7-1
