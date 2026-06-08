@@ -69,6 +69,33 @@ Size: 6664
 MD5Sum: 3763e7823bae544adada667cd444621e
 SHA256: 8bceb08da04dcc4be05000b270150298b9d3e72f56b3bf91650fee99aed0a908
 
+Package: aosp-libs
+Version: 9.0.0-r76-2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 38952
+Breaks: bionic-host
+Replaces: bionic-host
+Homepage: https://source.android.com/
+Description: bionic libc, libicuuc, liblzma, zlib, and boringssl for package builder and termux-docker
+Filename: pool/main/a/aosp-libs/aosp-libs_9.0.0-r76-2_aarch64.deb
+Size: 9655756
+MD5Sum: 940323201bdc667f5b42f6f4d91b89b4
+SHA256: 8508a6f4dce40f4f2e80fc4a57f6389c4ed3371e3869805f0b79300a19ffa917
+
+Package: aosp-utils
+Version: 9.0.0-r76-2
+Architecture: aarch64
+Maintainer: @termux
+Installed-Size: 1248
+Depends: aosp-libs (= 9.0.0-r76-2)
+Homepage: https://source.android.com/
+Description: AOSP-based mksh, toybox and iputils for termux-docker
+Filename: pool/main/a/aosp-utils/aosp-utils_9.0.0-r76-2_aarch64.deb
+Size: 327700
+MD5Sum: c4610174eefe0030898c1a8f58808034
+SHA256: 66a97e82a16ab41397c1de4aeb64f8fe2f4673de793da83450c6d79e83b6dd78
+
 Package: apksigner
 Version: 33.0.1-1
 Architecture: all
@@ -1091,9 +1118,9 @@ Depends: libiconv (= 1.18-1)
 Homepage: https://www.gnu.org/software/libiconv/
 Description: Utility converting between different character encodings
 Filename: pool/main/i/iconv/iconv_1.18-1_aarch64.deb
-Size: 10032
-MD5Sum: 8a84641b9b14f93f6b528e3e0d482a55
-SHA256: 1411bd8a7cc85c835cb90798dee1e8502c476fe5e8d9fdf601e5507f2a2af108
+Size: 10128
+MD5Sum: d123481bfd96252fc61575bd187db8b8
+SHA256: e74bb9a70e19426ec274483260a277dbf5da3e0f4e18b0f7f658aa8d083f670f
 
 Package: icu-devtools
 Version: 78.2
@@ -1784,22 +1811,22 @@ Replaces: libgmp-dev
 Homepage: https://gmplib.org/
 Description: Library for arbitrary precision arithmetic
 Filename: pool/main/l/libgmp/libgmp_6.3.0-2_aarch64.deb
-Size: 327348
-MD5Sum: 814f4d5172b567d4df21d336017f9dbe
-SHA256: 3f388a68ca16d2c1706f7dc70af636f2e0f8edf913febb33720c7ef88173e7bd
+Size: 328296
+MD5Sum: 4fac205ce93eeab9079eaa6810846291
+SHA256: 8117e26f8548f3084931460cec48d0a5297b7d888ea4de63b8e044199425fdda
 
 Package: libgmp-static
 Version: 6.3.0-2
 Architecture: aarch64
 Maintainer: @termux
-Installed-Size: 1280
+Installed-Size: 1276
 Depends: libgmp (= 6.3.0-2)
 Homepage: https://gmplib.org/
 Description: Static libraries for libgmp
 Filename: pool/main/l/libgmp-static/libgmp-static_6.3.0-2_aarch64.deb
-Size: 227100
-MD5Sum: 473159b139c1ea1e5cf855b90a494a15
-SHA256: eaa1ed4439c9eb1d8cb85b95cae0b447e72eb433b9c75e717f9aee03a9611f51
+Size: 226472
+MD5Sum: bedd9252aa7382d49d3ce330f72000c9
+SHA256: 78b0a9f0f4fb7119043462351e64efc0df391c009f65f16b5cffc4c95d062d24
 
 Package: libgnutls
 Version: 3.8.11
@@ -1878,9 +1905,9 @@ Replaces: libandroid-support (<= 24), libiconv-dev, libandroid-support-dev
 Homepage: https://www.gnu.org/software/libiconv/
 Description: An implementation of iconv()
 Filename: pool/main/l/libiconv/libiconv_1.18-1_aarch64.deb
-Size: 562476
-MD5Sum: 3af59ce709b2bf45de4602d39a1372cb
-SHA256: 2aef2737a1580a47fc3127e4ce3d430d7f44de8b515ede73b41c00945e7deda3
+Size: 561368
+MD5Sum: 3547832de6ae0e5297d7c0c689379216
+SHA256: 17a4c613869faca2f5fd081301f5b9f7f5b67ec3ea56615089be7809bfb494dd
 
 Package: libiconv-static
 Version: 1.18-1
@@ -1891,9 +1918,9 @@ Depends: libiconv (= 1.18-1)
 Homepage: https://www.gnu.org/software/libiconv/
 Description: Static libraries for libiconv
 Filename: pool/main/l/libiconv-static/libiconv-static_1.18-1_aarch64.deb
-Size: 558004
-MD5Sum: f39d246df55449d8b0004499da58c1d3
-SHA256: 01fe6cf7615530941b059ab13c57779d5349673b5cf5fb2f125ac42a1d782dcb
+Size: 556228
+MD5Sum: b841cdf3f75e3917742b957d8c301ef7
+SHA256: 99c2c48fe3f41f1dbbd5d6e521d2af8fbcd24a05ac321e8536ee43934c6e0ac6
 
 Package: libicu
 Version: 78.2
@@ -4413,6 +4440,19 @@ Filename: pool/main/s/serf-static/serf-static_1.3.10-2_aarch64.deb
 Size: 39252
 MD5Sum: 5ddd5d3dba9a6633be47881cc42687e0
 SHA256: d77ebf94bc70ca5492ad73293eafc3513dfb38f6706fc1f5a4fff9341993e66e
+
+Package: shellcheck
+Version: 0.11.0
+Architecture: aarch64
+Maintainer: Joshua Kahn <tom@termux.dev>
+Installed-Size: 20404
+Depends: libffi, libgmp, libiconv
+Homepage: https://www.shellcheck.net/
+Description: Shell script analysis tool
+Filename: pool/main/s/shellcheck/shellcheck_0.11.0_aarch64.deb
+Size: 2622372
+MD5Sum: 8fb5a356fd5bffc82f18d1c218e5db99
+SHA256: 4ad7df745a1f08252e823f9bfa3a943066f14ba527c6426a0084b7575124a1bc
 
 Package: socat
 Version: 1.8.1.1
