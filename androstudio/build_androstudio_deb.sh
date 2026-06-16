@@ -54,40 +54,7 @@ echo "  Copying androstudio CLI..."
 cp "$SCRIPT_DIR/androstudio" "$PKG_DIR${PREFIX}/bin/androstudio"
 echo "  OK  androstudio → $PREFIX/bin/androstudio"
 
-# ── Write postinst ────────────────────────────────────────────
-echo "  Writing postinst..."
-cat > "$PKG_DIR/DEBIAN/postinst" << 'POSTINST'
-#!/data/data/com.jahangir/files/usr/bin/bash
-echo ""
-echo "  ✓ AndroStudio v2.5 installed successfully!"
-echo ""
-echo "  ┌─────────────────────────────────────────────────────┐"
-echo "  │  Getting started:                                   │"
-echo "  │                                                     │"
-echo "  │  androstudio setup       ← full environment setup  │"
-echo "  │  androstudio install ndk ← install NDK + cmake     │"
-echo "  │                                                     │"
-echo "  │  Other commands:                                    │"
-echo "  │    androstudio install pkg --list  ← release pkgs  │"
-echo "  │    androstudio status              ← installed tools│"
-echo "  │    androstudio doctor              ← check issues   │"
-echo "  │    androstudio -help               ← all commands   │"
-echo "  └─────────────────────────────────────────────────────┘"
-echo ""
-POSTINST
 
-# ── Write prerm ───────────────────────────────────────────────
-echo "  Writing prerm..."
-cat > "$PKG_DIR/DEBIAN/prerm" << 'PRERM'
-#!/data/data/com.jahangir/files/usr/bin/bash
-echo "  Removing AndroStudio environment config..."
-for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
-    if [ -f "$rc" ]; then
-        sed -i '/# ── AndroStudio Environment/,/# ── End AndroStudio/d' "$rc"
-        echo "  Cleaned $rc"
-    fi
-done
-PRERM
 
 # ── Write control file ────────────────────────────────────────
 echo "  Writing control file..."
@@ -107,8 +74,6 @@ EOF
 chmod 755 "$PKG_DIR/DEBIAN"
 find "$PKG_DIR" -type d | xargs chmod 755
 find "$PKG_DIR" -type f | xargs chmod 644
-chmod 755 "$PKG_DIR/DEBIAN/postinst"
-chmod 755 "$PKG_DIR/DEBIAN/prerm"
 chmod 755 "$PKG_DIR${PREFIX}/bin/androstudio"
 
 # ── Build .deb ────────────────────────────────────────────────

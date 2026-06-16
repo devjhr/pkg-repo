@@ -44,7 +44,7 @@
       {
         "name": "androstudio_2.5_all.deb",
         "path": "pool/main/a/androstudio/androstudio_2.5_all.deb",
-        "size": 6684,
+        "size": 6300,
         "package": "androstudio",
         "version": "2.5",
         "desc": "AndroStudio IDE environment setup"
