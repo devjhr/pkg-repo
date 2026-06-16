@@ -11,10 +11,10 @@
 set -e
 
 PKG_NAME="androstudio"
-PKG_VERSION="2.6"
+PKG_VERSION="2.7"
 PKG_ARCH="all"
 PKG_MAINTAINER="AndroStudio <repo@androstudio.dev>"
-PKG_DEPENDS="git, which, curl, dpkg, aapt2"
+PKG_DEPENDS="git, which, curl, dpkg, aapt2, unzip, tar, findutils, sed, grep, gawk"
 PKG_DESCRIPTION="AndroStudio IDE environment setup
  Installs and configures all required dependencies for
  AndroStudio IDE on Android. Use 'androstudio setup' to

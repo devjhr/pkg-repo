@@ -42,11 +42,11 @@
     ],
     "androstudio": [
       {
-        "name": "androstudio_2.6_all.deb",
-        "path": "pool/main/a/androstudio/androstudio_2.6_all.deb",
-        "size": 6292,
+        "name": "androstudio_2.7_all.deb",
+        "path": "pool/main/a/androstudio/androstudio_2.7_all.deb",
+        "size": 7476,
         "package": "androstudio",
-        "version": "2.6",
+        "version": "2.7",
         "desc": "AndroStudio IDE environment setup"
       }
     ],
