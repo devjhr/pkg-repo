@@ -1,8 +1,10 @@
 #!/data/data/com.jahangir/files/usr/bin/env bash
 # ╔══════════════════════════════════════════════════════════════╗
-# ║   AndroStudio CLI Tool v2.8                                  ║
+# ║   AndroStudio CLI Tool                                       ║
 # ║   Usage: androstudio <command> [args]                        ║
 # ╚══════════════════════════════════════════════════════════════╝
+
+CLI_VERSION="2.9"   # ← ভার্সন এখানে আপডেট করুন
 
 HOME_DIR="$HOME"
 SDK_DIR="$HOME/android-sdk"
@@ -150,6 +152,23 @@ cmd_setup() {
         success "cmdline-tools installed"
     fi
     chmod -R 755 "$CMDTOOLS_DIR/bin/" 2>/dev/null
+
+    # ── Patch sdkmanager shebang for Termux ──────────────────
+    # sdkmanager uses #!/usr/bin/env java but Termux env is at
+    # /data/data/com.jahangir/files/usr/bin/env — patch it.
+    local termux_env
+    termux_env=$(command -v env 2>/dev/null)
+    if [ -n "$termux_env" ] && [ "$termux_env" != "/usr/bin/env" ]; then
+        for bin_file in "$CMDTOOLS_DIR/bin/"*; do
+            [ -f "$bin_file" ] || continue
+            local shebang; shebang=$(head -1 "$bin_file" 2>/dev/null)
+            if [[ "$shebang" == "#!/usr/bin/env"* ]]; then
+                local rest="${shebang#'#!/usr/bin/env'}"
+                sed -i "1s|.*|#!${termux_env}${rest}|" "$bin_file"
+            fi
+        done
+        success "sdkmanager shebang patched for Termux"
+    fi
 
     # ── Step 5: Accept licenses ───────────────────────────────
     step "6/9" "Accepting Android SDK licenses..."
@@ -791,10 +810,10 @@ case "${1:-}" in
         esac ;;
     status)  cmd_status ;;
     doctor)  cmd_doctor ;;
-    version|-v|--version) echo -e "\n  AndroStudio CLI v2.8\n" ;;
+    version|-v|--version) echo -e "\n  AndroStudio CLI v${CLI_VERSION}\n" ;;
     help|-help|--help|"")
         echo ""
-        echo -e "  ${BOLD}AndroStudio CLI v2.8${RESET}"
+        echo -e "  ${BOLD}AndroStudio CLI v${CLI_VERSION}${RESET}"
         divider
         echo -e "  ${CYAN}androstudio install ndk${RESET}"
         echo -e "  ${MUTED}    Show NDK versions and install selected + cmake (optional)${RESET}"
