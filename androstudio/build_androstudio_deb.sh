@@ -11,7 +11,7 @@
 set -e
 
 PKG_NAME="androstudio"
-PKG_VERSION="2.5"
+PKG_VERSION="2.6"
 PKG_ARCH="all"
 PKG_MAINTAINER="AndroStudio <repo@androstudio.dev>"
 PKG_DEPENDS="git, which, curl, dpkg, aapt2"
