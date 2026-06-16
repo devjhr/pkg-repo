@@ -53,7 +53,7 @@ MD5Sum: e15f2813a9e1f4e5bb8e7c7b1c986184
 SHA256: b49149bfb100438d96e269eae62ea8fc2be60147e44e07663449371b465dccda
 
 Package: androstudio
-Version: 2.7
+Version: 2.8
 Architecture: all
 Maintainer: AndroStudio <repo@androstudio.dev>
 Installed-Size: 61
@@ -64,10 +64,10 @@ Description: AndroStudio IDE environment setup
  AndroStudio IDE on Android. Use 'androstudio setup' to
  download openjdk-21, gradle, Android SDK, platform and
  build-tools and set up ANDROID_HOME and JAVA_HOME.
-Filename: pool/main/a/androstudio/androstudio_2.7_all.deb
-Size: 7476
-MD5Sum: c7ad0603cfb5100b2be2b30d9ff8c2fe
-SHA256: 1f36353a18345d424cbc4619a6b8316e2ee8d2d570b71e7ebe75cc27980547da
+Filename: pool/main/a/androstudio/androstudio_2.8_all.deb
+Size: 7652
+MD5Sum: 26e447205e8bad9ea72fe0d87ba392a6
+SHA256: 2d2fbba810c1588780a5cbff9c4b1daf2b28fb3cf56325c5245373ba025c8fac
 
 Package: aosp-libs
 Version: 9.0.0-r76-2

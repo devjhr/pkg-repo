@@ -1,6 +1,6 @@
 #!/data/data/com.jahangir/files/usr/bin/env bash
 # ╔══════════════════════════════════════════════════════════════╗
-# ║   AndroStudio CLI Tool v2.7                                  ║
+# ║   AndroStudio CLI Tool v2.8                                  ║
 # ║   Usage: androstudio <command> [args]                        ║
 # ╚══════════════════════════════════════════════════════════════╝
 
@@ -242,10 +242,7 @@ cmd_install_ndk() {
     echo ""
     info "Selected: NDK $ndk_name ($ndk_ver)"
 
-    if [ -d "$ndk_install_dir" ]; then
-        success "NDK $ndk_name already installed at $ndk_install_dir"
-        echo ""
-    else
+    _do_install_ndk_files() {
         local home_ndk=""
         [ -d "$HOME_DIR/$ndk_ver" ]              && home_ndk="$HOME_DIR/$ndk_ver"
         [ -d "$HOME_DIR/android-ndk-$ndk_name" ] && home_ndk="$HOME_DIR/android-ndk-$ndk_name"
@@ -276,6 +273,21 @@ cmd_install_ndk() {
                 exit 1
             fi
         fi
+    }
+
+    if [ -d "$ndk_install_dir" ]; then
+        warn "NDK $ndk_name is already installed at $ndk_install_dir"
+        printf "  Force reinstall? [y/N]: "
+        read -r force_ndk
+        if [ "$force_ndk" != "y" ] && [ "$force_ndk" != "Y" ]; then
+            info "Skipped NDK $ndk_name"
+        else
+            info "Removing NDK $ndk_name for reinstall..."
+            rm -rf "$ndk_install_dir"
+            _do_install_ndk_files
+        fi
+    else
+        _do_install_ndk_files
     fi
 
     if [ -d "$ndk_install_dir" ]; then
@@ -441,10 +453,23 @@ cmd_install_sdk() {
         else
             error "Invalid selection"; exit 1
         fi
-        info "Installing platforms;android-${sel_api}..."
-        "$SDKMANAGER" "platforms;android-${sel_api}" \
-            && success "platforms;android-${sel_api} installed" \
-            || error "Failed"
+        if [ -d "$SDK_DIR/platforms/android-${sel_api}" ]; then
+            warn "platforms;android-${sel_api} is already installed"
+            printf "  Force reinstall? [y/N]: "
+            read -r force_plat
+            if [ "$force_plat" != "y" ] && [ "$force_plat" != "Y" ]; then
+                info "Skipped platforms;android-${sel_api}"
+            else
+                info "Reinstalling platforms;android-${sel_api}..."
+                "$SDKMANAGER" --uninstall "platforms;android-${sel_api}" &>/dev/null
+                "$SDKMANAGER" "platforms;android-${sel_api}" \
+                    && success "platforms;android-${sel_api} reinstalled" || error "Failed"
+            fi
+        else
+            info "Installing platforms;android-${sel_api}..."
+            "$SDKMANAGER" "platforms;android-${sel_api}" \
+                && success "platforms;android-${sel_api} installed" || error "Failed"
+        fi
     fi
 
     if $do_buildtools; then
@@ -472,10 +497,23 @@ cmd_install_sdk() {
         else
             error "Invalid selection"; exit 1
         fi
-        info "Installing build-tools;${sel_bt}..."
-        "$SDKMANAGER" "build-tools;${sel_bt}" \
-            && success "build-tools;${sel_bt} installed" \
-            || error "Failed"
+        if [ -d "$SDK_DIR/build-tools/${sel_bt}" ]; then
+            warn "build-tools;${sel_bt} is already installed"
+            printf "  Force reinstall? [y/N]: "
+            read -r force_bt
+            if [ "$force_bt" != "y" ] && [ "$force_bt" != "Y" ]; then
+                info "Skipped build-tools;${sel_bt}"
+            else
+                info "Reinstalling build-tools;${sel_bt}..."
+                "$SDKMANAGER" --uninstall "build-tools;${sel_bt}" &>/dev/null
+                "$SDKMANAGER" "build-tools;${sel_bt}" \
+                    && success "build-tools;${sel_bt} reinstalled" || error "Failed"
+            fi
+        else
+            info "Installing build-tools;${sel_bt}..."
+            "$SDKMANAGER" "build-tools;${sel_bt}" \
+                && success "build-tools;${sel_bt} installed" || error "Failed"
+        fi
     fi
 
     echo ""
@@ -493,11 +531,6 @@ _do_install_cmake() {
     echo -e "  ${BOLD}Available cmake versions:${RESET}"
     echo -e "  ${MUTED}Source: github.com/MrIkso/AndroidIDE-NDK${RESET}"
     echo ""
-
-    # Clean old versions
-    for old_ver in "3.10.1" "3.18.1" "3.22.1" "3.23.1"; do
-        [ -d "$CMAKE_DIR/$old_ver" ] && rm -rf "$CMAKE_DIR/$old_ver" && info "Removed old cmake $old_ver"
-    done
 
     local i=1
     for cmake_ver in "${CMAKE_VERSIONS[@]}"; do
@@ -532,7 +565,15 @@ _do_install_cmake() {
 _download_cmake() {
     local cmake_ver="$1"
     if [ -d "$CMAKE_DIR/$cmake_ver" ]; then
-        success "cmake $cmake_ver already installed"; return
+        warn "cmake $cmake_ver is already installed"
+        printf "  Force reinstall? [y/N]: "
+        read -r force_choice
+        if [ "$force_choice" != "y" ] && [ "$force_choice" != "Y" ]; then
+            info "Skipped cmake $cmake_ver"
+            return
+        fi
+        info "Removing cmake $cmake_ver for reinstall..."
+        rm -rf "$CMAKE_DIR/$cmake_ver"
     fi
     local cmake_file="cmake-${cmake_ver}-android-aarch64.zip"
     info "Downloading cmake $cmake_ver..."
@@ -750,10 +791,10 @@ case "${1:-}" in
         esac ;;
     status)  cmd_status ;;
     doctor)  cmd_doctor ;;
-    version|-v|--version) echo -e "\n  AndroStudio CLI v2.7\n" ;;
+    version|-v|--version) echo -e "\n  AndroStudio CLI v2.8\n" ;;
     help|-help|--help|"")
         echo ""
-        echo -e "  ${BOLD}AndroStudio CLI v2.7${RESET}"
+        echo -e "  ${BOLD}AndroStudio CLI v2.8${RESET}"
         divider
         echo -e "  ${CYAN}androstudio install ndk${RESET}"
         echo -e "  ${MUTED}    Show NDK versions and install selected + cmake (optional)${RESET}"
@@ -783,4 +824,5 @@ case "${1:-}" in
         echo -e "  ${MUTED}Run: androstudio -help${RESET}"
         exit 1 ;;
 esac
+
 

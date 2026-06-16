@@ -5,30 +5,30 @@ Origin: AndroStudio
 Label: AndroStudio Package Repository
 Suite: stable
 Codename: stable
-Date: Tue, 16 Jun 2026 20:53:47 UTC
+Date: Tue, 16 Jun 2026 21:43:50 UTC
 Architectures: aarch64 all
 Components: main
 Description: Official AndroStudio terminal package repository
 MD5Sum:
- 970cfcd1541134f14571e3474d356816     171882 main/binary-aarch64/Packages
- 6929f4d20d58b13597e208a0b541122b      50811 main/binary-aarch64/Packages.gz
+ b6c885556ce45f374f3451956383d427     171882 main/binary-aarch64/Packages
+ 28abb0c034801f67e161180d2ba6581d      50811 main/binary-aarch64/Packages.gz
 SHA256:
- e4057b2af8ab088448643f599e3470d0518759eaa9dda9e34913fdfc0730aa0d     171882 main/binary-aarch64/Packages
- fd11abbd117ae42d8f3cb77c3df931478e7fa30d377d314c39329dd6f8844ddb      50811 main/binary-aarch64/Packages.gz
+ 2158ed5dfc325108ae782628edaf4eb95d4ed8e57fe2d160391fd35e2d31ac24     171882 main/binary-aarch64/Packages
+ 30b341009da3d7fee376cb1c075727f134343627d3bb87e7012eaf162d54ec58      50811 main/binary-aarch64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJPBAEBCAA5FiEEKDXtDRB9gNykYn56kVR8FqymkDgFAmoxt9wbFIAAAAAABAAO
-bWFudTIsMi41KzEuMTEsMywyAAoJEJFUfBasppA4JbYQAKRHjLdsKmjCRKRZ7+ti
-CXJe9kKeyRTQvSttb475rnz53I8+gALccYsjTgkWUbTHtBCqUJPN8O+Kev4lFBFA
-6EshegPBZSGhAjDbBKoaBv1sc1rAylR7Awk0kZffJuIxLlZQ4Rz8Efy+uo0CXh7m
-ELOEideDP4EtIUPYVWDcGEPXziUOC/6v+dkYEttUo21vB7PIdpjZzeKr6ZB9C6+k
-txYB0Zu4Q5RoQ9c86B7qc6g1Hg/57qKtoreyZpt3tuRGKqOSGwuw8Zp9Pamx55dM
-fpZqgYHsfoRRtD//vzxKk6ZVOwOCLIHwHj+WGSSj/t1edMIzzNBIEqMfYSXmbNjd
-oTKfzj3HaeE9F0XRioghuUXgJKtgd21R2PQg6kbcMKGtoYimS+QQVXfB3RM8e7ml
-IZivivw1Hcpz97VyDktBgy4lTvwV+rPdEvvVXM0eZjTJ0dZxHBB1Lpw705vU1Wzd
-8pelM+/EYDgTeFR4wb34AwikEJVFhdsa5CgRlTWpMRZ6Fdo4djKHjuZKbe26iHK3
-d7iM217Y51idTP4sokvyTnGpgN99RL9MXIYJYnnPO+5tFWmPbwIkYz5IT3rD7X3S
-OyGpMtivVPzr7zctZMNaMD9vylg9jeCJX8I8YzJS0P1+u94SvpAdPXS0W+DJxrJh
-ZjOn6GH1XKtKGbHK9nh9PS7A
-=zyt9
+iQJPBAEBCAA5FiEEKDXtDRB9gNykYn56kVR8FqymkDgFAmoxw5YbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTEsMywyAAoJEJFUfBasppA4810P+weGTwE7TMsiXdL+t/Xb
+TZEnUnepo743Dvj88psOZ1/wwFsetYPjPrm8KX/F+sWeCgIYjf7tF3EVCoMJjViK
+GPoPE0fZhOuf8CCb5Jizf71ozYghvjN6u2AVQz3Iee9+Y7orO3I+0UtFjTv1hvSl
+VZDGaerpP6HmLbKBRdthqBJHkhjzTxkxdJ8QPlkihYNQOKw0VDRep3NlyZqBWaM8
+gDoOXWgiGiqMkgPDXrP6foHqfAVqm0T7IR2k0Q7pp60nQN9xSEh3SK5/OI9FEfoW
+BZLp5PTrM3E2RRohsd65qYuPoY9WySebPnwyxcBpXhVgHBHVzt/HkvOW5q5GxG61
+iJ0111BpYK36M5DsLBhMyfdxLkt+KyocfVU/P0/4Y/380/aryKuAKmK5N6tka9GH
+y3zOQ+qUuYgM2iyvvPasURHCj4ZVf2yd+7xBFFsu83xCBuNlPsXIjsEQJW6tEaSq
+07CURGPztQCX+1WlIwQfqJPcVLxOml3UUJcjFklm4AnZmT1aAIZFduWy+TxCORh0
+g5J4xp0xwrOdbGE/YDvuvu4kI+oTUTn8zf3wFcqy1CYSH6VQ2drQPZMRqKhwx5FX
+7vBqaKkweY5fXUQbFij1ZWyX0XxSCV4E85BVvl+B8K5qOLVOF7n6vlhTCEvV2W15
+6GLISEVxi6+2vTJsxVWdSBXs
+=iEox
 -----END PGP SIGNATURE-----

@@ -2,13 +2,13 @@ Origin: AndroStudio
 Label: AndroStudio Package Repository
 Suite: stable
 Codename: stable
-Date: Tue, 16 Jun 2026 20:53:47 UTC
+Date: Tue, 16 Jun 2026 21:43:50 UTC
 Architectures: aarch64 all
 Components: main
 Description: Official AndroStudio terminal package repository
 MD5Sum:
- 970cfcd1541134f14571e3474d356816     171882 main/binary-aarch64/Packages
- 6929f4d20d58b13597e208a0b541122b      50811 main/binary-aarch64/Packages.gz
+ b6c885556ce45f374f3451956383d427     171882 main/binary-aarch64/Packages
+ 28abb0c034801f67e161180d2ba6581d      50811 main/binary-aarch64/Packages.gz
 SHA256:
- e4057b2af8ab088448643f599e3470d0518759eaa9dda9e34913fdfc0730aa0d     171882 main/binary-aarch64/Packages
- fd11abbd117ae42d8f3cb77c3df931478e7fa30d377d314c39329dd6f8844ddb      50811 main/binary-aarch64/Packages.gz
+ 2158ed5dfc325108ae782628edaf4eb95d4ed8e57fe2d160391fd35e2d31ac24     171882 main/binary-aarch64/Packages
+ 30b341009da3d7fee376cb1c075727f134343627d3bb87e7012eaf162d54ec58      50811 main/binary-aarch64/Packages.gz
