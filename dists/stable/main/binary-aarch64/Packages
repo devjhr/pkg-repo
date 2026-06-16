@@ -65,9 +65,9 @@ Description: AndroStudio IDE environment setup
  download openjdk-21, gradle, Android SDK, platform and
  build-tools and set up ANDROID_HOME and JAVA_HOME.
 Filename: pool/main/a/androstudio/androstudio_2.5_all.deb
-Size: 6668
-MD5Sum: 7d57e2053f4cec2bd9c872c563c381d4
-SHA256: 720f49ab9f158cd5f37135553449e335c38ee5eeb39a973633663984e09efa4b
+Size: 6684
+MD5Sum: ced2f74e7ed00735b3b2e4dfdb23540f
+SHA256: f15500c1ab749486a5cae4256f62a4d72427b75cc52c4712a4ba998412284ebd
 
 Package: aosp-libs
 Version: 9.0.0-r76-2

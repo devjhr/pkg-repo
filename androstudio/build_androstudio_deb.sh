@@ -57,7 +57,7 @@ echo "  OK  androstudio → $PREFIX/bin/androstudio"
 # ── Write postinst ────────────────────────────────────────────
 echo "  Writing postinst..."
 cat > "$PKG_DIR/DEBIAN/postinst" << 'POSTINST'
-#!/bin/bash
+#!/data/data/com.jahangir/files/usr/bin/bash
 echo ""
 echo "  ✓ AndroStudio v2.5 installed successfully!"
 echo ""
@@ -79,7 +79,7 @@ POSTINST
 # ── Write prerm ───────────────────────────────────────────────
 echo "  Writing prerm..."
 cat > "$PKG_DIR/DEBIAN/prerm" << 'PRERM'
-#!/bin/bash
+#!/data/data/com.jahangir/files/usr/bin/bash
 echo "  Removing AndroStudio environment config..."
 for rc in "$HOME/.bashrc" "$HOME/.zshrc"; do
     if [ -f "$rc" ]; then
@@ -135,4 +135,5 @@ else
 fi
 
 rm -rf "$BUILD_DIR"
+
 
