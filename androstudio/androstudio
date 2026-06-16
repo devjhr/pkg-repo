@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/data/data/com.jahangir/files/usr/bin/env bash
 # ╔══════════════════════════════════════════════════════════════╗
-# ║   AndroStudio CLI Tool v2.4                                  ║
+# ║   AndroStudio CLI Tool v2.5                                  ║
 # ║   Usage: androstudio <command> [args]                        ║
 # ╚══════════════════════════════════════════════════════════════╝
 
@@ -593,10 +593,10 @@ case "${1:-}" in
         esac ;;
     status)  cmd_status ;;
     doctor)  cmd_doctor ;;
-    version|-v|--version) echo -e "\n  AndroStudio CLI v2.4\n" ;;
+    version|-v|--version) echo -e "\n  AndroStudio CLI v2.5\n" ;;
     help|-help|--help|"")
         echo ""
-        echo -e "  ${BOLD}AndroStudio CLI v2.4${RESET}"
+        echo -e "  ${BOLD}AndroStudio CLI v2.5${RESET}"
         divider
         echo -e "  ${CYAN}androstudio install pkg <name>${RESET}"
         echo -e "  ${MUTED}    Install a large package from GitHub Releases${RESET}"
