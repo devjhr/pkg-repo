@@ -11,7 +11,7 @@
 set -e
 
 PKG_NAME="androstudio"
-PKG_VERSION="2.4"
+PKG_VERSION="2.5"
 PKG_ARCH="all"
 PKG_MAINTAINER="AndroStudio <repo@androstudio.dev>"
 PKG_DEPENDS="git, which, curl, dpkg, aapt2"
@@ -59,7 +59,7 @@ echo "  Writing postinst..."
 cat > "$PKG_DIR/DEBIAN/postinst" << 'POSTINST'
 #!/bin/bash
 echo ""
-echo "  ✓ AndroStudio v2.4 installed successfully!"
+echo "  ✓ AndroStudio v2.5 installed successfully!"
 echo ""
 echo "  ┌─────────────────────────────────────────────────────┐"
 echo "  │  Getting started:                                   │"
