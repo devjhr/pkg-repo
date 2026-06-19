@@ -2,11 +2,11 @@
   "a": {
     "aapt2": [
       {
-        "name": "aapt2_2.19-compiler260130142929_aarch64.deb",
-        "path": "pool/main/a/aapt2/aapt2_2.19-compiler260130142929_aarch64.deb",
-        "size": 1462680,
+        "name": "aapt2_2.20_aarch64.deb",
+        "path": "pool/main/a/aapt2/aapt2_2.20_aarch64.deb",
+        "size": 1461492,
         "package": "aapt2",
-        "version": "2.19-compiler260130142929",
+        "version": "2.20",
         "desc": "Android Asset Packaging Tool 2"
       }
     ],
