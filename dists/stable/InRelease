@@ -5,30 +5,30 @@ Origin: AndroStudio
 Label: AndroStudio Package Repository
 Suite: stable
 Codename: stable
-Date: Fri, 19 Jun 2026 15:54:00 UTC
+Date: Tue, 04 Aug 2026 20:24:39 UTC
 Architectures: aarch64 all
 Components: main
 Description: Official AndroStudio terminal package repository
 MD5Sum:
- a2420afac0ec9fa90a8abce3fcbf1a2e     171840 main/binary-aarch64/Packages
- e9d0514c6ae0aef150bdc498818f032c      50801 main/binary-aarch64/Packages.gz
+ 79527f19e9fcd0dfd2e4a084e532f86d     175782 main/binary-aarch64/Packages
+ 8a6a7b3be77e59b22ab0b69067fd5095      51987 main/binary-aarch64/Packages.gz
 SHA256:
- 3c30763fceb86b0db0e09839c50782aa39c08705bdacde7aab603b1d2be5c1d7     171840 main/binary-aarch64/Packages
- fcd0597c521564a9ade59d69ddf6b8423a065fe784576719ac7c1dfffa8f03c6      50801 main/binary-aarch64/Packages.gz
+ e69150f9193dfd315e529eddd4629bd78c364cdf0054b02acecf35d245a0a6dc     175782 main/binary-aarch64/Packages
+ b9463c46de382d84bf0fa88c64a63927eaeb006d640a439e16f59da98e5d354f      51987 main/binary-aarch64/Packages.gz
 -----BEGIN PGP SIGNATURE-----
 
-iQJPBAEBCAA5FiEEKDXtDRB9gNykYn56kVR8FqymkDgFAmo1ZhkbFIAAAAAABAAO
-bWFudTIsMi41KzEuMTEsMywyAAoJEJFUfBasppA44y8P/iaT8iwEp3xlFdSxt2+G
-xFWRUiKGHBxpyq5a4YAV1jLfr7Zomtx8AwTNQhfGO0ZoiBnXRJz349NXLVM0Xh3X
-5bRLKnR1HI/S+7yOyci2IEOHIPbG40BJAXFZzBCExR9D0tw3h9RbsCHDwTR6HFY8
-TnnzIeaujfly1n4RL8aKBLyjjw80JS5vHgfC4YyEqeCmSsO1glMVQGWzBNeHXSVn
-3D9Mi86OSNFWi2Vi2JbBp0/kQGHMqLV5AOQS4OBuRwZ5oztbF225+P8Vw83eGbG+
-X93+2QthqBk4ieRFG/Iew232HNfnVnVebL3x3P7M3tntMlxYjqLnsyUslv20Pgdt
-ZpggBzTPigr5b21I9UdDEGxusNRj+hOe97TAKjp4i9cNGq9OyyTLPW90Ug6RtksG
-CgnMYLApFQ23DuGkdAY1RyOR91qK3fhQr3TpjUk3Qbk6rcjsFqSsrkAwl4oMyI5t
-r7FZuVu9EPkXcuqZc0efGtryqI1Z4GPGpGX/907byyx/ZcABRz4R2ksJHl7gEyNM
-9M7CcYj0lRkIGT5fWL/KWPAe9D/Dt59jlTP8JlryafiKfJw5HbDeDuykWk+1TGma
-jQBb1ptL5pRhwMjRN9/DYe3H/MSrpYtmq5fbwUvqFXgQOucKvZNQgIRZjgKUeP5d
-RPUXMcqjMveQDmRvRA1unIAt
-=Bs0G
+iQJPBAEBCAA5FiEExCWkvdSHZEatf88m1Er7F9GTmL4FAmpySocbFIAAAAAABAAO
+bWFudTIsMi41KzEuMTIsMywyAAoJENRK+xfRk5i+kxQP/2N2mSCc1eotKBbWBT/w
+1xGmLJsr/L1Ty6IFpaKWixNE7EeHMu59zqMl+AJEcbaPZl8Pa2mkBpENP8htKbSB
+NXHkq+/D8FbX1cwDxUUW2AdYkWosJ8GEVhngaSQq57jAKOhP3lPArUVYEIdN0AjM
+9Jv/8YJam/udHlSYavgtUwSi3YTS7D1hYx5+IQn2fZHKHrLRvfTUDp82DmqY8daW
+D7UYAIA5Q034LjyKSPB5EMolueHhQf3outctshkd6s2heD6LkAS89AsBoy2r4mht
+eRdiNK7PWO2o3F1vmVRshnv3DKizvQhQfW91pTfNsRumlXPoS92q0GnQZoVgmyxD
+39xzjdbA+bjQnPW6TEzwoOE8C0mikRiraH0BrPTQotJ6lCJUDYs2TEaanbZElFje
+29CMz7kyADf+I8LfLbC7v5ZzaPCBuBrrajh1njc70TscyEp0kXRVgOrXyksxsBwm
+HA5EdZlvbxjACDm4b+VB51zqoNU1ASGgwq6xflbJsrg3OZG94lE/4G0Ks05iLaYj
+Xc4VaKr/yES47RUj151zRjuBgz1Vh4DDqGM7bOxrePl5Qnq0RM+5Tb573vSO3mF1
+IKw+vzHB52WwOVb9g813JPC4AKcU+FyZvGPsDQUepUyhjkzUdOjaMG7GVPgot6le
+pWEUUDFb599msJhTKwJYSnEX
+=pHUT
 -----END PGP SIGNATURE-----
