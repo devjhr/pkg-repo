@@ -373,9 +373,9 @@ Installed-Size: 284
 Homepage: https://src.fedoraproject.org/rpms/ca-certificates
 Description: Common CA certificates
 Filename: pool/main/c/ca-certificates-glibc/ca-certificates-glibc_2025.02.25_all.deb
-Size: 128056
-MD5Sum: bb65e7e5e25313e2a7631b148f5b60a0
-SHA256: a975df7b341316f82921b0d544af47d0246d3d82d8ea2e8a1a66ea40ccad697b
+Size: 128064
+MD5Sum: fc7b4c211362daf8845e675f6c567d62
+SHA256: 6898454151be07a1c765da2b44f289a2192922354793a543d3d2f61dffd99c5a
 
 Package: ca-certificates-java
 Version: 1:2025.12.02
@@ -1023,9 +1023,9 @@ Recommends: glibc-runner
 Homepage: https://www.gnu.org/software/libc/
 Description: GNU C Library
 Filename: pool/main/g/glibc/glibc_2.43-1_aarch64.deb
-Size: 9757768
-MD5Sum: bc44328867ce926cb2b5e6eb3d1e90b1
-SHA256: e26a0fd78f9efa86c6598b9a1e85a39201e07ad53066ad45d6102e66db18ddb5
+Size: 9774256
+MD5Sum: d845c71f60770a86d99319b2c2177657
+SHA256: c749f4b79c9316742f8dad0aea11d131277f7c0b2aac7a3c0008cd5ee2e14afe
 
 Package: glibc32
 Version: 2.43-1
@@ -1036,9 +1036,9 @@ Depends: glibc, glibc (= 2.43-1)
 Homepage: https://www.gnu.org/software/libc/
 Description: GNU C Library (32-bit)
 Filename: pool/main/g/glibc32/glibc32_2.43-1_aarch64.deb
-Size: 3214096
-MD5Sum: 114edc58fc537096b05a05e9dced9280
-SHA256: 30f512716a14b267bb4d58eecd65719eb2b31d3bbc9148a901f30f160af8747b
+Size: 3212856
+MD5Sum: 66e20687148ba73fa7a449a29124be01
+SHA256: ae28c44b2c46f5ab6b2c8f23605480ca371c7b7d9f7e6ef26830b4b61a79e24d
 
 Package: gnupg
 Version: 2.5.11
@@ -3351,9 +3351,9 @@ Installed-Size: 8844
 Homepage: https://www.gnu.org/software/libc/
 Description: Kernel headers sanitized for use in userspace
 Filename: pool/main/l/linux-api-headers-glibc/linux-api-headers-glibc_7.1_aarch64.deb
-Size: 1277004
-MD5Sum: 05f8a8a7823f11a766197cf8ce56e650
-SHA256: eb6b1ab866ba7d6604d8e1617957c1c1b41a73e515c972a0f2f5ee8e8aeb3525
+Size: 1276952
+MD5Sum: 27b646183ed1f48a9db64c04e15e02c8
+SHA256: 8795877c23442a4047e786988511eb87677c8fae54628d11bdbe45e4fcbf723e
 
 Package: littlecms
 Version: 2.18
@@ -4017,15 +4017,15 @@ Package: opencode
 Version: 1.18.7
 Architecture: aarch64
 Maintainer: Hope2333(幽零小喵) <u0catmiao@proton.me>
-Installed-Size: 174692
-Depends: bash, ncurses
+Installed-Size: 175908
+Depends: bash, ncurses, glibc, openssl-glibc
 Description: OpenCode AI coding assistant for Termux
 Section: utils
 Priority: optional
 Filename: pool/main/o/opencode/opencode_1.18.7_aarch64.deb
-Size: 44888542
-MD5Sum: ab4fc3762590cacc9847155575f2d729
-SHA256: 562c366a9def71711b5c30ff232f5ea479d557e43257ab10ac40e0f2ad52e8fd
+Size: 45120612
+MD5Sum: 46bc82c683c03b4654d5da7e2cb5ce57
+SHA256: 8813ac650fbb4e30e6947f8ea555b79e0ba6fe4af69925a129b671ea35b46c48
 
 Package: openjdk-17
 Version: 17.0.18
@@ -4128,13 +4128,13 @@ Version: 3.4.1
 Architecture: aarch64
 Maintainer: @termux-pacman
 Installed-Size: 16412
-Depends: ca-certificates-glibc, resolv-conf, zlib-glibc, gcc-libs-glibc
+Depends: ca-certificates-glibc, resolv-conf, zlib-glibc
 Homepage: https://www.openssl.org/
 Description: Library implementing the SSL and TLS protocols as well as general purpose cryptography functions
 Filename: pool/main/o/openssl-glibc/openssl-glibc_3.4.1_aarch64.deb
-Size: 5586032
-MD5Sum: 805dc2d5f775d5c3c5261042962b0dc6
-SHA256: d040968fe6cb8ebe4a342ac90295bd1ee46d2c8df626ebcc8f3423b8bf462f02
+Size: 5585328
+MD5Sum: acb1d264c860c6565e4fa46444d1f488
+SHA256: 327c58954a0471b9e2bf9b1745991b62fd13457b280b524fa2eb657b86d3fe89
 
 Package: openssl-glibc-static
 Version: 3.4.1
@@ -4145,9 +4145,9 @@ Depends: openssl-glibc (= 3.4.1)
 Homepage: https://www.openssl.org/
 Description: Static libraries for openssl-glibc
 Filename: pool/main/o/openssl-glibc-static/openssl-glibc-static_3.4.1_aarch64.deb
-Size: 2794980
-MD5Sum: 1fc1a96de9e656cfeac2d99566e9446a
-SHA256: 77a7f17230eb98f04548658ed74646ac47c5516be5ee313272a1bc3a632982d0
+Size: 2795424
+MD5Sum: e1f8cf024047ff659eb23e11bb2b0488
+SHA256: 3c236874f23e30ac70f5f1b8f42d9c537f23105d511cd610dc70608d6e56860f
 
 Package: openssl-static
 Version: 1:3.6.1
@@ -5302,9 +5302,9 @@ Depends: glibc
 Homepage: https://www.zlib.net/
 Description: Compression library implementing the deflate compression method found in gzip and PKZIP
 Filename: pool/main/z/zlib-glibc/zlib-glibc_1.3.2_aarch64.deb
-Size: 77632
-MD5Sum: 003963fdfea67ee622bd2203758a6958
-SHA256: f05976e5a02a39c04dd4b5821223f138d174723bbc78b3ed03c675f10b6e28d8
+Size: 77628
+MD5Sum: 1bb95be36212b6d0fe4522f8b01d4aa1
+SHA256: add2bf24e38a8327b6c3c6d67eaf3298a163d154d9dc2f910ba288fc5e704317
 
 Package: zlib-glibc-static
 Version: 1.3.2
@@ -5315,9 +5315,9 @@ Depends: zlib-glibc (= 1.3.2)
 Homepage: https://www.zlib.net/
 Description: Static libraries for zlib-glibc
 Filename: pool/main/z/zlib-glibc-static/zlib-glibc-static_1.3.2_aarch64.deb
-Size: 47280
-MD5Sum: e69896dab7f60b5eadf1a49d07dd7ffb
-SHA256: e9eeb545e46a5e9f4111a18c92c753d0fa90568455a0366e11a03e1a6d368733
+Size: 47252
+MD5Sum: 54fded07da46cca54b4b9b83fc6af849
+SHA256: 4c3d9740389a066c652071f25433e9a1543e82fd83d326ae10673bea64f5a125
 
 Package: zlib-static
 Version: 1.3.2
